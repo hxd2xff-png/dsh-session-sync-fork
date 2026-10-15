@@ -1,0 +1,316 @@
+<div align="center">
+
+# 🔄 dsh-session-sync
+- **1024 store channel**: `npm i -g dsh1024` once, then `dsh1024 plugin --profile web add dsh-session-sync` (counts toward the [deepseek1024.com](https://deepseek1024.com) install ranking).
+[![Gitee](https://img.shields.io/badge/Gitee-mirror-c71d23?logo=gitee)](https://gitee.com/perrylink/dsh-session-sync)
+[![dshfind](https://dshfind.com/api/badge/PerryLink/dsh-session-sync?metric=downloads)](https://dshfind.com/plugins/PerryLink/dsh-session-sync?ref=badge)
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/PerryLink/dsh-session-sync/badge)](https://api.securityscorecards.dev/projects/github.com/PerryLink/dsh-session-sync)
+
+**Cross-device session sync for DeepSeek Harness — a dedicated git mirror of your session store.**
+
+*Sync your sessions between devices, keep both sides on any conflict, never lose a turn.*
+
+> **Official repository.** This is the only official repository of dsh-session-sync, maintained by PerryLink. Same-name repositories under other accounts are not affiliated.
+
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
+[![DSH plugin](https://img.shields.io/badge/dsh--plugin-✅-green)](https://github.com/topics/dsh-plugin)
+[![dsh-doctor](https://raw.githubusercontent.com/PerryLink/dsh-plugin-doctor/main/badges/PerryLink__dsh-session-sync.svg)](https://github.com/PerryLink/dsh-plugin-doctor#verified-徽章)
+[![DSH Market](https://raw.githubusercontent.com/2BingLing/dsh-market/master/assets/readme/badge-top-rated.svg)](https://dsh.market/)
+[![Node](https://img.shields.io/badge/node-%5E22.19%20%7C%7C%20%3E%3D24-brightgreen.svg)](#)
+[![CI](https://img.shields.io/github/actions/workflow/status/PerryLink/dsh-session-sync/ci.yml?branch=main&label=CI)](https://github.com/PerryLink/dsh-session-sync/actions)
+[![Version](https://img.shields.io/github/v/tag/PerryLink/dsh-session-sync?label=version)](https://github.com/PerryLink/dsh-session-sync/releases)
+[![npm version](https://img.shields.io/npm/v/dsh-session-sync)](https://www.npmjs.com/package/dsh-session-sync)
+[![npm downloads](https://img.shields.io/npm/dm/dsh-session-sync)](https://www.npmjs.com/package/dsh-session-sync)
+
+[English](README.md) · [简体中文](README-zh.md) · [Español](README-es.md) · [Português](README-pt.md) · [हिन्दी](README-hi.md)
+
+</div>
+
+---
+
+**📖 Ecosystem knowledge base** — measured data, not marketing: [plugin development guide · plugin-selection data · maintenance criteria](https://perrylink.github.io/dsh-plugin-guide/).
+
+<!-- star-cta -->
+## ⭐ 如果它帮到了你
+
+这个插件是 [DSH 插件家族](https://github.com/PerryLink)的一员（40+ 个，全部 Apache-2.0）。如果你在用，**给个 star** —— 它不会解锁任何功能，但会让下一个人在搜索里更容易找到它。
+
+*English:* part of a 40+ plugin family for DeepSeek Harness. If it is useful, **a star helps the next person find it** — nothing is gated behind it.
+
+
+## What is dsh-session-sync?
+
+Cross-device session sync for DeepSeek Harness — a dedicated git mirror of your session store.
+
+Sync your sessions between devices, keep both sides on any conflict, never lose a turn.
+
+![Terminal demo of dsh-session-sync: dsh-session-sync — mirror the session store, then /sync](https://raw.githubusercontent.com/PerryLink/dsh-session-sync/main/docs/assets/dsh-session-sync-demo.png)
+
+![Animated terminal demo of dsh-session-sync](https://raw.githubusercontent.com/PerryLink/dsh-session-sync/main/docs/assets/dsh-session-sync-demo.gif)
+
+*The same run, animated.*
+
+## Compatibility
+
+| Surface | Status |
+|---|---|
+| Harness | DeepSeek Harness `dsh-v0.2.1-alpha.1` (GitHub tag, verified 2026-09-25: full gate chain against the pinned `0.1.7-rc.2` peers). npm dependency line `0.1.7-rc.2`, peers `>=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0`. (adapted 2026-10-04): the conflict fork notice carries the plugin's own producer-owned message source kind - the harness retired the shared `plugin` kind and refuses it on read-back. |
+| Node | `^22.19.0 \|\| >=24.0.0` |
+| Platforms | Anywhere `git` and DSH run (git-based mirror; no platform-specific code) |
+| Model | Text-only models fully supported; no vision or extra model capability required |
+
+## What you get
+
+`dsh-session-sync` mirrors your DSH session store into a dedicated git worktree and syncs it to a remote **you** control — no cloud service, no third-party storage:
+
+- **`/sync` command** — `status` (branch, sanitized remote, ahead/behind, dirty files, forks), `diff`, `log`, `pull`, `push`, `help`.
+- **`sync_status` / `sync_pull` / `sync_push` tools** — the same surface for the model, inside a turn.
+- **Append-only conflict resolution** — session logs are append-only; on any divergence the plugin keeps **both** sides (local version kept, remote version preserved as fork files) and never silently overwrites. Diverged sessions can also fork at the session level.
+- **Auto modes** — pull on start, push after every closed turn, and periodic pull, all configurable and all reversible.
+- **Confirmation-gated writes** — `pull`/`push` ask first (through `userQuestions` or `approval`); read-only surfaces never ask; with no answerer the operation fails closed.
+
+```text
+device A                              remote (your git repo)                  device B
+$DSH_HOME/sessions ──mirror──▶ commit ──push──▶ [sessions] ──pull──▶ merge (keep-both + fork)
+```
+
+## Quick start
+
+```sh
+dsh plugin --profile web add github:PerryLink/dsh-session-sync
+```
+
+```sh
+# 1. install the bundle into your profile
+dsh plugin --profile web add github:PerryLink/dsh-session-sync
+
+# or from npm (published releases)
+dsh plugin --profile web add dsh-session-sync
+
+# 2. point it at a private git remote and verify the row
+dsh --profile web --dump-config | grep -A2 'id: session-sync'
+```
+
+Then set the remote in your profile patch (a **private** repository is the baseline) and sync:
+
+```yaml
+- insert:
+    - id: session-sync
+      name: dsh-session-sync
+      config:
+        remote: git@github.com:you/your-dsh-sessions.git
+```
+
+```
+> /sync status
+> /sync pull
+> /sync push
+```
+
+## Install & uninstall
+
+- **git channel** (latest `main`): `dsh plugin --profile web add github:PerryLink/dsh-session-sync` (equivalent to installing from `git+https://github.com/PerryLink/dsh-session-sync.git`). No build step — `index.mjs` and `lib/` are the shipped artifacts.
+- **npm channel** (published releases): `dsh plugin --profile web add dsh-session-sync`.
+- **tarball channel**: `pnpm pack` in this repo, then `dsh plugin --profile web add ./dsh-session-sync-<version>.tgz`.
+- **uninstall**: `dsh plugin --profile web remove dsh-session-sync` (or remove the row from the profile patch).
+
+## Configuration
+
+All tunables are Schemastery `Config` fields (changeable from cordis.yml). An id-targeted override replaces the whole row — restate every key you need. `cordis.patch.yml` documents each key inline.
+
+| Key | Default | Meaning |
+|---|---|---|
+| `enabled` | `true` | Master switch; `false` unregisters the command, tools, listeners, and auto modes |
+| `backend` | `git` | Sync backend: `git` (plaintext mirror) or `encrypted` (age-encrypted mirror content) |
+| `sessionRoot` | `''` | Session store root; empty = `$DSH_HOME/sessions` (both missing fails load) |
+| `repoDir` | `''` | Sync worktree root; empty = `$DSH_HOME/dsh-session-sync/repo` |
+| `remote` | `''` | Remote address (required before pull/push; status/diff work without one) |
+| `branch` | `main` | Remote branch name |
+| `gitBin` | `git` | git executable path |
+| `ageBin` | `age` | age executable path (probed for `backend: encrypted`; missing degrades to plaintext) |
+| `ageRecipient` | `''` | age recipient (public key or identity string); empty = cannot encrypt, degrades to plaintext |
+| `ageIdentity` | `''` | Path to a passphrase-less age secret key for decryption; empty = cannot decrypt, degrades to plaintext |
+| `autoPullOnStart` | `false` | Pull once when the plugin mounts (config is the grant; no re-confirm) |
+| `autoPushOnTurnEnd` | `false` | Push after every closed turn |
+| `pullIntervalMinutes` | `0` | Periodic pull every N minutes (`0` = off, max `10080`) |
+| `confirmVia` | `auto` | Confirmation channel: `auto` (userQuestions first, then approval), `userQuestions`, `approval` |
+| `graceMs` | `10000` | Grace period for git kills (ms) |
+| `commandTimeoutMs` | `120000` | Per-command timeout (ms) |
+| `maxOutputBytes` | `262144` | Per-stream collected-output cap (bytes) |
+| `commitName` | `dsh-session-sync` | Commit author name |
+| `commitEmail` | `dsh-session-sync@localhost` | Commit author email |
+| `registerCommand` | `true` | Register the `/sync` command |
+| `registerTools` | `true` | Register the `sync_*` tools when the tools service is present |
+
+Example override in your profile patch:
+
+```yaml
+- insert:
+    - id: session-sync
+      name: dsh-session-sync
+      config:
+        remote: git@github.com:you/your-dsh-sessions.git
+        branch: main
+        autoPushOnTurnEnd: true
+        pullIntervalMinutes: 30
+        confirmVia: userQuestions
+```
+
+## Tools & surfaces
+
+| Surface | Read-only | Needs confirmation | Notes |
+|---|---|---|---|
+| `/sync status` | ✅ | — | Branch, sanitized remote, ahead/behind, dirty files, fork files, last pull/push |
+| `/sync diff` | ✅ | — | Uncommitted changes + `HEAD..remote` stat (read-only) |
+| `/sync log` | ✅ | — | Last commits in the sync repository |
+| `/sync pull` | | ✅ | Fetch + merge with keep-both semantics; local kept, remote preserved as forks |
+| `/sync push` | | ✅ | Mirror + commit + push; never force-pushes, reconciles and retries once on rejection |
+| `sync_status` | ✅ | — | Same facts as `/sync status` for the model |
+| `sync_pull` | | ✅ | Model-callable pull |
+| `sync_push` | | ✅ | Model-callable push |
+
+## Permissions & data
+
+- **Permissions**: mutating operations cross the confirmation gate (`confirmVia`); the plugin never re-implements or bypasses the harness's `userQuestions`/`approval` services. Auto modes are covered by the config grant and never re-confirm.
+- **Data**: sync metadata (device id, last pull/push, last push head, last error) lives in the `session-sync` storage domain. Session files are copied as opaque bytes — the plugin never parses them. The device id is also written to `device.txt` in the sync repository for cross-device fork attribution.
+- **Session log**: `sync/push`, `sync/pull`, and `sync/conflict` are declared in `types.d.ts`; they are appended only when the host records the types (see Known limitations). Everything written or shown is sanitized. The one durable message the plugin writes — the conflict fork notice — carries the plugin's own producer-owned source kind (`dsh-session-sync`); the harness retired the shared `plugin` kind and refuses it when a session is read back.
+
+## Security boundaries
+
+- **Never silently overwrite.** The append-only three-way merge keeps both sides on any divergence; fork files are never deleted, and git never force-pushes, resets, rebases, or switches branches.
+- **Path containment.** Files are mirrored as opaque bytes with symlinks refused and every joined path containment-checked (`PATH_UNSAFE` fails loud).
+- **Sanitized output.** Remote-URL credentials, tokens, and `key=value` secrets are redacted before reaching the model or the log; path display refuses anything outside its root.
+- **No credential storage.** The plugin stores no credentials; git credentials live in your normal git credential helper. age keys are read from paths you configure (`ageIdentity`); keys never enter the sync repository.
+- **Git hardening.** Git runs with `GIT_TERMINAL_PROMPT=0` and `GIT_OPTIONAL_LOCKS=0`, deadline- and signal-bounded, with a per-stream output cap.
+- **Fail closed.** A missing confirmation answerer, a missing remote, or an unsafe path refuses the operation loudly.
+
+## Encryption & threat model
+
+`backend: encrypted` adds an optional **age** layer above the mirror: session bytes are encrypted into `encrypted/**/*.age` files before they are committed and pushed, and decrypted back to the local plaintext mirror before merging. The three-way merge always runs on plaintext locally, so the append-only keep-both semantics are unchanged.
+
+What the encryption **protects**:
+
+- **Mirror content at rest in the remote.** The session files you push are age ciphertext; the remote host, its operators, and anyone who clones the repository do not see plaintext session bytes without the private key.
+
+What it does **not** protect (the boundary):
+
+- **Keys and age identities are yours to manage.** The recipient/identity files are never shipped, stored, or rotated by the plugin. If a key leaks, the mirror content it protects is exposed. Use a passphrase-less identity and keep it out of the repository.
+- **The remote is still a private repository in practice.** git metadata — commit messages, the `.gitignore`, the `encrypted/` path structure, branch names, and push/fetch activity — remains visible to the remote host. Encryption hides the *content*, not the fact that you sync, nor the shape of your session tree.
+- **Plaintext still exists locally.** The mirror at `<repoDir>/sessions/` is plaintext on disk; encryption protects the transmitted/remote copy, not local disk encryption or the live session store.
+- **graceful degradation means plaintext.** With `backend: encrypted`, if `age` is missing, or `ageRecipient`/`ageIdentity` is empty, the plugin falls back to the plaintext git path **and warns explicitly** in the status/log — it never silently pretends to encrypt. Check `/sync status` for the warning before trusting the remote as encrypted.
+
+Baseline: with `backend: git` (the default), session bytes are stored unencrypted in **your** git remote — use a private repository.
+
+## Known limitations
+
+- **Object storage backend reserved.** `object-storage` is an interface placeholder and fails loudly at load; only `git` and `encrypted` are implemented.
+- **git required.** The plugin needs the `git` executable and the `subprocess` service; without them, sync operations fail with a clear reason (profiles keep booting).
+- **age is optional, external.** Encryption depends on the `age` binary on `PATH` (or `ageBin`). No `age` → plaintext fallback with a warning; a passphrase-protected identity cannot be used (decryption would block on a TTY prompt, so it fails closed).
+- **One repoDir per backend.** Switching between `git` and `encrypted` on the same `repoDir` is not supported; use a fresh worktree per backend.
+- **Session events on `0.1.0-rc.6`/`0.1.0-rc.8`/`0.1.1-rc.2`/`0.1.2-alpha.2`/`0.1.2-alpha.3`/`0.1.2-rc.1`/`0.1.7-alpha.2`.** The harness does not record `sync/*` event types, so the session-log appends are skipped (sessions keep loading); the plugin enables them automatically once a host records the types or exposes the `ignorable` envelope on `Session.append`.
+- **`approval` between turns.** `/sync` runs between turns, where the `approval` channel has no open turn to attach to; use `confirmVia: userQuestions` for command-driven sync, or drive sync through the tools inside a turn. The open-turn check reads the host `turnBoundary` session projection: a composition without `@deepseek-ai/dsh-session-projection` cannot verify the turn state and fails closed with that reason.
+- **Host-private artifacts stay host-private.** `session.lock` (the harness session lease) and `session.migration.*.tmp` staging files are never mirrored or deleted — they are runtime state, not syncable content. Session logs (`session.jsonl`, `session.v[1-9]*.jsonl[.zstd]`) remain the mirrored payload.
+
+## Development
+
+```sh
+pnpm install                                       # node ^22.19 || >=24
+pnpm run typecheck && pnpm run typecheck:ci        # tsc --checkJs against the published 0.1.7-alpha.2 peers
+pnpm test                                          # node --test (13 test files; the engine git suite skips without git)
+pnpm run verify:self-contained                     # dependency specs resolve from the registry
+pnpm run verify:artifacts                          # shipped files present + index.mjs importable
+pnpm run check:readmes                             # five-language README consistency
+pnpm pack                                          # the published tarball
+```
+
+There is no build step: pure ESM, `index.mjs` and `lib/` are the shipped artifacts.
+
+## Topics
+
+`dsh`, `dsh-plugin`, `deepseek-harness`, `deepseek`, `cordis`, `session-sync`, `session`, `git`, `sync`, `cross-device`
+
+## Contributors
+
+- [@PerryLink](https://github.com/PerryLink) — creator and maintainer: git mirror engine, append-only keep-both merge, `/sync` command and `sync_*` tools, auto modes, sanitizers, and the five-language docs.
+
+## PerryLink DSH Plugin Family
+
+This project is one of the **33 actively maintained** DeepSeek Harness plugins from [PerryLink](https://github.com/PerryLink) — the roster is **42**, of which **6** are frozen and **3** retired; every one keeps its row below, with the reason in the Status column. If this one helps you, the others likely will too:
+
+| Plugin | One-liner | Status |
+|---|---|---|
+| **[dsh-auto-review](https://github.com/PerryLink/dsh-auto-review)** | Second-model auto-review on the approval chain, fail-closed by default | |
+| **[dsh-autotier](https://github.com/PerryLink/dsh-autotier)** | Automatic strong/cheap model-tier routing with deterministic risk guards and a `/tier` command | |
+| **[dsh-background-agents](https://github.com/PerryLink/dsh-background-agents)** | Durable background child agents with a Web UI sidebar, messaging and interrupt | 🚫 **RETIRED** — see the note above |
+| **[dsh-budget](https://github.com/PerryLink/dsh-budget)** | Cost governance for DeepSeek Harness: budgets, carbon, and latency in one panel. | 🧊 FROZEN — see the repo README |
+| **[dsh-catalog](https://github.com/PerryLink/dsh-catalog)** | DSH Desktop Market standard catalog source for the PerryLink family | |
+| **[dsh-cert-mcp](https://github.com/PerryLink/dsh-cert-mcp)** | Read-only MCP server exposing the certification registry: grades, snapshots and five-dimension evidence | |
+| **[dsh-checkpoint-rewind](https://github.com/PerryLink/dsh-checkpoint-rewind)** | Claude Code /rewind-equivalent: snapshots, session forks, one-shot restore | |
+| **[dsh-claude-move](https://github.com/PerryLink/dsh-claude-move)** | Migrate Claude Code sessions, memory, skills and CLAUDE.md into DSH | 🧊 FROZEN — see the repo README |
+| **[dsh-click](https://github.com/PerryLink/dsh-click)** | Cross-platform native desktop control for DeepSeek Harness — Windows first. | |
+| **[dsh-composer-history](https://github.com/PerryLink/dsh-composer-history)** | Terminal-style input history for the web composer: arrows, Ctrl+R search | |
+| **[dsh-data-quality](https://github.com/PerryLink/dsh-data-quality)** | Dataset quality checks and citation cross-checks (the optional numeric bridge consumed here) | |
+| **[dsh-defend](https://github.com/PerryLink/dsh-defend)** | Prompt-injection, jailbreak, and secret-leak defense for DeepSeek Harness. | 🧊 FROZEN — see the repo README |
+| **[dsh-doublecheck](https://github.com/PerryLink/dsh-doublecheck)** | Engineering-discipline guard: requirements grill, test gates, adversary review | |
+| **[dsh-draw](https://github.com/PerryLink/dsh-draw)** | Unified static-image generation routing for DeepSeek Harness. | 🧊 FROZEN — see the repo README |
+| **[dsh-fast](https://github.com/PerryLink/dsh-fast)** | Read-only performance diagnostics for DeepSeek Harness. | |
+| **[dsh-fund-research](https://github.com/PerryLink/dsh-fund-research)** | Deterministic research reports for Chinese public mutual funds | |
+| **[dsh-github](https://github.com/PerryLink/dsh-github)** | GitHub PR/issues integration for DSH, every write gated by approval | |
+| **[dsh-industry-research](https://github.com/PerryLink/dsh-industry-research)** | Industry research orchestration that seals its deliverables through this plugin's `ctx.researchReport.assemble` | |
+| **[dsh-laya](https://github.com/PerryLink/dsh-laya)** | Laya typed decisions (`noul`/`choice`/`score`) as a first-class Cordis service and model-visible tools | |
+| **[dsh-library](https://github.com/PerryLink/dsh-library)** | Local document knowledge base for DeepSeek Harness. | |
+| **[dsh-local-ai](https://github.com/PerryLink/dsh-local-ai)** | Local-model (Ollama) integration for DeepSeek Harness. | |
+| **[dsh-lsp-actions](https://github.com/PerryLink/dsh-lsp-actions)** | LSP diagnostics, formatting, completion, code actions and rename over language servers | |
+| **[dsh-mask](https://github.com/PerryLink/dsh-mask)** | PII masking middleware: anonymize at the model boundary, restore at the display layer | |
+| **[dsh-mcp-panel](https://github.com/PerryLink/dsh-mcp-panel)** | Read-only MCP runtime panel: /mcp command + Settings tab with status, tools and errors | |
+| **[dsh-memento](https://github.com/PerryLink/dsh-memento)** | Approval-gated cross-session memory: ctx.memory seam + SQLite + memory tool | 🧊 FROZEN — see the repo README |
+| **[dsh-observe](https://github.com/PerryLink/dsh-observe)** | OpenTelemetry and Langfuse observability exporter for DeepSeek Harness. | |
+| **[dsh-output-styles](https://github.com/PerryLink/dsh-output-styles)** | Claude Code outputStyles-equivalent runtime style switching | |
+| **[dsh-permission-rules](https://github.com/PerryLink/dsh-permission-rules)** | Claude Code-style declarative allow/deny/ask permission rules with audit | |
+| **[dsh-plugin-certification](https://github.com/PerryLink/dsh-plugin-certification)** | Community certification registry with repro-checkable grades and badges | |
+| **[dsh-plugin-doctor](https://github.com/PerryLink/dsh-plugin-doctor)** | Zero-dependency static + sandbox smoke detector for DSH plugins | |
+| **[dsh-plugin-guide](https://github.com/PerryLink/dsh-plugin-guide)** | Plugin-development knowledge base as an on-demand agent skill | |
+| **[dsh-plugin-kit](https://github.com/PerryLink/dsh-plugin-kit)** | Shared zero-runtime-dependency toolkit for the PerryLink DSH plugins | |
+| **[dsh-plugin-upgrade](https://github.com/PerryLink/dsh-plugin-upgrade)** | One-package, one-corridor-index plugin upgrade skill: routes a repository to the matching closed corridor card | |
+| **[dsh-plugin-upgrade-015](https://github.com/PerryLink/dsh-plugin-upgrade-015)** | Merged `0.1.3-alpha.1` → `0.1.5-rc.1` upgrade corridor card plus a zero-dependency seam scanner | 🚫 RETIRED — corridors carried by `dsh-plugin-upgrade` |
+| **[dsh-reach](https://github.com/PerryLink/dsh-reach)** | Multi-channel approval/question bridge: WeChat/Telegram/Feishu, session console | 🧊 FROZEN — see the repo README |
+| **[dsh-research-report](https://github.com/PerryLink/dsh-research-report)** | Verifiable research-report engine: content-addressed evidence ledger and sealed versions | |
+| **[dsh-score](https://github.com/PerryLink/dsh-score)** | Multi-dimensional quality scoring for DeepSeek Harness plugins. | |
+| **[dsh-session-pin](https://github.com/PerryLink/dsh-session-pin)** | Pin sessions in the Web sidebar with durable ordering | 🚫 **RETIRED** — see the note above |
+| **[dsh-session-sync](https://github.com/PerryLink/dsh-session-sync)** | Cross-device session sync for DeepSeek Harness — a dedicated git mirror of your session store. | |
+| **[dsh-skill-pack-security](https://github.com/PerryLink/dsh-skill-pack-security)** | Security-audit skill pack: secret scan, dependency and supply-chain review | |
+| **[dsh-talk](https://github.com/PerryLink/dsh-talk)** | Voice-first session loop for DeepSeek Harness: talk to it, hear it answer. | |
+| **[dsh-team-rooms](https://github.com/PerryLink/dsh-team-rooms)** | Cross-session team rooms: shared message bus, task board and timeline | 🚫 **RETIRED** — see the note above |
+| **[dsh-test-drive](https://github.com/PerryLink/dsh-test-drive)** | Isolated install-and-smoke test drives for DeepSeek Harness plugins. | |
+| **[dsh-ticktick](https://github.com/PerryLink/dsh-ticktick)** | TickTick/Dida365 task bridge: session-header panel + 11 tools | |
+| **[dsh-translate](https://github.com/PerryLink/dsh-translate)** | Vendor parameter translation and deterministic JSON repair for DeepSeek Harness. | |
+
+### Install from the DSH Desktop Market
+
+All PerryLink plugins are browsable in the built-in DSH Desktop Market: **Market → Sources → add source → paste** `https://perrylink-dsh-catalog.perrylink.workers.dev/catalog-source.json` **→ select it**. Installation still goes through the Market's npm-identity verification and your confirmation.
+
+## License
+
+[LICENSE](LICENSE) (Apache License 2.0) © 2026 dsh-session-sync contributors
+
+---
+
+## 本仓库说明（dsh-session-sync-fork）
+
+本仓库是 [PerryLink/dsh-session-sync](https://github.com/PerryLink/dsh-session-sync) 的个人魔改版，用于跨设备分发（`dsh plugin add github:hxd2xff-png/dsh-session-sync-fork`）。
+
+### 插件功能
+
+在原版「会话 Git 镜像同步（append-only 三路合并 + keep-both 冲突留存）、/sync 命令、sync_* 工具、自动备份计划、Web 面板」之上，扩展为**三域备份与同步**：
+
+- **会话备份**：会话存储的 git 镜像；历史按提交浏览，支持还原（安全合并 / 时间点覆盖）、单条与批量删除（重写 git 历史并同步远端，本地分支 ref 移动 + `--force-with-lease` 强推，不使用 reset）。
+- **插件备份（云同步）**：本机 DSH profile 的插件清单/配置快照推送到 GitHub Gist / WebDAV / S3（可选 AES 加密），支持跨设备还原、快照历史（可批量删除）、自动备份调度、冲突时选择本地或远端为准。
+- **技能备份**：全局技能库 `~/.agents/skills` 按技能打包为 gzip 归档（超过 Gist 单对象 700KiB 上限的技能动态分片，片数随内容自适应），一次备份聚合为一条历史；支持整次还原（安全合并：本地已有技能跳过不覆盖）、批量还原、单条/批量删除（索引条目与远端归档文件同步删除）。
+
+### 安装
+
+```bash
+dsh plugin --profile desktop add github:hxd2xff-png/dsh-session-sync-fork
+```
+
+安装后重启该 profile，DSH 侧栏出现「备份与同步」面板。

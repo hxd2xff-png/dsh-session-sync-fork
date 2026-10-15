@@ -1,0 +1,56 @@
+# dsh-session-sync bundle patch: mount the session-sync plugin.
+#
+# Every key below is a Config field (Schemastery schema); invalid values fail
+# the profile load loudly. See README.md "Configuration" for the full table.
+# The shipped profiles (web/headless/sdk/acp) already compose the storage
+# stack (storage + storage-json + storage-domain) through the dsh-base
+# bundle, so the patch mounts only the plugin row. A bare profile without
+# dsh-base must compose the storage stack itself; until it does, the plugin
+# row stays pending (waiting for service: storageDomain).
+- insert:
+    - id: session-sync
+      name: dsh-session-sync
+      config:
+        enabled: true
+        # backend: git = plaintext mirror transport; encrypted = age-encrypted
+        # mirror content (encrypt-then-push). 'object-storage' is reserved and
+        # fails loud at load.
+        backend: git
+        # Paths are resolved dynamically per device (never hardcode personal
+        # paths): $DSH_HOME, else derived from this plugin's install location
+        # (<home>/profiles/<profile>/node_modules/…), else ~/.dsh.
+        # Leave empty to use the auto-detected DSH home; set only to override.
+        sessionRoot: ''
+        # Dedicated worktree; sibling of sessions, so recursive nesting is impossible.
+        repoDir: ''
+        # Required before any pull/push (status works without one).
+        remote: ''
+        branch: main
+        gitBin: git
+        # age settings for backend: encrypted. ageBin is probed at first use;
+        # missing age / empty ageRecipient / empty ageIdentity degrades to
+        # plaintext git with an explicit warning (never hard-depends on age).
+        ageBin: age
+        ageRecipient: ''
+        ageIdentity: ''
+        # Auto modes: pull once when the plugin mounts; push after every
+        # closed turn; periodic pull every N minutes (0 = off). Auto runs are
+        # covered by the config grant and never re-confirm.
+        autoPullOnStart: false
+        autoPushOnTurnEnd: false
+        pullIntervalMinutes: 0
+        # Confirmation channel for /sync pull|push and the sync_* tools:
+        # auto (userQuestions first, then approval) · userQuestions · approval.
+        # Read-only surfaces (status/diff/log) never ask.
+        confirmVia: auto
+        # Subprocess tuning: grace period for git kills, per-command timeout,
+        # and the per-stream collected-output cap.
+        graceMs: 10000
+        commandTimeoutMs: 120000
+        maxOutputBytes: 262144
+        # Identity for commits created by the plugin.
+        commitName: dsh-session-sync
+        commitEmail: dsh-session-sync@localhost
+        # Surface switches: register the /sync command and the sync_* tools.
+        registerCommand: true
+        registerTools: true
