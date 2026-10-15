@@ -28,6 +28,7 @@ import SessionStore, { KNOWN_SESSION_EVENT_TYPES } from '@deepseek-ai/dsh-sessio
 import { createUserMessage } from '@deepseek-ai/dsh-llm'
 import { defineTool } from '@deepseek-ai/dsh-tools'
 import {
+  API_PREFIX,
   BACKENDS,
   COMMAND_NAME,
   COMMIT_MESSAGE_AUTO,
@@ -70,8 +71,9 @@ import { defaultUiConfig, loadUiConfig, normalizeUiConfigPatch, saveUiConfig } f
 import { delayUntilNextRun, describeSchedule, nextRunAt } from './lib/schedule.mjs'
 import { countMirrorFilesAtCommit, deleteHistoryCommit, listHistory } from './lib/history.mjs'
 import { createSafetySnapshot, materializeCommit, mergeRestore, previewRestore } from './lib/restore.mjs'
-import { OperationGate, buildRoutes } from './lib/api.mjs'
+import { OperationGate, buildRoutes, route } from './lib/api.mjs'
 import { cloudRoutes, cloudRoutePaths, readPluginSchedule, runPluginBackup } from './lib/cloud.mjs'
+import { ProgressRegistry, feedGitProgress } from './lib/progress.mjs'
 
 // 模块级探针：所有 import 解析完毕后立即写入。无此记录 = 模块体从未执行
 // （某个 import 解析失败，或宿主根本没加载本模块）。
@@ -298,16 +300,50 @@ export function makeRunGit(subprocess, opts) {
         for await (const chunk of handle.stdout) chunks.push(Buffer.isBuffer(chunk) ? chunk : Buffer.from(String(chunk)))
         raw = Buffer.concat(chunks)
       }
-      const outcome = await handle.done
-      if (timedOut) {
-        throw new Error(`git ${args[0] ?? ''} timed out after ${opts.commandTimeoutMs}ms`)
+      // 进度观察（纯增量，不改变任何现有行为）。
+      //
+      // 依据 dsh-subprocess-local/lib/output.js:189 —— OutputCollector.readFrom
+      // 是 **offset 基、非消费式** 读取：独立读取者互相不影响。因此这里提前读走的
+      // stderr 文本，下面第 335 行的 collected.stderr.readFrom(0) 仍然能完整读到，
+      // git 的失败诊断、超时判定、返回值全部保持原样。
+      //
+      // 不传 onStderr 时不会建立定时器，「行 282-286 的 stdio 配置」与
+      // 「行 335 的 stderr 取值」都与改动前逐字节相同。
+      let progressTimer = null
+      if (runOpts.onStderr !== undefined) {
+        const progressState = { offset: 0 }
+        progressTimer = setInterval(() => {
+          let read
+          try {
+            read = handle.collected.stderr.readFrom(progressState.offset)
+          } catch {
+            return // 读取失败不影响 git 结果
+          }
+          if (typeof read?.offset === 'number') progressState.offset = read.offset
+          const text = typeof read?.text === 'string' ? read.text : ''
+          if (text === '') return
+          try {
+            runOpts.onStderr(text)
+          } catch {
+            // 回调自身出错只吞掉，绝不改变 git 行为。
+          }
+        }, 120)
+        if (typeof progressTimer.unref === 'function') progressTimer.unref()
       }
-      if (runOpts.signal?.aborted === true) {
-        throw runOpts.signal.reason instanceof Error ? runOpts.signal.reason : new Error('sync operation aborted')
+      try {
+        const outcome = await handle.done
+        if (timedOut) {
+          throw new Error(`git ${args[0] ?? ''} timed out after ${opts.commandTimeoutMs}ms`)
+        }
+        if (runOpts.signal?.aborted === true) {
+          throw runOpts.signal.reason instanceof Error ? runOpts.signal.reason : new Error('sync operation aborted')
+        }
+        const stdout = raw ?? handle.collected.stdout.readFrom(0).text
+        const stderr = handle.collected.stderr.readFrom(0).text
+        return { code: outcome.exitCode ?? (outcome.signal !== null ? 128 : 0), stdout, stderr }
+      } finally {
+        if (progressTimer !== null) clearInterval(progressTimer)
       }
-      const stdout = raw ?? handle.collected.stdout.readFrom(0).text
-      const stderr = handle.collected.stderr.readFrom(0).text
-      return { code: outcome.exitCode ?? (outcome.signal !== null ? 128 : 0), stdout, stderr }
     } finally {
       clearTimeout(timer)
       if (runOpts.signal !== undefined) {
@@ -981,6 +1017,8 @@ export function apply(ctx, config = {}) {
   // --- Web UI 后端（页面：会话备份 / 还原 / 自动备份计划）--------------------
   // webServer 是可选服务：缺失时整个 UI 层安静缺席，命令与工具照常可用。
   const gate = new OperationGate()
+  // 备份进度注册表（会话/插件/技能三类）。纯内存、无 IO；前端按 500ms 轮询读取。
+  const progress = new ProgressRegistry()
   /** 页面配置缓存（首次读取后复用；保存时同步更新）。 */
   let uiConfigCache
   /** 复用的 GitBackend：远端/分支随页面配置变化时重建。 */
@@ -1232,7 +1270,19 @@ export function apply(ctx, config = {}) {
       },
       backup: async () => {
         const backupEngine = await uiEngine()
-        return await backupEngine.push()
+        // 进度：仅在本次备份期间登记；git 的真百分比来自 --progress 的 stderr。
+        const progressState = { carry: '' }
+        progress.start('session', { label: '会话备份', stage: 'mirror' })
+        try {
+          const result = await backupEngine.push({
+            onStderr: (text) => feedGitProgress(progress, 'session', text, progressState),
+          })
+          progress.finish('session', { ok: result?.ok !== false, error: result?.error })
+          return result
+        } catch (error) {
+          progress.finish('session', { ok: false, error: messageOf(error) })
+          throw error
+        }
       },
       previewRestore: async (commit) => previewRestore({
         git: await uiBackend(),
@@ -1290,7 +1340,38 @@ export function apply(ctx, config = {}) {
       logger,
     })
     // 合并云同步路由（内置 cloud-sync 核心，跨设备可用）。路径前缀不同，不冲突。
-    const allRoutes = [...routes, ...cloudRoutes()]
+    //
+    // 插件备份 / 技能备份的进度：在【路由层】包一层，不改 lib/cloud.mjs 内部实现。
+    // 这两条操作的核心是网络往返（Gist/WebDAV/S3），没有 git 那样的分段百分比，
+    // 因此只上报真实的"进行中"与"已完成"两个状态（stage），不做假百分比。
+    const progressWrapped = cloudRoutes().map((item) => {
+      // item.path 形如 `/api/dsh-session-sync/cloud/snapshot/push`，
+      // 必须按【结尾】匹配多段路由名：按最后一段只会拿到 `push`，永远匹配不上，
+      // 结果是插件/技能备份从不登记进度（实测确实如此）。
+      const kind = item.path.endsWith('/skill/push')
+        ? 'skill'
+        : item.path.endsWith('/snapshot/push')
+          ? 'plugin'
+          : null
+      if (kind === null) return item
+      const label = kind === 'skill' ? '技能备份' : '插件备份'
+      const inner = item.handler
+      return {
+        ...item,
+        handler: async (request, response) => {
+          progress.start(kind, { label, stage: 'collecting' })
+          try {
+            const result = await inner(request, response)
+            progress.finish(kind, { ok: true })
+            return result
+          } catch (error) {
+            progress.finish(kind, { ok: false, error: messageOf(error) })
+            throw error
+          }
+        },
+      }
+    })
+    const allRoutes = [...routes, ...progressWrapped, route(`${API_PREFIX}/progress`, 'GET', async () => progress.snapshot())]
     const disposers = []
     for (const item of allRoutes) {
       try {

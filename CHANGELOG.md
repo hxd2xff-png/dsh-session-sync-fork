@@ -26,6 +26,47 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- **Backup progress overlay.** Session, plugin, and skill backups now report live
+  progress to a floating bar docked in the bottom-right corner, with one titled row
+  per running backup stacked in `session → plugin → skill` order. It is mounted on
+  the frame-wide `shell.overlay` seat, so it stays visible while the user keeps
+  working in another workspace, and it animates out once a backup finishes.
+
+  Session progress is **real**: `git push --progress` writes lines such as
+  `Writing objects:  66% (2/3)` and `... 392 bytes | 392.00 KiB/s` to stderr, and
+  `lib/progress.mjs` parses exactly those lines. Percentages, object counts, and
+  transfer rates are therefore measured values, never estimates. When no real
+  percentage exists yet (mirror phase, push handshake, or the plugin/skill cloud
+  round-trips), the row renders an indeterminate striped bar with real elapsed time
+  rather than a fabricated number.
+
+  The runner gained an opt-in `onStderr` observer (`lib/git.mjs` → `index.mjs` →
+  `lib/engine.mjs`) that reads the collected stderr incrementally through
+  `OutputCollector.readFrom(offset)` — a non-consuming, offset-based read — so
+  collected stderr, exit-code handling, timeout, and cancellation are unchanged.
+  Callers that pass no callback keep the original command line: `push` only appends
+  `--progress` when an observer is attached.
+
+### Fixed
+
+- `cordis.patch.yml` no longer pins `commandTimeoutMs`. The shipped bundle patch
+  carried an explicit `commandTimeoutMs: 120000`, and an explicit config value
+  always beats the code default — so raising `DEFAULTS.COMMAND_TIMEOUT_MS` in
+  `lib/constants.mjs` had no effect on any profile that mounted this bundle.
+  Normal first pushes kept dying with `git push failed: git push timed out after
+  120000ms` (measured: a 36 MB first push takes 264 s). The field is now simply
+  absent from the shipped patch, so the effective value is the single source of
+  truth `DEFAULTS.COMMAND_TIMEOUT_MS` (600000), and deployments that need a
+  different value override it in their own profile patch.
+
+### Changed
+
+- `README.md`, `README-zh.md`, `README-es.md`, `README-pt.md`, `README-hi.md`
+  and `types.d.ts` document `commandTimeoutMs` as `600000` instead of the stale
+  `120000`.
+
 ## [0.2.22] - 2026-10-04
 
 undefined

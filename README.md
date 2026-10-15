@@ -135,7 +135,7 @@ All tunables are Schemastery `Config` fields (changeable from cordis.yml). An id
 | `pullIntervalMinutes` | `0` | Periodic pull every N minutes (`0` = off, max `10080`) |
 | `confirmVia` | `auto` | Confirmation channel: `auto` (userQuestions first, then approval), `userQuestions`, `approval` |
 | `graceMs` | `10000` | Grace period for git kills (ms) |
-| `commandTimeoutMs` | `120000` | Per-command timeout (ms) |
+| `commandTimeoutMs` | `600000` | Per-command timeout (ms). The shipped bundle patch deliberately leaves this unset so the code default applies; measured first push of 36 MB takes 264 s |
 | `maxOutputBytes` | `262144` | Per-stream collected-output cap (bytes) |
 | `commitName` | `dsh-session-sync` | Commit author name |
 | `commitEmail` | `dsh-session-sync@localhost` | Commit author email |

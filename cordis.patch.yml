@@ -43,10 +43,20 @@
         # auto (userQuestions first, then approval) · userQuestions · approval.
         # Read-only surfaces (status/diff/log) never ask.
         confirmVia: auto
-        # Subprocess tuning: grace period for git kills, per-command timeout,
-        # and the per-stream collected-output cap.
+        # Subprocess tuning: grace period for git kills and the per-stream
+        # collected-output cap.
+        #
+        # commandTimeoutMs is deliberately NOT pinned in this shipped layer.
+        # Anything written here becomes an explicit config value that shadows
+        # the code default forever — which is exactly how a `120000` pin
+        # survived the DEFAULTS fix in lib/constants.mjs and kept killing
+        # normal first pushes ("git push timed out after 120000ms"). The
+        # effective default now comes from a single source of truth,
+        # lib/constants.mjs DEFAULTS.COMMAND_TIMEOUT_MS (600000; measured
+        # 264s first push). To change it, override it in YOUR OWN profile
+        # patch (~/.dsh/profiles/<profile>/cordis.patch.yml) with a full
+        # config block — patch config replaces the whole object.
         graceMs: 10000
-        commandTimeoutMs: 120000
         maxOutputBytes: 262144
         # Identity for commits created by the plugin.
         commitName: dsh-session-sync

@@ -134,7 +134,7 @@ dsh --profile web --dump-config | grep -A2 'id: session-sync'
 | `pullIntervalMinutes` | `0` | 每 N 分钟周期拉取（`0` = 关闭，最大 `10080`） |
 | `confirmVia` | `auto` | 确认通道：`auto`（优先 userQuestions，其次 approval）、`userQuestions`、`approval` |
 | `graceMs` | `10000` | git 终止宽限（毫秒） |
-| `commandTimeoutMs` | `120000` | 单条命令超时（毫秒） |
+| `commandTimeoutMs` | `600000` | 单条命令超时（毫秒）。随包 patch 有意不写该字段，让代码默认值生效；实测 36 MB 首次推送耗时 264 秒 |
 | `maxOutputBytes` | `262144` | 单流收集输出上限（字节） |
 | `commitName` | `dsh-session-sync` | 提交者名 |
 | `commitEmail` | `dsh-session-sync@localhost` | 提交者邮箱 |

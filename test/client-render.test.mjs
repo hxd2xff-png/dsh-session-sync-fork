@@ -183,3 +183,13 @@ test('顶层页签包含会话/插件/技能三个备份入口', async () => {
   const tabs = collect(nodes, node => node.type === 'button' && node.props?.role === 'tab').map(textOf)
   assert.deepEqual(tabs, ['会话备份', '插件备份', '技能备份'])
 })
+
+test('插件备份 TAB 渲染出「回收孤儿对象」按钮且 onClick 可用', async () => {
+  const render = await loadMainComponent()
+  const nodes = render({ SessionSyncPage: { 13: 'pluginbackup' } })
+  const pane = activePane(nodes)
+  assert.ok(pane !== null, '应有且只有一个激活 pane')
+  const button = collect([pane], node => node.type === 'button' && textOf(node) === '回收孤儿对象')
+  assert.equal(button.length, 1, '插件备份 TAB 的「其他」卡片应有回收孤儿对象按钮')
+  assert.equal(typeof button[0].props.onClick, 'function')
+})

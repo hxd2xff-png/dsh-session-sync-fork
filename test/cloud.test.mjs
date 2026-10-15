@@ -8,7 +8,7 @@ import assert from 'node:assert/strict'
 import { cloudRoutes, cloudRoutePaths, cloudCore } from '../lib/cloud.mjs'
 import { CLOUD_PREFIX } from '../lib/constants.mjs'
 
-/** 与 @dickpy/dsh-cloud-sync 对应的 22 个操作 + 历史删除 + 5 个技能备份操作 + 3 个调度操作。 */
+/** 与 @dickpy/dsh-cloud-sync 对应的 22 个操作 + 历史删除 + 5 个技能备份 + 孤儿回收 + 3 个调度操作。 */
 const EXPECTED_OPS = [
   'status', 'settings/get', 'release/check', 'release/update',
   'webdav/connect', 'provider/connect',
@@ -16,6 +16,7 @@ const EXPECTED_OPS = [
   'settings/clear-provider', 'settings/preferences',
   'security/unlock', 'security/lock',
   'snapshot/diff', 'snapshot/history', 'snapshot/history/delete', 'snapshot/push', 'snapshot/pull',
+  'snapshot/reclaim-orphans',
   'source/backup', 'inventory',
   'plugin/adopt-configured', 'plugin/install-configured', 'plugin/uninstall',
   'skill/local-list', 'skill/push', 'skill/history', 'skill/history/delete', 'skill/restore',
@@ -32,9 +33,10 @@ const REQUIRED_CORE_EXPORTS = [
   'backupLocalPlugin', 'getSyncInventory', 'adoptConfiguredPlugin',
   'installConfiguredPlugin', 'uninstallPlugin',
   'skillsRoot', 'listLocalSkills', 'backupLocalSkill', 'listSkillBackups', 'pushSkillBackup', 'deleteSkillBackup', 'restoreSkills',
+  'reclaimOrphanObjects',
 ]
 
-test('cloud 路由数量与 22 个 cloud-sync 操作 + 历史删除 + 5 个技能备份 + 3 个调度操作一一对应', () => {
+test('cloud 路由数量与 22 个 cloud-sync 操作 + 历史删除 + 5 个技能备份 + 孤儿回收 + 3 个调度操作一一对应', () => {
   assert.equal(cloudRoutePaths().length, EXPECTED_OPS.length)
   assert.deepEqual(
     [...cloudRoutePaths()].sort(),

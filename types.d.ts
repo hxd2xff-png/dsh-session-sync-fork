@@ -100,7 +100,7 @@ export interface Config {
   confirmVia?: 'auto' | 'userQuestions' | 'approval'
   /** git 子进程终止宽限（ms；默认 10000）。 */
   graceMs?: number
-  /** 单条 git 命令超时（ms；默认 120000）。 */
+  /** 单条 git 命令超时（ms；默认 600000，随包 patch 有意不写该字段以免固化旧值）。 */
   commandTimeoutMs?: number
   /** git 输出单流收集上限（字节；默认 262144）。 */
   maxOutputBytes?: number

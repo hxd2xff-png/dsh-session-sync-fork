@@ -132,7 +132,7 @@ Todos os ajustes são campos de `Config` do Schemastery (alteráveis pelo cordis
 | `pullIntervalMinutes` | `0` | Pull periódico a cada N minutos (`0` = desligado, máx. `10080`) |
 | `confirmVia` | `auto` | Canal de confirmação: `auto` (userQuestions primeiro, depois approval), `userQuestions`, `approval` |
 | `graceMs` | `10000` | Período de graça para matar git (ms) |
-| `commandTimeoutMs` | `120000` | Tempo limite por comando (ms) |
+| `commandTimeoutMs` | `600000` | Tempo limite por comando (ms). O patch do bundle não define este campo de propósito: vale o padrão do código |
 | `maxOutputBytes` | `262144` | Limite de saída coletada por fluxo (bytes) |
 | `commitName` | `dsh-session-sync` | Nome do autor do commit |
 | `commitEmail` | `dsh-session-sync@localhost` | E-mail do autor do commit |

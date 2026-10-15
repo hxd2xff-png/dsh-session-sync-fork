@@ -132,7 +132,7 @@ dsh --profile web --dump-config | grep -A2 'id: session-sync'
 | `pullIntervalMinutes` | `0` | हर N मिनट में आवधिक pull (`0` = बंद, अधिकतम `10080`) |
 | `confirmVia` | `auto` | पुष्टि चैनल: `auto` (पहले userQuestions, फिर approval), `userQuestions`, `approval` |
 | `graceMs` | `10000` | git को मारने की अनुग्रह अवधि (ms) |
-| `commandTimeoutMs` | `120000` | प्रति-कमांड टाइमआउट (ms) |
+| `commandTimeoutMs` | `600000` | प्रति-कमांड टाइमआउट (ms)। बंडल पैच जानबूझकर यह फ़ील्ड नहीं लिखता: कोड का डिफ़ॉल्ट लागू होता है |
 | `maxOutputBytes` | `262144` | प्रति-स्ट्रीम एकत्रित आउटपुट सीमा (बाइट्स) |
 | `commitName` | `dsh-session-sync` | कमिट लेखक नाम |
 | `commitEmail` | `dsh-session-sync@localhost` | कमिट लेखक ईमेल |

@@ -238,6 +238,24 @@ window.__ModuleLoader__.load({
 .ss-dialog-body{padding:16px 18px;display:flex;flex-direction:column;gap:12px;white-space:pre-wrap;line-height:1.6}
 .ss-dialog-foot{display:flex;gap:8px;justify-content:flex-end;padding:0 18px 16px}
 .ss-toggle{display:flex;align-items:center;gap:8px;font-size:12px}
+/* ---- 备份进度浮层（右下角，框架层常驻）---- */
+.ss-prog-dock{position:fixed;right:18px;bottom:18px;z-index:2147483000;display:flex;flex-direction:column;gap:8px;width:296px;pointer-events:none}
+.ss-prog-row{pointer-events:auto;border:1px solid var(--dsw-alias-border-l2);background:var(--dsw-alias-bg-layer-1);border-radius:10px;padding:9px 11px;box-shadow:var(--dsw-shadow-lv3,0 6px 24px rgba(0,0,0,.18));display:flex;flex-direction:column;gap:7px;animation:ss-prog-in .22s cubic-bezier(.22,1,.36,1);transition:transform .5s cubic-bezier(.22,1,.36,1),opacity .5s ease}
+.ss-prog-row.is-exiting{transform:translateY(14px) scale(.86);opacity:0}
+.ss-prog-head{display:flex;align-items:baseline;gap:7px;min-width:0}
+.ss-prog-title{font-size:12px;font-weight:600;color:var(--dsw-alias-label-primary);white-space:nowrap}
+.ss-prog-detail{font-size:11px;color:var(--dsw-alias-label-tertiary);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;min-width:0}
+.ss-prog-pct{font-size:11px;color:var(--dsw-alias-label-secondary,var(--dsw-alias-label-tertiary));font-variant-numeric:tabular-nums;margin-left:auto;padding-left:6px}
+.ss-prog-badge{font-size:12px;margin-left:auto;padding-left:6px;color:var(--dsw-alias-brand-primary,#3b82f6)}
+.ss-prog-row.is-error .ss-prog-badge{color:var(--dsw-alias-label-error,#ef4444)}
+.ss-prog-bar{position:relative;height:5px;border-radius:999px;background:var(--dsw-alias-bg-layer-3,rgba(127,127,127,.18));overflow:hidden}
+.ss-prog-fill{height:100%;border-radius:999px;background:var(--dsw-alias-brand-primary,#3b82f6);transition:width .28s linear}
+.ss-prog-row.is-done .ss-prog-fill{background:var(--dsw-alias-brand-primary,#22c55e)}
+.ss-prog-row.is-error .ss-prog-fill{background:var(--dsw-alias-label-error,#ef4444)}
+.ss-prog-flow{position:absolute;inset:0;width:38%;border-radius:999px;background:linear-gradient(90deg,transparent,var(--dsw-alias-brand-primary,#3b82f6),transparent);opacity:.85;animation:ss-prog-flow 1.15s ease-in-out infinite}
+@keyframes ss-prog-flow{0%{transform:translateX(-110%)}100%{transform:translateX(300%)}}
+@keyframes ss-prog-in{from{transform:translateY(12px) scale(.96);opacity:0}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){.ss-prog-flow{animation-duration:2.6s}.ss-prog-row{transition:none;animation:none}}
 `
       document.head.append(style)
     }
@@ -408,6 +426,13 @@ window.__ModuleLoader__.load({
         className: `ss-btn${kind ? ` ${kind}` : ''}`, disabled: busyAny,
         onClick: () => void run(key, path, body),
       }, busy === key ? '执行中…' : label)
+      // 孤儿回收：列出远端已无任何索引引用的备份对象并删除。这些是推送中途失败
+      // （上传成功但索引未写入）的残留——按历史删除扫不到，只能全量比对清理。
+      const reclaimOrphans = async () => {
+        const ok = await ask('扫描远端孤儿对象？\n\n孤儿＝已上传但没有任何备份历史引用的残留文件（推送中途失败的产物）。\n只删除本插件前缀命名且未被引用的对象；备份历史、当前快照、其他文件一律不动。')
+        if (!ok) return
+        await run('reclaim', '/snapshot/reclaim-orphans', {})
+      }
       // 立即备份：smart 策略遇本地/远端配置冲突时后端返回 needs-choice 且【不上传】，
       // 必须显式二次推送带 resolveConflicts，否则按钮点了没有任何备份发生（实测复现）。
       const pluginBackupNow = async () => {
@@ -668,6 +693,7 @@ window.__ModuleLoader__.load({
             h('div', { className: 'ss-field', style: { gridColumn: '1 / -1' } },
               h('div', { className: 'ss-row' },
                 btn('检查本插件更新', 'release', '/release/check'),
+                h('button', { className: 'ss-btn', disabled: busyAny, onClick: () => void reclaimOrphans() }, busy === 'reclaim' ? '执行中…' : '回收孤儿对象'),
                 h('div', { className: 'ss-field', style: { flex: '1 1 220px' } }, h('input', { className: 'ss-input', placeholder: '本地插件源目录', value: form.directory, onChange: set('directory'), spellCheck: false })),
                 btn('备份插件源目录', 'srcBak', '/source/backup', { directory: form.directory }),
               ),
@@ -1333,6 +1359,160 @@ window.__ModuleLoader__.load({
 
     const inject = ['slots', 'locale']
 
+    // ---------------------------------------------------------------------
+    // 备份进度浮层（右下角，跨工作区常驻）
+    //
+    // 挂在 `shell.overlay`（AppFrame 框架层，见 dsh-client-ui-layout），
+    // 因此切工作区/切会话都不会卸载 —— 这正是"在其他工作区对话内也能实时查看"的实现依据。
+    //
+    // 数据全部来自后端 /progress（真 git 百分比/对象计数/速率）。
+    // 后端 percent 为 null 时走"不确定态"（流动条纹 + 已用时长），绝不编造数字。
+    // ---------------------------------------------------------------------
+    const PROGRESS_POLL_MS = 500
+    /** 完成后播放收尾动画的时长（与后端 FINISHED_LINGER_MS=6000 留出余量）。 */
+    const PROGRESS_EXIT_MS = 520
+
+    /** 阶段文案（中文/英文二选一，跟随现有 locale 机制）。 */
+    function stageLabel(stage, phase) {
+      const table = locale === 'en'
+        ? { starting: 'Preparing…', mirror: 'Mirroring files…', collecting: 'Collecting…', push: 'Uploading…' }
+        : { starting: '准备中…', mirror: '镜像文件中…', collecting: '收集数据中…', push: '上传中…' }
+      if (stage === 'push' && typeof phase === 'string' && phase !== '') {
+        const phases = locale === 'en'
+          ? { enumerating: 'Enumerating', counting: 'Counting', compressing: 'Compressing', writing: 'Uploading', receiving: 'Receiving', resolving: 'Resolving', updating: 'Updating', transfer: 'Transferring' }
+          : { enumerating: '枚举对象', counting: '计数对象', compressing: '压缩对象', writing: '上传对象', receiving: '接收对象', resolving: '解析增量', updating: '更新文件', transfer: '传输中' }
+        const label = phases[phase]
+        if (label !== undefined) return locale === 'en' ? `${label}…` : `${label}…`
+      }
+      return table[stage] ?? (locale === 'en' ? 'Working…' : '处理中…')
+    }
+
+    /** 毫秒 → 人类可读（真实耗时，不估算）。 */
+    function formatElapsed(ms) {
+      const total = Math.max(0, Math.floor(ms / 1000))
+      if (total < 60) return `${total}s`
+      const m = Math.floor(total / 60)
+      const s = total % 60
+      return `${m}m${String(s).padStart(2, '0')}s`
+    }
+
+    /**
+     * 备份进度浮层。无进度时渲染 null（不占位、不可见）。
+     */
+    function BackupProgressOverlay() {
+      const [snapshot, setSnapshot] = useState(null)
+      const [exiting, setExiting] = useState(() => new Set())
+      // 平滑插值：显示值独立于后端值，每次轮询后用 requestAnimationFrame 追上去。
+      const displayRef = useRef(new Map())
+      const [displayTick, setDisplayTick] = useState(0)
+
+      useEffect(() => {
+        let stopped = false
+        let timer = null
+        const poll = async () => {
+          try {
+            const response = await fetch(`${API}/progress`)
+            if (response.ok) {
+              const body = await response.json()
+              const value = body?.ok === false ? null : (body?.value ?? body)
+              if (!stopped && value !== null && typeof value === 'object') setSnapshot(value)
+            }
+          } catch {
+            // 后端不可用时静默：进度是附加信息，不该打扰用户。
+          }
+          if (!stopped) timer = setTimeout(poll, PROGRESS_POLL_MS)
+        }
+        void poll()
+        return () => {
+          stopped = true
+          if (timer !== null) clearTimeout(timer)
+        }
+      }, [])
+
+      const entries = Array.isArray(snapshot?.entries) ? snapshot.entries : []
+
+      // 平滑插值驱动：有进行中条目时持续刷新显示值。
+      useEffect(() => {
+        const running = entries.filter((e) => e.state === 'running')
+        if (running.length === 0) return undefined
+        let raf = null
+        const step = () => {
+          setDisplayTick((n) => n + 1)
+          raf = requestAnimationFrame(step)
+        }
+        raf = requestAnimationFrame(step)
+        return () => {
+          if (raf !== null) cancelAnimationFrame(raf)
+        }
+      }, [entries.map((e) => `${e.kind}:${e.state}:${e.percent ?? 'x'}`).join('|')])
+
+      // 已完成条目：播放退出动画后移除。
+      useEffect(() => {
+        const finished = entries.filter((e) => e.state === 'finished' && !exiting.has(e.kind))
+        if (finished.length === 0) return undefined
+        const ids = finished.map((e) => e.kind)
+        const timer = setTimeout(() => {
+          setExiting((prev) => {
+            const next = new Set(prev)
+            for (const id of ids) next.add(id)
+            return next
+          })
+        }, 900)
+        return () => clearTimeout(timer)
+      }, [entries.map((e) => `${e.kind}:${e.state}`).join('|')])
+
+      if (entries.length === 0) return null
+
+      // 按 PROGRESS_KINDS 顺序（后端已排序）上下排列。
+      const rows = entries.map((entry) => {
+        const isFinished = entry.state === 'finished'
+        const target = typeof entry.percent === 'number' ? entry.percent : null
+        const prev = displayRef.current.get(entry.kind) ?? 0
+        // 平滑：向目标值靠拢（百分数越大追得越快），但不越过目标。
+        let shown = prev
+        if (target !== null) {
+          const delta = target - prev
+          shown = isFinished ? 100 : prev + delta * 0.22
+          if (Math.abs(target - shown) < 0.4) shown = target
+        }
+        displayRef.current.set(entry.kind, shown)
+
+        const indeterminate = target === null && !isFinished
+        const phaseText = stageLabel(entry.stage, entry.phase)
+        const elapsed = formatElapsed(entry.elapsedMs ?? 0)
+        const counts = entry.counts !== null && typeof entry.counts === 'object' && Number.isFinite(entry.counts?.total)
+          ? `${entry.counts.done}/${entry.counts.total}`
+          : null
+        const detail = isFinished
+          ? (entry.ok === false ? (locale === 'en' ? 'Failed' : '失败') : (locale === 'en' ? 'Done' : '备份完毕'))
+          : [phaseText, counts, entry.rate, elapsed].filter((v) => typeof v === 'string' && v !== '').join(' · ')
+
+        return h('div', {
+          key: entry.kind,
+          className: `ss-prog-row${isFinished ? ' is-done' : ''}${isFinished && entry.ok === false ? ' is-error' : ''}${exiting.has(entry.kind) ? ' is-exiting' : ''}`,
+        }, [
+          h('div', { key: 'head', className: 'ss-prog-head' }, [
+            h('span', { key: 'title', className: 'ss-prog-title' }, entry.label ?? entry.kind),
+            h('span', { key: 'detail', className: 'ss-prog-detail' }, detail),
+            isFinished
+              ? h('span', { key: 'badge', className: 'ss-prog-badge' }, entry.ok === false ? '✕' : '✓')
+              : h('span', { key: 'pct', className: 'ss-prog-pct' }, target === null ? '' : `${Math.round(shown)}%`),
+          ]),
+          h('div', { key: 'bar', className: `ss-prog-bar${indeterminate ? ' is-indeterminate' : ''}` }, [
+            indeterminate
+              ? h('div', { key: 'flow', className: 'ss-prog-flow' })
+              : h('div', {
+                  key: 'fill',
+                  className: 'ss-prog-fill',
+                  style: { width: `${Math.max(0, Math.min(100, shown))}%` },
+                }),
+          ]),
+        ])
+      })
+
+      return h('div', { className: 'ss-prog-dock', role: 'status', 'aria-live': 'polite' }, rows)
+    }
+
     function apply(ctx) {
       ensureStyles()
       // 语言：宿主 locale 服务可用时跟随，否则用浏览器语言判断。
@@ -1369,6 +1549,14 @@ window.__ModuleLoader__.load({
         children: {},
         inject: () => ({}),
       }, SessionSyncPage))
+
+      // 备份进度浮层：挂在框架层 shell.overlay（右下角）。
+      // 该 seat 由 AppFrame 渲染，切工作区/会话不卸载 —— 跨工作区可见的依据。
+      slots.inject('shell.overlay', () => slots.register({
+        name: 'shell.overlay',
+        id: `${PANEL_ID}.progress`,
+        inject: () => ({}),
+      }, BackupProgressOverlay))
     }
 
     return { inject, apply }
