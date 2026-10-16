@@ -67,7 +67,7 @@ window.__ModuleLoader__.load({
       'history.source.automatic': '自动',
       'history.source.unknown': '未知',
       'history.merge': '安全合并',
-      'history.overwrite': '完整覆盖',
+      'history.overwrite': '全量还原',
       'history.delete': '删除',
       'history.deleteConfirm': '确认删除这条备份历史吗？本地分支和 GitHub 远端将同步重写，操作不可恢复。当前会话数据不会回滚，后续备份仍会按当前状态生成。',
       'history.deleted': '备份历史已从本地与远端删除',
@@ -76,8 +76,9 @@ window.__ModuleLoader__.load({
       'restore.same': '已相同',
       'restore.fork': '将留存冲突副本',
       'restore.mergeHint': '安全合并：只补齐本地缺失的会话；同名文件保留本地版本，备份版本另存为冲突副本。',
-      'restore.overwriteHint': '完整覆盖：把会话库还原成该时间点。会先创建安全快照，需要重启 DSH 执行。',
-      'restore.confirmOverwrite': '确认要把整个本机会话库替换为该备份吗？执行前会先创建安全快照。',
+      'restore.overwriteHint': '全量还原：用该备份恢复，同时保留本地新增历史和本地独有会话。',
+      'restore.confirmOverwrite': '确认用该备份恢复，并保留本地新增历史吗？',
+      'restore.overwriteRisk': '还原前保留安全快照；历史分叉或日志损坏时拒绝覆盖。备份比已加载会话更新时，需要退出并重启 DSH 后再试。',
       'restore.prepared': '已准备还原任务，请完全退出并重启 DSH 后生效。',
       'restore.pending': '有待执行的完整覆盖还原',
       'restore.cancel': '取消该还原任务',
@@ -134,7 +135,7 @@ window.__ModuleLoader__.load({
       'history.source.automatic': 'Automatic',
       'history.source.unknown': 'Unknown',
       'history.merge': 'Safe merge',
-      'history.overwrite': 'Full overwrite',
+      'history.overwrite': 'Full restore',
       'history.delete': 'Delete',
       'history.deleteConfirm': 'Delete this backup-history entry? The local branch and GitHub remote will be rewritten together. This cannot be undone. Current session data is not rolled back and future backups still use its current state.',
       'history.deleted': 'Backup history deleted locally and remotely',
@@ -143,8 +144,9 @@ window.__ModuleLoader__.load({
       'restore.same': 'Already identical',
       'restore.fork': 'Conflict copies kept',
       'restore.mergeHint': 'Safe merge: fills in sessions missing locally; same-name files keep the local version and the backup version is preserved as a conflict copy.',
-      'restore.overwriteHint': 'Full overwrite: restores the store to that point in time. A safety snapshot is created first and a DSH restart is required.',
-      'restore.confirmOverwrite': 'Replace the entire local session store with this backup? A safety snapshot is taken first.',
+      'restore.overwriteHint': 'Full restore: restore this backup while keeping newer local history and local-only sessions.',
+      'restore.confirmOverwrite': 'Restore this backup and keep newer local history?',
+      'restore.overwriteRisk': 'A safety snapshot is kept. Divergent or corrupt histories are rejected. If a backup is newer than a loaded session, fully quit and restart DSH before retrying.',
       'restore.prepared': 'Restore task prepared. Fully quit and restart DSH for it to take effect.',
       'restore.pending': 'A full-overwrite restore is pending',
       'restore.cancel': 'Cancel that restore task',
@@ -923,6 +925,35 @@ window.__ModuleLoader__.load({
       )
     }
 
+    /** Confirm source-project → existing local-project mappings before restore. */
+    function ProjectPathDialog({ projects, onResolve }) {
+      const ref = useRef(null)
+      const [paths, setPaths] = useState(() => Object.fromEntries(projects.map(item => [item.source, item.target || item.suggested || ''])))
+      useEffect(() => {
+        const node = ref.current
+        if (typeof node?.showModal === 'function') node.showModal()
+        else node?.setAttribute('open', '')
+        return () => { if (node?.open && typeof node.close === 'function') node.close() }
+      }, [])
+      return h('dialog', { ref, className: 'ss-dialog', 'aria-label': '确认目标设备项目目录', onCancel: event => { event.preventDefault(); onResolve(null) } },
+        h('form', { onSubmit: event => { event.preventDefault(); onResolve(paths) } },
+          h('div', { className: 'ss-dialog-body', style: { maxHeight: '60vh', overflow: 'auto' } },
+            h('strong', null, '确认目标设备的本地项目目录'),
+            h('p', { className: 'ss-card-hint' }, '已自动解析本机路径；请核对或输入已有项目的绝对目录。这里只还原会话历史，不会创建空项目来代替原项目文件。'),
+            projects.map((item, index) => h('label', { key: item.source, className: 'ss-field', htmlFor: 'ss-restore-path-' + index },
+              h('span', { className: 'ss-label' }, item.source),
+              h('input', { id: 'ss-restore-path-' + index, className: 'ss-input', required: true, spellCheck: false, value: paths[item.source], onChange: event => setPaths(current => ({ ...current, [item.source]: event.target.value })) }),
+              item.requiresSelection ? h('span', { className: 'ss-item-sub' }, '自动建议目录尚不存在，请指定本机已有项目。') : null,
+            )),
+          ),
+          h('div', { className: 'ss-dialog-foot' },
+            h('button', { type: 'button', className: 'ss-btn', onClick: () => onResolve(null) }, t('common.cancel')),
+            h('button', { type: 'submit', className: 'ss-btn primary' }, '核对目录并继续'),
+          ),
+        ),
+      )
+    }
+
     /** 主页面。 */
     function SessionSyncPage() {
       const [status, setStatus] = useState(null)
@@ -939,6 +970,9 @@ window.__ModuleLoader__.load({
       const [confirm, setConfirm] = useState(null)
       const [selected, setSelected] = useState(() => new Set())
       const [tab, setTab] = useState('session')
+      const [projectDialog, setProjectDialog] = useState(null)
+      const projectResolve = useRef(null)
+      useEffect(() => () => { projectResolve.current?.(null) }, [])
       const toggle = (sha) => setSelected((current) => {
         const next = new Set(current)
         if (next.has(sha)) next.delete(sha)
@@ -1080,26 +1114,75 @@ window.__ModuleLoader__.load({
         setNote({ kind: 'ok', value: t('config.saved') })
       })
 
+      const restorePaths = async (commit) => {
+        let projectPaths = {}
+        let value = await call('/restore/preview', { method: 'POST', body: { commit: commit.sha } })
+        let preview = value.preview ?? {}
+        if (preview.ok === false) throw new Error(preview.error)
+        const projects = preview.projects ?? []
+        if (projects.some(item => item.requiresSelection || item.source !== item.target)) {
+          projectPaths = await new Promise(resolve => { projectResolve.current = resolve; setProjectDialog(projects) })
+          if (projectPaths === null) return null
+          value = await call('/restore/preview', { method: 'POST', body: { commit: commit.sha, projectPaths } })
+          preview = value.preview ?? {}
+          if (preview.ok === false) throw new Error(preview.error)
+        }
+        return { preview, projectPaths }
+      }
+      const resolveProjectDialog = answer => {
+        const resolve = projectResolve.current
+        projectResolve.current = null
+        setProjectDialog(null)
+        resolve?.(answer)
+      }
+
+      const artifactPreview = preview => (preview.auxiliaryCount ?? 0) === 0 ? '' : '\n\n' +
+        (locale === 'en' ? 'Auxiliary backup files will be preserved separately, not opened as sessions: ' : '附属备份将原样另存，不作为正式会话打开：') +
+        preview.auxiliaryCount + '\n' + (preview.auxiliaryFiles ?? []).slice(0, 10).join('\n')
+      const artifactResult = value => (value.auxiliaryCount ?? 0) === 0 ? '' :
+        (locale === 'en' ? ' · auxiliary files preserved: ' : ' · 附属备份已保留：') + value.auxiliaryCount + ' · ' + value.artifactDir
+
       const onMerge = (commit) => run(`merge-${commit.sha}`, async () => {
-        const value = await call('/restore/preview', { method: 'POST', body: { commit: commit.sha } })
-        const preview = value.preview ?? {}
+        const plan = await restorePaths(commit)
+        if (plan === null) return
+        const { preview, projectPaths } = plan
         const summary = `${t('restore.new')}: ${preview.willWriteCount ?? 0} · ${t('restore.same')}: ${preview.identical ?? 0} · ${t('restore.fork')}: ${preview.willForkCount ?? 0}`
-        const ok = await ask(`${t('restore.previewTitle')}\n${summary}\n\n${t('restore.mergeHint')}`)
+        const ok = await ask(`${t('restore.previewTitle')}\n${summary}\n\n${t('restore.mergeHint')}${artifactPreview(preview)}`)
         if (!ok) return
-        const result = await call('/restore/merge', { method: 'POST', body: { commit: commit.sha } })
+        const result = await call('/restore/merge', { method: 'POST', body: { commit: commit.sha, projectPaths } })
         const merged = result.result ?? {}
-        setNote({ kind: 'ok', value: `${t('history.merge')} ✓ ${merged.written ?? 0} / ${merged.skipped ?? 0} / ${(merged.forks ?? []).length}` })
+        if (merged.ok === false) throw new Error(merged.error ?? 'Restore failed')
+        setNote({ kind: 'ok', value: `${t('history.merge')} ✓ ${merged.written ?? 0} / ${merged.skipped ?? 0} / ${(merged.forks ?? []).length}${artifactResult(merged)}` })
         await refresh()
         await refreshHistory()
       })
 
+      // 全量还原保留本地增量；先确认目标设备项目目录，再进行历史前缀校验。
       const onOverwrite = (commit) => run(`overwrite-${commit.sha}`, async () => {
-        const ok = await ask(`${t('restore.confirmOverwrite')}\n\n${shortSha(commit.sha)} · ${formatTime(commit.at)}\n${t('restore.overwriteHint')}`)
+        const plan = await restorePaths(commit)
+        if (plan === null) return
+        const { projectPaths, preview } = plan
+        const ok = await ask(
+          `${t('restore.confirmOverwrite')}\n\n` +
+          `${shortSha(commit.sha)} · ${formatTime(commit.at)}\n\n` +
+          `${t('restore.overwriteHint')}\n\n` +
+          `${t('restore.overwriteRisk')}${artifactPreview(preview)}`,
+        )
         if (!ok) return
-        await call('/restore/overwrite/prepare', { method: 'POST', body: { commit: commit.sha } })
-        setNote({ kind: 'ok', value: t('restore.prepared') })
+        const result = await call('/restore/overwrite/apply', { method: 'POST', body: { commit: commit.sha, projectPaths } })
+        const value = result?.result ?? {}
+        if (value.ok === false) {
+          setNote({ kind: 'error', value: `${locale === 'en' ? 'Full restore failed' : '全量还原失败'}：${value.error ?? 'unknown'}` })
+          return
+        }
+        setNote({
+          kind: 'ok',
+          value: locale === 'en'
+            ? `Restore done · ${value.replaced ?? 0} restored · ${value.preserved ?? 0} local histories kept · snapshot kept${artifactResult(value)}`
+            : `还原完成 · 恢复 ${value.replaced ?? 0} 个文件 · 保留 ${value.preserved ?? 0} 份本地历史 · 安全快照已保留${artifactResult(value)}`,
+        })
         await refresh()
-        await refreshPending()
+        await refreshHistory()
       })
 
       const onDeleteHistory = (commit) => run(`delete-${commit.sha}`, async () => {
@@ -1340,6 +1423,7 @@ window.__ModuleLoader__.load({
           h(SkillBackupTab, { cloud: CLOUD }),
         ),
 
+        projectDialog === null ? null : h(ProjectPathDialog, { projects: projectDialog, onResolve: resolveProjectDialog }),
         confirm === null ? null : h(ConfirmDialog, { message: confirm.message, onResolve: resolveConfirm }),
       )
     }
@@ -1375,8 +1459,8 @@ window.__ModuleLoader__.load({
     /** 阶段文案（中文/英文二选一，跟随现有 locale 机制）。 */
     function stageLabel(stage, phase) {
       const table = locale === 'en'
-        ? { starting: 'Preparing…', mirror: 'Mirroring files…', collecting: 'Collecting…', push: 'Uploading…' }
-        : { starting: '准备中…', mirror: '镜像文件中…', collecting: '收集数据中…', push: '上传中…' }
+        ? { starting: 'Preparing…', mirror: 'Mirroring files…', collecting: 'Collecting…', push: 'Uploading…', delete: 'Deleting…' }
+        : { starting: '准备中…', mirror: '镜像文件中…', collecting: '收集数据中…', push: '上传中…', delete: '删除中…' }
       if (stage === 'push' && typeof phase === 'string' && phase !== '') {
         const phases = locale === 'en'
           ? { enumerating: 'Enumerating', counting: 'Counting', compressing: 'Compressing', writing: 'Uploading', receiving: 'Receiving', resolving: 'Resolving', updating: 'Updating', transfer: 'Transferring' }
@@ -1431,6 +1515,25 @@ window.__ModuleLoader__.load({
 
       const entries = Array.isArray(snapshot?.entries) ? snapshot.entries : []
 
+      // 条目唯一键：kind + action。同域可以同时有备份和删除两条，
+      // 只用 kind 会互相误判（删除完成把备份的条目标成 exiting，反之亦然）。
+      const keyOf = (entry) => `${entry.kind}:${entry.action ?? 'backup'}`
+
+      // 新一轮开始（running）时必须清除该条目的退出标记与残留显示值：
+      // 否则上一次的 is-exiting（CSS opacity:0 + scale）会永久粘住，
+      // 进度条明明渲染了却完全看不见 —— 实测：第二次备份起全部不可见。
+      useEffect(() => {
+        const runningKeys = entries.filter((e) => e.state === 'running').map(keyOf)
+        if (runningKeys.length === 0) return
+        setExiting((prev) => {
+          if (!runningKeys.some((k) => prev.has(k))) return prev
+          const next = new Set(prev)
+          for (const k of runningKeys) next.delete(k)
+          return next
+        })
+        for (const k of runningKeys) displayRef.current.delete(k)
+      }, [entries.map((e) => `${keyOf(e)}:${e.state}`).join('|')])
+
       // 平滑插值驱动：有进行中条目时持续刷新显示值。
       useEffect(() => {
         const running = entries.filter((e) => e.state === 'running')
@@ -1444,13 +1547,13 @@ window.__ModuleLoader__.load({
         return () => {
           if (raf !== null) cancelAnimationFrame(raf)
         }
-      }, [entries.map((e) => `${e.kind}:${e.state}:${e.percent ?? 'x'}`).join('|')])
+      }, [entries.map((e) => `${keyOf(e)}:${e.state}:${e.percent ?? 'x'}`).join('|')])
 
       // 已完成条目：播放退出动画后移除。
       useEffect(() => {
-        const finished = entries.filter((e) => e.state === 'finished' && !exiting.has(e.kind))
+        const finished = entries.filter((e) => e.state === 'finished' && !exiting.has(keyOf(e)))
         if (finished.length === 0) return undefined
-        const ids = finished.map((e) => e.kind)
+        const ids = finished.map(keyOf)
         const timer = setTimeout(() => {
           setExiting((prev) => {
             const next = new Set(prev)
@@ -1459,15 +1562,16 @@ window.__ModuleLoader__.load({
           })
         }, 900)
         return () => clearTimeout(timer)
-      }, [entries.map((e) => `${e.kind}:${e.state}`).join('|')])
+      }, [entries.map((e) => `${keyOf(e)}:${e.state}`).join('|')])
 
       if (entries.length === 0) return null
 
       // 按 PROGRESS_KINDS 顺序（后端已排序）上下排列。
       const rows = entries.map((entry) => {
         const isFinished = entry.state === 'finished'
+        const key = keyOf(entry)
         const target = typeof entry.percent === 'number' ? entry.percent : null
-        const prev = displayRef.current.get(entry.kind) ?? 0
+        const prev = displayRef.current.get(key) ?? 0
         // 平滑：向目标值靠拢（百分数越大追得越快），但不越过目标。
         let shown = prev
         if (target !== null) {
@@ -1475,36 +1579,60 @@ window.__ModuleLoader__.load({
           shown = isFinished ? 100 : prev + delta * 0.22
           if (Math.abs(target - shown) < 0.4) shown = target
         }
-        displayRef.current.set(entry.kind, shown)
+        displayRef.current.set(key, shown)
 
+        const isDelete = (entry.action ?? 'backup') === 'delete'
         const indeterminate = target === null && !isFinished
         const phaseText = stageLabel(entry.stage, entry.phase)
         const elapsed = formatElapsed(entry.elapsedMs ?? 0)
-        const counts = entry.counts !== null && typeof entry.counts === 'object' && Number.isFinite(entry.counts?.total)
+        // 真实计数优先，两个来源都来自后端实测，不是估算：
+        //   counts = git 的对象进度（如 2/3）
+        //   files  = cloud 域的真实对象数（profile 数 / 技能数 / 待上传分片数）
+        const gitCounts = entry.counts !== null && typeof entry.counts === 'object' && Number.isFinite(entry.counts?.total)
           ? `${entry.counts.done}/${entry.counts.total}`
           : null
+        const fileCounts = entry.files !== null && typeof entry.files === 'object' && Number.isFinite(entry.files?.total) && entry.files.total > 0
+          ? `${entry.files.done}/${entry.files.total}`
+          : null
+        const counts = gitCounts ?? fileCounts
+        // 有真实计数但没有百分比时，用计数比例驱动条宽（真数据，不是插值猜测）。
+        const derivedPct = target === null && entry.files !== null && Number.isFinite(entry.files?.total) && entry.files.total > 0
+          ? Math.round((entry.files.done / entry.files.total) * 100)
+          : null
+        // 完成文案按操作区分：删除说"已删除"，备份说"备份完毕"——不能都叫备份完毕。
+        const doneText = isDelete
+          ? (locale === 'en' ? 'Deleted' : '已删除')
+          : (locale === 'en' ? 'Done' : '备份完毕')
+        const failText = isDelete
+          ? (locale === 'en' ? 'Delete failed' : '删除失败')
+          : (locale === 'en' ? 'Failed' : '失败')
         const detail = isFinished
-          ? (entry.ok === false ? (locale === 'en' ? 'Failed' : '失败') : (locale === 'en' ? 'Done' : '备份完毕'))
+          ? (entry.ok === false
+              ? failText
+              : [doneText, elapsed, fileCounts].filter((v) => typeof v === 'string' && v !== '').join(' · '))
           : [phaseText, counts, entry.rate, elapsed].filter((v) => typeof v === 'string' && v !== '').join(' · ')
+        // 条宽：有真百分比用平滑值；只有真实计数时用计数比例；都没有才走不确定态条纹。
+        const effectivePct = target !== null ? shown : derivedPct
+        const showIndeterminate = indeterminate && derivedPct === null
 
         return h('div', {
-          key: entry.kind,
-          className: `ss-prog-row${isFinished ? ' is-done' : ''}${isFinished && entry.ok === false ? ' is-error' : ''}${exiting.has(entry.kind) ? ' is-exiting' : ''}`,
+          key,
+          className: `ss-prog-row${isFinished ? ' is-done' : ''}${isFinished && entry.ok === false ? ' is-error' : ''}${exiting.has(key) ? ' is-exiting' : ''}`,
         }, [
           h('div', { key: 'head', className: 'ss-prog-head' }, [
             h('span', { key: 'title', className: 'ss-prog-title' }, entry.label ?? entry.kind),
             h('span', { key: 'detail', className: 'ss-prog-detail' }, detail),
             isFinished
               ? h('span', { key: 'badge', className: 'ss-prog-badge' }, entry.ok === false ? '✕' : '✓')
-              : h('span', { key: 'pct', className: 'ss-prog-pct' }, target === null ? '' : `${Math.round(shown)}%`),
+              : h('span', { key: 'pct', className: 'ss-prog-pct' }, effectivePct === null ? '' : `${Math.round(effectivePct)}%`),
           ]),
-          h('div', { key: 'bar', className: `ss-prog-bar${indeterminate ? ' is-indeterminate' : ''}` }, [
-            indeterminate
+          h('div', { key: 'bar', className: `ss-prog-bar${showIndeterminate ? ' is-indeterminate' : ''}` }, [
+            showIndeterminate
               ? h('div', { key: 'flow', className: 'ss-prog-flow' })
               : h('div', {
                   key: 'fill',
                   className: 'ss-prog-fill',
-                  style: { width: `${Math.max(0, Math.min(100, shown))}%` },
+                  style: { width: `${Math.max(0, Math.min(100, effectivePct ?? shown))}%` },
                 }),
           ]),
         ])

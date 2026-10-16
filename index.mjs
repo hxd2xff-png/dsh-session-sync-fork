@@ -22,6 +22,7 @@ import { promises as fs } from 'node:fs'
 import fsSync from 'node:fs'
 import os from 'node:os'
 import path from 'node:path'
+import { zstdCompressSync } from 'node:zlib'
 import { Context } from '@deepseek-ai/cordis'
 import Schema from '@deepseek-ai/schemastery'
 import SessionStore, { KNOWN_SESSION_EVENT_TYPES } from '@deepseek-ai/dsh-session'
@@ -70,9 +71,11 @@ import { sessionSyncDomainSpec } from './lib/domain.mjs'
 import { defaultUiConfig, loadUiConfig, normalizeUiConfigPatch, saveUiConfig } from './lib/uiconfig.mjs'
 import { delayUntilNextRun, describeSchedule, nextRunAt } from './lib/schedule.mjs'
 import { countMirrorFilesAtCommit, deleteHistoryCommit, listHistory } from './lib/history.mjs'
-import { createSafetySnapshot, materializeCommit, mergeRestore, previewRestore } from './lib/restore.mjs'
+import { createSafetySnapshot, materializeCommit, mergeRestore, overwriteApply, previewRestore } from './lib/restore.mjs'
 import { OperationGate, buildRoutes, route } from './lib/api.mjs'
-import { cloudRoutes, cloudRoutePaths, readPluginSchedule, runPluginBackup } from './lib/cloud.mjs'
+import { createSessionMapper } from './lib/session-portable.mjs'
+import { detectDshHome } from './lib/paths.mjs'
+import { cloudRoutes, cloudRoutePaths, readPluginSchedule, runPluginBackup, setCloudProgressSink } from './lib/cloud.mjs'
 import { ProgressRegistry, feedGitProgress } from './lib/progress.mjs'
 
 // 模块级探针：所有 import 解析完毕后立即写入。无此记录 = 模块体从未执行
@@ -984,10 +987,29 @@ export function apply(ctx, config = {}) {
   }
 
   // turn/end 自动推送（配置即授权；每轮结束拉一次快照并推送）。
+  //
+  // 防抖：一轮推送尚未结束时，后续 turn/end 直接跳过（不排队、不叠加）。
+  // engine.push 内部经 git.schedule 串行，但每次推送都跑全量镜像（16 文件
+  // 约 48MB 逐个读取比对）；连续快速的多轮对话会把推送排队堆积，宿主进程
+  // 内的磁盘 I/O 与内存压力集中放大（2026-10-16 实测整应用冻结一次）。
+  // 跳过的轮次不丢数据：下一轮 turn/end 或手动备份仍会全量镜像提交。
   if (resolved.autoPushOnTurnEnd) {
+    let turnPushInFlight = false
     ctx.on('session/event', (session, event) => {
       if (event.type !== 'turn/end') return
-      void engine.push().then(result => {
+      if (turnPushInFlight) {
+        warn('auto push skipped: previous turn push still running')
+        return
+      }
+      turnPushInFlight = true
+      // 与手动备份一致地登记进度（自动跑时用户也要看得见）。
+      const turnProgressState = { carry: '' }
+      progress.start('session', { label: '会话备份', stage: 'mirror' })
+      void engine.push({
+        onStderr: (text) => feedGitProgress(progress, 'session', text, turnProgressState),
+      }).then(result => {
+        turnPushInFlight = false
+        progress.finish('session', { ok: result?.ok !== false, error: result?.error })
         maybeAppendSessionEvent(session, SESSION_EVENTS.PUSH, {
           sessionId: session.id,
           ok: result.ok,
@@ -998,6 +1020,10 @@ export function apply(ctx, config = {}) {
           head: result.head,
         }, eventGate, warn)
         if (!result.ok) warn(`auto push failed: ${result.error ?? 'unknown error'}`)
+      }).catch((error) => {
+        turnPushInFlight = false
+        progress.finish('session', { ok: false, error: messageOf(error) })
+        warn(`auto push failed: ${messageOf(error)}`)
       })
     })
   }
@@ -1131,15 +1157,22 @@ export function apply(ctx, config = {}) {
   /** 自动备份执行体（与手动备份共用引擎；有变化才提交）。 */
   async function runAutomaticBackup() {
     scheduleRuntime.lastRunAt = Date.now()
+    // 自动备份同样登记进度：否则定时跑起来时用户完全看不到（与手动不一致 = 功能不完全）。
+    const autoProgressState = { carry: '' }
+    progress.start('session', { label: '会话备份', stage: 'mirror' })
     try {
       const result = await gate.run('backup', async () => {
         const automatic = await uiEngine()
-        return await automatic.push()
+        return await automatic.push({
+          onStderr: (text) => feedGitProgress(progress, 'session', text, autoProgressState),
+        })
       })
+      progress.finish('session', { ok: result?.ok !== false, error: result?.error })
       scheduleRuntime.lastResult = { ok: result.ok !== false, pushed: result.pushed === true, at: Date.now() }
       if (result.ok === false) warn(`automatic backup failed: ${result.error ?? 'unknown error'}`)
       else logger.info(`automatic backup ok (pushed=${result.pushed === true})`)
     } catch (error) {
+      progress.finish('session', { ok: false, error: messageOf(error) })
       scheduleRuntime.lastResult = { ok: false, error: messageOf(error), at: Date.now() }
       warn(`automatic backup failed: ${messageOf(error)}`)
     }
@@ -1199,7 +1232,18 @@ export function apply(ctx, config = {}) {
                 target.setHours(Number(config.atHour) || 3, Number(config.atMinute) || 0, 0, 0)
                 return now >= target.getTime() && (last === 0 || last < target.getTime())
               })()
-          if (due) await runPluginBackup()
+          if (due) {
+            // 定时插件备份也登记进度：这条路径不经过 HTTP 路由包装，
+            // 必须在此处显式登记，否则自动跑时进度条完全不出现。
+            progress.start('plugin', { label: '插件备份', stage: 'collecting' })
+            try {
+              await runPluginBackup()
+              progress.finish('plugin', { ok: true })
+            } catch (error) {
+              progress.finish('plugin', { ok: false, error: messageOf(error) })
+              throw error
+            }
+          }
         } catch (error) {
           warn(`plugin backup schedule tick failed: ${messageOf(error)}`)
         }
@@ -1210,6 +1254,27 @@ export function apply(ctx, config = {}) {
 
   // webServer 不放进必需 inject（会让插件挂起）；改用 ctx.inject 可选获取：
   // 服务存在时注册路由，不存在时 UI 层安静缺席，命令与工具不受影响。
+  // Each restore request gets an independent map; no cross-request source-device state.
+  function sessionRestoreContext(projectPaths = {}, preview = false) {
+    const persistence = ctx.get('sessionPersistence')
+    const inspectLog = async (rel, bytes) => {
+      if (typeof persistence?.readZstdPrefix !== 'function' || typeof persistence?.locate !== 'function') {
+        throw new Error('当前宿主不支持完整日志校验，已拒绝还原')
+      }
+      let compressed = bytes
+      if (!rel.endsWith('.zstd')) {
+        const end = bytes.indexOf(10)
+        if (end < 0) throw new Error('会话日志缺少完整头部: ' + rel)
+        compressed = Buffer.concat([zstdCompressSync(bytes.subarray(0, end + 1)), zstdCompressSync(bytes.subarray(end + 1))])
+      }
+      const parsed = await persistence.readZstdPrefix(compressed)
+      if (parsed.tornTruncateTo !== undefined || (parsed.recoveredTail?.length ?? 0) > 0) throw new Error('会话日志存在不完整尾部，已拒绝还原: ' + rel)
+      if (path.resolve(persistence.locate(parsed.meta).path) !== path.resolve(sessionRoot, ...rel.split('/'))) throw new Error('会话路径与宿主存储身份不匹配: ' + rel)
+      return parsed
+    }
+    return { ...createSessionMapper({ sessionRoot, persistence, projectPaths, preview, dshHome: detectDshHome(), inspectLog }), inspectLog }
+  }
+
   ctx.inject(['webServer'], (webCtx) => {
     mountProbe('web-inject-fired')
     const routes = buildRoutes({
@@ -1284,15 +1349,18 @@ export function apply(ctx, config = {}) {
           throw error
         }
       },
-      previewRestore: async (commit) => previewRestore({
+      previewRestore: async (commit, projectPaths) => previewRestore({
+        ...sessionRestoreContext(projectPaths, true),
         git: await uiBackend(),
         sessionRoot,
         commit,
         tempRoot: os.tmpdir(),
       }),
-      mergeRestore: async (commit) => {
+      mergeRestore: async (commit, projectPaths) => {
         const meta = await ensureMeta().catch(() => ({ deviceId: 'unknown' }))
         return mergeRestore({
+          ...sessionRestoreContext(projectPaths),
+          artifactRoot: path.join(detectDshHome(), SNAPSHOT_DIR_NAME),
           git: await uiBackend(),
           sessionRoot,
           commit,
@@ -1319,12 +1387,96 @@ export function apply(ctx, config = {}) {
         await putRestoreTask(task)
         return { ok: true, snapshotDir: snapshot.snapshotDir, files: snapshot.files, taskId: id }
       },
+      // 全量还原：备份为底座，保留本地增量；不交换会话库目录。
+      //
+      // 活动轮次检查：live 会话正在写 sessionRoot，运行时直接替换有竞争风险。
+      // 依据权威投影判定——true（轮次进行中）或 undefined（投影缺席）一律拒绝；
+      // 只有投影明确返回 false 才放行。绝不静默绕过。
+      overwriteApply: async (commit, projectPaths) => {
+        const blocked = []
+        for (const session of ctx.sessions.list()) {
+          const openTurn = openTurnFromProjection(ctx, session)
+          if (openTurn !== false) blocked.push(session.id)
+        }
+        if (blocked.length > 0) {
+          return {
+            ok: false,
+            error: `有 ${blocked.length} 个会话处于活动状态（轮次未关闭或轮次状态不可读），已拒绝全量还原。请关闭这些会话后再试——运行中直接替换会丢失正在写入的数据。`,
+          }
+        }
+        const backend = await uiBackend()
+        const id = `restore-${Date.now().toString(36)}`
+        const snapshotRoot = path.join(path.dirname(sessionRoot), SNAPSHOT_DIR_NAME)
+        const stagingDir = path.join(os.tmpdir(), `dsh-session-sync-staging-${id}`)
+        // 进度：真实计数（快照文件数 / 物化文件数），与备份同域但 action 不同。
+        progress.start('session', { label: '会话全量还原', stage: 'delete', action: 'delete' })
+        try {
+          const result = await overwriteApply({
+            ...sessionRestoreContext(projectPaths),
+            git: backend,
+            commit,
+            sessionRoot,
+            snapshotDir: snapshotRoot,
+            stagingDir,
+            id,
+            acquireWriteLease: async (rel, header) => {
+              if (ctx.sessions.get(header.id) !== undefined) {
+                throw new Error('备份比已加载会话更新，请完全退出并重新启动 DSH 后再还原: ' + header.id)
+              }
+              const persistence = ctx.get('sessionPersistence')
+              if (typeof persistence?.acquireWriteLease !== 'function'
+                || typeof persistence?.locate !== 'function'
+                || path.resolve(persistence.locate(header).path) !== path.resolve(sessionRoot, ...rel.split('/'))) {
+                throw new Error('宿主写租约不可用或存储路径不匹配，已拒绝全量还原')
+              }
+              const lease = await persistence.acquireWriteLease(header)
+              if (ctx.sessions.get(header.id) !== undefined) {
+                await lease.release()
+                throw new Error('会话在预检后被加载，已拒绝全量还原: ' + header.id)
+              }
+              return lease
+            },
+            onProgress: (patch) => progress.update('session', {
+              action: 'delete',
+              ...(typeof patch?.stage === 'string' ? { stage: patch.stage } : {}),
+              ...(patch?.files !== undefined ? { files: patch.files } : {}),
+            }),
+          })
+          progress.finish('session', {
+            ok: result?.ok !== false,
+            action: 'delete',
+            error: result?.ok === false ? result.error : undefined,
+          })
+          return result
+        } catch (error) {
+          progress.finish('session', { ok: false, error: messageOf(error), action: 'delete' })
+          throw error
+        }
+      },
       pendingRestores: async () => ({ pending: restoreView(await readPendingRestore()) }),
       deleteHistory: async (commit) => {
         const backend = await uiBackend()
         await fs.mkdir(repoDir, { recursive: true })
         await backend.bootstrap()
-        return deleteHistoryCommit(backend, { commit, logger })
+        // 进度：会话历史删除同样登记（真实计数 = 需重写的提交数 / 已重写数）。
+        // 与备份同域但 action 不同，因此两条可以并存、互不覆盖。
+        progress.start('session', { label: '会话备份删除', stage: 'delete', action: 'delete' })
+        try {
+          const result = await deleteHistoryCommit(backend, {
+            commit,
+            logger,
+            onProgress: (patch) => progress.update('session', {
+              action: 'delete',
+              ...(typeof patch?.stage === 'string' ? { stage: patch.stage } : {}),
+              ...(patch?.files !== undefined ? { files: patch.files } : {}),
+            }),
+          })
+          progress.finish('session', { ok: result?.ok !== false, action: 'delete' })
+          return result
+        } catch (error) {
+          progress.finish('session', { ok: false, error: messageOf(error), action: 'delete' })
+          throw error
+        }
       },
       cancelRestore: async (id) => {
         const table = await restoreTable()
@@ -1341,37 +1493,63 @@ export function apply(ctx, config = {}) {
     })
     // 合并云同步路由（内置 cloud-sync 核心，跨设备可用）。路径前缀不同，不冲突。
     //
-    // 插件备份 / 技能备份的进度：在【路由层】包一层，不改 lib/cloud.mjs 内部实现。
-    // 这两条操作的核心是网络往返（Gist/WebDAV/S3），没有 git 那样的分段百分比，
-    // 因此只上报真实的"进行中"与"已完成"两个状态（stage），不做假百分比。
+    // 插件备份 / 技能备份的进度：在【路由层】包一层，不改 lib/cloud.mjs 的调用签名字面。
+    // 这两条操作的核心是网络往返（Gist/WebDAV/S3），没有 git 那样的分段百分比；
+    // 但 core 内部有真实的可数对象（profile 数 / 技能数 / 待上传分片数），
+    // 因此上报【真实计数】而不是估算百分比。
+    //
+    // 计数怎么从 core 传出来：进度回调是函数，穿不过 HTTP 请求体。
+    // 所以用 lib/cloud.mjs 的模块级 sink（setCloudProgressSink）——
+    // 发起前设、finally 清，避免回调泄漏到下一次调用。
     const progressWrapped = cloudRoutes().map((item) => {
       // item.path 形如 `/api/dsh-session-sync/cloud/snapshot/push`，
       // 必须按【结尾】匹配多段路由名：按最后一段只会拿到 `push`，永远匹配不上，
       // 结果是插件/技能备份从不登记进度（实测确实如此）。
-      const kind = item.path.endsWith('/skill/push')
-        ? 'skill'
-        : item.path.endsWith('/snapshot/push')
-          ? 'plugin'
-          : null
-      if (kind === null) return item
-      const label = kind === 'skill' ? '技能备份' : '插件备份'
+      // 路由 →（域, 操作）。删除与备份各占一条，互不覆盖，因此同域可同时显示。
+      // 路径形如 /api/dsh-session-sync/cloud/<...>，必须按结尾匹配（取最后一段会只拿到 push/delete）。
+      const routeKind = (path) => {
+        if (path.endsWith('/skill/push')) return { kind: 'skill', action: 'backup', label: '技能备份' }
+        if (path.endsWith('/skill/history/delete')) return { kind: 'skill', action: 'delete', label: '技能备份删除' }
+        if (path.endsWith('/snapshot/push')) return { kind: 'plugin', action: 'backup', label: '插件备份' }
+        if (path.endsWith('/snapshot/history/delete')) return { kind: 'plugin', action: 'delete', label: '插件备份删除' }
+        if (path.endsWith('/snapshot/reclaim-orphans')) return { kind: 'plugin', action: 'delete', label: '孤儿对象回收' }
+        return null
+      }
+      const mapped = routeKind(item.path)
+      if (mapped === null) return item
+      const { kind, action, label } = mapped
       const inner = item.handler
       return {
         ...item,
         handler: async (request, response) => {
-          progress.start(kind, { label, stage: 'collecting' })
+          progress.start(kind, { label, stage: 'collecting', action })
+          // core 的真实计数 → 进度条目（stage/files 全部照抄，不做换算）。
+          setCloudProgressSink((patch) => {
+            progress.update(kind, {
+              action,
+              ...(typeof patch?.stage === 'string' ? { stage: patch.stage } : {}),
+              ...(patch?.files !== undefined ? { files: patch.files } : {}),
+            })
+          })
           try {
             const result = await inner(request, response)
-            progress.finish(kind, { ok: true })
+            progress.finish(kind, { ok: true, action })
             return result
           } catch (error) {
-            progress.finish(kind, { ok: false, error: messageOf(error) })
+            progress.finish(kind, { ok: false, error: messageOf(error), action })
             throw error
+          } finally {
+            setCloudProgressSink(null)
           }
         },
       }
     })
-    const allRoutes = [...routes, ...progressWrapped, route(`${API_PREFIX}/progress`, 'GET', async () => progress.snapshot())]
+    // 路由装配：保持原有 [...routes, ...cloudRoutes()] 结构不变，
+    // 只把 5 条备份/删除路由替换成带进度的包装版（map 内命中才换，未命中原样返回）。
+    // 这样 diff 最小：没碰 routes、没碰 cloudRoutes() 的其余 27 条。
+    const wrappedByPath = new Map(progressWrapped.map((item) => [item.path, item]))
+    const cloudWithProgress = cloudRoutes().map((item) => wrappedByPath.get(item.path) ?? item)
+    const allRoutes = [...routes, ...cloudWithProgress, route(`${API_PREFIX}/progress`, 'GET', async () => progress.snapshot())]
     const disposers = []
     for (const item of allRoutes) {
       try {

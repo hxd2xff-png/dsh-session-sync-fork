@@ -147,6 +147,75 @@ test('未包装的路由不产生任何进度条目（不误伤非备份操作�
   assert.equal(registry.hasRunning(), false)
 })
 
+// —— action 维度：备份与删除同域并存（本次改动的核心契约）——
+test('同域的备份与删除是两条独立条目，互不覆盖', () => {
+  const registry = new ProgressRegistry()
+  registry.start('plugin', { label: '插件备份', action: 'backup' })
+  registry.start('plugin', { label: '插件备份删除', action: 'delete', stage: 'delete' })
+
+  const entries = registry.snapshot().entries
+  assert.equal(entries.length, 2, '同域 backup + delete 必须同时存在，不能被后者覆盖')
+  assert.deepEqual(entries.map((e) => e.action), ['backup', 'delete'], '同 kind 内 backup 在前、delete 在后')
+  assert.deepEqual(entries.map((e) => e.label), ['插件备份', '插件备份删除'])
+})
+
+test('只更新 delete 条目时，同域的 backup 条目不受影响', () => {
+  const registry = new ProgressRegistry()
+  registry.start('plugin', { action: 'backup', stage: 'collecting' })
+  registry.start('plugin', { action: 'delete', stage: 'delete' })
+
+  registry.update('plugin', { action: 'delete', stage: 'delete', files: { done: 2, total: 5 } })
+
+  const entries = registry.snapshot().entries
+  const backup = entries.find((e) => e.action === 'backup')
+  const del = entries.find((e) => e.action === 'delete')
+  assert.deepEqual(del.files, { done: 2, total: 5 }, 'delete 条目应被更新')
+  assert.equal(backup.files, null, 'backup 条目不得被 delete 的更新污染')
+  assert.equal(backup.stage, 'collecting', 'backup 的 stage 不得被改写')
+})
+
+test('删除失败不影响同域备份条目的状态', () => {
+  const registry = new ProgressRegistry()
+  registry.start('skill', { action: 'backup' })
+  registry.start('skill', { action: 'delete' })
+
+  const failed = registry.finish('skill', { ok: false, error: 'remove failed', action: 'delete' })
+  assert.equal(failed.state, 'finished')
+  assert.equal(failed.ok, false)
+  assert.equal(failed.error, 'remove failed')
+
+  const backup = registry.snapshot().entries.find((e) => e.action === 'backup')
+  assert.equal(backup.state, 'running', '同域备份条目不得被删除的失败收尾波及')
+})
+
+test('不传 action 的旧调用方仍指向 backup 条目（向后兼容）', () => {
+  const registry = new ProgressRegistry()
+  registry.start('session')                       // 旧式：只有 kind
+  registry.start('session', { action: 'delete' }) // 新式：删除
+  const updated = registry.update('session', { stage: 'push' })
+  assert.equal(updated.action, 'backup', '未指定 action 时应命中 backup 条目')
+  const finished = registry.finish('session', { ok: true })
+  assert.equal(finished.action, 'backup')
+})
+
+test('非法 action 响亮失败，不静默当作 backup', () => {
+  const registry = new ProgressRegistry()
+  assert.throws(() => registry.start('session', { action: 'purge' }), /unknown progress action/u)
+  registry.start('session')
+  assert.throws(() => registry.update('session', { action: 'purge' }), /unknown progress action/u)
+  assert.throws(() => registry.finish('session', { action: 'purge' }), /unknown progress action/u)
+})
+
+test('删除条目完成后同样进入保留期（供播放收尾动画）', () => {
+  let clock = 1_000_000
+  const registry = new ProgressRegistry({ now: () => clock })
+  registry.start('plugin', { action: 'delete' })
+  registry.finish('plugin', { ok: true, action: 'delete' })
+  assert.equal(registry.snapshot().entries.length, 1)
+  clock += FINISHED_LINGER_MS + 2
+  assert.equal(registry.snapshot().entries.length, 0, '超过保留期应被清理')
+})
+
 test('finish() 保留条目以便播放收尾动画，超期后惰性清理', () => {
   let clock = 1_000_000
   const registry = new ProgressRegistry({ now: () => clock })
