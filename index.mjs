@@ -1441,6 +1441,7 @@ export function apply(ctx, config = {}) {
           deviceShort: String(meta.deviceId ?? 'unknown').replaceAll('-', '').slice(0, 8).toLowerCase() || 'unknown',
           tempRoot: os.tmpdir(),
         })
+        return result
       },
       prepareOverwrite: async (commit) => {
         const backend = await uiBackend()
