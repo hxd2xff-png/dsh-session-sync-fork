@@ -1,1 +1,20 @@
-Ly8gUmVhZC1vbmx5IGRpYWdub3N0aWNzOiBuZXZlciBwcmludCB0b2tlbnMgb3IgYmFja3VwIGNvbnRlbnRzOyBuZXZlciB3cml0ZSByZW1vdGVseS4KaW1wb3J0IHsgbG9hZFNldHRpbmdzLCBkc2hIb21lIH0gZnJvbSAnLi4vbGliL2Nsb3VkLWNvcmUubWpzJwppbXBvcnQgeyBjcmVhdGVIYXNoIH0gZnJvbSAnbm9kZTpjcnlwdG8nCmNvbnN0IHNldHRpbmdzID0gYXdhaXQgbG9hZFNldHRpbmdzKGRzaEhvbWUoKSkKaWYgKHNldHRpbmdzLnByb3ZpZGVyLnR5cGUgIT09ICdnaXN0JykgdGhyb3cgbmV3IEVycm9yKCdBY3RpdmUgcHJvdmlkZXIgaXMgbm90IEdpc3QnKQpjb25zdCB7IHRva2VuLCBnaXN0SWQgfSA9IHNldHRpbmdzLnByb3ZpZGVyCmNvbnN0IGhlYWRlcnMgPSB7IEF1dGhvcml6YXRpb246ICdCZWFyZXIgJyArIHRva2VuLCBBY2NlcHQ6ICdhcHBsaWNhdGlvbi92bmQuZ2l0aHViK2pzb24nLCAnVXNlci1BZ2VudCc6ICdkc2gtc2Vzc2lvbi1zeW5jLWRpYWdub3N0aWNzJyB9CmNvbnN0IG5hbWUgPSBrZXkgPT4gJ2RzaC1jbG91ZC1zeW5jLXYxLScgKyBjcmVhdGVIYXNoKCdzaGEyNTYnKS51cGRhdGUoa2V5KS5kaWdlc3QoJ2hleCcpLnNsaWNlKDAsIDQwKSArICcuYjY0Jwpjb25zdCBrZXlzID0gWydzbmFwc2hvdHMvbGF0ZXN0Lmpzb24uZ3onLCAnc25hcHNob3RzL2hpc3RvcnkvaW5kZXguanNvbicsICdza2lsbHMvaW5kZXguanNvbiddCmZvciAobGV0IHBhZ2UgPSAxOyBwYWdlIDw9IDU7IHBhZ2UrKykgewogIGNvbnN0IHJlc3BvbnNlID0gYXdhaXQgZmV0Y2goJ2h0dHBzOi8vYXBpLmdpdGh1Yi5jb20vZ2lzdHM/cGVyX3BhZ2U9MTAwJnBhZ2U9JyArIHBhZ2UsIHsgaGVhZGVycywgc2lnbmFsOiBBYm9ydFNpZ25hbC50aW1lb3V0KDIwMDAwKSB9KQogIGlmICghcmVzcG9uc2Uub2spIHRocm93IG5ldyBFcnJvcignR2l0SHViIEdpc3QgZW51bWVyYXRpb246IEhUVFAgJyArIHJlc3BvbnNlLnN0YXR1cykKICBjb25zdCBnaXN0cyA9IGF3YWl0IHJlc3BvbnNlLmpzb24oKQogIGlmICghQXJyYXkuaXNBcnJheShnaXN0cykpIHRocm93IG5ldyBFcnJvcignSW52YWxpZCBHaXRIdWIgcmVzcG9uc2UnKQogIGZvciAoY29uc3QgZ2lzdCBvZiBnaXN0cykgewogICAgY29uc3QgZmlsZXMgPSBPYmplY3Qua2V5cyhnaXN0LmZpbGVzID8/IHt9KQogICAgaWYgKGdpc3QuaWQgPT09IGdpc3RJZCB8fCBmaWxlcy5zb21lKGZpbGUgPT4gZmlsZS5zdGFydHNXaXRoKCdkc2gtY2xvdWQtc3luYycpKSkgY29uc29sZS5sb2coSlNPTi5zdHJpbmdpZnkoeyBpZDogZ2lzdC5pZCwgYWN0aXZlOiBnaXN0LmlkID09PSBnaXN0SWQsIGZpbGVDb3VudDogZmlsZXMubGVuZ3RoLCB1cGRhdGVkQXQ6IGdpc3QudXBkYXRlZF9hdCwgaW5kaWNlczogT2JqZWN0LmZyb21FbnRyaWVzKGtleXMubWFwKGtleSA9PiBba2V5LCBmaWxlcy5pbmNsdWRlcyhuYW1lKGtleSkpXSkpIH0pKQogIH0KICBpZiAoZ2lzdHMubGVuZ3RoIDwgMTAwKSBicmVhawp9Cg==
+// Read-only diagnostics: never print tokens or backup contents; never write remotely.
+import { loadSettings, dshHome } from '../lib/cloud-core.mjs'
+import { createHash } from 'node:crypto'
+const settings = await loadSettings(dshHome())
+if (settings.provider.type !== 'gist') throw new Error('Active provider is not Gist')
+const { token, gistId } = settings.provider
+const headers = { Authorization: 'Bearer ' + token, Accept: 'application/vnd.github+json', 'User-Agent': 'dsh-session-sync-diagnostics' }
+const name = key => 'dsh-cloud-sync-v1-' + createHash('sha256').update(key).digest('hex').slice(0, 40) + '.b64'
+const keys = ['snapshots/latest.json.gz', 'snapshots/history/index.json', 'skills/index.json']
+for (let page = 1; page <= 5; page++) {
+  const response = await fetch('https://api.github.com/gists?per_page=100&page=' + page, { headers, signal: AbortSignal.timeout(20000) })
+  if (!response.ok) throw new Error('GitHub Gist enumeration: HTTP ' + response.status)
+  const gists = await response.json()
+  if (!Array.isArray(gists)) throw new Error('Invalid GitHub response')
+  for (const gist of gists) {
+    const files = Object.keys(gist.files ?? {})
+    if (gist.id === gistId || files.some(file => file.startsWith('dsh-cloud-sync'))) console.log(JSON.stringify({ id: gist.id, active: gist.id === gistId, fileCount: files.length, updatedAt: gist.updated_at, indices: Object.fromEntries(keys.map(key => [key, files.includes(name(key))])) }))
+  }
+  if (gists.length < 100) break
+}

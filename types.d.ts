@@ -1,1 +1,162 @@
-Ly8gdHlwZXMuZC50cyDigJQgZHNoLXNlc3Npb24tc3luYyDnsbvlnovlpZHnuqbvvIjkvJror53kuovku7blo7DmmI7lkIjlubYgKyDmtojmga8gc291cmNlIOWjsOaYjuWQiOW5tgovLyArIOmFjee9ruexu+Wei++8ieOAggoKLyoqCiAqIOa2iOaBryBzb3VyY2Ug55qE5aOw5piO5ZCI5bm277yI5a6/5Li7IDAuMS43IOi1tyBgTWVzc2FnZVNvdXJjZU1hcGAg5pivIHByb2R1Y2VyLW93bmVkIOeahAogKiDlj6/lkIjlubbmianlsZXogZTlkIjvvIzmsqHmnInlhbHkuqvlhZzlupUgYHBsdWdpbmAga2luZO+8ieOAggogKgogKiDkuLrku4DkuYjlv4XpobvmnInov5nkuIDmrrXvvJpgaW5kZXgubWpzYCDph4zlhpnnmoTmmK8qKuWvueixoeWtl+mdoumHj+mHjOeahOWtl+espuS4sioqCiAqIO+8iGBzb3VyY2U6IHsga2luZDogJ2RzaC1zZXNzaW9uLXN5bmMnLCDigKYgfWDvvInvvIzlj6rmnInmiormnKzmj5Lku7bnmoQga2luZCDlkIjov5sKICogYE1lc3NhZ2VTb3VyY2VNYXBg77yMYGtpbmRgIOaJjeiQveWcqOiBlOWQiOWGhSDih5Ig5pS55Zue6YCA5b2555qEIGAncGx1Z2luJ2Ag5Lya6Kem5Y+RCiAqIGV4Y2Vzcy1wcm9wZXJ0eS/ogZTlkIjkuI3ljLnphY3nmoQgYFRTMjMyMmDjgILnvLrkuobov5nmrrXvvIzpl6jnpoHlr7npgqPkuIDooYzmmK8qKuWkseaYjioq55qECiAqIO+8iGAncGx1Z2luJ2Ag5Y+q5pivIuWPiOS4gOS4quWtl+espuS4siLvvInjgIIKICoKICogYENvbnRleHRGb3JtZWRgIOaPkOS+myBgZm9ybTogJ25vdGljZSdgICsgYHN1bW1hcnlgIOeahOWIhuaUr++8jOivreS5ieS4juWOnwogKiBgeyBmb3JtOiAnbm90aWNlJywgc3VtbWFyeSB9YCDlrozlhajkuIDoh7TvvIjooYzkuLrkuI3lj5jvvIzku4XmjaIga2luZO+8ieOAggogKiBAc2VlIHRlc3Qvc291cmNlLXJlYWRiYWNrLnRlc3QubWpzIOKAlOKAlCDov5DooYzmnJ/or7vlm57pl7jvvIjnsbvlnovpl6jnpoHkuYvlpJbnmoTllK/kuIDliKTmja7vvInjgIIKICovCmRlY2xhcmUgbW9kdWxlICdAZGVlcHNlZWstYWkvZHNoLWxsbScgewogIGludGVyZmFjZSBNZXNzYWdlU291cmNlTWFwIHsKICAgICdkc2gtc2Vzc2lvbi1zeW5jJzogeyBraW5kOiAnZHNoLXNlc3Npb24tc3luYycgfSAmIGltcG9ydCgnQGRlZXBzZWVrLWFpL2RzaC1sbG0nKS5Db250ZXh0Rm9ybWVkCiAgfQp9CgpkZWNsYXJlIG1vZHVsZSAnQGRlZXBzZWVrLWFpL2RzaC1zZXNzaW9uJyB7CiAgaW50ZXJmYWNlIFNlc3Npb25FdmVudE1hcCB7CiAgICAvKioKICAgICAqIOS4gOasoeaOqOmAgee7k+aenO+8iGxvZy1vbmx577yJ44CCYXV0byDmqKHlvI/vvIh0dXJuL2VuZO+8ieS4jiAvc3luYyBwdXNo44CBCiAgICAgKiBzeW5jX3B1c2gg5bel5YW35YWx55So77ybb2s9ZmFsc2Ug5pC65bim57uT5p6E5YyW6ZSZ6K+v44CCCiAgICAgKiDms6jmhI/vvJrlvZPliY3lrr/kuLvmnoTlu7rvvIhLTk9XTl9TRVNTSU9OX0VWRU5UX1RZUEVT77yJ5bCa5pyq5pS25b2VIHN5bmMvKu+8jAogICAgICog6L+Q6KGM5pe257uP6Ieq6YCC5bqU6Zeo6Lez6L+HIGFwcGVuZO+8m+Wuv+S4u+aUtuW9leWQjuiHquWKqOW8gOWQr++8iOingSBSRUFETUXjgIzkvJror53kuovku7bjgI3vvInjgIIKICAgICAqLwogICAgJ3N5bmMvcHVzaCc6IHsKICAgICAgc2Vzc2lvbklkOiBzdHJpbmcKICAgICAgb2s6IGJvb2xlYW4KICAgICAgZXJyb3I/OiBzdHJpbmcKICAgICAgcHVzaGVkPzogYm9vbGVhbgogICAgICBtaXJyb3JlZD86IG51bWJlcgogICAgICBkZWxldGVkPzogbnVtYmVyCiAgICAgIGhlYWQ/OiBzdHJpbmcKICAgIH0KICAgIC8qKgogICAgICog5LiA5qyh5ouJ5Y+W57uT5p6c77yIbG9nLW9ubHnvvInjgIJjb25mbGljdCDor63kuYnvvIhhcHBlbmQtb25seeOAgWtlZXAtYm90aCArCiAgICAgKiBmb3Jr77yJ55qE5YWz6ZSu5a2X5q6177yaYWRvcHRlZO+8iOS7hei/nOerr+i/veWKoO+8jOacrOWcsOacquWPmO+8ieOAgWFwcGVuZGVk77yI5Y+M6L65CiAgICAgKiDov73liqDvvInjgIFkaXZlcmdlZO+8iOmdnui/veWKoOWIhuatp++8ie+8m2ZvcmtzIOS4uueVmeWtmOi/nOerr+eJiOacrOeahCBmb3JrIOaWh+S7tuOAggogICAgICovCiAgICAnc3luYy9wdWxsJzogewogICAgICBzZXNzaW9uSWQ6IHN0cmluZwogICAgICBvazogYm9vbGVhbgogICAgICBlcnJvcj86IHN0cmluZwogICAgICBwdWxsZWQ/OiBib29sZWFuCiAgICAgIG1lcmdlZD86IGJvb2xlYW4KICAgICAgYWRvcHRlZD86IG51bWJlcgogICAgICBhcHBlbmRlZD86IG51bWJlcgogICAgICBkaXZlcmdlZD86IG51bWJlcgogICAgICBmb3Jrcz86IHN0cmluZ1tdCiAgICAgIGhlYWQ/OiBzdHJpbmcKICAgIH0KICAgIC8qKgogICAgICog5Yay56qB6KOB5Yaz77yIbG9nLW9ubHnvvInvvJpmb3JrIOaWh+S7tui3r+W+hCArIOWPr+mAieS8muivnee6pyBmb3JrIOWtkOS8muivnSBpZOOAggogICAgICog5Lya6K+d57qnIGZvcmsg5LuF5Zyo55uu5qCH5Lya6K+dIGxpdmUg5LiU5peg5byA5pS+6L2u5qyh5pe25Y+R55Sf77yI6L2u5qyh5Lit6Lez6L+H77yMCiAgICAgKiDmlofku7bnuqfkuKTovrnkv53nlZnmgZLmiJDnq4vvvInjgIIKICAgICAqLwogICAgJ3N5bmMvY29uZmxpY3QnOiB7CiAgICAgIHNlc3Npb25JZDogc3RyaW5nCiAgICAgIGZvcmtQYXRoczogc3RyaW5nW10KICAgICAgY2hpbGRTZXNzaW9uSWQ/OiBzdHJpbmcKICAgICAgZGl2ZXJnZWQ/OiBudW1iZXIKICAgIH0KICB9Cn0KCmV4cG9ydCBpbnRlcmZhY2UgQ29uZmlnIHsKICAvKiog5oC75byA5YWz77ybZmFsc2Ug5pe25ZG95Luk44CB5bel5YW344CB55uR5ZCs5Zmo5LiO6Ieq5Yqo5qih5byP5YWo6YOo5Y246L2944CCICovCiAgZW5hYmxlZD86IGJvb2xlYW4KICAvKiog5ZCM5q2l5ZCO56uv6K+N5rGH77ybYGdpdGAg5piO5paH44CBYGVuY3J5cHRlZGAgYWdlIOWKoOWvhueahCBnaXTvvJvlr7nosaHlrZjlgqjkuLrpooTnlZnljaDkvY3vvIjphY3nva7ljbPlk43kuq7lpLHotKXvvInjgIIgKi8KICBiYWNrZW5kPzogJ2dpdCcgfCAnZW5jcnlwdGVkJwogIC8qKiDkvJror53lrZjlgqjmoLnvvJvnqbogPSAkRFNIX0hPTUUvc2Vzc2lvbnPvvIjkuKTogIXnmobnvLrliqDovb3mnJ/lk43kuq7lpLHotKXvvInjgIIgKi8KICBzZXNzaW9uUm9vdD86IHN0cmluZwogIC8qKiDlkIzmraUgZ2l0IOW3peS9nOagkeague+8m+epuiA9ICREU0hfSE9NRS9kc2gtc2Vzc2lvbi1zeW5jL3JlcG/jgIIgKi8KICByZXBvRGlyPzogc3RyaW5nCiAgLyoqIOi/nOerr+WcsOWdgO+8iOiHquWumuS5iSByZW1vdGXvvInvvJtwdWxsL3B1c2gg5YmN5b+F6aG76Z2e56m677yMc3RhdHVzL2RpZmYg5LiN6ZyA6KaB44CCICovCiAgcmVtb3RlPzogc3RyaW5nCiAgLyoqIOi/nOerr+WIhuaUr+WQje+8iOm7mOiupCBtYWlu77yJ44CCICovCiAgYnJhbmNoPzogc3RyaW5nCiAgLyoqIGdpdCDlj6/miafooYzot6/lvoTvvIjpu5jorqQgJ2dpdCfvvInjgIIgKi8KICBnaXRCaW4/OiBzdHJpbmcKICAvKiogYWdlIOWPr+aJp+ihjOi3r+W+hO+8iOm7mOiupCAnYWdlJ++8m2JhY2tlbmQ6IGVuY3J5cHRlZCDml7bmjqLmtYvvvIznvLrlpLHpmY3nuqfmmI7mlofvvInjgIIgKi8KICBhZ2VCaW4/OiBzdHJpbmcKICAvKiogYWdlIOaUtuS7tuS6uu+8iOWFrOmSpS/ouqvku73kuLLvvJvnqbogPSDml6Dms5XliqDlr4bvvIzpmY3nuqfmmI7mlofvvInjgIIgKi8KICBhZ2VSZWNpcGllbnQ/OiBzdHJpbmcKICAvKiogYWdlIOi6q+S7veaWh+S7tui3r+W+hO+8iOaXoOWPo+S7pOengemSpe+8m+epuiA9IOaXoOazleino+Wvhu+8jOmZjee6p+aYjuaWh++8ieOAgiAqLwogIGFnZUlkZW50aXR5Pzogc3RyaW5nCiAgLyoqIOaMgui9veaXtuiHquWKqOaLieWPluS4gOasoe+8iOmFjee9ruWNs+aOiOadg++8jOS4jeWGjeehruiupO+8ieOAgiAqLwogIGF1dG9QdWxsT25TdGFydD86IGJvb2xlYW4KICAvKiog5q+P5LiqIHR1cm4vZW5kIOWQjuiHquWKqOaOqOmAge+8iOmFjee9ruWNs+aOiOadg++8jOS4jeWGjeehruiupO+8ieOAgiAqLwogIGF1dG9QdXNoT25UdXJuRW5kPzogYm9vbGVhbgogIC8qKiDlkajmnJ/oh6rliqjmi4nlj5bpl7TpmpTliIbpkp/vvIgwID0g5YWz6Zet77yb5LiK6ZmQIDEwMDgw77yJ44CCICovCiAgcHVsbEludGVydmFsTWludXRlcz86IG51bWJlcgogIC8qKiDnoa7orqTpgJrpgZPvvJphdXRv77yIdXNlclF1ZXN0aW9ucyDkvJjlhYjvvIzlhbbmrKEgYXBwcm92YWzvvInCtyB1c2VyUXVlc3Rpb25zIMK3IGFwcHJvdmFs44CCICovCiAgY29uZmlybVZpYT86ICdhdXRvJyB8ICd1c2VyUXVlc3Rpb25zJyB8ICdhcHByb3ZhbCcKICAvKiogZ2l0IOWtkOi/m+eoi+e7iOatouWuvemZkO+8iG1z77yb6buY6K6kIDEwMDAw77yJ44CCICovCiAgZ3JhY2VNcz86IG51bWJlcgogIC8qKiDljZXmnaEgZ2l0IOWRveS7pOi2heaXtu+8iG1z77yb6buY6K6kIDYwMDAwMO+8jOmaj+WMhSBwYXRjaCDmnInmhI/kuI3lhpnor6XlrZfmrrXku6XlhY3lm7rljJbml6flgLzvvInjgIIgKi8KICBjb21tYW5kVGltZW91dE1zPzogbnVtYmVyCiAgLyoqIGdpdCDovpPlh7rljZXmtYHmlLbpm4bkuIrpmZDvvIjlrZfoioLvvJvpu5jorqQgMjYyMTQ077yJ44CCICovCiAgbWF4T3V0cHV0Qnl0ZXM/OiBudW1iZXIKICAvKiog5o+S5Lu25o+Q5Lqk6ICF5ZCN44CCICovCiAgY29tbWl0TmFtZT86IHN0cmluZwogIC8qKiDmj5Lku7bmj5DkuqTogIXpgq7nrrHjgIIgKi8KICBjb21taXRFbWFpbD86IHN0cmluZwogIC8qKiDms6jlhowgL3N5bmMg5ZG95Luk77yI6buY6K6kIHRydWXvvInjgIIgKi8KICByZWdpc3RlckNvbW1hbmQ/OiBib29sZWFuCiAgLyoqIHRvb2xzIOacjeWKoeWtmOWcqOaXtuazqOWGjCBzeW5jXyog5bel5YW377yI6buY6K6kIHRydWXvvInjgIIgKi8KICByZWdpc3RlclRvb2xzPzogYm9vbGVhbgp9CgovKiogc3luY19zdGF0dXMg5bel5YW36KeE6IyD57uT5p6c44CCICovCmV4cG9ydCBpbnRlcmZhY2UgU3RhdHVzVmFsdWUgewogIG9rOiBib29sZWFuCiAgYnJhbmNoOiBzdHJpbmcKICByZW1vdGU6IHN0cmluZwogIGhlYWQ/OiBzdHJpbmcKICByZW1vdGVIZWFkPzogc3RyaW5nCiAgYWhlYWQ6IG51bWJlcgogIGJlaGluZDogbnVtYmVyCiAgZGlydHk6IHN0cmluZ1tdCiAgZm9ya3M6IHN0cmluZ1tdCiAgZGlmZlN0YXQ6IHN0cmluZwogIG1lcmdlSW5Qcm9ncmVzczogYm9vbGVhbgogIGxhc3RDb21taXRzOiBzdHJpbmdbXQogIGxhc3RQdWxsQXQ/OiBudW1iZXIKICBsYXN0UHVzaEF0PzogbnVtYmVyCiAgbGFzdEVycm9yPzogc3RyaW5nCiAgZXJyb3I/OiBzdHJpbmcKICB3YXJuaW5ncz86IHN0cmluZ1tdCn0KCi8qKiBzeW5jX3B1bGwg5bel5YW36KeE6IyD57uT5p6c44CCICovCmV4cG9ydCBpbnRlcmZhY2UgUHVsbFZhbHVlIHsKICBvazogYm9vbGVhbgogIHB1bGxlZD86IGJvb2xlYW4KICBtZXJnZWQ/OiBib29sZWFuCiAgYWRvcHRlZD86IG51bWJlcgogIGFwcGVuZGVkPzogbnVtYmVyCiAgZGl2ZXJnZWQ/OiBudW1iZXIKICBmb3Jrcz86IHN0cmluZ1tdCiAgaGVhZD86IHN0cmluZwogIGVycm9yPzogc3RyaW5nCiAgd2FybmluZ3M/OiBzdHJpbmdbXQp9CgovKiogc3luY19wdXNoIOW3peWFt+inhOiMg+e7k+aenOOAgiAqLwpleHBvcnQgaW50ZXJmYWNlIFB1c2hWYWx1ZSB7CiAgb2s6IGJvb2xlYW4KICBwdXNoZWQ/OiBib29sZWFuCiAgaGVhZD86IHN0cmluZwogIG1pcnJvcmVkPzogbnVtYmVyCiAgZGVsZXRlZD86IG51bWJlcgogIHJlbW90ZT86IHN0cmluZwogIGVycm9yPzogc3RyaW5nCiAgd2FybmluZ3M/OiBzdHJpbmdbXQp9Cg==
+// types.d.ts — dsh-session-sync 类型契约（会话事件声明合并 + 消息 source 声明合并
+// + 配置类型）。
+
+/**
+ * 消息 source 的声明合并（宿主 0.1.7 起 `MessageSourceMap` 是 producer-owned 的
+ * 可合并扩展联合，没有共享兜底 `plugin` kind）。
+ *
+ * 为什么必须有这一段：`index.mjs` 里写的是**对象字面量里的字符串**
+ * （`source: { kind: 'dsh-session-sync', … }`），只有把本插件的 kind 合进
+ * `MessageSourceMap`，`kind` 才落在联合内 ⇒ 改回退役的 `'plugin'` 会触发
+ * excess-property/联合不匹配的 `TS2322`。缺了这段，门禁对那一行是**失明**的
+ * （`'plugin'` 只是"又一个字符串"）。
+ *
+ * `ContextFormed` 提供 `form: 'notice'` + `summary` 的分支，语义与原
+ * `{ form: 'notice', summary }` 完全一致（行为不变，仅换 kind）。
+ * @see test/source-readback.test.mjs —— 运行期读回闸（类型门禁之外的唯一判据）。
+ */
+declare module '@deepseek-ai/dsh-llm' {
+  interface MessageSourceMap {
+    'dsh-session-sync': { kind: 'dsh-session-sync' } & import('@deepseek-ai/dsh-llm').ContextFormed
+  }
+}
+
+declare module '@deepseek-ai/dsh-session' {
+  interface SessionEventMap {
+    /**
+     * 一次推送结果（log-only）。auto 模式（turn/end）与 /sync push、
+     * sync_push 工具共用；ok=false 携带结构化错误。
+     * 注意：当前宿主构建（KNOWN_SESSION_EVENT_TYPES）尚未收录 sync/*，
+     * 运行时经自适应门跳过 append；宿主收录后自动开启（见 README「会话事件」）。
+     */
+    'sync/push': {
+      sessionId: string
+      ok: boolean
+      error?: string
+      pushed?: boolean
+      mirrored?: number
+      deleted?: number
+      head?: string
+    }
+    /**
+     * 一次拉取结果（log-only）。conflict 语义（append-only、keep-both +
+     * fork）的关键字段：adopted（仅远端追加，本地未变）、appended（双边
+     * 追加）、diverged（非追加分歧）；forks 为留存远端版本的 fork 文件。
+     */
+    'sync/pull': {
+      sessionId: string
+      ok: boolean
+      error?: string
+      pulled?: boolean
+      merged?: boolean
+      adopted?: number
+      appended?: number
+      diverged?: number
+      forks?: string[]
+      head?: string
+    }
+    /**
+     * 冲突裁决（log-only）：fork 文件路径 + 可选会话级 fork 子会话 id。
+     * 会话级 fork 仅在目标会话 live 且无开放轮次时发生（轮次中跳过，
+     * 文件级两边保留恒成立）。
+     */
+    'sync/conflict': {
+      sessionId: string
+      forkPaths: string[]
+      childSessionId?: string
+      diverged?: number
+    }
+  }
+}
+
+export interface Config {
+  /** 总开关；false 时命令、工具、监听器与自动模式全部卸载。 */
+  enabled?: boolean
+  /** 同步后端词汇；`git` 明文、`encrypted` age 加密的 git；对象存储为预留占位（配置即响亮失败）。 */
+  backend?: 'git' | 'encrypted'
+  /** 会话存储根；空 = $DSH_HOME/sessions（两者皆缺加载期响亮失败）。 */
+  sessionRoot?: string
+  /** 同步 git 工作树根；空 = $DSH_HOME/dsh-session-sync/repo。 */
+  repoDir?: string
+  /** 远端地址（自定义 remote）；pull/push 前必须非空，status/diff 不需要。 */
+  remote?: string
+  /** 远端分支名（默认 main）。 */
+  branch?: string
+  /** git 可执行路径（默认 'git'）。 */
+  gitBin?: string
+  /** age 可执行路径（默认 'age'；backend: encrypted 时探测，缺失降级明文）。 */
+  ageBin?: string
+  /** age 收件人（公钥/身份串；空 = 无法加密，降级明文）。 */
+  ageRecipient?: string
+  /** age 身份文件路径（无口令私钥；空 = 无法解密，降级明文）。 */
+  ageIdentity?: string
+  /** 挂载时自动拉取一次（配置即授权，不再确认）。 */
+  autoPullOnStart?: boolean
+  /** 每个 turn/end 后自动推送（配置即授权，不再确认）。 */
+  autoPushOnTurnEnd?: boolean
+  /** 周期自动拉取间隔分钟（0 = 关闭；上限 10080）。 */
+  pullIntervalMinutes?: number
+  /** 确认通道：auto（userQuestions 优先，其次 approval）· userQuestions · approval。 */
+  confirmVia?: 'auto' | 'userQuestions' | 'approval'
+  /** git 子进程终止宽限（ms；默认 10000）。 */
+  graceMs?: number
+  /** 单条 git 命令超时（ms；默认 600000，随包 patch 有意不写该字段以免固化旧值）。 */
+  commandTimeoutMs?: number
+  /** git 输出单流收集上限（字节；默认 262144）。 */
+  maxOutputBytes?: number
+  /** 插件提交者名。 */
+  commitName?: string
+  /** 插件提交者邮箱。 */
+  commitEmail?: string
+  /** 注册 /sync 命令（默认 true）。 */
+  registerCommand?: boolean
+  /** tools 服务存在时注册 sync_* 工具（默认 true）。 */
+  registerTools?: boolean
+}
+
+/** sync_status 工具规范结果。 */
+export interface StatusValue {
+  ok: boolean
+  branch: string
+  remote: string
+  head?: string
+  remoteHead?: string
+  ahead: number
+  behind: number
+  dirty: string[]
+  forks: string[]
+  diffStat: string
+  mergeInProgress: boolean
+  lastCommits: string[]
+  lastPullAt?: number
+  lastPushAt?: number
+  lastError?: string
+  error?: string
+  warnings?: string[]
+}
+
+/** sync_pull 工具规范结果。 */
+export interface PullValue {
+  ok: boolean
+  pulled?: boolean
+  merged?: boolean
+  adopted?: number
+  appended?: number
+  diverged?: number
+  forks?: string[]
+  head?: string
+  error?: string
+  warnings?: string[]
+}
+
+/** sync_push 工具规范结果。 */
+export interface PushValue {
+  ok: boolean
+  pushed?: boolean
+  head?: string
+  mirrored?: number
+  deleted?: number
+  remote?: string
+  error?: string
+  warnings?: string[]
+}

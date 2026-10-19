@@ -1,1 +1,140 @@
-Ly8gdGVzdC9oaXN0b3J5LnRlc3QubWpzIOKAlCDmj5DkuqTorrDlvZXop6PmnpDkuI7mnaXmupDmoIforrDvvIjnuq/lh73mlbDvvInjgIIKaW1wb3J0IHsgdGVzdCB9IGZyb20gJ25vZGU6dGVzdCcKaW1wb3J0IGFzc2VydCBmcm9tICdub2RlOmFzc2VydC9zdHJpY3QnCmltcG9ydCB7IHBhcnNlTG9nUmVjb3JkcywgY29tbWl0U291cmNlLCBkZWxldGVIaXN0b3J5Q29tbWl0IH0gZnJvbSAnLi4vbGliL2hpc3RvcnkubWpzJwoKY29uc3QgUlMgPSAnXHUwMDAwJwpjb25zdCBVUyA9ICdcdTAwMWYnCgp0ZXN0KCfop6PmnpDljZXmnaHorrDlvZUnLCAoKSA9PiB7CiAgY29uc3Qgc3Rkb3V0ID0gYGFiYzEyMyR7VVN9MjAyNi0xMC0xNFQxMDowMDowMCswODowMCR7VVN9QWxpY2Uke1VTfWRzaC1zZXNzaW9uLXN5bmM6IG1hbnVhbCBiYWNrdXAke1VTfSR7UlN9YAogIGNvbnN0IHJlY29yZHMgPSBwYXJzZUxvZ1JlY29yZHMoc3Rkb3V0KQogIGFzc2VydC5lcXVhbChyZWNvcmRzLmxlbmd0aCwgMSkKICBhc3NlcnQuZXF1YWwocmVjb3Jkc1swXS5zaGEsICdhYmMxMjMnKQogIGFzc2VydC5lcXVhbChyZWNvcmRzWzBdLmF1dGhvciwgJ0FsaWNlJykKICBhc3NlcnQuZXF1YWwocmVjb3Jkc1swXS5zdWJqZWN0LCAnZHNoLXNlc3Npb24tc3luYzogbWFudWFsIGJhY2t1cCcpCiAgYXNzZXJ0Lm9rKHJlY29yZHNbMF0uYXQgPiAwKQp9KQoKdGVzdCgn6Kej5p6Q5aSa5p2h6K6w5b2V5LiU5L+d5oyB6aG65bqPJywgKCkgPT4gewogIGNvbnN0IHN0ZG91dCA9IFsKICAgIGBhYWEke1VTfTIwMjYtMTAtMTRUMTA6MDA6MDArMDg6MDAke1VTfUEke1VTfWZpcnN0JHtVU30ke1JTfWAsCiAgICBgYmJiJHtVU30yMDI2LTEwLTEzVDEwOjAwOjAwKzA4OjAwJHtVU31CJHtVU31zZWNvbmQke1VTfSR7UlN9YCwKICBdLmpvaW4oJ1xuJykKICBjb25zdCByZWNvcmRzID0gcGFyc2VMb2dSZWNvcmRzKHN0ZG91dCkKICBhc3NlcnQuZXF1YWwocmVjb3Jkcy5sZW5ndGgsIDIpCiAgYXNzZXJ0LmVxdWFsKHJlY29yZHNbMF0uc2hhLCAnYWFhJykKICBhc3NlcnQuZXF1YWwocmVjb3Jkc1sxXS5zaGEsICdiYmInKQp9KQoKdGVzdCgn5o+Q5Lqk5L+h5oGv5ZCr5o2i6KGM5LiN5Liy6KGMJywgKCkgPT4gewogIGNvbnN0IHN0ZG91dCA9IGBjY2Mke1VTfTIwMjYtMTAtMTRUMTA6MDA6MDArMDg6MDAke1VTfUEke1VTfXN1YmplY3QgbGluZSR7VVN9Ym9keSBsaW5lIDFcbmJvZHkgbGluZSAyJHtSU31gCiAgY29uc3QgcmVjb3JkcyA9IHBhcnNlTG9nUmVjb3JkcyhzdGRvdXQpCiAgYXNzZXJ0LmVxdWFsKHJlY29yZHMubGVuZ3RoLCAxKQogIGFzc2VydC5tYXRjaChyZWNvcmRzWzBdLmJvZHksIC9ib2R5IGxpbmUgMi8pCn0pCgp0ZXN0KCfnqbrovpPlhaXlronlhajov5Tlm57nqbrmlbDnu4QnLCAoKSA9PiB7CiAgYXNzZXJ0LmRlZXBFcXVhbChwYXJzZUxvZ1JlY29yZHMoJycpLCBbXSkKICBhc3NlcnQuZGVlcEVxdWFsKHBhcnNlTG9nUmVjb3JkcygnICAgJyksIFtdKQp9KQoKdGVzdCgn5peg5o+Q5Lqk55qE5LuT5bqT77yI56m65Liy77yJ5LiN5Lqn55Sf6K6w5b2VJywgKCkgPT4gewogIGFzc2VydC5lcXVhbChwYXJzZUxvZ1JlY29yZHMoJycpLmxlbmd0aCwgMCkKfSkKCnRlc3QoJ+adpea6kOagh+iusO+8muaJi+WKqCAvIOiHquWKqCAvIOacquefpScsICgpID0+IHsKICBhc3NlcnQuZXF1YWwoY29tbWl0U291cmNlKCdkc2gtc2Vzc2lvbi1zeW5jOiBtYW51YWwgYmFja3VwJyksICdtYW51YWwnKQogIGFzc2VydC5lcXVhbChjb21taXRTb3VyY2UoJ2RzaC1zZXNzaW9uLXN5bmM6IGF1dG9tYXRpYyBiYWNrdXAnKSwgJ2F1dG9tYXRpYycpCiAgYXNzZXJ0LmVxdWFsKGNvbW1pdFNvdXJjZSgnZHNoLXNlc3Npb24tc3luYzogcHVzaCBzbmFwc2hvdCcpLCAndW5rbm93bicpCiAgYXNzZXJ0LmVxdWFsKGNvbW1pdFNvdXJjZSgnTWVyZ2UgYnJhbmNoIG1haW4nKSwgJ3Vua25vd24nKQogIGFzc2VydC5lcXVhbChjb21taXRTb3VyY2UoJycpLCAndW5rbm93bicpCn0pCgp0ZXN0KCfmnaXmupDmoIforrDlpKflsI/lhpnkuI3mlY/mhJ8nLCAoKSA9PiB7CiAgYXNzZXJ0LmVxdWFsKGNvbW1pdFNvdXJjZSgnRFNILVNFU1NJT04tU1lOQzogTUFOVUFMIEJBQ0tVUCcpLCAnbWFudWFsJykKfSkKCmNvbnN0IFNIQTEgPSAnMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMScKY29uc3QgU0hBMiA9ICcyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyJwpjb25zdCBTSEEzID0gJzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMnCgpmdW5jdGlvbiBoaXN0b3J5RW50cnkoc2hhLCBwYXJlbnRzID0gW10pIHsKICByZXR1cm4gewogICAgc2hhLAogICAgdHJlZTogYHRyZWUtJHtzaGFbMF19YCwKICAgIHBhcmVudHMsCiAgICBhdXRob3JOYW1lOiAnQWxpY2UnLAogICAgYXV0aG9yRW1haWw6ICdhbGljZUBleGFtcGxlLmNvbScsCiAgICBhdXRob3JJc286ICcyMDI2LTEwLTE1VDEwOjAwOjAwKzA4OjAwJywKICAgIGNvbW1pdHRlck5hbWU6ICdBbGljZScsCiAgICBjb21taXR0ZXJFbWFpbDogJ2FsaWNlQGV4YW1wbGUuY29tJywKICAgIGNvbW1pdHRlcklzbzogJzIwMjYtMTAtMTVUMTA6MDA6MDArMDg6MDAnLAogICAgc3ViamVjdDogYGJhY2t1cC0ke3NoYVswXX1gLAogICAgYm9keTogJycsCiAgfQp9CgpmdW5jdGlvbiBmYWtlSGlzdG9yeUdpdChvdmVycmlkZXMgPSB7fSkgewogIGNvbnN0IGNhbGxzID0gW10KICBjb25zdCBjaGFpbiA9IFsKICAgIGhpc3RvcnlFbnRyeShTSEExKSwKICAgIGhpc3RvcnlFbnRyeShTSEEyLCBbU0hBMV0pLAogICAgaGlzdG9yeUVudHJ5KFNIQTMsIFtTSEEyXSksCiAgXQogIGxldCByZWJ1aWx0ID0gMAogIGNvbnN0IGdpdCA9IHsKICAgIGFzeW5jIGZldGNoKCkgeyBjYWxscy5wdXNoKFsnZmV0Y2gnXSkgfSwKICAgIGFzeW5jIGhlYWRTaGEoKSB7IHJldHVybiBTSEEzIH0sCiAgICBhc3luYyByZW1vdGVIZWFkU2hhKCkgeyByZXR1cm4gU0hBMyB9LAogICAgYXN5bmMgY291bnRDb21taXRzU2FmZSgpIHsgcmV0dXJuIDAgfSwKICAgIGFzeW5jIGhpc3RvcnlDaGFpbihsaW1pdCkgeyBjYWxscy5wdXNoKFsnaGlzdG9yeUNoYWluJywgbGltaXRdKTsgcmV0dXJuIGNoYWluIH0sCiAgICBhc3luYyBjb21taXRUcmVlKHRyZWUsIG9wdHMpIHsKICAgICAgcmVidWlsdCArPSAxCiAgICAgIGNvbnN0IHNoYSA9IFsnYScsICdiJywgJ2MnXVtyZWJ1aWx0IC0gMV0ucmVwZWF0KDQwKQogICAgICBjYWxscy5wdXNoKFsnY29tbWl0VHJlZScsIHRyZWUsIG9wdHNdKQogICAgICByZXR1cm4gc2hhCiAgICB9LAogICAgYXN5bmMgcmV0YXJnZXRCcmFuY2goc2hhLCByZW1vdGVTaGEpIHsgY2FsbHMucHVzaChbJ3JldGFyZ2V0QnJhbmNoJywgc2hhLCByZW1vdGVTaGFdKSB9LAogICAgYXN5bmMgcHVzaFJld3JpdHRlbihsZWFzZVNoYSkgeyBjYWxscy5wdXNoKFsncHVzaFJld3JpdHRlbicsIGxlYXNlU2hhXSkgfSwKICAgIGFzeW5jIHB1c2goKSB7IGNhbGxzLnB1c2goWydwdXNoJ10pIH0sCiAgICAuLi5vdmVycmlkZXMsCiAgfQogIHJldHVybiB7IGdpdCwgY2FsbHMsIGNoYWluIH0KfQoKdGVzdCgn5Yig6Zmk5Lit6Ze05Y6G5Y+y77ya6YeN5pS+5o+Q5Lqk44CB56e75Yqo5pys5ZywIHJlZiDlubbkvb/nlKjov5znq68gbGVhc2Ug5by65o6oJywgYXN5bmMgKCkgPT4gewogIGNvbnN0IHsgZ2l0LCBjYWxscyB9ID0gZmFrZUhpc3RvcnlHaXQoKQogIGNvbnN0IHJlc3VsdCA9IGF3YWl0IGRlbGV0ZUhpc3RvcnlDb21taXQoLyoqIEB0eXBlIHthbnl9ICovIChnaXQpLCB7IGNvbW1pdDogU0hBMiB9KQogIGFzc2VydC5kZWVwRXF1YWwocmVzdWx0LCB7IG9rOiB0cnVlLCBkZWxldGVkOiBTSEEyLCBoZWFkOiAnYScucmVwZWF0KDQwKSwgcmVtYWluaW5nOiAyIH0pCiAgY29uc3QgcmVidWlsdCA9IGNhbGxzLmZpbHRlcigoW25hbWVdKSA9PiBuYW1lID09PSAnY29tbWl0VHJlZScpCiAgYXNzZXJ0LmVxdWFsKHJlYnVpbHQubGVuZ3RoLCAxKQogIGFzc2VydC5kZWVwRXF1YWwocmVidWlsdFswXVsyXS5wYXJlbnRzLCBbU0hBMV0pCiAgYXNzZXJ0Lm9rKGNhbGxzLnNvbWUoY2FsbCA9PiBjYWxsWzBdID09PSAncmV0YXJnZXRCcmFuY2gnICYmIGNhbGxbMV0gPT09ICdhJy5yZXBlYXQoNDApICYmIGNhbGxbMl0gPT09IFNIQTMpKQogIGFzc2VydC5vayhjYWxscy5zb21lKGNhbGwgPT4gY2FsbFswXSA9PT0gJ3B1c2hSZXdyaXR0ZW4nICYmIGNhbGxbMV0gPT09IFNIQTMpKQogIGFzc2VydC5kZWVwRXF1YWwoY2FsbHMuYXQoLTEpLCBbJ3JldGFyZ2V0QnJhbmNoJywgJ2EnLnJlcGVhdCg0MCksICdhJy5yZXBlYXQoNDApXSkKfSkKCnRlc3QoJ+WOhuWPsumHjeWGmeaOqOmAgeWksei0peaXtuWbnua7muacrOWcsOS4jiBvcmlnaW4g6Lef6LiqIHJlZicsIGFzeW5jICgpID0+IHsKICBjb25zdCB7IGdpdCwgY2FsbHMgfSA9IGZha2VIaXN0b3J5R2l0KHsKICAgIGFzeW5jIHB1c2hSZXdyaXR0ZW4oKSB7IGNhbGxzLnB1c2goWydwdXNoUmV3cml0dGVuJywgU0hBM10pOyB0aHJvdyBuZXcgRXJyb3IoJ2xlYXNlIHJlamVjdGVkJykgfSwKICB9KQogIGF3YWl0IGFzc2VydC5yZWplY3RzKCgpID0+IGRlbGV0ZUhpc3RvcnlDb21taXQoLyoqIEB0eXBlIHthbnl9ICovIChnaXQpLCB7IGNvbW1pdDogU0hBMiB9KSwgL2xlYXNlIHJlamVjdGVkL3UpCiAgYXNzZXJ0LmRlZXBFcXVhbChjYWxscy5hdCgtMSksIFsncmV0YXJnZXRCcmFuY2gnLCBTSEEzLCBTSEEzXSkKfSkKCnRlc3QoJ+i/nOerr+WtmOWcqOacrOWcsOayoeacieeahOaPkOS6pOaXtuaLkue7nemHjeWGmScsIGFzeW5jICgpID0+IHsKICBsZXQgY2hhaW5SZWFkID0gZmFsc2UKICBjb25zdCB7IGdpdCB9ID0gZmFrZUhpc3RvcnlHaXQoewogICAgYXN5bmMgY291bnRDb21taXRzU2FmZSgpIHsgcmV0dXJuIDEgfSwKICAgIGFzeW5jIGhpc3RvcnlDaGFpbigpIHsgY2hhaW5SZWFkID0gdHJ1ZTsgcmV0dXJuIFtdIH0sCiAgfSkKICBhd2FpdCBhc3NlcnQucmVqZWN0cygoKSA9PiBkZWxldGVIaXN0b3J5Q29tbWl0KC8qKiBAdHlwZSB7YW55fSAqLyAoZ2l0KSwgeyBjb21taXQ6IFNIQTIgfSksIC/ov5znq6/pooblhYjmnKzlnLAvdSkKICBhc3NlcnQuZXF1YWwoY2hhaW5SZWFkLCBmYWxzZSkKfSkKCnRlc3QoJ+WQiOW5tuaPkOS6pOS9nOS4uuWIoOmZpOebruagh+aXtuaLkue7nemHjeWGmScsIGFzeW5jICgpID0+IHsKICBjb25zdCB7IGdpdCwgY2hhaW4gfSA9IGZha2VIaXN0b3J5R2l0KCkKICBjaGFpblsxXSA9IGhpc3RvcnlFbnRyeShTSEEyLCBbU0hBMSwgJ2FhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWEnXSkKICBhd2FpdCBhc3NlcnQucmVqZWN0cygoKSA9PiBkZWxldGVIaXN0b3J5Q29tbWl0KC8qKiBAdHlwZSB7YW55fSAqLyAoZ2l0KSwgeyBjb21taXQ6IFNIQTIgfSksIC/lkIjlubbmj5DkuqTkuI3lj6/liKDpmaQvdSkKfSkK
+// test/history.test.mjs — 提交记录解析与来源标记（纯函数）。
+import { test } from 'node:test'
+import assert from 'node:assert/strict'
+import { parseLogRecords, commitSource, deleteHistoryCommit } from '../lib/history.mjs'
+
+const RS = '\u0000'
+const US = '\u001f'
+
+test('解析单条记录', () => {
+  const stdout = `abc123${US}2026-10-14T10:00:00+08:00${US}Alice${US}dsh-session-sync: manual backup${US}${RS}`
+  const records = parseLogRecords(stdout)
+  assert.equal(records.length, 1)
+  assert.equal(records[0].sha, 'abc123')
+  assert.equal(records[0].author, 'Alice')
+  assert.equal(records[0].subject, 'dsh-session-sync: manual backup')
+  assert.ok(records[0].at > 0)
+})
+
+test('解析多条记录且保持顺序', () => {
+  const stdout = [
+    `aaa${US}2026-10-14T10:00:00+08:00${US}A${US}first${US}${RS}`,
+    `bbb${US}2026-10-13T10:00:00+08:00${US}B${US}second${US}${RS}`,
+  ].join('\n')
+  const records = parseLogRecords(stdout)
+  assert.equal(records.length, 2)
+  assert.equal(records[0].sha, 'aaa')
+  assert.equal(records[1].sha, 'bbb')
+})
+
+test('提交信息含换行不串行', () => {
+  const stdout = `ccc${US}2026-10-14T10:00:00+08:00${US}A${US}subject line${US}body line 1\nbody line 2${RS}`
+  const records = parseLogRecords(stdout)
+  assert.equal(records.length, 1)
+  assert.match(records[0].body, /body line 2/)
+})
+
+test('空输入安全返回空数组', () => {
+  assert.deepEqual(parseLogRecords(''), [])
+  assert.deepEqual(parseLogRecords('   '), [])
+})
+
+test('无提交的仓库（空串）不产生记录', () => {
+  assert.equal(parseLogRecords('').length, 0)
+})
+
+test('来源标记：手动 / 自动 / 未知', () => {
+  assert.equal(commitSource('dsh-session-sync: manual backup'), 'manual')
+  assert.equal(commitSource('dsh-session-sync: automatic backup'), 'automatic')
+  assert.equal(commitSource('dsh-session-sync: push snapshot'), 'unknown')
+  assert.equal(commitSource('Merge branch main'), 'unknown')
+  assert.equal(commitSource(''), 'unknown')
+})
+
+test('来源标记大小写不敏感', () => {
+  assert.equal(commitSource('DSH-SESSION-SYNC: MANUAL BACKUP'), 'manual')
+})
+
+const SHA1 = '1111111111111111111111111111111111111111'
+const SHA2 = '2222222222222222222222222222222222222222'
+const SHA3 = '3333333333333333333333333333333333333333'
+
+function historyEntry(sha, parents = []) {
+  return {
+    sha,
+    tree: `tree-${sha[0]}`,
+    parents,
+    authorName: 'Alice',
+    authorEmail: 'alice@example.com',
+    authorIso: '2026-10-15T10:00:00+08:00',
+    committerName: 'Alice',
+    committerEmail: 'alice@example.com',
+    committerIso: '2026-10-15T10:00:00+08:00',
+    subject: `backup-${sha[0]}`,
+    body: '',
+  }
+}
+
+function fakeHistoryGit(overrides = {}) {
+  const calls = []
+  const chain = [
+    historyEntry(SHA1),
+    historyEntry(SHA2, [SHA1]),
+    historyEntry(SHA3, [SHA2]),
+  ]
+  let rebuilt = 0
+  const git = {
+    async fetch() { calls.push(['fetch']) },
+    async headSha() { return SHA3 },
+    async remoteHeadSha() { return SHA3 },
+    async countCommitsSafe() { return 0 },
+    async historyChain(limit) { calls.push(['historyChain', limit]); return chain },
+    async commitTree(tree, opts) {
+      rebuilt += 1
+      const sha = ['a', 'b', 'c'][rebuilt - 1].repeat(40)
+      calls.push(['commitTree', tree, opts])
+      return sha
+    },
+    async retargetBranch(sha, remoteSha) { calls.push(['retargetBranch', sha, remoteSha]) },
+    async pushRewritten(leaseSha) { calls.push(['pushRewritten', leaseSha]) },
+    async push() { calls.push(['push']) },
+    ...overrides,
+  }
+  return { git, calls, chain }
+}
+
+test('删除中间历史：重放提交、移动本地 ref 并使用远端 lease 强推', async () => {
+  const { git, calls } = fakeHistoryGit()
+  const result = await deleteHistoryCommit(/** @type {any} */ (git), { commit: SHA2 })
+  assert.deepEqual(result, { ok: true, deleted: SHA2, head: 'a'.repeat(40), remaining: 2 })
+  const rebuilt = calls.filter(([name]) => name === 'commitTree')
+  assert.equal(rebuilt.length, 1)
+  assert.deepEqual(rebuilt[0][2].parents, [SHA1])
+  assert.ok(calls.some(call => call[0] === 'retargetBranch' && call[1] === 'a'.repeat(40) && call[2] === SHA3))
+  assert.ok(calls.some(call => call[0] === 'pushRewritten' && call[1] === SHA3))
+  assert.deepEqual(calls.at(-1), ['retargetBranch', 'a'.repeat(40), 'a'.repeat(40)])
+})
+
+test('历史重写推送失败时回滚本地与 origin 跟踪 ref', async () => {
+  const { git, calls } = fakeHistoryGit({
+    async pushRewritten() { calls.push(['pushRewritten', SHA3]); throw new Error('lease rejected') },
+  })
+  await assert.rejects(() => deleteHistoryCommit(/** @type {any} */ (git), { commit: SHA2 }), /lease rejected/u)
+  assert.deepEqual(calls.at(-1), ['retargetBranch', SHA3, SHA3])
+})
+
+test('远端存在本地没有的提交时拒绝重写', async () => {
+  let chainRead = false
+  const { git } = fakeHistoryGit({
+    async countCommitsSafe() { return 1 },
+    async historyChain() { chainRead = true; return [] },
+  })
+  await assert.rejects(() => deleteHistoryCommit(/** @type {any} */ (git), { commit: SHA2 }), /远端领先本地/u)
+  assert.equal(chainRead, false)
+})
+
+test('合并提交作为删除目标时拒绝重写', async () => {
+  const { git, chain } = fakeHistoryGit()
+  chain[1] = historyEntry(SHA2, [SHA1, 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'])
+  await assert.rejects(() => deleteHistoryCommit(/** @type {any} */ (git), { commit: SHA2 }), /合并提交不可删除/u)
+})

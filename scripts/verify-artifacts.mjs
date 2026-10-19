@@ -1,1 +1,37 @@
-Ly8gc2NyaXB0cy92ZXJpZnktYXJ0aWZhY3RzLm1qcyDigJQgSlMg5b2i5oCB5Lqn54mp6Zeo77ya5pat6KiA5Y+R5biD5paH5Lu26b2Q5YWo44CB6K+t5rOV5qOA5p+lCi8vIGhvc3Qg6Z2i5LiOIGxpYi8g5YWo6YOo5qih5Z2X44CB5Zyo57qvIE5vZGUg5LiLIGltcG9ydCBpbmRleC5tanMg5bm25qC45a+55o+S5Lu26Z2iCi8vIO+8iG5hbWUgPT09ICdzZXNzaW9uLXN5bmMn44CBYXBwbHkg5piv5Ye95pWw77yJ44CC6Ziy5Y+R5biD5YyF57y65paH5Lu25oiW5re35YWl5LiN5Y+v5omn6KGM6K+t5rOV44CCCmltcG9ydCB7IGV4ZWNGaWxlU3luYyB9IGZyb20gJ25vZGU6Y2hpbGRfcHJvY2VzcycKaW1wb3J0IHsgZXhpc3RzU3luYywgcmVhZGRpclN5bmMgfSBmcm9tICdub2RlOmZzJwppbXBvcnQgcGF0aCBmcm9tICdub2RlOnBhdGgnCmltcG9ydCB7IGZpbGVVUkxUb1BhdGgsIHBhdGhUb0ZpbGVVUkwgfSBmcm9tICdub2RlOnVybCcKCmNvbnN0IHJvb3QgPSBwYXRoLmRpcm5hbWUocGF0aC5kaXJuYW1lKGZpbGVVUkxUb1BhdGgoaW1wb3J0Lm1ldGEudXJsKSkpCgovLyAxLiDlj5HluIPpnaLlv4XpnIDmlofku7bvvIjkuI4gcGFja2FnZS5qc29uIGBmaWxlc2Ag55m95ZCN5Y2V5LiA6Ie055qE5qC45b+D5Lqn54mp77yJ44CCCmNvbnN0IHJlcXVpcmVkID0gWwogICdpbmRleC5tanMnLAogICd0eXBlcy5kLnRzJywKICAnY29yZGlzLnBhdGNoLnltbCcsCl0KZm9yIChjb25zdCByZWwgb2YgcmVxdWlyZWQpIHsKICBpZiAoIWV4aXN0c1N5bmMocGF0aC5qb2luKHJvb3QsIHJlbCkpKSB0aHJvdyBuZXcgRXJyb3IoYG1pc3NpbmcgYXJ0aWZhY3Q6ICR7cmVsfWApCn0KY29uc3QgbGliRGlyID0gcGF0aC5qb2luKHJvb3QsICdsaWInKQppZiAoIWV4aXN0c1N5bmMobGliRGlyKSkgdGhyb3cgbmV3IEVycm9yKCdtaXNzaW5nIGFydGlmYWN0OiBsaWIvJykKY29uc3QgbGliRmlsZXMgPSByZWFkZGlyU3luYyhsaWJEaXIpLmZpbHRlcigobmFtZSkgPT4gbmFtZS5lbmRzV2l0aCgnLm1qcycpKQppZiAobGliRmlsZXMubGVuZ3RoID09PSAwKSB0aHJvdyBuZXcgRXJyb3IoJ2xpYi8gY29udGFpbnMgbm8gLm1qcyBtb2R1bGVzJykKCi8vIDIuIOivreazleajgOafpSBob3N0IOmdoiArIOavj+S4qiBsaWIg5qih5Z2X77yI57qvIE5vZGUg6Kej5p6Q77yM5LiN5omn6KGM77yJ44CCCmZvciAoY29uc3QgcmVsIG9mIFsnaW5kZXgubWpzJywgLi4ubGliRmlsZXMubWFwKChuYW1lKSA9PiBgbGliLyR7bmFtZX1gKV0pIHsKICBleGVjRmlsZVN5bmMocHJvY2Vzcy5leGVjUGF0aCwgWyctLWNoZWNrJywgcGF0aC5qb2luKHJvb3QsIHJlbCldLCB7IHN0ZGlvOiAnaW5oZXJpdCcgfSkKfQoKLy8gMy4gaG9zdCDpnaLlv4XpobvlnKjnuq8gTm9kZSDkuIvlj68gaW1wb3J077yI5pegIHRzeOOAgeaXoCBjaGVja291dCBwYXRoc++8ie+8jOS4lOWvvOWHugovLyAgICDllK/kuIAgaG9zdCDpnaLlpZHnuqbvvJpuYW1lID09PSAnc2Vzc2lvbi1zeW5jJ+OAgWFwcGx5IOS4uuWHveaVsOOAggpjb25zdCBpbmRleCA9IGF3YWl0IGltcG9ydChwYXRoVG9GaWxlVVJMKHBhdGguam9pbihyb290LCAnaW5kZXgubWpzJykpLmhyZWYpCmlmIChpbmRleC5uYW1lICE9PSAnc2Vzc2lvbi1zeW5jJyB8fCB0eXBlb2YgaW5kZXguYXBwbHkgIT09ICdmdW5jdGlvbicpIHsKICB0aHJvdyBuZXcgRXJyb3IoJ2luZGV4Lm1qcyBleHBvcnRzIGFuIHVuZXhwZWN0ZWQgcGx1Z2luIGZhY2UnKQp9Cgpjb25zb2xlLmxvZyhgYXJ0aWZhY3RzIE9LOiAke2xpYkZpbGVzLmxlbmd0aH0gbGliIG1vZHVsZXMgKyBpbmRleC5tanMgc3ludGF4LWNoZWNrZWQgYW5kIGltcG9ydGFibGVgKQo=
+// scripts/verify-artifacts.mjs — JS 形态产物门：断言发布文件齐全、语法检查
+// host 面与 lib/ 全部模块、在纯 Node 下 import index.mjs 并核对插件面
+// （name === 'session-sync'、apply 是函数）。防发布包缺文件或混入不可执行语法。
+import { execFileSync } from 'node:child_process'
+import { existsSync, readdirSync } from 'node:fs'
+import path from 'node:path'
+import { fileURLToPath, pathToFileURL } from 'node:url'
+
+const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)))
+
+// 1. 发布面必需文件（与 package.json `files` 白名单一致的核心产物）。
+const required = [
+  'index.mjs',
+  'types.d.ts',
+  'cordis.patch.yml',
+]
+for (const rel of required) {
+  if (!existsSync(path.join(root, rel))) throw new Error(`missing artifact: ${rel}`)
+}
+const libDir = path.join(root, 'lib')
+if (!existsSync(libDir)) throw new Error('missing artifact: lib/')
+const libFiles = readdirSync(libDir).filter((name) => name.endsWith('.mjs'))
+if (libFiles.length === 0) throw new Error('lib/ contains no .mjs modules')
+
+// 2. 语法检查 host 面 + 每个 lib 模块（纯 Node 解析，不执行）。
+for (const rel of ['index.mjs', ...libFiles.map((name) => `lib/${name}`)]) {
+  execFileSync(process.execPath, ['--check', path.join(root, rel)], { stdio: 'inherit' })
+}
+
+// 3. host 面必须在纯 Node 下可 import（无 tsx、无 checkout paths），且导出
+//    唯一 host 面契约：name === 'session-sync'、apply 为函数。
+const index = await import(pathToFileURL(path.join(root, 'index.mjs')).href)
+if (index.name !== 'session-sync' || typeof index.apply !== 'function') {
+  throw new Error('index.mjs exports an unexpected plugin face')
+}
+
+console.log(`artifacts OK: ${libFiles.length} lib modules + index.mjs syntax-checked and importable`)

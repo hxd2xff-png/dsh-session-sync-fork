@@ -1,1 +1,93 @@
-aW1wb3J0IHsgdGVzdCB9IGZyb20gJ25vZGU6dGVzdCcKaW1wb3J0IGFzc2VydCBmcm9tICdub2RlOmFzc2VydC9zdHJpY3QnCmltcG9ydCBmcyBmcm9tICdub2RlOmZzL3Byb21pc2VzJwppbXBvcnQgdm0gZnJvbSAnbm9kZTp2bScKaW1wb3J0IHsgcm91dGUgfSBmcm9tICcuLi9saWIvYXBpLm1qcycKaW1wb3J0IHsgU3luY0Vycm9yIH0gZnJvbSAnLi4vbGliL2Vycm9ycy5tanMnCgovLyDmiafooYznnJ/lrp7pobXpnaLmjInpkq7vvIznvZHnu5zlhajpg6jmm7/mjaLvvJvkuI3orr/pl67nlKjmiLfkupHnq6/jgIIKYXN5bmMgZnVuY3Rpb24gbW91bnRUYWIobmFtZSkgewogIGxldCBkZXNjcmlwdG9yLCBNYWluLCBjdXJyZW50CiAgY29uc3Qgc3RhdGUgPSBuZXcgTWFwKCksIHJlcXVlc3RzID0gW10KICBjb25zdCBoID0gKHR5cGUsIHByb3BzLCAuLi5jaGlsZHJlbikgPT4gKHsgdHlwZSwgcHJvcHM6IHsgLi4ucHJvcHMsIGNoaWxkcmVuIH0gfSkKICBjb25zdCBSZWFjdCA9IHsgY3JlYXRlRWxlbWVudDogaCwgdXNlRWZmZWN0KCkge30sIHVzZUNhbGxiYWNrOiBmbiA9PiBmbiwKICAgIHVzZVJlZjogdmFsdWUgPT4gKHsgY3VycmVudDogdmFsdWUgfSksCiAgICB1c2VTdGF0ZShpbml0aWFsKSB7CiAgICAgIGNvbnN0IGtleSA9IGN1cnJlbnQubmFtZSArICc6JyArIGN1cnJlbnQuaW5kZXgrKwogICAgICBpZiAoIXN0YXRlLmhhcyhrZXkpKSBzdGF0ZS5zZXQoa2V5LCB0eXBlb2YgaW5pdGlhbCA9PT0gJ2Z1bmN0aW9uJyA/IGluaXRpYWwoKSA6IGluaXRpYWwpCiAgICAgIHJldHVybiBbc3RhdGUuZ2V0KGtleSksIHZhbHVlID0+IHN0YXRlLnNldChrZXksIHR5cGVvZiB2YWx1ZSA9PT0gJ2Z1bmN0aW9uJyA/IHZhbHVlKHN0YXRlLmdldChrZXkpKSA6IHZhbHVlKV0KICAgIH0sCiAgfQogIGNvbnN0IGZldGNoID0gYXN5bmMgKHVybCwgb3B0aW9ucyA9IHt9KSA9PiB7CiAgICByZXF1ZXN0cy5wdXNoKHsgdXJsLCAuLi5vcHRpb25zIH0pCiAgICBjb25zdCB2YWx1ZSA9IHVybC5lbmRzV2l0aCgnL3NuYXBzaG90L3B1c2gnKSA/IHsgZGlyZWN0aW9uOiAndXBsb2FkZWQnIH0gOiB7fQogICAgcmV0dXJuIHsgb2s6IHRydWUsIHN0YXR1czogMjAwLCBqc29uOiBhc3luYyAoKSA9PiAoeyBvazogdHJ1ZSwgdmFsdWUgfSkgfQogIH0KICBjb25zdCBkb2N1bWVudCA9IHsgaGVhZDogeyBhcHBlbmQoKSB7fSB9LCBxdWVyeVNlbGVjdG9yOiAoKSA9PiBudWxsLCBjcmVhdGVFbGVtZW50OiAoKSA9PiAoeyBkYXRhc2V0OiB7fSB9KSB9CiAgdm0ucnVuSW5OZXdDb250ZXh0KGF3YWl0IGZzLnJlYWRGaWxlKG5ldyBVUkwoJy4uL2NsaWVudC5qcycsIGltcG9ydC5tZXRhLnVybCksICd1dGY4JyksIHsKICAgIHdpbmRvdzogeyBfX01vZHVsZUxvYWRlcl9fOiB7IGxvYWQ6IHZhbHVlID0+IHsgZGVzY3JpcHRvciA9IHZhbHVlIH0gfSwgY29uZmlybTogKCkgPT4gZmFsc2UgfSwKICAgIGRvY3VtZW50LCBuYXZpZ2F0b3I6IHsgbGFuZ3VhZ2U6ICd6aC1DTicgfSwgZmV0Y2gsCiAgfSkKICBkZXNjcmlwdG9yLmZhY3RvcnkoKCkgPT4gUmVhY3QpLmFwcGx5KHsgc2xvdHM6IHsKICAgIGluamVjdChfbmFtZSwgY2FsbGJhY2spIHsgY2FsbGJhY2soKSB9LAogICAgcmVnaXN0ZXIobWV0YSwgY29tcG9uZW50KSB7IGlmIChtZXRhLm5hbWUgPT09ICdtYWluJykgTWFpbiA9IGNvbXBvbmVudCB9LAogIH0gfSkKICBmdW5jdGlvbiBmaW5kKG5vZGUpIHsKICAgIGlmIChBcnJheS5pc0FycmF5KG5vZGUpKSByZXR1cm4gbm9kZS5tYXAoZmluZCkuZmluZChCb29sZWFuKQogICAgaWYgKCFub2RlIHx8IHR5cGVvZiBub2RlICE9PSAnb2JqZWN0JykgcmV0dXJuCiAgICBpZiAobm9kZS50eXBlPy5uYW1lID09PSBuYW1lKSByZXR1cm4gbm9kZQogICAgcmV0dXJuIGZpbmQobm9kZS5wcm9wcz8uY2hpbGRyZW4pCiAgfQogIGN1cnJlbnQgPSB7IG5hbWU6ICdTZXNzaW9uU3luY1BhZ2UnLCBpbmRleDogMCB9CiAgY29uc3QgdGFiID0gZmluZChNYWluKHt9KSkKICBhc3NlcnQodGFiLCAn6aG16Z2i5bqU5oyC6L2955uu5qCH6aG1562+JykKICBmdW5jdGlvbiByZW5kZXIoKSB7CiAgICBjdXJyZW50ID0geyBuYW1lLCBpbmRleDogMCB9CiAgICBjb25zdCBub2RlcyA9IFtdCiAgICBmdW5jdGlvbiB2aXNpdChub2RlKSB7CiAgICAgIGlmIChBcnJheS5pc0FycmF5KG5vZGUpKSByZXR1cm4gbm9kZS5mb3JFYWNoKHZpc2l0KQogICAgICBpZiAoIW5vZGUgfHwgdHlwZW9mIG5vZGUgIT09ICdvYmplY3QnKSByZXR1cm4KICAgICAgbm9kZXMucHVzaChub2RlKTsgdmlzaXQobm9kZS5wcm9wcz8uY2hpbGRyZW4pCiAgICB9CiAgICB2aXNpdCh0YWIudHlwZSh0YWIucHJvcHMpKQogICAgcmV0dXJuIG5vZGVzCiAgfQogIGNvbnN0IHRleHQgPSBub2RlID0+IEFycmF5LmlzQXJyYXkobm9kZSkgPyBub2RlLm1hcCh0ZXh0KS5qb2luKCcnKSA6IG5vZGUgJiYgdHlwZW9mIG5vZGUgPT09ICdvYmplY3QnID8gdGV4dChub2RlLnByb3BzPy5jaGlsZHJlbikgOiBTdHJpbmcobm9kZSA/PyAnJykKICByZXR1cm4geyByZXF1ZXN0cywgY2xpY2tCYWNrdXAoKSB7CiAgICBjb25zdCBidXR0b24gPSByZW5kZXIoKS5maW5kKG5vZGUgPT4gbm9kZS50eXBlID09PSAnYnV0dG9uJyAmJiB0ZXh0KG5vZGUpID09PSAn56uL5Y2z5aSH5Lu9JykKICAgIGFzc2VydChidXR0b24pOyBidXR0b24ucHJvcHMub25DbGljaygpCiAgfSB9Cn0KCmZvciAoY29uc3QgW25hbWUsIGVuZHBvaW50XSBvZiBbWydQbHVnaW5CYWNrdXBUYWInLCAnL3NuYXBzaG90L3B1c2gnXSwgWydTa2lsbEJhY2t1cFRhYicsICcvc2tpbGwvcHVzaCddXSkgewogIHRlc3QoYCR7bmFtZX3nnJ/lrp7lpIfku73mjInpkq7pppbor7fmsYLkvb/nlKhQT1NU56m65a+56LGh6ICM6Z2eR0VUYCwgYXN5bmMgKCkgPT4gewogICAgY29uc3QgYXBwID0gYXdhaXQgbW91bnRUYWIobmFtZSkKICAgIGFwcC5jbGlja0JhY2t1cCgpCiAgICBhd2FpdCBuZXcgUHJvbWlzZShyZXNvbHZlID0+IHNldEltbWVkaWF0ZShyZXNvbHZlKSkKICAgIGNvbnN0IHJlcXVlc3QgPSBhcHAucmVxdWVzdHMuZmluZChpdGVtID0+IGl0ZW0udXJsLmVuZHNXaXRoKGVuZHBvaW50KSkKICAgIGFzc2VydChyZXF1ZXN0KQogICAgYXNzZXJ0LmVxdWFsKHJlcXVlc3QubWV0aG9kLCAnUE9TVCcpCiAgICBhc3NlcnQuZXF1YWwocmVxdWVzdC5ib2R5LCAne30nKQogICAgYXNzZXJ0LmVxdWFsKHJlcXVlc3QuaGVhZGVyc1snY29udGVudC10eXBlJ10sICdhcHBsaWNhdGlvbi9qc29uJykKICB9KQp9Cgp0ZXN0KCflv5nnoozplJnor6/kv53nlZnljp/ot6/nlLHmlrnms5XnuqblrprvvIzkuI3ooqtQT1NUIHJlcXVpcmVk6YGu55uWJywgYXN5bmMgKCkgPT4gewogIGNvbnN0IHNvdXJjZSA9IGF3YWl0IGZzLnJlYWRGaWxlKG5ldyBVUkwoJy4uL2luZGV4Lm1qcycsIGltcG9ydC5tZXRhLnVybCksICd1dGY4JykKICBjb25zdCBzdGFydCA9IHNvdXJjZS5pbmRleE9mKCdoYW5kbGVyOiBhc3luYyAocmVxdWVzdCwgcmVzcG9uc2UpID0+IHdpdGhDbG91ZE9wZXJhdGlvbicpCiAgY29uc3QgZW5kID0gc291cmNlLmluZGV4T2YoJ1xuICAgICAgfVxuICAgIH0pJywgc3RhcnQpCiAgYXNzZXJ0KHN0YXJ0ID49IDAgJiYgZW5kID4gc3RhcnQpCiAgY29uc3QgZXhwcmVzc2lvbiA9IHNvdXJjZS5zbGljZShzdGFydCArICdoYW5kbGVyOiAnLmxlbmd0aCwgZW5kKS50cmltKCkucmVwbGFjZSgvLCQvLCAnJykKICBjb25zdCBpdGVtID0geyBwYXRoOiAnL2FwaS9kc2gtc2Vzc2lvbi1zeW5jL2Nsb3VkL3NuYXBzaG90L3B1c2gnIH0KICBjb25zdCBoYW5kbGVyID0gbmV3IEZ1bmN0aW9uKCd3aXRoQ2xvdWRPcGVyYXRpb24nLCAnbGFiZWwnLCAnaXRlbScsICdyb3V0ZScsIGByZXR1cm4gKCR7ZXhwcmVzc2lvbn0pYCkoCiAgICBhc3luYyAoKSA9PiB7IHRocm93IG5ldyBTeW5jRXJyb3IoJ0JBRF9DT05GSUcnLCAn5bey5pyJ5LqR56uv5pON5L2c5q2j5Zyo5omn6KGMJykgfSwgJ+aPkuS7tuWkh+S7vScsIGl0ZW0sIHJvdXRlLAogICkKICBmb3IgKGNvbnN0IG1ldGhvZCBvZiBbJ0dFVCcsICdQT1NUJ10pIHsKICAgIGNvbnN0IHJlcXVlc3QgPSB7IG1ldGhvZCwgdXJsOiBpdGVtLnBhdGgsIGhlYWRlcnM6IHsgaG9zdDogJzEyNy4wLjAuMTo4NzY2JyB9LCBzb2NrZXQ6IHsgcmVtb3RlQWRkcmVzczogJzEyNy4wLjAuMScgfSwgYXN5bmMgKltTeW1ib2wuYXN5bmNJdGVyYXRvcl0oKSB7fSB9CiAgICBjb25zdCByZXNwb25zZSA9IHsgd3JpdGVIZWFkKHN0YXR1cykgeyB0aGlzLnN0YXR1cyA9IHN0YXR1cyB9LCBlbmQoYm9keSkgeyB0aGlzLmJvZHkgPSBKU09OLnBhcnNlKGJvZHkpIH0gfQogICAgYXdhaXQgaGFuZGxlcihyZXF1ZXN0LCByZXNwb25zZSkKICAgIGFzc2VydC5lcXVhbChyZXNwb25zZS5zdGF0dXMsIDQwMCkKICAgIGFzc2VydC5lcXVhbChyZXNwb25zZS5ib2R5LmNvZGUsICdCQURfQ09ORklHJykKICAgIGFzc2VydC5lcXVhbChyZXNwb25zZS5ib2R5LmVycm9yLCAn5bey5pyJ5LqR56uv5pON5L2c5q2j5Zyo5omn6KGMJykKICB9Cn0pCg==
+import { test } from 'node:test'
+import assert from 'node:assert/strict'
+import fs from 'node:fs/promises'
+import vm from 'node:vm'
+import { route } from '../lib/api.mjs'
+import { SyncError } from '../lib/errors.mjs'
+
+// 执行真实页面按钮，网络全部替换；不访问用户云端。
+async function mountTab(name) {
+  let descriptor, Main, current
+  const state = new Map(), requests = []
+  const h = (type, props, ...children) => ({ type, props: { ...props, children } })
+  const React = { createElement: h, useEffect() {}, useCallback: fn => fn,
+    useRef: value => ({ current: value }),
+    useState(initial) {
+      const key = current.name + ':' + current.index++
+      if (!state.has(key)) state.set(key, typeof initial === 'function' ? initial() : initial)
+      return [state.get(key), value => state.set(key, typeof value === 'function' ? value(state.get(key)) : value)]
+    },
+  }
+  const fetch = async (url, options = {}) => {
+    requests.push({ url, ...options })
+    const value = url.endsWith('/snapshot/push') ? { direction: 'uploaded' } : {}
+    return { ok: true, status: 200, json: async () => ({ ok: true, value }) }
+  }
+  const document = { head: { append() {} }, querySelector: () => null, createElement: () => ({ dataset: {} }) }
+  vm.runInNewContext(await fs.readFile(new URL('../client.js', import.meta.url), 'utf8'), {
+    window: { __ModuleLoader__: { load: value => { descriptor = value } }, confirm: () => false },
+    document, navigator: { language: 'zh-CN' }, fetch,
+  })
+  descriptor.factory(() => React).apply({ slots: {
+    inject(_name, callback) { callback() },
+    register(meta, component) { if (meta.name === 'main') Main = component },
+  } })
+  function find(node) {
+    if (Array.isArray(node)) return node.map(find).find(Boolean)
+    if (!node || typeof node !== 'object') return
+    if (node.type?.name === name) return node
+    return find(node.props?.children)
+  }
+  current = { name: 'SessionSyncPage', index: 0 }
+  const tab = find(Main({}))
+  assert(tab, '页面应挂载目标页签')
+  function render() {
+    current = { name, index: 0 }
+    const nodes = []
+    function visit(node) {
+      if (Array.isArray(node)) return node.forEach(visit)
+      if (!node || typeof node !== 'object') return
+      nodes.push(node); visit(node.props?.children)
+    }
+    visit(tab.type(tab.props))
+    return nodes
+  }
+  const text = node => Array.isArray(node) ? node.map(text).join('') : node && typeof node === 'object' ? text(node.props?.children) : String(node ?? '')
+  return { requests, clickBackup() {
+    const button = render().find(node => node.type === 'button' && text(node) === '立即备份')
+    assert(button); button.props.onClick()
+  } }
+}
+
+for (const [name, endpoint] of [['PluginBackupTab', '/snapshot/push'], ['SkillBackupTab', '/skill/push']]) {
+  test(`${name}真实备份按钮首请求使用POST空对象而非GET`, async () => {
+    const app = await mountTab(name)
+    app.clickBackup()
+    await new Promise(resolve => setImmediate(resolve))
+    const request = app.requests.find(item => item.url.endsWith(endpoint))
+    assert(request)
+    assert.equal(request.method, 'POST')
+    assert.equal(request.body, '{}')
+    assert.equal(request.headers['content-type'], 'application/json')
+  })
+}
+
+test('忙碌错误保留原路由方法约定，不被POST required遮盖', async () => {
+  const source = await fs.readFile(new URL('../index.mjs', import.meta.url), 'utf8')
+  const start = source.indexOf('handler: async (request, response) => withCloudOperation')
+  const end = source.indexOf('\n      }\n    })', start)
+  assert(start >= 0 && end > start)
+  const expression = source.slice(start + 'handler: '.length, end).trim().replace(/,$/, '')
+  const item = { path: '/api/dsh-session-sync/cloud/snapshot/push' }
+  const handler = new Function('withCloudOperation', 'label', 'item', 'route', `return (${expression})`)(
+    async () => { throw new SyncError('BAD_CONFIG', '已有云端操作正在执行') }, '插件备份', item, route,
+  )
+  for (const method of ['GET', 'POST']) {
+    const request = { method, url: item.path, headers: { host: '127.0.0.1:8766' }, socket: { remoteAddress: '127.0.0.1' }, async *[Symbol.asyncIterator]() {} }
+    const response = { writeHead(status) { this.status = status }, end(body) { this.body = JSON.parse(body) } }
+    await handler(request, response)
+    assert.equal(response.status, 400)
+    assert.equal(response.body.code, 'BAD_CONFIG')
+    assert.equal(response.body.error, '已有云端操作正在执行')
+  }
+})

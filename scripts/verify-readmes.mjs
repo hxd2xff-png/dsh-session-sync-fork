@@ -1,1 +1,45 @@
-Ly8gc2NyaXB0cy92ZXJpZnktcmVhZG1lcy5tanMg4oCUIOS6lOivrSBSRUFETUUg5LiA6Ie05oCn6Zeo77yIQ0kg5LiO5pys5Zyw5YWx55So77yJ44CCCi8vIOacuuaisOajgOafpe+8muagh+mimOOAgeivreiogOS6kumTvuOAgVRvcGljc+OAgeWuieijheWRveS7pOOAgeW6k+i3r+W+hOOAgeiuuOWPr+ivgemTvuaOpeOAgQovLyDlhbPplK7phY3nva4v5bel5YW3IHRva2Vu44CB5oGw5aW95LiA5Liq57uT5bC+5o2i6KGM44CC6KGM5Li65Y+Y5pu05ZCMIGNvbW1pdCDmm7TmlrDkupTor60gUkVBRE1FCi8vIOeahOe6oue6v+eUseacrOmXqOWcqCBDSSDlhZzlupXjgIIKaW1wb3J0IHsgcmVhZEZpbGVTeW5jLCBleGlzdHNTeW5jIH0gZnJvbSAnbm9kZTpmcycKaW1wb3J0IHsgZmlsZVVSTFRvUGF0aCB9IGZyb20gJ25vZGU6dXJsJwppbXBvcnQgcGF0aCBmcm9tICdub2RlOnBhdGgnCgpjb25zdCBST09UID0gcGF0aC5yZXNvbHZlKHBhdGguZGlybmFtZShmaWxlVVJMVG9QYXRoKGltcG9ydC5tZXRhLnVybCkpLCAnLi4nKQpjb25zdCBGSUxFUyA9IFsnUkVBRE1FLm1kJywgJ1JFQURNRS16aC5tZCcsICdSRUFETUUtZXMubWQnLCAnUkVBRE1FLXB0Lm1kJywgJ1JFQURNRS1oaS5tZCddCmNvbnN0IFNXSVRDSEVSID0gJ1tFbmdsaXNoXShSRUFETUUubWQpIMK3IFvnroDkvZPkuK3mloddKFJFQURNRS16aC5tZCkgwrcgW0VzcGHDsW9sXShSRUFETUUtZXMubWQpIMK3IFtQb3J0dWd1w6pzXShSRUFETUUtcHQubWQpIMK3IFvgpLngpL/gpKjgpY3gpKbgpYBdKFJFQURNRS1oaS5tZCknCgpsZXQgZmFpbGVkID0gMApmb3IgKGNvbnN0IGZpbGUgb2YgRklMRVMpIHsKICBjb25zdCBmaWxlUGF0aCA9IHBhdGguam9pbihST09ULCBmaWxlKQogIGlmICghZXhpc3RzU3luYyhmaWxlUGF0aCkpIHsKICAgIGNvbnNvbGUubG9nKGBNSVNTSU5HICAke2ZpbGV9YCkKICAgIGZhaWxlZCArPSAxCiAgICBjb250aW51ZQogIH0KICBjb25zdCB0ZXh0ID0gcmVhZEZpbGVTeW5jKGZpbGVQYXRoLCAndXRmOCcpCiAgY29uc3QgY2hlY2tzID0gWwogICAgWyd0aXRsZScsIC9eI1xzK1xTK1xzK2RzaC1zZXNzaW9uLXN5bmNccyokL20udGVzdCh0ZXh0KV0sCiAgICBbJ3N3aXRjaGVyJywgdGV4dC5pbmNsdWRlcyhTV0lUQ0hFUildLAogICAgWyd0b3BpYyBkc2gnLCAvYGRzaGAvLnRlc3QodGV4dCldLAogICAgWyd0b3BpYyBkc2gtcGx1Z2luJywgL2Bkc2gtcGx1Z2luYC8udGVzdCh0ZXh0KV0sCiAgICBbJ2luc3RhbGwgY21kJywgdGV4dC5pbmNsdWRlcygnZHNoIHBsdWdpbiAtLXByb2ZpbGUnKV0sCiAgICBbJ2luc3RhbGwgZ2ggdXJsJywgdGV4dC5pbmNsdWRlcygnZ2l0K2h0dHBzOi8vZ2l0aHViLmNvbS9QZXJyeUxpbmsvZHNoLXNlc3Npb24tc3luYy5naXQnKV0sCiAgICBbJ2xpY2Vuc2UgbGluaycsIHRleHQuaW5jbHVkZXMoJ1tMSUNFTlNFXShMSUNFTlNFKScpXSwKICAgIFsnY29tbWFuZCB0b2tlbicsIC9gXC9zeW5jYC8udGVzdCh0ZXh0KV0sCiAgICBbJ3N0YXR1cyB0b29sIHRva2VuJywgL2BzeW5jX3N0YXR1c2AvLnRlc3QodGV4dCldLAogICAgWydwdXNoIHRvb2wgdG9rZW4nLCAvYHN5bmNfcHVzaGAvLnRlc3QodGV4dCldLAogICAgWydjb25maWcgcmVtb3RlIHRva2VuJywgL2ByZW1vdGVgLy50ZXN0KHRleHQpXSwKICAgIFsnY29uZmlnIGF1dG9QdXNoIHRva2VuJywgL2BhdXRvUHVzaE9uVHVybkVuZGAvLnRlc3QodGV4dCldLAogICAgWyd0cmFpbGluZyBuZXdsaW5lJywgdGV4dC5lbmRzV2l0aCgnXG4nKSAmJiAhdGV4dC5lbmRzV2l0aCgnXG5cbicpXSwKICBdCiAgY29uc3QgYmFkID0gY2hlY2tzLmZpbHRlcigoWywgb2tdKSA9PiAhb2spLm1hcCgoW25hbWVdKSA9PiBuYW1lKQogIGlmIChiYWQubGVuZ3RoID09PSAwKSBjb25zb2xlLmxvZyhgT0sgICAgICAgJHtmaWxlfSAoJHt0ZXh0Lmxlbmd0aH0gY2hhcnMpYCkKICBlbHNlIHsKICAgIGNvbnNvbGUubG9nKGBGQUlMICAgICAke2ZpbGV9OiAke2JhZC5qb2luKCcsICcpfWApCiAgICBmYWlsZWQgKz0gMQogIH0KfQpjb25zb2xlLmxvZyhmYWlsZWQgPT09IDAgPyAnQUxMIFBBU1MnIDogYCR7ZmFpbGVkfSBmaWxlKHMpIGZhaWxlZGApCnByb2Nlc3MuZXhpdChmYWlsZWQgPT09IDAgPyAwIDogMSkK
+// scripts/verify-readmes.mjs — 五语 README 一致性门（CI 与本地共用）。
+// 机械检查：标题、语言互链、Topics、安装命令、库路径、许可证链接、
+// 关键配置/工具 token、恰好一个结尾换行。行为变更同 commit 更新五语 README
+// 的红线由本门在 CI 兜底。
+import { readFileSync, existsSync } from 'node:fs'
+import { fileURLToPath } from 'node:url'
+import path from 'node:path'
+
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
+const FILES = ['README.md', 'README-zh.md', 'README-es.md', 'README-pt.md', 'README-hi.md']
+const SWITCHER = '[English](README.md) · [简体中文](README-zh.md) · [Español](README-es.md) · [Português](README-pt.md) · [हिन्दी](README-hi.md)'
+
+let failed = 0
+for (const file of FILES) {
+  const filePath = path.join(ROOT, file)
+  if (!existsSync(filePath)) {
+    console.log(`MISSING  ${file}`)
+    failed += 1
+    continue
+  }
+  const text = readFileSync(filePath, 'utf8')
+  const checks = [
+    ['title', /^#\s+\S+\s+dsh-session-sync\s*$/m.test(text)],
+    ['switcher', text.includes(SWITCHER)],
+    ['topic dsh', /`dsh`/.test(text)],
+    ['topic dsh-plugin', /`dsh-plugin`/.test(text)],
+    ['install cmd', text.includes('dsh plugin --profile')],
+    ['install gh url', text.includes('git+https://github.com/PerryLink/dsh-session-sync.git')],
+    ['license link', text.includes('[LICENSE](LICENSE)')],
+    ['command token', /`\/sync`/.test(text)],
+    ['status tool token', /`sync_status`/.test(text)],
+    ['push tool token', /`sync_push`/.test(text)],
+    ['config remote token', /`remote`/.test(text)],
+    ['config autoPush token', /`autoPushOnTurnEnd`/.test(text)],
+    ['trailing newline', text.endsWith('\n') && !text.endsWith('\n\n')],
+  ]
+  const bad = checks.filter(([, ok]) => !ok).map(([name]) => name)
+  if (bad.length === 0) console.log(`OK       ${file} (${text.length} chars)`)
+  else {
+    console.log(`FAIL     ${file}: ${bad.join(', ')}`)
+    failed += 1
+  }
+}
+console.log(failed === 0 ? 'ALL PASS' : `${failed} file(s) failed`)
+process.exit(failed === 0 ? 0 : 1)

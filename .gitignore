@@ -1,1 +1,6 @@
-bm9kZV9tb2R1bGVzLwoqLmxvZwouRFNfU3RvcmUKLnJldmlldy8KJVN5c3RlbURyaXZlJS8KKi50Z3oK
+node_modules/
+*.log
+.DS_Store
+.review/
+%SystemDrive%/
+*.tgz

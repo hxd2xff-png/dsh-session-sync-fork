@@ -1,1 +1,31 @@
-IyEvdXNyL2Jpbi9lbnYgbm9kZQovLyBzY3JpcHRzL2NoZWNrLWxvY2tmaWxlLWRyaWZ0Lm1qcyAtIGZhaWwgZmFzdCB3aGVuIHBhY2thZ2UuanNvbiBhbmQgcG5wbS1sb2NrLnlhbWwgZGlzYWdyZWUuCi8vCi8vIFdoeSB0aGlzIGV4aXN0czogdGhlIDAuMS42LWFscGhhLjIgYmF0Y2ggc2hpcHBlZCB0d28gcmVsZWFzZXMgd2hvc2UgYHBhY2thZ2UuanNvbmAKLy8gaGFkIGdhaW5lZCBhIHBlZXIgd2hpbGUgYHBucG0tbG9jay55YW1sYCBoYWQgbm90IGJlZW4gcmVnZW5lcmF0ZWQuIE5vdGhpbmcgaW4gdGhlCi8vIGxvY2FsIGFjY2VwdGFuY2UgY2hhaW4gbm90aWNlZCwgc28gdGhlIGZpcnN0IHRoaW5nIHRoYXQgZmFpbGVkIHdhcyB0aGUgcmVsZWFzZQovLyB3b3JrZmxvdywgd2l0aCBgRVJSX1BOUE1fT1VUREFURURfTE9DS0ZJTEVgIChzZWUgdGhlIGJhdGNoIHJlcG9ydCwgUjIyKS4KLy8KLy8gYC0tZnJvemVuLWxvY2tmaWxlYCBtYWtlcyBwbnBtIHJlZnVzZSB0byByZXdyaXRlIHRoZSBsb2NrZmlsZSBhbmQgYC0tbG9ja2ZpbGUtb25seWAKLy8ga2VlcHMgaXQgZnJvbSB0b3VjaGluZyBgbm9kZV9tb2R1bGVzYCwgc28gdGhpcyBpcyBhIHJlYWQtb25seSBwcm9iZTogZXhpdCAwIG1lYW5zIHRoZQovLyB0d28gZmlsZXMgYWdyZWUsIGV4aXQgbm9uLXplcm8gbWVhbnMgc29tZW9uZSBjaGFuZ2VkIG9uZSB3aXRob3V0IHRoZSBvdGhlci4KLy8KLy8gRXhpdCBjb2RlczogMCA9IGluIHN5bmM7IDEgPSBkcmlmdCAocmVnZW5lcmF0ZSB0aGUgbG9ja2ZpbGUgYW5kIGNvbW1pdCBpdCkuCgppbXBvcnQgeyBzcGF3blN5bmMgfSBmcm9tICdub2RlOmNoaWxkX3Byb2Nlc3MnCmltcG9ydCBwcm9jZXNzIGZyb20gJ25vZGU6cHJvY2VzcycKCmNvbnN0IHJlc3VsdCA9IHNwYXduU3luYygKICAncG5wbScsCiAgWydpbnN0YWxsJywgJy0tZnJvemVuLWxvY2tmaWxlJywgJy0tbG9ja2ZpbGUtb25seScsICctLWlnbm9yZS1zY3JpcHRzJ10sCiAgeyBzdGRpbzogJ2luaGVyaXQnLCBzaGVsbDogcHJvY2Vzcy5wbGF0Zm9ybSA9PT0gJ3dpbjMyJyB9LAopCgppZiAocmVzdWx0LnN0YXR1cyAhPT0gMCkgewogIGNvbnNvbGUuZXJyb3IoJycpCiAgY29uc29sZS5lcnJvcignbG9ja2ZpbGUgZHJpZnQ6IHBhY2thZ2UuanNvbiBhbmQgcG5wbS1sb2NrLnlhbWwgZGlzYWdyZWUuJykKICBjb25zb2xlLmVycm9yKCdGaXg6IGBwbnBtIGluc3RhbGwgLS1sb2NrZmlsZS1vbmx5YCwgdGhlbiBjb21taXQgdGhlIGxvY2tmaWxlLicpCiAgcHJvY2Vzcy5leGl0KDEpCn0KCmNvbnNvbGUubG9nKCdsb2NrZmlsZSBvazogcGFja2FnZS5qc29uIGFuZCBwbnBtLWxvY2sueWFtbCBhZ3JlZScpCg==
+#!/usr/bin/env node
+// scripts/check-lockfile-drift.mjs - fail fast when package.json and pnpm-lock.yaml disagree.
+//
+// Why this exists: the 0.1.6-alpha.2 batch shipped two releases whose `package.json`
+// had gained a peer while `pnpm-lock.yaml` had not been regenerated. Nothing in the
+// local acceptance chain noticed, so the first thing that failed was the release
+// workflow, with `ERR_PNPM_OUTDATED_LOCKFILE` (see the batch report, R22).
+//
+// `--frozen-lockfile` makes pnpm refuse to rewrite the lockfile and `--lockfile-only`
+// keeps it from touching `node_modules`, so this is a read-only probe: exit 0 means the
+// two files agree, exit non-zero means someone changed one without the other.
+//
+// Exit codes: 0 = in sync; 1 = drift (regenerate the lockfile and commit it).
+
+import { spawnSync } from 'node:child_process'
+import process from 'node:process'
+
+const result = spawnSync(
+  'pnpm',
+  ['install', '--frozen-lockfile', '--lockfile-only', '--ignore-scripts'],
+  { stdio: 'inherit', shell: process.platform === 'win32' },
+)
+
+if (result.status !== 0) {
+  console.error('')
+  console.error('lockfile drift: package.json and pnpm-lock.yaml disagree.')
+  console.error('Fix: `pnpm install --lockfile-only`, then commit the lockfile.')
+  process.exit(1)
+}
+
+console.log('lockfile ok: package.json and pnpm-lock.yaml agree')

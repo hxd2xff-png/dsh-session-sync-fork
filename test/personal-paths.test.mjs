@@ -1,1 +1,49 @@
-Ly8gdGVzdC9wZXJzb25hbC1wYXRocy50ZXN0Lm1qcyDigJQg5b+r54Wn5raI5q+SL+WxleW8gOWlkee6pu+8iOiuvuWkh+i3r+W+hOS4gOW+i+WKqOaAgeivhuWIq+eahOWFqOWxgOinhOWImeiQveWcsO+8ieOAggovLyBob21lZGlyKCkg5LiN5Y+v5rOo5YWl77yM5Zug5q2k5pat6KiA5YWo6YOo5Z+65LqO44CM5LiOIGhvbWVkaXIoKSDnmoTlhbPns7vjgI3ogIzkuI3mmK/lhbfkvZPlgLzjgIIKaW1wb3J0IHsgdGVzdCB9IGZyb20gJ25vZGU6dGVzdCcKaW1wb3J0IGFzc2VydCBmcm9tICdub2RlOmFzc2VydC9zdHJpY3QnCmltcG9ydCB7IGhvbWVkaXIgfSBmcm9tICdub2RlOm9zJwppbXBvcnQgeyBzYW5pdGl6ZVBlcnNvbmFsUGF0aHMsIGV4cGFuZFBlcnNvbmFsUGF0aHMgfSBmcm9tICcuLi9saWIvY2xvdWQtY29yZS5tanMnCgpjb25zdCBob21lID0gaG9tZWRpcigpCmNvbnN0IGZvcndhcmQgPSBob21lLnJlcGxhY2VBbGwoJ1xcJywgJy8nKQoKdGVzdCgn5raI5q+S77ya5q2j5pac5p2g5Liq5Lq66Lev5b6EIOKGkiB+LyDljaDkvY0nLCAoKSA9PiB7CiAgY29uc3QgaW5wdXQgPSBgeyJkc2gtY29kZXgtY29ubmVjdCI6ICJmaWxlOiR7Zm9yd2FyZH0vLi4vZHNoLWNvZGV4LWNvbm5lY3QifWAKICBjb25zdCByZXN1bHQgPSBzYW5pdGl6ZVBlcnNvbmFsUGF0aHMoaW5wdXQpCiAgYXNzZXJ0LmVxdWFsKHJlc3VsdC5pbmNsdWRlcyhob21lKSwgZmFsc2UpCiAgYXNzZXJ0LmVxdWFsKHJlc3VsdC5pbmNsdWRlcyhmb3J3YXJkKSwgZmFsc2UpCiAgYXNzZXJ0Lm9rKHJlc3VsdC5pbmNsdWRlcygnZmlsZTp+Ly4uL2RzaC1jb2RleC1jb25uZWN0JyksIHJlc3VsdCkKfSkKCnRlc3QoJ+a2iOavku+8muWPjeaWnOadoOS4quS6uui3r+W+hO+8iEpTT04g6L2s5LmJIFxcXFwg5b2i5oCB77yJ5Lmf5pu/5o2iJywgKCkgPT4gewogIGNvbnN0IGpzb25Fc2NhcGVkID0gYGZpbGU6JHtob21lLnJlcGxhY2VBbGwoJy8nLCAnXFxcXCcpfVxcXFxEb2N1bWVudHNcXFxceGAKICBjb25zdCByZXN1bHQgPSBzYW5pdGl6ZVBlcnNvbmFsUGF0aHMoanNvbkVzY2FwZWQpCiAgYXNzZXJ0LmVxdWFsKHJlc3VsdC5pbmNsdWRlcyhob21lLnJlcGxhY2VBbGwoJy8nLCAnXFxcXCcpKSwgZmFsc2UsIHJlc3VsdCkKICBhc3NlcnQub2socmVzdWx0LmluY2x1ZGVzKCd+LycpLCByZXN1bHQpCn0pCgp0ZXN0KCfmtojmr5LkuI3lkJ7nu5PlsL7lvJXlj7fvvJpKU09OIOe7k+aehOS/neaMgeWQiOazlScsICgpID0+IHsKICBjb25zdCBpbnB1dCA9IGB7ImEiOiJmaWxlOiR7Zm9yd2FyZH0vZHNoLWNvZGV4LWNvbm5lY3QifWAKICBjb25zdCByZXN1bHQgPSBzYW5pdGl6ZVBlcnNvbmFsUGF0aHMoaW5wdXQpCiAgY29uc3QgcGFyc2VkID0gSlNPTi5wYXJzZShyZXN1bHQpCiAgYXNzZXJ0LmVxdWFsKHBhcnNlZC5hLCBgZmlsZTp+L2RzaC1jb2RleC1jb25uZWN0YCkKfSkKCnRlc3QoJ+WxleW8gOaYr+a2iOavkueahOmAhuaTjeS9nO+8mnJvdW5kdHJpcCDmgaLlpI3mnKzmnLrot6/lvoQnLCAoKSA9PiB7CiAgY29uc3Qgb3JpZ2luYWwgPSBgZmlsZToke2ZvcndhcmR9L0RvY3VtZW50cy9kZWVwc2Vlay1oYXJuZXNzL2RlZmF1bHQtd29ya3NwYWNlL2RzaC1jb2RleC1jb25uZWN0YAogIGNvbnN0IHNhbml0aXplZCA9IHNhbml0aXplUGVyc29uYWxQYXRocyhvcmlnaW5hbCkKICBhc3NlcnQuZXF1YWwoc2FuaXRpemVkLCBgZmlsZTp+L0RvY3VtZW50cy9kZWVwc2Vlay1oYXJuZXNzL2RlZmF1bHQtd29ya3NwYWNlL2RzaC1jb2RleC1jb25uZWN0YCkKICBhc3NlcnQuZXF1YWwoZXhwYW5kUGVyc29uYWxQYXRocyhzYW5pdGl6ZWQpLCBvcmlnaW5hbCkKfSkKCnRlc3QoJ+WxleW8gOWPquWkhOeQhiB+LyDljaDkvY3vvIzkuI3or6/kvKTmma7pgJrms6Lmtarlj7fmiJbnm7jlr7not6/lvoQnLCAoKSA9PiB7CiAgYXNzZXJ0LmVxdWFsKGV4cGFuZFBlcnNvbmFsUGF0aHMoJy4vcmVsYXRpdmUvcGF0aCcpLCAnLi9yZWxhdGl2ZS9wYXRoJykKICBhc3NlcnQuZXF1YWwoZXhwYW5kUGVyc29uYWxQYXRocygnfi9hL2InKSwgYCR7Zm9yd2FyZH0vYS9iYCkKICBhc3NlcnQuZXF1YWwoZXhwYW5kUGVyc29uYWxQYXRocygndXNlcn5uYW1lJyksICd1c2Vyfm5hbWUnKQp9KQoKdGVzdCgn5raI5q+S5a+55LiN5ZCr5Liq5Lq66Lev5b6E55qE5paH5pys6Zu25pS55Yqo77yI5bmC562J77yJJywgKCkgPT4gewogIGNvbnN0IGNsZWFuID0gJ3siZGVwZW5kZW5jaWVzIjp7IngiOiJeMS4wLjAifX1cbiMgY29tbWVudCAvdXNyL2xvY2FsL2JpblxuJwogIGFzc2VydC5lcXVhbChzYW5pdGl6ZVBlcnNvbmFsUGF0aHMoY2xlYW4pLCBjbGVhbikKfSkK
+// test/personal-paths.test.mjs — 快照消毒/展开契约（设备路径一律动态识别的全局规则落地）。
+// homedir() 不可注入，因此断言全部基于「与 homedir() 的关系」而不是具体值。
+import { test } from 'node:test'
+import assert from 'node:assert/strict'
+import { homedir } from 'node:os'
+import { sanitizePersonalPaths, expandPersonalPaths } from '../lib/cloud-core.mjs'
+
+const home = homedir()
+const forward = home.replaceAll('\\', '/')
+
+test('消毒：正斜杠个人路径 → ~/ 占位', () => {
+  const input = `{"dsh-codex-connect": "file:${forward}/../dsh-codex-connect"}`
+  const result = sanitizePersonalPaths(input)
+  assert.equal(result.includes(home), false)
+  assert.equal(result.includes(forward), false)
+  assert.ok(result.includes('file:~/../dsh-codex-connect'), result)
+})
+
+test('消毒：反斜杠个人路径（JSON 转义 \\\\ 形态）也替换', () => {
+  const jsonEscaped = `file:${home.replaceAll('/', '\\\\')}\\\\Documents\\\\x`
+  const result = sanitizePersonalPaths(jsonEscaped)
+  assert.equal(result.includes(home.replaceAll('/', '\\\\')), false, result)
+  assert.ok(result.includes('~/'), result)
+})
+
+test('消毒不吞结尾引号：JSON 结构保持合法', () => {
+  const input = `{"a":"file:${forward}/dsh-codex-connect"}`
+  const result = sanitizePersonalPaths(input)
+  const parsed = JSON.parse(result)
+  assert.equal(parsed.a, `file:~/dsh-codex-connect`)
+})
+
+test('展开是消毒的逆操作：roundtrip 恢复本机路径', () => {
+  const original = `file:${forward}/Documents/deepseek-harness/default-workspace/dsh-codex-connect`
+  const sanitized = sanitizePersonalPaths(original)
+  assert.equal(sanitized, `file:~/Documents/deepseek-harness/default-workspace/dsh-codex-connect`)
+  assert.equal(expandPersonalPaths(sanitized), original)
+})
+
+test('展开只处理 ~/ 占位，不误伤普通波浪号或相对路径', () => {
+  assert.equal(expandPersonalPaths('./relative/path'), './relative/path')
+  assert.equal(expandPersonalPaths('~/a/b'), `${forward}/a/b`)
+  assert.equal(expandPersonalPaths('user~name'), 'user~name')
+})
+
+test('消毒对不含个人路径的文本零改动（幂等）', () => {
+  const clean = '{"dependencies":{"x":"^1.0.0"}}\n# comment /usr/local/bin\n'
+  assert.equal(sanitizePersonalPaths(clean), clean)
+})

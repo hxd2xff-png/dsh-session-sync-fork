@@ -1,1 +1,50 @@
-Ly8gR2lzdFByb3ZpZGVyLnJlbW92ZU1hbnkg5aWR57qm5rWL6K+V77ya5b+F6aG76L+H5ruk5o6J6L+c56uv5LiN5a2Y5Zyo55qE6ZSu4oCU4oCUCi8vIOWunua1iyBHaXRIdWIg5a+55Yig6Zmk5LiN5a2Y5Zyo55qE5paH5Lu26L+U5ZueIEhUVFAgNDIy77yIMjAyNi0xMC0xNSBwcm9iZSDovpPlh7rvvInjgIIKLy8g5Li05pe25pu/5o2iIGdsb2JhbFRoaXMuZmV0Y2gg5o2V6I63IFBBVENIIOivt+axguS9k++8jOa1i+ivlee7k+adn+aBouWkjeOAggppbXBvcnQgeyB0ZXN0IH0gZnJvbSAnbm9kZTp0ZXN0JwppbXBvcnQgYXNzZXJ0IGZyb20gJ25vZGU6YXNzZXJ0L3N0cmljdCcKaW1wb3J0IHsgY3JlYXRlSGFzaCB9IGZyb20gJ25vZGU6Y3J5cHRvJwppbXBvcnQgeyBwcm92aWRlckZyb20gfSBmcm9tICcuLi9saWIvY2xvdWQtY29yZS5tanMnCgovLyDkuI4gY2xvdWQtY29yZSDnmoQgZ2lzdE9iamVjdEZpbGVOYW1lIOWQjOaehO+8iEdJU1RfRklMRV9QUkVGSVggKyBzaGEyNTYoa2V5KSDliY0gNDAg5L2N77yJ44CCCmNvbnN0IGdpc3ROYW1lID0gKGtleSkgPT4gYGRzaC1jbG91ZC1zeW5jLXYxLSR7Y3JlYXRlSGFzaCgnc2hhMjU2JykudXBkYXRlKEJ1ZmZlci5mcm9tKGtleSkpLmRpZ2VzdCgnaGV4Jykuc2xpY2UoMCwgNDApfS5iNjRgCgpmdW5jdGlvbiBtYWtlRmV0Y2goZXhpc3RpbmdLZXlzLCByZWNvcmRlcikgewogIHJldHVybiBhc3luYyAodXJsLCBpbml0ID0ge30pID0+IHsKICAgIGNvbnN0IG1ldGhvZCA9IGluaXQubWV0aG9kID8/ICdHRVQnCiAgICBpZiAobWV0aG9kID09PSAnR0VUJykgewogICAgICBjb25zdCBmaWxlcyA9IHt9CiAgICAgIGZvciAoY29uc3Qga2V5IG9mIGV4aXN0aW5nS2V5cykgZmlsZXNbZ2lzdE5hbWUoa2V5KV0gPSB7IGNvbnRlbnQ6ICd4JyB9CiAgICAgIHJldHVybiB7CiAgICAgICAgb2s6IHRydWUsCiAgICAgICAgc3RhdHVzOiAyMDAsCiAgICAgICAgaGVhZGVyczogeyBnZXQ6IChuYW1lKSA9PiAoU3RyaW5nKG5hbWUpLnRvTG93ZXJDYXNlKCkgPT09ICdldGFnJyA/ICciYWJjIicgOiBudWxsKSB9LAogICAgICAgIGpzb246IGFzeW5jICgpID0+ICh7IGZpbGVzIH0pLAogICAgICB9CiAgICB9CiAgICBjb25zdCBib2R5ID0gSlNPTi5wYXJzZShpbml0LmJvZHkpCiAgICByZWNvcmRlci5wdXNoKHsgbWV0aG9kLCBmaWxlczogYm9keS5maWxlcyB9KQogICAgcmV0dXJuIHsgb2s6IHRydWUsIHN0YXR1czogMjAwLCBoZWFkZXJzOiB7IGdldDogKCkgPT4gbnVsbCB9LCBqc29uOiBhc3luYyAoKSA9PiAoe30pIH0KICB9Cn0KCnRlc3QoJ3JlbW92ZU1hbnkg5Y+q5o+Q5Lqk6L+c56uv5a2Y5Zyo55qE6ZSu77yI5LiN5a2Y5Zyo6ZSu5LiN6Kem5Y+RIDQyMiDor7fmsYLvvIknLCBhc3luYyAoKSA9PiB7CiAgY29uc3Qgb3JpZ2luYWwgPSBnbG9iYWxUaGlzLmZldGNoCiAgY29uc3QgcmVjb3JkZXIgPSBbXQogIGNvbnN0IHByb3ZpZGVyID0gcHJvdmlkZXJGcm9tKHsgcHJvdmlkZXI6IHsgdHlwZTogJ2dpc3QnLCBnaXN0SWQ6ICdnMScsIHRva2VuOiAndDEnIH0sIGVuY3J5cHRpb246IHsgZW5hYmxlZDogZmFsc2UgfSB9KQogIHRyeSB7CiAgICAvKiogQHR5cGUge2FueX0gKi8gKGdsb2JhbFRoaXMpLmZldGNoID0gbWFrZUZldGNoKFsnc2tpbGxzL2tlZXAuanNvbi5neiddLCByZWNvcmRlcikKICAgIC8vIOS4pOS4qumUrumDveS4jeWcqOi/nOerryDihpIg6L+H5ruk5ZCO5Li656m6IOKGkiDkuI3lj5EgUEFUQ0jjgIIKICAgIGF3YWl0IC8qKiBAdHlwZSB7YW55fSAqLyAocHJvdmlkZXIpLnJlbW92ZU1hbnkoWydza2lsbHMvYS5qc29uLmd6JywgJ3NraWxscy9iLmpzb24uZ3onXSkKICAgIGFzc2VydC5lcXVhbChyZWNvcmRlci5maWx0ZXIoZW50cnkgPT4gZW50cnkubWV0aG9kID09PSAnUEFUQ0gnKS5sZW5ndGgsIDAsICflhajpg6jkuI3lrZjlnKjml7bkuI3lupTlj5EgUEFUQ0gnKQogICAgLy8g5re35ZCI77ya5LiA5Liq5a2Y5Zyo5LiA5Liq5LiN5a2Y5ZyoIOKGkiBQQVRDSCDlj6rmkLrluKblrZjlnKjnmoTpgqPkuKrjgIIKICAgIGF3YWl0IC8qKiBAdHlwZSB7YW55fSAqLyAocHJvdmlkZXIpLnJlbW92ZU1hbnkoWydza2lsbHMva2VlcC5qc29uLmd6JywgJ3NraWxscy9taXNzaW5nLmpzb24uZ3onXSkKICAgIGNvbnN0IHBhdGNoZXMgPSByZWNvcmRlci5maWx0ZXIoZW50cnkgPT4gZW50cnkubWV0aG9kID09PSAnUEFUQ0gnKQogICAgYXNzZXJ0LmVxdWFsKHBhdGNoZXMubGVuZ3RoLCAxLCBg5bqU5oGw5aW95LiA5qyhIFBBVENI77yM5a6e6ZmFICR7cGF0Y2hlcy5sZW5ndGh9YCkKICAgIGNvbnN0IG5hbWVzID0gT2JqZWN0LmtleXMocGF0Y2hlc1swXS5maWxlcykKICAgIGFzc2VydC5kZWVwRXF1YWwobmFtZXMsIFtnaXN0TmFtZSgnc2tpbGxzL2tlZXAuanNvbi5neicpXSkKICAgIGFzc2VydC5lcXVhbChwYXRjaGVzWzBdLmZpbGVzW25hbWVzWzBdXSwgbnVsbCkKICB9IGZpbmFsbHkgewogICAgZ2xvYmFsVGhpcy5mZXRjaCA9IG9yaWdpbmFsCiAgfQp9KQo=
+// GistProvider.removeMany 契约测试：必须过滤掉远端不存在的键——
+// 实测 GitHub 对删除不存在的文件返回 HTTP 422（2026-10-15 probe 输出）。
+// 临时替换 globalThis.fetch 捕获 PATCH 请求体，测试结束恢复。
+import { test } from 'node:test'
+import assert from 'node:assert/strict'
+import { createHash } from 'node:crypto'
+import { providerFrom } from '../lib/cloud-core.mjs'
+
+// 与 cloud-core 的 gistObjectFileName 同构（GIST_FILE_PREFIX + sha256(key) 前 40 位）。
+const gistName = (key) => `dsh-cloud-sync-v1-${createHash('sha256').update(Buffer.from(key)).digest('hex').slice(0, 40)}.b64`
+
+function makeFetch(existingKeys, recorder) {
+  return async (url, init = {}) => {
+    const method = init.method ?? 'GET'
+    if (method === 'GET') {
+      const files = {}
+      for (const key of existingKeys) files[gistName(key)] = { content: 'x' }
+      return {
+        ok: true,
+        status: 200,
+        headers: { get: (name) => (String(name).toLowerCase() === 'etag' ? '"abc"' : null) },
+        json: async () => ({ files }),
+      }
+    }
+    const body = JSON.parse(init.body)
+    recorder.push({ method, files: body.files })
+    return { ok: true, status: 200, headers: { get: () => null }, json: async () => ({}) }
+  }
+}
+
+test('removeMany 只提交远端存在的键（不存在键不触发 422 请求）', async () => {
+  const original = globalThis.fetch
+  const recorder = []
+  const provider = providerFrom({ provider: { type: 'gist', gistId: 'g1', token: 't1' }, encryption: { enabled: false } })
+  try {
+    /** @type {any} */ (globalThis).fetch = makeFetch(['skills/keep.json.gz'], recorder)
+    // 两个键都不在远端 → 过滤后为空 → 不发 PATCH。
+    await /** @type {any} */ (provider).removeMany(['skills/a.json.gz', 'skills/b.json.gz'])
+    assert.equal(recorder.filter(entry => entry.method === 'PATCH').length, 0, '全部不存在时不应发 PATCH')
+    // 混合：一个存在一个不存在 → PATCH 只携带存在的那个。
+    await /** @type {any} */ (provider).removeMany(['skills/keep.json.gz', 'skills/missing.json.gz'])
+    const patches = recorder.filter(entry => entry.method === 'PATCH')
+    assert.equal(patches.length, 1, `应恰好一次 PATCH，实际 ${patches.length}`)
+    const names = Object.keys(patches[0].files)
+    assert.deepEqual(names, [gistName('skills/keep.json.gz')])
+    assert.equal(patches[0].files[names[0]], null)
+  } finally {
+    globalThis.fetch = original
+  }
+})

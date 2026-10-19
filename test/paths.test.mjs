@@ -1,1 +1,33 @@
-Ly8gdGVzdC9wYXRocy50ZXN0Lm1qcyDigJQg5Yqo5oCB6Lev5b6E5qOA5rWL5aWR57qm77yI5q+P5Y+w6K6+5aSH5LiN5ZCM77yM56aB5q2i5Liq5Lq66Lev5b6E5YaZ5q2777yJ44CCCmltcG9ydCB7IHRlc3QgfSBmcm9tICdub2RlOnRlc3QnCmltcG9ydCBhc3NlcnQgZnJvbSAnbm9kZTphc3NlcnQvc3RyaWN0JwppbXBvcnQgcGF0aCBmcm9tICdub2RlOnBhdGgnCmltcG9ydCB7IGRldGVjdERzaEhvbWUsIHJlc29sdmVTZXNzaW9uUm9vdCwgcmVzb2x2ZVJlcG9EaXIgfSBmcm9tICcuLi9saWIvcGF0aHMubWpzJwoKdGVzdCgnZGV0ZWN0RHNoSG9tZSDkvJjlhYjlj5YgJERTSF9IT01FJywgKCkgPT4gewogIGFzc2VydC5lcXVhbChkZXRlY3REc2hIb21lKHVuZGVmaW5lZCwgeyBEU0hfSE9NRTogJy9jdXN0b20vaG9tZScgfSksICcvY3VzdG9tL2hvbWUnKQp9KQoKdGVzdCgnZGV0ZWN0RHNoSG9tZSDku47mj5Lku7blronoo4Xot6/lvoTlj43mjqggaG9tZe+8iEVsZWN0cm9uIOaXoCAkRFNIX0hPTUUg55qE5Li76Lev5b6E77yJJywgKCkgPT4gewogIGNvbnN0IHdpbiA9ICdDOlxcVXNlcnNcXHNvbWVvbmVcXC5kc2hcXHByb2ZpbGVzXFxkZXNrdG9wXFxub2RlX21vZHVsZXNcXGRzaC1zZXNzaW9uLXN5bmNcXGxpYlxccGF0aHMubWpzJwogIGFzc2VydC5lcXVhbChwYXRoLnJlc29sdmUoZGV0ZWN0RHNoSG9tZSh3aW4sIHt9KSksIHBhdGgucmVzb2x2ZSgnQzpcXFVzZXJzXFxzb21lb25lXFwuZHNoJykpCiAgY29uc3QgdW5peCA9ICcvaG9tZS9kZXYvLmRzaC9wcm9maWxlcy93ZWIvbm9kZV9tb2R1bGVzL2RzaC1zZXNzaW9uLXN5bmMvbGliL3BhdGhzLm1qcycKICBhc3NlcnQuZXF1YWwoZGV0ZWN0RHNoSG9tZSh1bml4LCB7fSksIHBhdGgucmVzb2x2ZSgnL2hvbWUvZGV2Ly5kc2gnKSkKfSkKCnRlc3QoJ2RldGVjdERzaEhvbWUg5a6J6KOF6Lev5b6E5LiN5Yy56YWN5pe25YWc5bqVIH4vLmRzaCcsICgpID0+IHsKICBjb25zdCBkZXRlY3RlZCA9IGRldGVjdERzaEhvbWUoJy9vcHQvZWxzZXdoZXJlL3BsdWdpbi5tanMnLCB7fSkKICBhc3NlcnQub2soZGV0ZWN0ZWQuZW5kc1dpdGgoJy5kc2gnKSwgZGV0ZWN0ZWQpCn0pCgp0ZXN0KCdyZXNvbHZlU2Vzc2lvblJvb3QvUmVwb0RpciDnqbrphY3nva7otbDliqjmgIEgaG9tZe+8jOe7neS4jeWGmeatu+S4quS6uui3r+W+hCcsICgpID0+IHsKICBhc3NlcnQuZXF1YWwocmVzb2x2ZVNlc3Npb25Sb290KCcnLCAnL2gnKSwgcGF0aC5qb2luKCcvaCcsICdzZXNzaW9ucycpKQogIGFzc2VydC5lcXVhbChyZXNvbHZlUmVwb0RpcignJywgJy9oJyksIHBhdGguam9pbignL2gnLCAnZHNoLXNlc3Npb24tc3luYycsICdyZXBvJykpCiAgLy8g5pi+5byP6YWN572u5LuN54S25LyY5YWI77yI6ICB6YWN572u5LiN5Y+X5b2x5ZON77yJ44CCCiAgYXNzZXJ0LmVxdWFsKHJlc29sdmVTZXNzaW9uUm9vdCgnL2V4cGxpY2l0JywgJy9oJyksIHBhdGgucmVzb2x2ZSgnL2V4cGxpY2l0JykpCn0pCgp0ZXN0KCfmnKzku5PlupPov5DooYzkvY3nva7oh6rouqvlj6/ooqvop6PmnpDvvIjnnJ/lrp7lronoo4Xot6/lvoTlhpLng5/vvIknLCAoKSA9PiB7CiAgY29uc3QgZGV0ZWN0ZWQgPSBkZXRlY3REc2hIb21lKCkKICBhc3NlcnQub2sodHlwZW9mIGRldGVjdGVkID09PSAnc3RyaW5nJyAmJiBkZXRlY3RlZC5sZW5ndGggPiAwLCAnZGV0ZWN0RHNoSG9tZSgpIOaXoOazqOWFpeaXtuW/hemhu+aciee7k+aenCcpCn0pCg==
+// test/paths.test.mjs — 动态路径检测契约（每台设备不同，禁止个人路径写死）。
+import { test } from 'node:test'
+import assert from 'node:assert/strict'
+import path from 'node:path'
+import { detectDshHome, resolveSessionRoot, resolveRepoDir } from '../lib/paths.mjs'
+
+test('detectDshHome 优先取 $DSH_HOME', () => {
+  assert.equal(detectDshHome(undefined, { DSH_HOME: '/custom/home' }), '/custom/home')
+})
+
+test('detectDshHome 从插件安装路径反推 home（Electron 无 $DSH_HOME 的主路径）', () => {
+  const win = 'C:\\Users\\someone\\.dsh\\profiles\\desktop\\node_modules\\dsh-session-sync\\lib\\paths.mjs'
+  assert.equal(path.resolve(detectDshHome(win, {})), path.resolve('C:\\Users\\someone\\.dsh'))
+  const unix = '/home/dev/.dsh/profiles/web/node_modules/dsh-session-sync/lib/paths.mjs'
+  assert.equal(detectDshHome(unix, {}), path.resolve('/home/dev/.dsh'))
+})
+
+test('detectDshHome 安装路径不匹配时兜底 ~/.dsh', () => {
+  const detected = detectDshHome('/opt/elsewhere/plugin.mjs', {})
+  assert.ok(detected.endsWith('.dsh'), detected)
+})
+
+test('resolveSessionRoot/RepoDir 空配置走动态 home，绝不写死个人路径', () => {
+  assert.equal(resolveSessionRoot('', '/h'), path.join('/h', 'sessions'))
+  assert.equal(resolveRepoDir('', '/h'), path.join('/h', 'dsh-session-sync', 'repo'))
+  // 显式配置仍然优先（老配置不受影响）。
+  assert.equal(resolveSessionRoot('/explicit', '/h'), path.resolve('/explicit'))
+})
+
+test('本仓库运行位置自身可被解析（真实安装路径冒烟）', () => {
+  const detected = detectDshHome()
+  assert.ok(typeof detected === 'string' && detected.length > 0, 'detectDshHome() 无注入时必须有结果')
+})

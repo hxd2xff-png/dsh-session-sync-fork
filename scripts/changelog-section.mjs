@@ -1,1 +1,32 @@
-IyEvdXNyL2Jpbi9lbnYgbm9kZQovKioKICogUHJpbnQgb25lIHZlcnNpb24ncyBDSEFOR0VMT0cgc2VjdGlvbiB0byBzdGRvdXQgKGhlYWRpbmcgZXhjbHVkZWQgZnJvbSB0aGUKICogaW5wdXQgcmVxdWlyZW1lbnQsIGV2ZXJ5dGhpbmcgdW50aWwgdGhlIG5leHQgYCMjIFtgIGhlYWRpbmcgaW5jbHVkZWQpLgogKiBVc2VkIGJ5IHRoZSByZWxlYXNlIHdvcmtmbG93IHRvIGJ1aWxkIHRoZSBHaXRIdWIgUmVsZWFzZSBib2R5LgogKgogKiBVc2FnZTogbm9kZSBzY3JpcHRzL2NoYW5nZWxvZy1zZWN0aW9uLm1qcyA8dmVyc2lvbj4KICoKICogQG1vZHVsZSBkc2gtc2Vzc2lvbi1zeW5jL3NjcmlwdHMvY2hhbmdlbG9nLXNlY3Rpb24KICovCgppbXBvcnQgeyByZWFkRmlsZVN5bmMgfSBmcm9tICdub2RlOmZzJwppbXBvcnQgeyByZXNvbHZlIH0gZnJvbSAnbm9kZTpwYXRoJwoKY29uc3QgdmVyc2lvbiA9IHByb2Nlc3MuYXJndlsyXQppZiAoIS9eXGQrXC5cZCtcLlxkKyQvLnRlc3QodmVyc2lvbiA/PyAnJykpIHsKICBjb25zb2xlLmVycm9yKGB1c2FnZTogbm9kZSBzY3JpcHRzL2NoYW5nZWxvZy1zZWN0aW9uLm1qcyA8eC55Lno+IChnb3Q6ICR7dmVyc2lvbiA/PyAnbm9uZSd9KWApCiAgcHJvY2Vzcy5leGl0KDEpCn0KCmNvbnN0IGNoYW5nZWxvZyA9IHJlYWRGaWxlU3luYyhyZXNvbHZlKGltcG9ydC5tZXRhLmRpcm5hbWUsICcuLicsICdDSEFOR0VMT0cubWQnKSwgJ3V0ZjgnKQpjb25zdCBsaW5lcyA9IGNoYW5nZWxvZy5zcGxpdCgnXG4nKQovLyBTZWN0aW9uIGhlYWRpbmdzIGNhcnJ5IGEgZGF0ZSBzdWZmaXggKGAjIyBbMC4xLjBdIC0gMjAyNi0wOC0xNmApOyB0aGUKLy8gdHJhaWxpbmcgc3BhY2Uga2VlcHMgYDAuMS4wYCBmcm9tIGFsc28gbWF0Y2hpbmcgYDAuMS4wLWJldGFgLXN0eWxlIG5hbWVzLgpjb25zdCBzdGFydCA9IGxpbmVzLmZpbmRJbmRleChsaW5lID0+IGxpbmUuc3RhcnRzV2l0aChgIyMgWyR7dmVyc2lvbn1dIGApKQppZiAoc3RhcnQgPT09IC0xKSB7CiAgY29uc29sZS5lcnJvcihgQ0hBTkdFTE9HLm1kIGhhcyBubyAiIyMgWyR7dmVyc2lvbn1dIiBzZWN0aW9uYCkKICBwcm9jZXNzLmV4aXQoMSkKfQpjb25zdCBlbmQgPSBsaW5lcy5maW5kSW5kZXgoKGxpbmUsIGluZGV4KSA9PiBpbmRleCA+IHN0YXJ0ICYmIGxpbmUuc3RhcnRzV2l0aCgnIyMgWycpKQpjb25zdCBzZWN0aW9uID0gbGluZXMuc2xpY2Uoc3RhcnQsIGVuZCA9PT0gLTEgPyB1bmRlZmluZWQgOiBlbmQpCnByb2Nlc3Muc3Rkb3V0LndyaXRlKGAke3NlY3Rpb24uam9pbignXG4nKS5yZXBsYWNlKC9cbiskLywgJycpfVxuYCkK
+#!/usr/bin/env node
+/**
+ * Print one version's CHANGELOG section to stdout (heading excluded from the
+ * input requirement, everything until the next `## [` heading included).
+ * Used by the release workflow to build the GitHub Release body.
+ *
+ * Usage: node scripts/changelog-section.mjs <version>
+ *
+ * @module dsh-session-sync/scripts/changelog-section
+ */
+
+import { readFileSync } from 'node:fs'
+import { resolve } from 'node:path'
+
+const version = process.argv[2]
+if (!/^\d+\.\d+\.\d+$/.test(version ?? '')) {
+  console.error(`usage: node scripts/changelog-section.mjs <x.y.z> (got: ${version ?? 'none'})`)
+  process.exit(1)
+}
+
+const changelog = readFileSync(resolve(import.meta.dirname, '..', 'CHANGELOG.md'), 'utf8')
+const lines = changelog.split('\n')
+// Section headings carry a date suffix (`## [0.1.0] - 2026-08-16`); the
+// trailing space keeps `0.1.0` from also matching `0.1.0-beta`-style names.
+const start = lines.findIndex(line => line.startsWith(`## [${version}] `))
+if (start === -1) {
+  console.error(`CHANGELOG.md has no "## [${version}]" section`)
+  process.exit(1)
+}
+const end = lines.findIndex((line, index) => index > start && line.startsWith('## ['))
+const section = lines.slice(start, end === -1 ? undefined : end)
+process.stdout.write(`${section.join('\n').replace(/\n+$/, '')}\n`)

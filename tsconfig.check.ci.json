@@ -1,1 +1,18 @@
-ewogICJjb21waWxlck9wdGlvbnMiOiB7CiAgICAidGFyZ2V0IjogIkVTMjAyMyIsCiAgICAibW9kdWxlIjogIk5vZGVOZXh0IiwKICAgICJtb2R1bGVSZXNvbHV0aW9uIjogIk5vZGVOZXh0IiwKICAgICJsaWIiOiBbIkVTMjAyMyJdLAogICAgInR5cGVzIjogWyJub2RlIl0sCiAgICAiYWxsb3dKcyI6IHRydWUsCiAgICAiY2hlY2tKcyI6IHRydWUsCiAgICAibm9FbWl0IjogdHJ1ZSwKICAgICJub0ltcGxpY2l0QW55IjogZmFsc2UsCiAgICAibm9JbXBsaWNpdFJldHVybnMiOiB0cnVlLAogICAgInN0cmljdCI6IGZhbHNlLAogICAgInNraXBMaWJDaGVjayI6IHRydWUsCiAgICAicGF0aHMiOiB7fQogIH0sCiAgImluY2x1ZGUiOiBbImluZGV4Lm1qcyIsICJsaWIvKiovKi5tanMiLCAic2NyaXB0cy8qKi8qLm1qcyIsICJ0ZXN0LyoqLyoubWpzIiwgInR5cGVzLmQudHMiXQp9Cg==
+{
+  "compilerOptions": {
+    "target": "ES2023",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "lib": ["ES2023"],
+    "types": ["node"],
+    "allowJs": true,
+    "checkJs": true,
+    "noEmit": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": true,
+    "strict": false,
+    "skipLibCheck": true,
+    "paths": {}
+  },
+  "include": ["index.mjs", "lib/**/*.mjs", "scripts/**/*.mjs", "test/**/*.mjs", "types.d.ts"]
+}

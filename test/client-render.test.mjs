@@ -1,1 +1,204 @@
-Ly8gdGVzdC9jbGllbnQtcmVuZGVyLnRlc3QubWpzIOKAlCDnnJ/lrp7miafooYwgY2xpZW50LmpzIOW5tumqjOivgeWFs+mUruWPr+ingeWFg+e0oOeUn+aIkOOAggppbXBvcnQgeyB0ZXN0IH0gZnJvbSAnbm9kZTp0ZXN0JwppbXBvcnQgYXNzZXJ0IGZyb20gJ25vZGU6YXNzZXJ0L3N0cmljdCcKaW1wb3J0IGZzIGZyb20gJ25vZGU6ZnMvcHJvbWlzZXMnCmltcG9ydCB2bSBmcm9tICdub2RlOnZtJwoKY29uc3QgY2xpZW50VXJsID0gbmV3IFVSTCgnLi4vY2xpZW50LmpzJywgaW1wb3J0Lm1ldGEudXJsKQoKYXN5bmMgZnVuY3Rpb24gbG9hZE1haW5Db21wb25lbnQoKSB7CiAgLyoqIEB0eXBlIHthbnl9ICovCmxldCBkZXNjcmlwdG9yCiAgY29uc3QgZG9jdW1lbnQgPSB7CiAgICBoZWFkOiB7IGFwcGVuZCgpIHt9IH0sCiAgICBxdWVyeVNlbGVjdG9yKCkgeyByZXR1cm4gbnVsbCB9LAogICAgY3JlYXRlRWxlbWVudCh0YWcpIHsgcmV0dXJuIHsgdGFnTmFtZTogdGFnLnRvVXBwZXJDYXNlKCksIGRhdGFzZXQ6IHt9LCBzaG93TW9kYWwoKSB7fSB9IH0sCiAgfQogIGNvbnN0IHdpbmRvdyA9IHsKICAgIF9fTW9kdWxlTG9hZGVyX186IHsgbG9hZCh2YWx1ZSkgeyBkZXNjcmlwdG9yID0gdmFsdWUgfSB9LAogICAgY29uZmlybSgpIHsgcmV0dXJuIGZhbHNlIH0sCiAgICBvcGVuKCkge30sCiAgfQogIGNvbnN0IHNvdXJjZSA9IGF3YWl0IGZzLnJlYWRGaWxlKGNsaWVudFVybCwgJ3V0ZjgnKQogIHZtLnJ1bkluTmV3Q29udGV4dChzb3VyY2UsIHsgd2luZG93LCBkb2N1bWVudCwgbmF2aWdhdG9yOiB7IGxhbmd1YWdlOiAnemgtQ04nIH0sIGZldGNoOiBhc3luYyAoKSA9PiAoeyBvazogdHJ1ZSwganNvbjogYXN5bmMgKCkgPT4gKHsgb2s6IHRydWUsIHZhbHVlOiB7fSB9KSB9KSB9KQoKICBsZXQgaG9va0luZGV4ID0gMAogIGxldCBvdmVycmlkZXMgPSB7fQogIGNvbnN0IFJlYWN0ID0gewogICAgY3JlYXRlRWxlbWVudCh0eXBlLCBwcm9wcywgLi4uY2hpbGRyZW4pIHsKICAgICAgcmV0dXJuIHsgdHlwZSwgcHJvcHM6IHsgLi4uKHByb3BzID8/IHt9KSwgY2hpbGRyZW46IGNoaWxkcmVuLmxlbmd0aCA9PT0gMSA/IGNoaWxkcmVuWzBdIDogY2hpbGRyZW4gfSB9CiAgICB9LAogICAgdXNlU3RhdGUoaW5pdGlhbCkgewogICAgICBjb25zdCBpbmRleCA9IGhvb2tJbmRleCsrCiAgICAgIGNvbnN0IHZhbHVlID0gT2JqZWN0Lmhhc093bihvdmVycmlkZXMsIGluZGV4KQogICAgICAgID8gb3ZlcnJpZGVzW2luZGV4XQogICAgICAgIDogKHR5cGVvZiBpbml0aWFsID09PSAnZnVuY3Rpb24nID8gaW5pdGlhbCgpIDogaW5pdGlhbCkKICAgICAgcmV0dXJuIFt2YWx1ZSwgKCkgPT4ge31dCiAgICB9LAogICAgdXNlQ2FsbGJhY2soZm4pIHsgcmV0dXJuIGZuIH0sCiAgICB1c2VFZmZlY3QoKSB7fSwKICAgIHVzZVJlZih2YWx1ZSkgeyByZXR1cm4geyBjdXJyZW50OiB2YWx1ZSB9IH0sCiAgfQogIGNvbnN0IHBsdWdpbiA9IGRlc2NyaXB0b3IuZmFjdG9yeSgobmFtZSkgPT4gewogICAgaWYgKG5hbWUgPT09ICdyZWFjdCcpIHJldHVybiBSZWFjdAogICAgdGhyb3cgbmV3IEVycm9yKGB1bmV4cGVjdGVkIG1vZHVsZTogJHtuYW1lfWApCiAgfSkKICBsZXQgTWFpbgogIGNvbnN0IHNsb3RzID0gewogICAgaW5qZWN0KF9uYW1lLCBpbnN0YWxsKSB7IGluc3RhbGwoKSB9LAogICAgcmVnaXN0ZXIobWV0YSwgY29tcG9uZW50KSB7CiAgICAgIGlmIChtZXRhLm5hbWUgPT09ICdtYWluJykgTWFpbiA9IGNvbXBvbmVudAogICAgICByZXR1cm4gbnVsbAogICAgfSwKICB9CiAgcGx1Z2luLmFwcGx5KHsgc2xvdHMgfSkKICBhc3NlcnQuZXF1YWwodHlwZW9mIE1haW4sICdmdW5jdGlvbicpCgogIGZ1bmN0aW9uIHJlbmRlck5vZGUobm9kZSwgY29tcG9uZW50T3ZlcnJpZGVzKSB7CiAgICBpZiAobm9kZSA9PT0gbnVsbCB8fCBub2RlID09PSB1bmRlZmluZWQgfHwgdHlwZW9mIG5vZGUgPT09ICdib29sZWFuJykgcmV0dXJuIFtdCiAgICBpZiAoQXJyYXkuaXNBcnJheShub2RlKSkgcmV0dXJuIG5vZGUuZmxhdE1hcChpdGVtID0+IHJlbmRlck5vZGUoaXRlbSwgY29tcG9uZW50T3ZlcnJpZGVzKSkKICAgIGlmICh0eXBlb2Ygbm9kZSAhPT0gJ29iamVjdCcpIHJldHVybiBbbm9kZV0KICAgIGlmICh0eXBlb2Ygbm9kZS50eXBlID09PSAnZnVuY3Rpb24nKSB7CiAgICAgIGNvbnN0IHByZXZpb3VzSW5kZXggPSBob29rSW5kZXgKICAgICAgY29uc3QgcHJldmlvdXNPdmVycmlkZXMgPSBvdmVycmlkZXMKICAgICAgaG9va0luZGV4ID0gMAogICAgICBvdmVycmlkZXMgPSBjb21wb25lbnRPdmVycmlkZXNbbm9kZS50eXBlLm5hbWVdID8/IHt9CiAgICAgIGNvbnN0IHJlbmRlcmVkID0gbm9kZS50eXBlKG5vZGUucHJvcHMgPz8ge30pCiAgICAgIGhvb2tJbmRleCA9IHByZXZpb3VzSW5kZXgKICAgICAgb3ZlcnJpZGVzID0gcHJldmlvdXNPdmVycmlkZXMKICAgICAgcmV0dXJuIHJlbmRlck5vZGUocmVuZGVyZWQsIGNvbXBvbmVudE92ZXJyaWRlcykKICAgIH0KICAgIHJldHVybiBbeyAuLi5ub2RlLCByZW5kZXJlZENoaWxkcmVuOiByZW5kZXJOb2RlKG5vZGUucHJvcHM/LmNoaWxkcmVuLCBjb21wb25lbnRPdmVycmlkZXMpIH1dCiAgfQoKICByZXR1cm4gKGNvbXBvbmVudE92ZXJyaWRlcykgPT4gewogICAgaG9va0luZGV4ID0gMAogICAgb3ZlcnJpZGVzID0gY29tcG9uZW50T3ZlcnJpZGVzLk1haW4gPz8ge30KICAgIHJldHVybiByZW5kZXJOb2RlKHsgdHlwZTogTWFpbiwgcHJvcHM6IHt9IH0sIGNvbXBvbmVudE92ZXJyaWRlcykKICB9Cn0KCmZ1bmN0aW9uIHRleHRPZihub2RlKSB7CiAgcmV0dXJuIChub2RlLnJlbmRlcmVkQ2hpbGRyZW4gPz8gW10pLm1hcChjaGlsZCA9PiB0eXBlb2YgY2hpbGQgPT09ICdvYmplY3QnID8gdGV4dE9mKGNoaWxkKSA6IFN0cmluZyhjaGlsZCkpLmpvaW4oJycpCn0KCmZ1bmN0aW9uIGNvbGxlY3Qobm9kZXMsIHByZWRpY2F0ZSkgewogIGNvbnN0IG91dCA9IFtdCiAgY29uc3QgdmlzaXQgPSAobm9kZSkgPT4gewogICAgaWYgKHR5cGVvZiBub2RlICE9PSAnb2JqZWN0JyB8fCBub2RlID09PSBudWxsKSByZXR1cm4KICAgIGlmIChwcmVkaWNhdGUobm9kZSkpIG91dC5wdXNoKG5vZGUpCiAgICBmb3IgKGNvbnN0IGNoaWxkIG9mIG5vZGUucmVuZGVyZWRDaGlsZHJlbiA/PyBbXSkgdmlzaXQoY2hpbGQpCiAgfQogIGZvciAoY29uc3Qgbm9kZSBvZiBub2RlcykgdmlzaXQobm9kZSkKICByZXR1cm4gb3V0Cn0KCmZ1bmN0aW9uIGRlbGV0ZUJ1dHRvbnMobm9kZXMpIHsKICByZXR1cm4gY29sbGVjdChub2Rlcywgbm9kZSA9PiBub2RlLnR5cGUgPT09ICdidXR0b24nICYmIHRleHRPZihub2RlKSA9PT0gJ+WIoOmZpCcgJiYgU3RyaW5nKG5vZGUucHJvcHM/LmNsYXNzTmFtZSA/PyAnJykuaW5jbHVkZXMoJ2RhbmdlcicpKQp9CgpmdW5jdGlvbiBhY3RpdmVUYWJMYWJlbChub2RlcykgewogIGNvbnN0IHRhYnMgPSBjb2xsZWN0KG5vZGVzLCBub2RlID0+IG5vZGUudHlwZSA9PT0gJ2J1dHRvbicgJiYgbm9kZS5wcm9wcz8ucm9sZSA9PT0gJ3RhYicgJiYgbm9kZS5wcm9wcz8uWydhcmlhLXNlbGVjdGVkJ10gPT09ICd0cnVlJykKICByZXR1cm4gdGFicy5sZW5ndGggPT09IDEgPyB0ZXh0T2YodGFic1swXSkgOiBudWxsCn0KCi8qKiDlvZPliY3mv4DmtLsgVEFCIOeahCBwYW5lIOWtkOagke+8muS4iSBUQUIg5bi46am75oyC6L2977yM5Y+q5pyJ5r+A5rS7IHBhbmUg55qEIGRpc3BsYXkg5pivICdjb250ZW50cyfjgIIgKi8KZnVuY3Rpb24gYWN0aXZlUGFuZShub2RlcykgewogIGNvbnN0IHBhbmVzID0gY29sbGVjdChub2Rlcywgbm9kZSA9PiB0eXBlb2Ygbm9kZS5wcm9wcz8ua2V5ID09PSAnc3RyaW5nJyAmJiBub2RlLnByb3BzLmtleS5zdGFydHNXaXRoKCdwYW5lLScpKQogIGNvbnN0IGFjdGl2ZSA9IHBhbmVzLmZpbHRlcihub2RlID0+IG5vZGUucHJvcHM/LnN0eWxlPy5kaXNwbGF5ICE9PSAnbm9uZScpCiAgcmV0dXJuIGFjdGl2ZS5sZW5ndGggPT09IDEgPyBhY3RpdmVbMF0gOiBudWxsCn0KCnRlc3QoJ+S8muivneWkh+S7veWOhuWPsuWunumZhea4suafkyBkYW5nZXIg5Yig6Zmk5oyJ6ZKuJywgYXN5bmMgKCkgPT4gewogIGNvbnN0IHJlbmRlciA9IGF3YWl0IGxvYWRNYWluQ29tcG9uZW50KCkKICBjb25zdCBub2RlcyA9IHJlbmRlcih7CiAgICBTZXNzaW9uU3luY1BhZ2U6IHsKICAgICAgNDogW3sgc2hhOiAnMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMScsIGF0OiBEYXRlLm5vdygpLCBhdXRob3I6ICdBbGljZScsIHN1YmplY3Q6ICdtYW51YWwnLCBzb3VyY2U6ICdtYW51YWwnIH1dLAogICAgfSwKICB9KQogIGNvbnN0IGJ1dHRvbnMgPSBkZWxldGVCdXR0b25zKG5vZGVzKQogIGFzc2VydC5lcXVhbChidXR0b25zLmxlbmd0aCwgMSkKICBhc3NlcnQuZXF1YWwodHlwZW9mIGJ1dHRvbnNbMF0ucHJvcHMub25DbGljaywgJ2Z1bmN0aW9uJykKICAvLyDlpJrpgInpl6jvvJrlj6rnu5/orqHmv4DmtLsgcGFuZSDlhoXnmoQgY2hlY2tib3jvvIjkuIkgVEFCIOW4uOmpu++8jOWFtuS7liBwYW5lIOaYr+makOiXj+eahO+8ieOAggogIGNvbnN0IHBhbmUgPSBhY3RpdmVQYW5lKG5vZGVzKQogIGFzc2VydC5vayhwYW5lICE9PSBudWxsLCAn5bqU5pyJ5LiU5Y+q5pyJ5LiA5Liq5r+A5rS7IHBhbmUnKQogIGNvbnN0IGJveGVzID0gY29sbGVjdChbcGFuZV0sIG5vZGUgPT4gbm9kZS50eXBlID09PSAnaW5wdXQnICYmIG5vZGUucHJvcHM/LnR5cGUgPT09ICdjaGVja2JveCcpCiAgYXNzZXJ0LmVxdWFsKGJveGVzLmxlbmd0aCwgMiwgYOa/gOa0uyBwYW5lIOW6lOaciSAyIOS4qiBjaGVja2JveO+8jOWunumZhSAke2JveGVzLmxlbmd0aH1gKQp9KQoKdGVzdCgn5o+S5Lu25aSH5Lu95Y6G5Y+y5a6e6ZmF5riy5p+TIGRhbmdlciDliKDpmaTmjInpkq4nLCBhc3luYyAoKSA9PiB7CiAgY29uc3QgcmVuZGVyID0gYXdhaXQgbG9hZE1haW5Db21wb25lbnQoKQogIGNvbnN0IG5vZGVzID0gcmVuZGVyKHsKICAgIFNlc3Npb25TeW5jUGFnZTogeyAxMzogJ3BsdWdpbmJhY2t1cCcgfSwKICAgIFBsdWdpbkJhY2t1cFRhYjogewogICAgICA0OiBbeyBrZXk6ICdzbmFwc2hvdHMvaGlzdG9yeS9vbmUuemlwJywgZGV2aWNlTmFtZTogJ2Rlc2t0b3AnLCBjcmVhdGVkQXQ6IERhdGUubm93KCksIGNoYW5nZXM6IFtdIH1dLAogICAgICAvLyBQbHVnaW5CYWNrdXBUYWIg55qEIGhvb2sg6aG65bqP77ya4oCmY29uZmlybSg5KSBzZWxlY3RlZCgxMCnjgILmibnph4/mjInpkq7mjIkgc2VsZWN0ZWQuc2l6ZSA+IDAg5riy5p+T44CCCiAgICAgIDEwOiBuZXcgU2V0KFsnc25hcHNob3RzL2hpc3Rvcnkvb25lLnppcCddKSwKICAgIH0sCiAgfSkKICBjb25zdCBidXR0b25zID0gZGVsZXRlQnV0dG9ucyhub2RlcykKICBhc3NlcnQuZXF1YWwoYnV0dG9ucy5sZW5ndGgsIDEpCiAgYXNzZXJ0LmVxdWFsKHR5cGVvZiBidXR0b25zWzBdLnByb3BzLm9uQ2xpY2ssICdmdW5jdGlvbicpCiAgLy8g5aSa6YCJ6Zeo77ya5Y+q57uf6K6h5r+A5rS7IHBhbmUg5YaF55qEIGNoZWNrYm94IOS4juaJuemHj+aMiemSru+8iOS4iSBUQUIg5bi46am75oyC6L2977yJ44CCCiAgY29uc3QgcGFuZSA9IGFjdGl2ZVBhbmUobm9kZXMpCiAgYXNzZXJ0Lm9rKHBhbmUgIT09IG51bGwsICflupTmnInkuJTlj6rmnInkuIDkuKrmv4DmtLsgcGFuZScpCiAgY29uc3QgYm94ZXMgPSBjb2xsZWN0KFtwYW5lXSwgbm9kZSA9PiBub2RlLnR5cGUgPT09ICdpbnB1dCcgJiYgbm9kZS5wcm9wcz8udHlwZSA9PT0gJ2NoZWNrYm94JykKICBhc3NlcnQuZXF1YWwoYm94ZXMubGVuZ3RoLCAyLCBg5r+A5rS7IHBhbmUg5bqU5pyJIDIg5LiqIGNoZWNrYm9477yM5a6e6ZmFICR7Ym94ZXMubGVuZ3RofWApCiAgY29uc3QgYmF0Y2ggPSBjb2xsZWN0KFtwYW5lXSwgbm9kZSA9PiBub2RlLnR5cGUgPT09ICdidXR0b24nICYmIHRleHRPZihub2RlKS5zdGFydHNXaXRoKCfmibnph4/liKDpmaQnKSkKICBhc3NlcnQuZXF1YWwoYmF0Y2gubGVuZ3RoLCAxLCBg5bqU5pyJ5om56YeP5Yig6Zmk5oyJ6ZKu77yM5a6e6ZmFICR7YmF0Y2gubGVuZ3RofWApCn0pCgp0ZXN0KCfmioDog73lpIfku73pobXnrb7lrZjlnKjkuJTmuLLmn5MgZGFuZ2VyIOWIoOmZpOaMiemSru+8iOWQq+i/mOWOn+aMiemSru+8iScsIGFzeW5jICgpID0+IHsKICBjb25zdCByZW5kZXIgPSBhd2FpdCBsb2FkTWFpbkNvbXBvbmVudCgpCiAgY29uc3Qgbm9kZXMgPSByZW5kZXIoewogICAgU2Vzc2lvblN5bmNQYWdlOiB7IDEzOiAnc2tpbGxiYWNrdXAnIH0sCiAgICBTa2lsbEJhY2t1cFRhYjogewogICAgICAvLyBTa2lsbEJhY2t1cFRhYiDnmoQgaG9vayDpobrluo/vvJpsb2NhbCgwKSBoaXN0b3J5KDEpIHByb3ZpZGVyKDIpIHJlc3VsdCgzKSBlcnJvcig0KSBidXN5KDUpIGNvbmZpcm0oNikgc2VsZWN0ZWQoNynjgIIKICAgICAgMTogW3sga2V5OiAnc2tpbGxzL2R3cy1hYmMuanNvbi5neicsIG5hbWU6ICdkd3MnLCBzaGEyNTY6ICdhJy5yZXBlYXQoNjQpLCBzb3VyY2VCeXRlczogMjM1NzMyNCwgZGV2aWNlTmFtZTogJ2Rlc2t0b3AnLCBjcmVhdGVkQXQ6IG5ldyBEYXRlKCkudG9JU09TdHJpbmcoKSB9XSwKICAgICAgLy8gc2VsZWN0ZWQg5b+F6aG75rOo5YWl6Z2e56m66ZuG5ZCI77yM5ZCm5YiZ5om56YeP5oyJ6ZKu5oyJIHNlbGVjdGVkLnNpemUgPiAwIOS4jea4suafk+OAggogICAgICA3OiBuZXcgU2V0KFsnc2tpbGxzL2R3cy1hYmMuanNvbi5neiddKSwKICAgIH0sCiAgfSkKICBhc3NlcnQuZXF1YWwoYWN0aXZlVGFiTGFiZWwobm9kZXMpLCAn5oqA6IO95aSH5Lu9JykKICBjb25zdCBidXR0b25zID0gZGVsZXRlQnV0dG9ucyhub2RlcykKICBhc3NlcnQuZXF1YWwoYnV0dG9ucy5sZW5ndGgsIDEpCiAgYXNzZXJ0LmVxdWFsKHR5cGVvZiBidXR0b25zWzBdLnByb3BzLm9uQ2xpY2ssICdmdW5jdGlvbicpCiAgY29uc3QgcmVzdG9yZSA9IGNvbGxlY3Qobm9kZXMsIG5vZGUgPT4gbm9kZS50eXBlID09PSAnYnV0dG9uJyAmJiB0ZXh0T2Yobm9kZSkgPT09ICfov5jljp8nICYmIFN0cmluZyhub2RlLnByb3BzPy5jbGFzc05hbWUgPz8gJycpLmluY2x1ZGVzKCdzcy1idG4nKSkKICBhc3NlcnQuZXF1YWwocmVzdG9yZS5sZW5ndGgsIDEpCiAgYXNzZXJ0LmVxdWFsKHR5cGVvZiByZXN0b3JlWzBdLnByb3BzLm9uQ2xpY2ssICdmdW5jdGlvbicpCiAgLy8g5aSa6YCJ6Zeo77ya5Y+q57uf6K6h5r+A5rS7IHBhbmUg5YaF55qEIGNoZWNrYm94IOS4juaJuemHj+aMiemSruOAggogIGNvbnN0IHBhbmUgPSBhY3RpdmVQYW5lKG5vZGVzKQogIGFzc2VydC5vayhwYW5lICE9PSBudWxsLCAn5bqU5pyJ5LiU5Y+q5pyJ5LiA5Liq5r+A5rS7IHBhbmUnKQogIGNvbnN0IGJveGVzID0gY29sbGVjdChbcGFuZV0sIG5vZGUgPT4gbm9kZS50eXBlID09PSAnaW5wdXQnICYmIG5vZGUucHJvcHM/LnR5cGUgPT09ICdjaGVja2JveCcpCiAgYXNzZXJ0LmVxdWFsKGJveGVzLmxlbmd0aCwgMiwgYOa/gOa0uyBwYW5lIOW6lOaciSAyIOS4qiBjaGVja2JveO+8jOWunumZhSAke2JveGVzLmxlbmd0aH1gKQogIGNvbnN0IGJhdGNoID0gY29sbGVjdChbcGFuZV0sIG5vZGUgPT4gbm9kZS50eXBlID09PSAnYnV0dG9uJyAmJiB0ZXh0T2Yobm9kZSkuc3RhcnRzV2l0aCgn5om56YePJykpCiAgYXNzZXJ0LmVxdWFsKGJhdGNoLmxlbmd0aCwgMiwgYOW6lOacieaJuemHj+i/mOWOnyArIOaJuemHj+WIoOmZpOS4pOS4quaMiemSru+8jOWunumZhSAke2JhdGNoLmxlbmd0aH1gKQogIC8vIOW4uOmpu+aMgui9vemXqO+8muS4ieS4qiBwYW5lIOmDveW/hemhu+WcqOa4suafk+agkemHjO+8iOWIhyBUQUIg5LiN5Y246L2977yJ44CCCiAgY29uc3QgcGFuZXMgPSBjb2xsZWN0KG5vZGVzLCBub2RlID0+IHR5cGVvZiBub2RlLnByb3BzPy5rZXkgPT09ICdzdHJpbmcnICYmIG5vZGUucHJvcHMua2V5LnN0YXJ0c1dpdGgoJ3BhbmUtJykpCiAgYXNzZXJ0LmRlZXBFcXVhbChwYW5lcy5tYXAobm9kZSA9PiBub2RlLnByb3BzLmtleSkuc29ydCgpLCBbJ3BhbmUtcGx1Z2luJywgJ3BhbmUtc2Vzc2lvbicsICdwYW5lLXNraWxsJ10pCn0pCgp0ZXN0KCforqTor4HphY3nva7mmL7npLrns7vnu5/lh63mja7lkoxTU0jlr4bpkqXpgInpobknLCBhc3luYyAoKSA9PiB7CiAgY29uc3QgcmVuZGVyID0gYXdhaXQgbG9hZE1haW5Db21wb25lbnQoKQogIGNvbnN0IG5vZGVzID0gcmVuZGVyKHt9KQogIGNvbnN0IG9wdGlvbnMgPSBjb2xsZWN0KG5vZGVzLCBub2RlID0+IG5vZGUudHlwZSA9PT0gJ29wdGlvbicpLm1hcCh0ZXh0T2YpCiAgYXNzZXJ0Lm9rKG9wdGlvbnMuaW5jbHVkZXMoJ+ezu+e7nyBHaXQg5Yet5o2u566h55CG5ZmoIC8gU1NIIEFnZW50JykpCiAgYXNzZXJ0Lm9rKG9wdGlvbnMuaW5jbHVkZXMoJ+aMh+WumiBTU0gg56eB6ZKl6Lev5b6EJykpCn0pCgp0ZXN0KCfpobblsYLpobXnrb7ljIXlkKvkvJror50v5o+S5Lu2L+aKgOiDveS4ieS4quWkh+S7veWFpeWPoycsIGFzeW5jICgpID0+IHsKICBjb25zdCByZW5kZXIgPSBhd2FpdCBsb2FkTWFpbkNvbXBvbmVudCgpCiAgY29uc3Qgbm9kZXMgPSByZW5kZXIoe30pCiAgY29uc3QgdGFicyA9IGNvbGxlY3Qobm9kZXMsIG5vZGUgPT4gbm9kZS50eXBlID09PSAnYnV0dG9uJyAmJiBub2RlLnByb3BzPy5yb2xlID09PSAndGFiJykubWFwKHRleHRPZikKICBhc3NlcnQuZGVlcEVxdWFsKHRhYnMsIFsn5Lya6K+d5aSH5Lu9JywgJ+aPkuS7tuWkh+S7vScsICfmioDog73lpIfku70nXSkKfSkKCnRlc3QoJ+aPkuS7tuWkh+S7vSBUQUIg5riy5p+T5Ye644CM5Zue5pS25a2k5YS/5a+56LGh44CN5oyJ6ZKu5LiUIG9uQ2xpY2sg5Y+v55SoJywgYXN5bmMgKCkgPT4gewogIGNvbnN0IHJlbmRlciA9IGF3YWl0IGxvYWRNYWluQ29tcG9uZW50KCkKICBjb25zdCBub2RlcyA9IHJlbmRlcih7IFNlc3Npb25TeW5jUGFnZTogeyAxMzogJ3BsdWdpbmJhY2t1cCcgfSB9KQogIGNvbnN0IHBhbmUgPSBhY3RpdmVQYW5lKG5vZGVzKQogIGFzc2VydC5vayhwYW5lICE9PSBudWxsLCAn5bqU5pyJ5LiU5Y+q5pyJ5LiA5Liq5r+A5rS7IHBhbmUnKQogIGNvbnN0IGJ1dHRvbiA9IGNvbGxlY3QoW3BhbmVdLCBub2RlID0+IG5vZGUudHlwZSA9PT0gJ2J1dHRvbicgJiYgdGV4dE9mKG5vZGUpID09PSAn5Zue5pS25a2k5YS/5a+56LGhJykKICBhc3NlcnQuZXF1YWwoYnV0dG9uLmxlbmd0aCwgMSwgJ+aPkuS7tuWkh+S7vSBUQUIg55qE44CM5YW25LuW44CN5Y2h54mH5bqU5pyJ5Zue5pS25a2k5YS/5a+56LGh5oyJ6ZKuJykKICBhc3NlcnQuZXF1YWwodHlwZW9mIGJ1dHRvblswXS5wcm9wcy5vbkNsaWNrLCAnZnVuY3Rpb24nKQp9KQo=
+// test/client-render.test.mjs — 真实执行 client.js 并验证关键可见元素生成。
+import { test } from 'node:test'
+import assert from 'node:assert/strict'
+import fs from 'node:fs/promises'
+import vm from 'node:vm'
+
+const clientUrl = new URL('../client.js', import.meta.url)
+
+async function loadMainComponent() {
+  /** @type {any} */
+let descriptor
+  const document = {
+    head: { append() {} },
+    querySelector() { return null },
+    createElement(tag) { return { tagName: tag.toUpperCase(), dataset: {}, showModal() {} } },
+  }
+  const window = {
+    __ModuleLoader__: { load(value) { descriptor = value } },
+    confirm() { return false },
+    open() {},
+  }
+  const source = await fs.readFile(clientUrl, 'utf8')
+  vm.runInNewContext(source, { window, document, navigator: { language: 'zh-CN' }, fetch: async () => ({ ok: true, json: async () => ({ ok: true, value: {} }) }) })
+
+  let hookIndex = 0
+  let overrides = {}
+  const React = {
+    createElement(type, props, ...children) {
+      return { type, props: { ...(props ?? {}), children: children.length === 1 ? children[0] : children } }
+    },
+    useState(initial) {
+      const index = hookIndex++
+      const value = Object.hasOwn(overrides, index)
+        ? overrides[index]
+        : (typeof initial === 'function' ? initial() : initial)
+      return [value, () => {}]
+    },
+    useCallback(fn) { return fn },
+    useEffect() {},
+    useRef(value) { return { current: value } },
+  }
+  const plugin = descriptor.factory((name) => {
+    if (name === 'react') return React
+    throw new Error(`unexpected module: ${name}`)
+  })
+  let Main
+  const slots = {
+    inject(_name, install) { install() },
+    register(meta, component) {
+      if (meta.name === 'main') Main = component
+      return null
+    },
+  }
+  plugin.apply({ slots })
+  assert.equal(typeof Main, 'function')
+
+  function renderNode(node, componentOverrides) {
+    if (node === null || node === undefined || typeof node === 'boolean') return []
+    if (Array.isArray(node)) return node.flatMap(item => renderNode(item, componentOverrides))
+    if (typeof node !== 'object') return [node]
+    if (typeof node.type === 'function') {
+      const previousIndex = hookIndex
+      const previousOverrides = overrides
+      hookIndex = 0
+      overrides = componentOverrides[node.type.name] ?? {}
+      const rendered = node.type(node.props ?? {})
+      hookIndex = previousIndex
+      overrides = previousOverrides
+      return renderNode(rendered, componentOverrides)
+    }
+    return [{ ...node, renderedChildren: renderNode(node.props?.children, componentOverrides) }]
+  }
+
+  return (componentOverrides) => {
+    hookIndex = 0
+    overrides = componentOverrides.Main ?? {}
+    return renderNode({ type: Main, props: {} }, componentOverrides)
+  }
+}
+
+function textOf(node) {
+  return (node.renderedChildren ?? []).map(child => typeof child === 'object' ? textOf(child) : String(child)).join('')
+}
+
+function collect(nodes, predicate) {
+  const out = []
+  const visit = (node) => {
+    if (typeof node !== 'object' || node === null) return
+    if (predicate(node)) out.push(node)
+    for (const child of node.renderedChildren ?? []) visit(child)
+  }
+  for (const node of nodes) visit(node)
+  return out
+}
+
+function deleteButtons(nodes) {
+  return collect(nodes, node => node.type === 'button' && textOf(node) === '删除' && String(node.props?.className ?? '').includes('danger'))
+}
+
+function activeTabLabel(nodes) {
+  const tabs = collect(nodes, node => node.type === 'button' && node.props?.role === 'tab' && node.props?.['aria-selected'] === 'true')
+  return tabs.length === 1 ? textOf(tabs[0]) : null
+}
+
+/** 当前激活 TAB 的 pane 子树：三 TAB 常驻挂载，只有激活 pane 的 display 是 'contents'。 */
+function activePane(nodes) {
+  const panes = collect(nodes, node => typeof node.props?.key === 'string' && node.props.key.startsWith('pane-'))
+  const active = panes.filter(node => node.props?.style?.display !== 'none')
+  return active.length === 1 ? active[0] : null
+}
+
+test('会话备份历史实际渲染 danger 删除按钮', async () => {
+  const render = await loadMainComponent()
+  const nodes = render({
+    SessionSyncPage: {
+      4: [{ sha: '1111111111111111111111111111111111111111', at: Date.now(), author: 'Alice', subject: 'manual', source: 'manual' }],
+    },
+  })
+  const buttons = deleteButtons(nodes)
+  assert.equal(buttons.length, 1)
+  assert.equal(typeof buttons[0].props.onClick, 'function')
+  // 多选门：只统计激活 pane 内的 checkbox（三 TAB 常驻，其他 pane 是隐藏的）。
+  const pane = activePane(nodes)
+  assert.ok(pane !== null, '应有且只有一个激活 pane')
+  const boxes = collect([pane], node => node.type === 'input' && node.props?.type === 'checkbox')
+  assert.equal(boxes.length, 2, `激活 pane 应有 2 个 checkbox，实际 ${boxes.length}`)
+})
+
+test('插件备份历史实际渲染 danger 删除按钮', async () => {
+  const render = await loadMainComponent()
+  const nodes = render({
+    SessionSyncPage: { 13: 'pluginbackup' },
+    PluginBackupTab: {
+      4: [{ key: 'snapshots/history/one.zip', deviceName: 'desktop', createdAt: Date.now(), changes: [] }],
+      // PluginBackupTab 的 hook 顺序：…confirm(9) selected(10)。批量按钮按 selected.size > 0 渲染。
+      10: new Set(['snapshots/history/one.zip']),
+    },
+  })
+  const buttons = deleteButtons(nodes)
+  assert.equal(buttons.length, 1)
+  assert.equal(typeof buttons[0].props.onClick, 'function')
+  // 多选门：只统计激活 pane 内的 checkbox 与批量按钮（三 TAB 常驻挂载）。
+  const pane = activePane(nodes)
+  assert.ok(pane !== null, '应有且只有一个激活 pane')
+  const boxes = collect([pane], node => node.type === 'input' && node.props?.type === 'checkbox')
+  assert.equal(boxes.length, 2, `激活 pane 应有 2 个 checkbox，实际 ${boxes.length}`)
+  const batch = collect([pane], node => node.type === 'button' && textOf(node).startsWith('批量删除'))
+  assert.equal(batch.length, 1, `应有批量删除按钮，实际 ${batch.length}`)
+})
+
+test('技能备份页签存在且渲染 danger 删除按钮（含还原按钮）', async () => {
+  const render = await loadMainComponent()
+  const nodes = render({
+    SessionSyncPage: { 13: 'skillbackup' },
+    SkillBackupTab: {
+      // SkillBackupTab 的 hook 顺序：local(0) history(1) provider(2) result(3) error(4) busy(5) confirm(6) selected(7)。
+      1: [{ key: 'skills/dws-abc.json.gz', name: 'dws', sha256: 'a'.repeat(64), sourceBytes: 2357324, deviceName: 'desktop', createdAt: new Date().toISOString() }],
+      // selected 必须注入非空集合，否则批量按钮按 selected.size > 0 不渲染。
+      7: new Set(['skills/dws-abc.json.gz']),
+    },
+  })
+  assert.equal(activeTabLabel(nodes), '技能备份')
+  const buttons = deleteButtons(nodes)
+  assert.equal(buttons.length, 1)
+  assert.equal(typeof buttons[0].props.onClick, 'function')
+  const restore = collect(nodes, node => node.type === 'button' && textOf(node) === '还原' && String(node.props?.className ?? '').includes('ss-btn'))
+  assert.equal(restore.length, 1)
+  assert.equal(typeof restore[0].props.onClick, 'function')
+  // 多选门：只统计激活 pane 内的 checkbox 与批量按钮。
+  const pane = activePane(nodes)
+  assert.ok(pane !== null, '应有且只有一个激活 pane')
+  const boxes = collect([pane], node => node.type === 'input' && node.props?.type === 'checkbox')
+  assert.equal(boxes.length, 2, `激活 pane 应有 2 个 checkbox，实际 ${boxes.length}`)
+  const batch = collect([pane], node => node.type === 'button' && textOf(node).startsWith('批量'))
+  assert.equal(batch.length, 2, `应有批量还原 + 批量删除两个按钮，实际 ${batch.length}`)
+  // 常驻挂载门：三个 pane 都必须在渲染树里（切 TAB 不卸载）。
+  const panes = collect(nodes, node => typeof node.props?.key === 'string' && node.props.key.startsWith('pane-'))
+  assert.deepEqual(panes.map(node => node.props.key).sort(), ['pane-plugin', 'pane-session', 'pane-skill'])
+})
+
+test('认证配置显示系统凭据和SSH密钥选项', async () => {
+  const render = await loadMainComponent()
+  const nodes = render({})
+  const options = collect(nodes, node => node.type === 'option').map(textOf)
+  assert.ok(options.includes('系统 Git 凭据管理器 / SSH Agent'))
+  assert.ok(options.includes('指定 SSH 私钥路径'))
+})
+
+test('顶层页签包含会话/插件/技能三个备份入口', async () => {
+  const render = await loadMainComponent()
+  const nodes = render({})
+  const tabs = collect(nodes, node => node.type === 'button' && node.props?.role === 'tab').map(textOf)
+  assert.deepEqual(tabs, ['会话备份', '插件备份', '技能备份'])
+})
+
+test('插件备份 TAB 渲染出「回收孤儿对象」按钮且 onClick 可用', async () => {
+  const render = await loadMainComponent()
+  const nodes = render({ SessionSyncPage: { 13: 'pluginbackup' } })
+  const pane = activePane(nodes)
+  assert.ok(pane !== null, '应有且只有一个激活 pane')
+  const button = collect([pane], node => node.type === 'button' && textOf(node) === '回收孤儿对象')
+  assert.equal(button.length, 1, '插件备份 TAB 的「其他」卡片应有回收孤儿对象按钮')
+  assert.equal(typeof button[0].props.onClick, 'function')
+})

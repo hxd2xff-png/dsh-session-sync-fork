@@ -1,1 +1,182 @@
-ewogICJuYW1lIjogImRzaC1zZXNzaW9uLXN5bmMiLAogICJkZXNjcmlwdGlvbiI6ICJDcm9zcy1kZXZpY2Ugc3luYyBmb3IgRGVlcFNlZWsgSGFybmVzcyBzZXNzaW9uczogYSBkZWRpY2F0ZWQgZ2l0IG1pcnJvciBvZiB0aGUgc2Vzc2lvbiBzdG9yZSwgYXBwZW5kLW9ubHkgdGhyZWUtd2F5IG1lcmdlIHdpdGgga2VlcC1ib3RoICsgZm9yayBjb25mbGljdCByZXNvbHV0aW9uLCAvc3luYyBjb21tYW5kLCBzeW5jX3B1bGwvc3luY19wdXNoL3N5bmNfc3RhdHVzIHRvb2xzLCBjb25maWd1cmFibGUgYXV0byBwdXNoL3B1bGwsIGFuZCBhIFdlYiBjbGllbnQgcGFuZWwgKHNlc3Npb24gYmFja3VwIC8gcmVzdG9yZSAvIGF1dG9tYXRpYyBiYWNrdXAgc2NoZWR1bGUpIiwKICAidmVyc2lvbiI6ICIwLjIuMjQtdWkuMSIsCiAgInJlcG9zaXRvcnkiOiB7CiAgICAidHlwZSI6ICJnaXQiLAogICAgInVybCI6ICJnaXQraHR0cHM6Ly9naXRodWIuY29tL2h4ZDJ4ZmYtcG5nL2RzaC1zZXNzaW9uLXN5bmMtZm9yay5naXQiCiAgfSwKICAiaG9tZXBhZ2UiOiAiaHR0cHM6Ly9naXRodWIuY29tL2h4ZDJ4ZmYtcG5nL2RzaC1zZXNzaW9uLXN5bmMtZm9yayNyZWFkbWUiLAogICJidWdzIjogewogICAgInVybCI6ICJodHRwczovL2dpdGh1Yi5jb20vaHhkMnhmZi1wbmcvZHNoLXNlc3Npb24tc3luYy1mb3JrL2lzc3VlcyIKICB9LAogICJhdXRob3IiOiAiUGVycnlMaW5rIiwKICAidHlwZSI6ICJtb2R1bGUiLAogICJtYWluIjogIi4vaW5kZXgubWpzIiwKICAidHlwZXMiOiAiLi90eXBlcy5kLnRzIiwKICAiZXhwb3J0cyI6IHsKICAgICIuIjogewogICAgICAidHlwZXMiOiAiLi90eXBlcy5kLnRzIiwKICAgICAgImRlZmF1bHQiOiAiLi9pbmRleC5tanMiCiAgICB9LAogICAgIi4vY2xpZW50IjogIi4vY2xpZW50LmpzIiwKICAgICIuL2NvcmRpcy5wYXRjaC55bWwiOiAiLi9jb3JkaXMucGF0Y2gueW1sIiwKICAgICIuL3BhY2thZ2UuanNvbiI6ICIuL3BhY2thZ2UuanNvbiIKICB9LAogICJmaWxlcyI6IFsKICAgICJpbmRleC5tanMiLAogICAgImNsaWVudC5qcyIsCiAgICAidHlwZXMuZC50cyIsCiAgICAibGliIiwKICAgICJjb3JkaXMucGF0Y2gueW1sIiwKICAgICJSRUFETUUubWQiLAogICAgIlJFQURNRS16aC5tZCIsCiAgICAiUkVBRE1FLWVzLm1kIiwKICAgICJSRUFETUUtcHQubWQiLAogICAgIlJFQURNRS1oaS5tZCIsCiAgICAiQVJDSElURUNUVVJFLm1kIiwKICAgICJDSEFOR0VMT0cubWQiLAogICAgIlNFQ1VSSVRZLm1kIiwKICAgICJMSUNFTlNFIiwKICAgICJUSElSRF9QQVJUWV9OT1RJQ0VTLm1kIgogIF0sCiAgImRzaCI6IHsKICAgICJtYW5pZmVzdFZlcnNpb24iOiAxLAogICAgImJ1bmRsZSI6IHsKICAgICAgInBhdGNoIjogIi4vY29yZGlzLnBhdGNoLnltbCIKICAgIH0sCiAgICAiY2xpZW50IjogewogICAgICAicGxhdGZvcm0iOiAid2ViIiwKICAgICAgImluamVjdCI6IFsKICAgICAgICAiQGRlZXBzZWVrLWFpL2RzaC1jbGllbnQtcnVudGltZSIKICAgICAgXQogICAgfQogIH0sCiAgImRzaFdvcmtzaG9wIjogewogICAgInNjaGVtYSI6ICJvbWRzaC13b3Jrc2hvcC1wYWNrYWdlL3YxIiwKICAgICJ0eXBlIjogInBsdWdpbiIsCiAgICAiaW50ZWdyYXRpb24iOiB7CiAgICAgICJwcm90b2NvbCI6ICJoYXJuZXNzLXByb2ZpbGUiLAogICAgICAiYXJ0aWZhY3QiOiAiY29yZGlzLnBhdGNoLnltbCIKICAgIH0sCiAgICAiaW5zdGFsbCI6IHsKICAgICAgIm1vZGUiOiAidHJhbnNhY3Rpb25hbCIsCiAgICAgICJhZGFwdGVyIjogInByb2ZpbGUtYnVuZGxlIiwKICAgICAgImZhaWx1cmVQb2xpY3kiOiAiZ2VuZXJhdGlvbi1yb2xsYmFjayIsCiAgICAgICJ0b3VjaGVzQ3VycmVudEJlZm9yZUFjdGl2YXRpb24iOiBmYWxzZQogICAgfSwKICAgICJsaWZlY3ljbGUiOiB7CiAgICAgICJhY3RpdmF0aW9uIjogInJlc3RhcnQtcHJvZmlsZSIsCiAgICAgICJkaXNwb3NlIjogInN1cHBvcnRlZCIKICAgIH0sCiAgICAicGVybWlzc2lvbnMiOiBbCiAgICAgICJmaWxlc3lzdGVtOnJlYWQiLAogICAgICAiZmlsZXN5c3RlbTp3cml0ZSIsCiAgICAgICJzZXNzaW9uLWxvZzpyZWFkIiwKICAgICAgIm5ldHdvcms6Z2l0LXJlbW90ZSIsCiAgICAgICJzdWJwcm9jZXNzOmdpdCIsCiAgICAgICJjcmVkZW50aWFsczpub25lIgogICAgXSwKICAgICJjb21wYXRpYmlsaXR5IjogewogICAgICAiZHNoVmVyc2lvbnMiOiBbCiAgICAgICAgIjAuMS4yLXJjLjEiLAogICAgICAgICIwLjEuNS1yYy4yIiwKICAgICAgICAiMC4xLjctYWxwaGEuMiIsCiAgICAgICAgIjAuMS43LXJjLjEiLAogICAgICAgICIwLjEuNy1yYy4yIiwKICAgICAgICAiMC4yLjEtYWxwaGEuMSIKICAgICAgXQogICAgfSwKICAgICJjYXBhYmlsaXR5IjogewogICAgICAiaWQiOiAic2Vzc2lvbi1zeW5jIiwKICAgICAgImtpbmQiOiAiY29tbWFuZCIsCiAgICAgICJpbnZvY2F0aW9uIjogIi9zeW5jIHN0YXR1cyIsCiAgICAgICJleHBlY3RlZCI6ICJ0aGUgL3N5bmMgY29tbWFuZCBpcyByZWdpc3RlcmVkIG9uIHRoZSBjb21tYW5kcyBzZXJ2aWNlOiBzdGF0dXMgbGlzdHMgdGhlIGdpdCBtaXJyb3Igc3RhdGUsIHB1bGwvcHVzaCBtb3ZlIHNlc3Npb24gYnl0ZXMgd2l0aCBhcHBlbmQtb25seSBrZWVwLWJvdGggY29uZmxpY3QgcmVzb2x1dGlvbiwgZGlmZiBzaG93cyBsb2NhbC12cy1yZW1vdGUgY2hhbmdlcyByZWFkLW9ubHkiCiAgICB9LAogICAgImV2aWRlbmNlIjogewogICAgICAiaW5zdGFsbCI6IG51bGwsCiAgICAgICJmYWlsdXJlSXNvbGF0aW9uIjogbnVsbCwKICAgICAgImhvdFJlbG9hZCI6IG51bGwsCiAgICAgICJyZW1vdmUiOiBudWxsCiAgICB9CiAgfSwKICAicGVlckRlcGVuZGVuY2llcyI6IHsKICAgICJAZGVlcHNlZWstYWkvY29yZGlzIjogIl40LjAuNS1hbHBoYS4xIiwKICAgICJAZGVlcHNlZWstYWkvZHNoLWNvbW1hbmRzIjogIj49MC4xLjItcmMuMSA8MC4yLjAgfHwgPj0wLjEuNS1hbHBoYS4xIDwwLjIuMCB8fCA+PTAuMS42LTAgPDAuMi4wIHx8ID49MC4xLjctMCA8MC4yLjAgfHwgPj0wLjIuMC0wIDwwLjMuMCB8fCA+PTAuMi4xLTAgPDAuMy4wIiwKICAgICJAZGVlcHNlZWstYWkvZHNoLWxsbSI6ICI+PTAuMS4yLXJjLjEgPDAuMi4wIHx8ID49MC4xLjUtYWxwaGEuMSA8MC4yLjAgfHwgPj0wLjEuNi0wIDwwLjIuMCB8fCA+PTAuMS43LTAgPDAuMi4wIHx8ID49MC4yLjAtMCA8MC4zLjAgfHwgPj0wLjIuMS0wIDwwLjMuMCIsCiAgICAiQGRlZXBzZWVrLWFpL2RzaC1zZXNzaW9uIjogIj49MC4xLjItcmMuMSA8MC4yLjAgfHwgPj0wLjEuNS1hbHBoYS4xIDwwLjIuMCB8fCA+PTAuMS42LTAgPDAuMi4wIHx8ID49MC4xLjctMCA8MC4yLjAgfHwgPj0wLjIuMC0wIDwwLjMuMCB8fCA+PTAuMi4xLTAgPDAuMy4wIiwKICAgICJAZGVlcHNlZWstYWkvZHNoLXNlc3Npb24tcHJvamVjdGlvbiI6ICI+PTAuMS4yLXJjLjEgPDAuMi4wIHx8ID49MC4xLjUtYWxwaGEuMSA8MC4yLjAgfHwgPj0wLjEuNi0wIDwwLjIuMCB8fCA+PTAuMS43LTAgPDAuMi4wIHx8ID49MC4yLjAtMCA8MC4zLjAgfHwgPj0wLjIuMS0wIDwwLjMuMCIsCiAgICAiQGRlZXBzZWVrLWFpL2RzaC1zdG9yYWdlIjogIj49MC4xLjItcmMuMSA8MC4yLjAgfHwgPj0wLjEuNS1hbHBoYS4xIDwwLjIuMCB8fCA+PTAuMS42LTAgPDAuMi4wIHx8ID49MC4xLjctMCA8MC4yLjAgfHwgPj0wLjIuMC0wIDwwLjMuMCB8fCA+PTAuMi4xLTAgPDAuMy4wIiwKICAgICJAZGVlcHNlZWstYWkvZHNoLXN0b3JhZ2UtZG9tYWluIjogIj49MC4xLjItcmMuMSA8MC4yLjAgfHwgPj0wLjEuNS1hbHBoYS4xIDwwLjIuMCB8fCA+PTAuMS42LTAgPDAuMi4wIHx8ID49MC4xLjctMCA8MC4yLjAgfHwgPj0wLjIuMC0wIDwwLjMuMCB8fCA+PTAuMi4xLTAgPDAuMy4wIiwKICAgICJAZGVlcHNlZWstYWkvZHNoLXN0b3JhZ2UtanNvbiI6ICI+PTAuMS4yLXJjLjEgPDAuMi4wIHx8ID49MC4xLjUtYWxwaGEuMSA8MC4yLjAgfHwgPj0wLjEuNi0wIDwwLjIuMCB8fCA+PTAuMS43LTAgPDAuMi4wIHx8ID49MC4yLjAtMCA8MC4zLjAgfHwgPj0wLjIuMS0wIDwwLjMuMCIsCiAgICAiQGRlZXBzZWVrLWFpL2RzaC1zdWJwcm9jZXNzIjogIj49MC4xLjItcmMuMSA8MC4yLjAgfHwgPj0wLjEuNS1hbHBoYS4xIDwwLjIuMCB8fCA+PTAuMS42LTAgPDAuMi4wIHx8ID49MC4xLjctMCA8MC4yLjAgfHwgPj0wLjIuMC0wIDwwLjMuMCB8fCA+PTAuMi4xLTAgPDAuMy4wIiwKICAgICJAZGVlcHNlZWstYWkvZHNoLXRvb2xzIjogIj49MC4xLjItcmMuMSA8MC4yLjAgfHwgPj0wLjEuNS1hbHBoYS4xIDwwLjIuMCB8fCA+PTAuMS42LTAgPDAuMi4wIHx8ID49MC4xLjctMCA8MC4yLjAgfHwgPj0wLjIuMC0wIDwwLjMuMCB8fCA+PTAuMi4xLTAgPDAuMy4wIiwKICAgICJAZGVlcHNlZWstYWkvc2NoZW1hc3RlcnkiOiAiXjMuMTguNS1hbHBoYS4xIgogIH0sCiAgInBlZXJEZXBlbmRlbmNpZXNNZXRhIjogewogICAgIkBkZWVwc2Vlay1haS9kc2gtc2Vzc2lvbi1wcm9qZWN0aW9uIjogewogICAgICAib3B0aW9uYWwiOiB0cnVlCiAgICB9CiAgfSwKICAiZGVwZW5kZW5jaWVzIjogewogICAgInpvZCI6ICJeNC40LjMiCiAgfSwKICAiZGV2RGVwZW5kZW5jaWVzIjogewogICAgIkBkZWVwc2Vlay1haS9kc2gtYXR0YWNobWVudCI6ICIwLjIuMS1hbHBoYS4xIiwKICAgICJAZGVlcHNlZWstYWkvY29yZGlzIjogIl40LjAuNS1hbHBoYS4xIiwKICAgICJAZGVlcHNlZWstYWkvY29yZGlzLXBsdWdpbi1pbmNsdWRlIjogIl4xLjAuMTAtYWxwaGEuMSIsCiAgICAiQGRlZXBzZWVrLWFpL2NvcmRpcy1wbHVnaW4tbG9hZGVyIjogIl4xLjAuNi1hbHBoYS4xIiwKICAgICJAZGVlcHNlZWstYWkvZHNoLWNvbW1hbmRzIjogIjAuMi4xLWFscGhhLjEiLAogICAgIkBkZWVwc2Vlay1haS9kc2gtbGxtIjogIjAuMi4xLWFscGhhLjEiLAogICAgIkBkZWVwc2Vlay1haS9kc2gtc2Vzc2lvbiI6ICIwLjIuMS1hbHBoYS4xIiwKICAgICJAZGVlcHNlZWstYWkvZHNoLXNlc3Npb24tZm9ybWF0LXYzLXRvLXY0IjogIjAuMi4xLWFscGhhLjEiLAogICAgIkBkZWVwc2Vlay1haS9kc2gtc3RvcmFnZSI6ICIwLjIuMS1hbHBoYS4xIiwKICAgICJAZGVlcHNlZWstYWkvZHNoLXN0b3JhZ2UtZG9tYWluIjogIjAuMi4xLWFscGhhLjEiLAogICAgIkBkZWVwc2Vlay1haS9kc2gtc3RvcmFnZS1qc29uIjogIjAuMi4xLWFscGhhLjEiLAogICAgIkBkZWVwc2Vlay1haS9kc2gtc3VicHJvY2VzcyI6ICIwLjIuMS1hbHBoYS4xIiwKICAgICJAZGVlcHNlZWstYWkvZHNoLXN5c3RlbS1wcm9tcHQiOiAiMC4yLjEtYWxwaGEuMSIsCiAgICAiQGRlZXBzZWVrLWFpL2RzaC10b29scyI6ICIwLjIuMS1hbHBoYS4xIiwKICAgICJAZGVlcHNlZWstYWkvZHNoLXVzZXItYXBwcm92YWwiOiAiMC4yLjEtYWxwaGEuMSIsCiAgICAiQGRlZXBzZWVrLWFpL2RzaC11c2VyLXF1ZXN0aW9ucyI6ICIwLjIuMS1hbHBoYS4xIiwKICAgICJAZGVlcHNlZWstYWkvc2NoZW1hc3RlcnkiOiAiXjMuMTguNS1hbHBoYS4xIiwKICAgICJAdHlwZXMvbm9kZSI6ICJeMjIuMTkuMCIsCiAgICAib3hsaW50IjogIjAuMTguMSIsCiAgICAidHlwZXNjcmlwdCI6ICJeNS45LjAiCiAgfSwKICAic2NyaXB0cyI6IHsKICAgICJ0eXBlY2hlY2siOiAibm9kZSBzY3JpcHRzL3R5cGVjaGVjay1jaGVja291dC5tanMiLAogICAgInR5cGVjaGVjazpjaSI6ICJ0c2MgLXAgdHNjb25maWcuY2hlY2suY2kuanNvbiIsCiAgICAidGVzdCI6ICJub2RlIC0tdGVzdCBcInRlc3QvKi50ZXN0Lm1qc1wiIiwKICAgICJjb3ZlcmFnZSI6ICJub2RlIC0tdGVzdCAtLWV4cGVyaW1lbnRhbC10ZXN0LWNvdmVyYWdlIFwidGVzdC8qLnRlc3QubWpzXCIiLAogICAgImxpbnQiOiAib3hsaW50IiwKICAgICJ2ZXJpZnk6c2VsZi1jb250YWluZWQiOiAibm9kZSBzY3JpcHRzL3ZlcmlmeS1zZWxmLWNvbnRhaW5lZC5tanMiLAogICAgImNoZWNrOmxvY2tmaWxlIjogIm5vZGUgc2NyaXB0cy9jaGVjay1sb2NrZmlsZS1kcmlmdC5tanMiLAogICAgInZlcmlmeTphcnRpZmFjdHMiOiAibm9kZSBzY3JpcHRzL3ZlcmlmeS1hcnRpZmFjdHMubWpzIiwKICAgICJjaGVjazpyZWFkbWVzIjogIm5vZGUgc2NyaXB0cy92ZXJpZnktcmVhZG1lcy5tanMiCiAgfSwKICAia2V5d29yZHMiOiBbCiAgICAiZHNoIiwKICAgICJkc2gtcGx1Z2luIiwKICAgICJkZWVwc2Vlay1oYXJuZXNzIiwKICAgICJkZWVwc2VlayIsCiAgICAiY29yZGlzIiwKICAgICJzZXNzaW9uLXN5bmMiLAogICAgInNlc3Npb24iLAogICAgImdpdCIsCiAgICAic3luYyIsCiAgICAiY3Jvc3MtZGV2aWNlIgogIF0sCiAgImVuZ2luZXMiOiB7CiAgICAibm9kZSI6ICJeMjIuMTkuMCB8fCA+PTI0LjAuMCIsCiAgICAiZHNoIjogIj49MC4xLjItcmMuMSA8MC4yLjAgfHwgPj0wLjEuNS1hbHBoYS4xIDwwLjIuMCB8fCA+PTAuMS42LTAgPDAuMi4wIHx8ID49MC4xLjctMCA8MC4yLjAgfHwgPj0wLjIuMC0wIDwwLjMuMCB8fCA+PTAuMi4xLTAgPDAuMy4wIgogIH0sCiAgInBhY2thZ2VNYW5hZ2VyIjogInBucG1AMTEuNy4wIiwKICAicHVibGlzaENvbmZpZyI6IHsKICAgICJhY2Nlc3MiOiAicHVibGljIgogIH0sCiAgImxpY2Vuc2UiOiAiQXBhY2hlLTIuMCIsCiAgImZ1bmRpbmciOiB7CiAgICAidHlwZSI6ICJpbmRpdmlkdWFsIiwKICAgICJ1cmwiOiAiaHR0cHM6Ly9naXRodWIuY29tL3Nwb25zb3JzL1BlcnJ5TGluayIKICB9Cn0K
+{
+  "name": "dsh-session-sync",
+  "description": "Cross-device sync for DeepSeek Harness sessions: a dedicated git mirror of the session store, append-only three-way merge with keep-both + fork conflict resolution, /sync command, sync_pull/sync_push/sync_status tools, configurable auto push/pull, and a Web client panel (session backup / restore / automatic backup schedule)",
+  "version": "0.2.24-ui.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hxd2xff-png/dsh-session-sync-fork.git"
+  },
+  "homepage": "https://github.com/hxd2xff-png/dsh-session-sync-fork#readme",
+  "bugs": {
+    "url": "https://github.com/hxd2xff-png/dsh-session-sync-fork/issues"
+  },
+  "author": "PerryLink",
+  "type": "module",
+  "main": "./index.mjs",
+  "types": "./types.d.ts",
+  "exports": {
+    ".": {
+      "types": "./types.d.ts",
+      "default": "./index.mjs"
+    },
+    "./client": "./client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.mjs",
+    "client.js",
+    "types.d.ts",
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "README-zh.md",
+    "README-es.md",
+    "README-pt.md",
+    "README-hi.md",
+    "ARCHITECTURE.md",
+    "CHANGELOG.md",
+    "SECURITY.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime"
+      ]
+    }
+  },
+  "dshWorkshop": {
+    "schema": "omdsh-workshop-package/v1",
+    "type": "plugin",
+    "integration": {
+      "protocol": "harness-profile",
+      "artifact": "cordis.patch.yml"
+    },
+    "install": {
+      "mode": "transactional",
+      "adapter": "profile-bundle",
+      "failurePolicy": "generation-rollback",
+      "touchesCurrentBeforeActivation": false
+    },
+    "lifecycle": {
+      "activation": "restart-profile",
+      "dispose": "supported"
+    },
+    "permissions": [
+      "filesystem:read",
+      "filesystem:write",
+      "session-log:read",
+      "network:git-remote",
+      "subprocess:git",
+      "credentials:none"
+    ],
+    "compatibility": {
+      "dshVersions": [
+        "0.1.2-rc.1",
+        "0.1.5-rc.2",
+        "0.1.7-alpha.2",
+        "0.1.7-rc.1",
+        "0.1.7-rc.2",
+        "0.2.1-alpha.1"
+      ]
+    },
+    "capability": {
+      "id": "session-sync",
+      "kind": "command",
+      "invocation": "/sync status",
+      "expected": "the /sync command is registered on the commands service: status lists the git mirror state, pull/push move session bytes with append-only keep-both conflict resolution, diff shows local-vs-remote changes read-only"
+    },
+    "evidence": {
+      "install": null,
+      "failureIsolation": null,
+      "hotReload": null,
+      "remove": null
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.5-alpha.1",
+    "@deepseek-ai/dsh-commands": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0",
+    "@deepseek-ai/dsh-llm": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0",
+    "@deepseek-ai/dsh-session": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0",
+    "@deepseek-ai/dsh-session-projection": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0",
+    "@deepseek-ai/dsh-storage": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0",
+    "@deepseek-ai/dsh-storage-domain": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0",
+    "@deepseek-ai/dsh-storage-json": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0",
+    "@deepseek-ai/dsh-subprocess": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0",
+    "@deepseek-ai/dsh-tools": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0",
+    "@deepseek-ai/schemastery": "^3.18.5-alpha.1"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh-session-projection": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@deepseek-ai/dsh-attachment": "0.2.1-alpha.1",
+    "@deepseek-ai/cordis": "^4.0.5-alpha.1",
+    "@deepseek-ai/cordis-plugin-include": "^1.0.10-alpha.1",
+    "@deepseek-ai/cordis-plugin-loader": "^1.0.6-alpha.1",
+    "@deepseek-ai/dsh-commands": "0.2.1-alpha.1",
+    "@deepseek-ai/dsh-llm": "0.2.1-alpha.1",
+    "@deepseek-ai/dsh-session": "0.2.1-alpha.1",
+    "@deepseek-ai/dsh-session-format-v3-to-v4": "0.2.1-alpha.1",
+    "@deepseek-ai/dsh-storage": "0.2.1-alpha.1",
+    "@deepseek-ai/dsh-storage-domain": "0.2.1-alpha.1",
+    "@deepseek-ai/dsh-storage-json": "0.2.1-alpha.1",
+    "@deepseek-ai/dsh-subprocess": "0.2.1-alpha.1",
+    "@deepseek-ai/dsh-system-prompt": "0.2.1-alpha.1",
+    "@deepseek-ai/dsh-tools": "0.2.1-alpha.1",
+    "@deepseek-ai/dsh-user-approval": "0.2.1-alpha.1",
+    "@deepseek-ai/dsh-user-questions": "0.2.1-alpha.1",
+    "@deepseek-ai/schemastery": "^3.18.5-alpha.1",
+    "@types/node": "^22.19.0",
+    "oxlint": "0.18.1",
+    "typescript": "^5.9.0"
+  },
+  "scripts": {
+    "typecheck": "node scripts/typecheck-checkout.mjs",
+    "typecheck:ci": "tsc -p tsconfig.check.ci.json",
+    "test": "node --test \"test/*.test.mjs\"",
+    "coverage": "node --test --experimental-test-coverage \"test/*.test.mjs\"",
+    "lint": "oxlint",
+    "verify:self-contained": "node scripts/verify-self-contained.mjs",
+    "check:lockfile": "node scripts/check-lockfile-drift.mjs",
+    "verify:artifacts": "node scripts/verify-artifacts.mjs",
+    "check:readmes": "node scripts/verify-readmes.mjs"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "deepseek",
+    "cordis",
+    "session-sync",
+    "session",
+    "git",
+    "sync",
+    "cross-device"
+  ],
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0",
+    "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
+  },
+  "packageManager": "pnpm@11.7.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "Apache-2.0",
+  "funding": {
+    "type": "individual",
+    "url": "https://github.com/sponsors/PerryLink"
+  }
+}

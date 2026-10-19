@@ -1,1 +1,164 @@
-Ly8g5YWo6YeP6L+Y5Y6f55qE5paw6K+t5LmJ44CC55yf5a6eIEdpdC/mlofku7bns7vnu5/vvJvlj6rlnKjlrr/kuLvml6Xlv5fmo4Dmn6Xlkoznp5/nuqbmjqXlj6PovrnnlYzms6jlhaXlpLnlhbfjgIIKLy8g55yf5a6/5Li76Kej56CBL1dpbmRvd3Mg5YaZ56ef57qm5Y+m55So5a6J6KOF5Lit55qE5a6e546w5YGa6L+H6ZuG5oiQ6aqM6K+B77yb6L+Z6YeM5LiN5qih5oufIG92ZXJ3cml0ZUFwcGx5IOacrOi6q+OAggppbXBvcnQgeyB0ZXN0IH0gZnJvbSAnbm9kZTp0ZXN0JwppbXBvcnQgYXNzZXJ0IGZyb20gJ25vZGU6YXNzZXJ0L3N0cmljdCcKaW1wb3J0IHsgcHJvbWlzZXMgYXMgZnMgfSBmcm9tICdub2RlOmZzJwppbXBvcnQgZnNTeW5jIGZyb20gJ25vZGU6ZnMnCmltcG9ydCBvcyBmcm9tICdub2RlOm9zJwppbXBvcnQgcGF0aCBmcm9tICdub2RlOnBhdGgnCmltcG9ydCB7IGV4ZWNGaWxlIH0gZnJvbSAnbm9kZTpjaGlsZF9wcm9jZXNzJwppbXBvcnQgeyBwcm9taXNpZnkgfSBmcm9tICdub2RlOnV0aWwnCmltcG9ydCB7IG92ZXJ3cml0ZUFwcGx5IH0gZnJvbSAnLi4vbGliL3Jlc3RvcmUubWpzJwoKY29uc3QgZXhlYyA9IHByb21pc2lmeShleGVjRmlsZSkKY29uc3QgcmVsID0gKGlkKSA9PiAncHJvamVjdC8nICsgaWQgKyAnL3Nlc3Npb24udjQuanNvbmwnCmNvbnN0IGxvZyA9IChpZCwgY291bnQsIGNoYW5nZWQgPSBmYWxzZSkgPT4gSlNPTi5zdHJpbmdpZnkoeyB0eXBlOiAnc2Vzc2lvbicsIHZlcnNpb246IDQsIGlkLCBjcmVhdGVkQXQ6IDEgfSkgKyAnXG4nCiAgKyBBcnJheS5mcm9tKHsgbGVuZ3RoOiBjb3VudCB9LCAoXywgc2VxKSA9PiBKU09OLnN0cmluZ2lmeSh7CiAgICB0eXBlOiAncGVybWlzc2lvbi9wcmVzZXQnLCBzZXEsIHRpbWU6IHNlcSArIDIsCiAgICBkYXRhOiB7IHByZXNldDogY2hhbmdlZCAmJiBzZXEgPT09IDEgPyAncmVhZC1vbmx5JyA6ICd3b3Jrc3BhY2Utd3JpdGUnIH0sCiAgfSkgKyAnXG4nKS5qb2luKCcnKQoKLy8g5a6/5Li75o6l5Y+j55qE5aS55YW377ya5qC45b+D5Y+q5L6d6LWW4oCc5bey5qCh6aqM5aS06YOo5LiO5LqL5Lu24oCd77yM5LiN5L6d6LWW5Y6L57yp57yW56CB55qE57uG6IqC44CCCmFzeW5jIGZ1bmN0aW9uIGluc3BlY3RMb2coX3JlbCwgYnl0ZXMpIHsKICBjb25zdCBbbWV0YSwgLi4uZXZlbnRzXSA9IGJ5dGVzLnRvU3RyaW5nKCd1dGY4JykudHJpbUVuZCgpLnNwbGl0KCdcbicpLm1hcChsaW5lID0+IEpTT04ucGFyc2UobGluZSkpCiAgZm9yIChjb25zdCBbc2VxLCBldmVudF0gb2YgZXZlbnRzLmVudHJpZXMoKSkgYXNzZXJ0LmVxdWFsKGV2ZW50LnNlcSwgc2VxLCAnc2VxIGdhcCcpCiAgcmV0dXJuIHsgbWV0YSwgZXZlbnRzLCBpbmhlcml0ZWRFdmVudENvdW50OiAwIH0KfQoKYXN5bmMgZnVuY3Rpb24gZml4dHVyZSh0LCBiYWNrZWQsIGxvY2FsID0ge30pIHsKICBjb25zdCByb290ID0gYXdhaXQgZnMubWtkdGVtcChwYXRoLmpvaW4ob3MudG1wZGlyKCksICdzZXNzaW9uc3luYy1vdmVyd3JpdGUtdGVzdC0nKSkKICB0LmFmdGVyKGFzeW5jICgpID0+IHsKICAgIGFzc2VydC5lcXVhbChwYXRoLmRpcm5hbWUocm9vdCksIG9zLnRtcGRpcigpKQogICAgYXNzZXJ0KHBhdGguYmFzZW5hbWUocm9vdCkuc3RhcnRzV2l0aCgnc2Vzc2lvbnN5bmMtb3ZlcndyaXRlLXRlc3QtJykpCiAgICBhd2FpdCBmcy5ybShyb290LCB7IHJlY3Vyc2l2ZTogdHJ1ZSwgZm9yY2U6IHRydWUgfSkKICB9KQogIGNvbnN0IHJlcG8gPSBwYXRoLmpvaW4ocm9vdCwgJ3JlcG8nKSwgc2Vzc2lvblJvb3QgPSBwYXRoLmpvaW4ocm9vdCwgJ3Nlc3Npb25zJykKICBhd2FpdCBmcy5ta2RpcihyZXBvLCB7IHJlY3Vyc2l2ZTogdHJ1ZSB9KQogIGF3YWl0IGZzLm1rZGlyKHNlc3Npb25Sb290LCB7IHJlY3Vyc2l2ZTogdHJ1ZSB9KQogIGNvbnN0IGdpdCA9IGFzeW5jIGFyZ3MgPT4gKGF3YWl0IGV4ZWMoJ2dpdCcsIGFyZ3MsIHsgY3dkOiByZXBvLCBlbmNvZGluZzogJ2J1ZmZlcicgfSkpLnN0ZG91dAogIGF3YWl0IGdpdChbJ2luaXQnLCAnLWInLCAnbWFpbiddKQogIGF3YWl0IGdpdChbJ2NvbmZpZycsICd1c2VyLm5hbWUnLCAndGVzdCddKQogIGF3YWl0IGdpdChbJ2NvbmZpZycsICd1c2VyLmVtYWlsJywgJ3Rlc3RAbG9jYWxob3N0J10pCiAgZm9yIChjb25zdCBbZmlsZSwgYnl0ZXNdIG9mIE9iamVjdC5lbnRyaWVzKGJhY2tlZCkpIHsKICAgIGNvbnN0IHAgPSBwYXRoLmpvaW4ocmVwbywgJ3Nlc3Npb25zJywgZmlsZSkKICAgIGF3YWl0IGZzLm1rZGlyKHBhdGguZGlybmFtZShwKSwgeyByZWN1cnNpdmU6IHRydWUgfSkKICAgIGF3YWl0IGZzLndyaXRlRmlsZShwLCBieXRlcykKICB9CiAgYXdhaXQgZ2l0KFsnYWRkJywgJy1BJ10pCiAgYXdhaXQgZ2l0KFsnY29tbWl0JywgJy1tJywgJ3Jlc3RvcmUgZml4dHVyZSddKQogIGNvbnN0IGNvbW1pdCA9IChhd2FpdCBnaXQoWydyZXYtcGFyc2UnLCAnSEVBRCddKSkudG9TdHJpbmcoJ3V0ZjgnKS50cmltKCkKICBmb3IgKGNvbnN0IFtmaWxlLCBieXRlc10gb2YgT2JqZWN0LmVudHJpZXMobG9jYWwpKSB7CiAgICBjb25zdCBwID0gcGF0aC5qb2luKHNlc3Npb25Sb290LCBmaWxlKQogICAgYXdhaXQgZnMubWtkaXIocGF0aC5kaXJuYW1lKHApLCB7IHJlY3Vyc2l2ZTogdHJ1ZSB9KQogICAgYXdhaXQgZnMud3JpdGVGaWxlKHAsIGJ5dGVzKQogIH0KICBjb25zdCBsb2FkZWQgPSBuZXcgU2V0KCksIGhlbGQgPSBuZXcgU2V0KCkKICBsZXQgZ2VuZXJhdGlvbiA9IDAKICBjb25zdCBhY3F1aXJlV3JpdGVMZWFzZSA9IGFzeW5jIChfcmVsLCBtZXRhKSA9PiB7CiAgICBpZiAobG9hZGVkLmhhcyhtZXRhLmlkKSB8fCBoZWxkLmhhcyhtZXRhLmlkKSkgdGhyb3cgbmV3IEVycm9yKCdzZXNzaW9uIGFscmVhZHkgbG9hZGVkIG9yIG93bmVkJykKICAgIGhlbGQuYWRkKG1ldGEuaWQpCiAgICByZXR1cm4geyByZWxlYXNlOiBhc3luYyAoKSA9PiB7IGhlbGQuZGVsZXRlKG1ldGEuaWQpIH0gfQogIH0KICBjb25zdCBydW4gPSBvdmVycmlkZXMgPT4gb3ZlcndyaXRlQXBwbHkoewogICAgZ2l0OiB7CiAgICAgIGxpc3RGaWxlc0F0UmV2OiBhc3luYyByZXYgPT4gKGF3YWl0IGdpdChbJ2xzLXRyZWUnLCAnLXInLCAnLS1uYW1lLW9ubHknLCByZXZdKSkudG9TdHJpbmcoJ3V0ZjgnKS50cmltRW5kKCkuc3BsaXQoJ1xuJyksCiAgICAgIHJlYWRGaWxlQXRSZXY6IGFzeW5jIChyZXYsIGZpbGUpID0+IGdpdChbJ3Nob3cnLCByZXYgKyAnOicgKyBmaWxlXSksCiAgICB9LAogICAgY29tbWl0LCBzZXNzaW9uUm9vdCwgc25hcHNob3REaXI6IHBhdGguam9pbihyb290LCAnc25hcHNob3RzJyksCiAgICBzdGFnaW5nRGlyOiBwYXRoLmpvaW4ocm9vdCwgJ3N0YWdpbmcnKSwgaWQ6ICdyZXN0b3JlLScgKyAoKytnZW5lcmF0aW9uKSwKICAgIGluc3BlY3RMb2csIGFjcXVpcmVXcml0ZUxlYXNlLCAuLi5vdmVycmlkZXMsCiAgfSkKICByZXR1cm4geyBydW4sIHJvb3QsIHNlc3Npb25Sb290LCBsb2FkZWQsIGhlbGQsIGFjcXVpcmVXcml0ZUxlYXNlLAogICAgdGFyZ2V0OiBpZCA9PiBwYXRoLmpvaW4oc2Vzc2lvblJvb3QsIHJlbChpZCkpLAogICAgcmVhZDogaWQgPT4gZnMucmVhZEZpbGUocGF0aC5qb2luKHNlc3Npb25Sb290LCByZWwoaWQpKSwgJ3V0ZjgnKSB9Cn0KCnRlc3QoJ+WFqOmHj+i/mOWOn+S/neeVmeacrOWcsOi/veWKoOS6i+S7tuOAgeeLrOacieS8muivneWPiuaXpeW/lyBpbm9kZe+8jOesrOS6jOi9ruS7jeiDvee7p+e7reWGmScsIGFzeW5jIHQgPT4gewogIGNvbnN0IGYgPSBhd2FpdCBmaXh0dXJlKHQsIHsgW3JlbCgnYScpXTogbG9nKCdhJywgMikgfSwgeyBbcmVsKCdhJyldOiBsb2coJ2EnLCA0KSwgW3JlbCgnbG9jYWwtb25seScpXTogbG9nKCdsb2NhbC1vbmx5JywgMSkgfSkKICBjb25zdCBpbm9kZSA9IChhd2FpdCBmcy5zdGF0KGYudGFyZ2V0KCdhJyksIHsgYmlnaW50OiB0cnVlIH0pKS5pbm8KICBmLmxvYWRlZC5hZGQoJ2EnKQogIGZvciAobGV0IHJvdW5kID0gMDsgcm91bmQgPCAyOyByb3VuZCsrKSB7CiAgICBjb25zdCByID0gYXdhaXQgZi5ydW4oKQogICAgYXNzZXJ0LmVxdWFsKHIub2ssIHRydWUsIHIuZXJyb3IpCiAgICBhc3NlcnQuZXF1YWwoci5yZXBsYWNlZCwgMCkKICAgIGFzc2VydC5lcXVhbChyLnByZXNlcnZlZCwgMSkKICAgIGNvbnN0IGN1cnJlbnQgPSBhd2FpdCBpbnNwZWN0TG9nKCcnLCBCdWZmZXIuZnJvbShhd2FpdCBmLnJlYWQoJ2EnKSkpCiAgICBjb25zdCBzZXEgPSBjdXJyZW50LmV2ZW50cy5sZW5ndGgKICAgIGF3YWl0IGZzLmFwcGVuZEZpbGUoZi50YXJnZXQoJ2EnKSwgSlNPTi5zdHJpbmdpZnkoeyB0eXBlOiAncGVybWlzc2lvbi9wcmVzZXQnLCBzZXEsIHRpbWU6IHNlcSArIDIsIGRhdGE6IHsgcHJlc2V0OiAnd29ya3NwYWNlLXdyaXRlJyB9IH0pICsgJ1xuJykKICB9CiAgYXNzZXJ0LmVxdWFsKChhd2FpdCBpbnNwZWN0TG9nKCcnLCBCdWZmZXIuZnJvbShhd2FpdCBmLnJlYWQoJ2EnKSkpKS5ldmVudHMubGVuZ3RoLCA2KQogIGFzc2VydC5lcXVhbChhd2FpdCBmLnJlYWQoJ2xvY2FsLW9ubHknKSwgbG9nKCdsb2NhbC1vbmx5JywgMSkpCiAgYXNzZXJ0LmVxdWFsKChhd2FpdCBmcy5zdGF0KGYudGFyZ2V0KCdhJyksIHsgYmlnaW50OiB0cnVlIH0pKS5pbm8sIGlub2RlKQp9KQoKdGVzdCgn5oGi5aSN6L6D5paw5aSH5Lu95LiO5pys5Zyw57y65aSx5Lya6K+d77yM5bm25L+d55WZ5L+u5pS55YmN5b+r54WnJywgYXN5bmMgdCA9PiB7CiAgY29uc3QgZiA9IGF3YWl0IGZpeHR1cmUodCwgeyBbcmVsKCdhJyldOiBsb2coJ2EnLCA0KSwgW3JlbCgnYicpXTogbG9nKCdiJywgMikgfSwgeyBbcmVsKCdhJyldOiBsb2coJ2EnLCAxKSB9KQogIGNvbnN0IHIgPSBhd2FpdCBmLnJ1bigpCiAgYXNzZXJ0LmVxdWFsKHIub2ssIHRydWUsIHIuZXJyb3IpCiAgYXNzZXJ0LmVxdWFsKHIucmVwbGFjZWQsIDIpCiAgYXNzZXJ0LmVxdWFsKGF3YWl0IGYucmVhZCgnYScpLCBsb2coJ2EnLCA0KSkKICBhc3NlcnQuZXF1YWwoYXdhaXQgZi5yZWFkKCdiJyksIGxvZygnYicsIDIpKQogIGFzc2VydC5lcXVhbChhd2FpdCBmcy5yZWFkRmlsZShwYXRoLmpvaW4oci5zbmFwc2hvdERpciwgcmVsKCdhJykpLCAndXRmOCcpLCBsb2coJ2EnLCAxKSkKICBhc3NlcnQuZXF1YWwoZi5oZWxkLnNpemUsIDApCn0pCgp0ZXN0KCfliIblj4nmi5Lnu53lj5HnlJ/lnKjku7vkvZXml6Xlv5flhpnlhaXliY0nLCBhc3luYyB0ID0+IHsKICBjb25zdCBmID0gYXdhaXQgZml4dHVyZSh0LCB7IFtyZWwoJ2EnKV06IGxvZygnYScsIDIpLCBbcmVsKCdiJyldOiBsb2coJ2InLCAzLCB0cnVlKSB9LCB7IFtyZWwoJ2InKV06IGxvZygnYicsIDMpIH0pCiAgY29uc3QgciA9IGF3YWl0IGYucnVuKCkKICBhc3NlcnQuZXF1YWwoci5vaywgZmFsc2UpCiAgYXNzZXJ0Lm1hdGNoKHIuZXJyb3IsIC/liIblj4kvdSkKICBhc3NlcnQuZXF1YWwoYXdhaXQgZi5yZWFkKCdiJyksIGxvZygnYicsIDMpKQogIGF3YWl0IGFzc2VydC5yZWplY3RzKGZzLmFjY2VzcyhmLnRhcmdldCgnYScpKSwgeyBjb2RlOiAnRU5PRU5UJyB9KQp9KQoKdGVzdCgn5bey5Yqg6L295oiW5Y2g55So55qE5b6F5oGi5aSN5Lya6K+d5ouS57ud5YaZ5YWl77yM5bey5Y+W5b6X56ef57qm5Lmf5b+F6aG76YeK5pS+JywgYXN5bmMgdCA9PiB7CiAgY29uc3QgZiA9IGF3YWl0IGZpeHR1cmUodCwgeyBbcmVsKCdhJyldOiBsb2coJ2EnLCAzKSwgW3JlbCgnYicpXTogbG9nKCdiJywgMykgfSwgeyBbcmVsKCdhJyldOiBsb2coJ2EnLCAxKSwgW3JlbCgnYicpXTogbG9nKCdiJywgMSkgfSkKICBmLmxvYWRlZC5hZGQoJ2InKQogIGNvbnN0IHIgPSBhd2FpdCBmLnJ1bigpCiAgYXNzZXJ0LmVxdWFsKHIub2ssIGZhbHNlKQogIGFzc2VydC5tYXRjaChyLmVycm9yLCAvbG9hZGVkIG9yIG93bmVkL3UpCiAgYXNzZXJ0LmVxdWFsKGF3YWl0IGYucmVhZCgnYScpLCBsb2coJ2EnLCAxKSkKICBhc3NlcnQuZXF1YWwoYXdhaXQgZi5yZWFkKCdiJyksIGxvZygnYicsIDEpKQogIGFzc2VydC5lcXVhbChmLmhlbGQuc2l6ZSwgMCkKfSkKCnRlc3QoJ+mihOajgOWQjuaWsOWinuWOhuWPsuS4jeW+l+iiq+i/mOWOn+imhueblicsIGFzeW5jIHQgPT4gewogIGNvbnN0IGYgPSBhd2FpdCBmaXh0dXJlKHQsIHsgW3JlbCgnYScpXTogbG9nKCdhJywgNCkgfSwgeyBbcmVsKCdhJyldOiBsb2coJ2EnLCAxKSB9KQogIGNvbnN0IHIgPSBhd2FpdCBmLnJ1bih7IGFjcXVpcmVXcml0ZUxlYXNlOiBhc3luYyAoLi4uYXJncykgPT4gewogICAgY29uc3QgbGVhc2UgPSBhd2FpdCBmLmFjcXVpcmVXcml0ZUxlYXNlKC4uLmFyZ3MpCiAgICBhd2FpdCBmcy53cml0ZUZpbGUoZi50YXJnZXQoJ2EnKSwgbG9nKCdhJywgMikpCiAgICByZXR1cm4gbGVhc2UKICB9IH0pCiAgYXNzZXJ0LmVxdWFsKHIub2ssIGZhbHNlKQogIGFzc2VydC5tYXRjaChyLmVycm9yLCAv6aKE5qOA5ZCO5Y+R55Sf5Y+Y5YyWL3UpCiAgYXNzZXJ0LmVxdWFsKGF3YWl0IGYucmVhZCgnYScpLCBsb2coJ2EnLCAyKSkKICBhc3NlcnQuZXF1YWwoZi5oZWxkLnNpemUsIDApCn0pCgp0ZXN0KCflkI7nu63mlofku7blj5HluIPlpLHotKXlj6rlm57mu5rmnKzmrKHlhpnlhaXvvIzkuI3liKDpmaTlpJbpg6jmlrDlu7rnm67moIcnLCBhc3luYyB0ID0+IHsKICBjb25zdCBmID0gYXdhaXQgZml4dHVyZSh0LCB7IFtyZWwoJ2EnKV06IGxvZygnYScsIDQpLCBbcmVsKCdiJyldOiBsb2coJ2InLCAyKSB9LCB7IFtyZWwoJ2EnKV06IGxvZygnYScsIDEpIH0pCiAgbGV0IGluamVjdGVkID0gZmFsc2UKICBjb25zdCByID0gYXdhaXQgZi5ydW4oeyBvblByb2dyZXNzOiBwYXRjaCA9PiB7CiAgICBpZiAoIWluamVjdGVkICYmIHBhdGNoLmZpbGVzLmRvbmUgPT09IDIpIHsKICAgICAgYXNzZXJ0LmVxdWFsKGZzU3luYy5yZWFkRmlsZVN5bmMoZi50YXJnZXQoJ2EnKSwgJ3V0ZjgnKSwgbG9nKCdhJywgNCkpCiAgICAgIGluamVjdGVkID0gdHJ1ZQogICAgICBmc1N5bmMubWtkaXJTeW5jKGYudGFyZ2V0KCdiJyksIHsgcmVjdXJzaXZlOiB0cnVlIH0pCiAgICB9CiAgfSB9KQogIGFzc2VydC5lcXVhbChpbmplY3RlZCwgdHJ1ZSkKICBhc3NlcnQuZXF1YWwoci5vaywgZmFsc2UpCiAgYXNzZXJ0LmVxdWFsKHIucm9sbGVkQmFjaywgdHJ1ZSkKICBhc3NlcnQuZGVlcEVxdWFsKHIucm9sbGJhY2tFcnJvcnMsIFtdKQogIGFzc2VydC5lcXVhbChhd2FpdCBmLnJlYWQoJ2EnKSwgbG9nKCdhJywgMSkpCiAgYXNzZXJ0LmVxdWFsKChhd2FpdCBmcy5zdGF0KGYudGFyZ2V0KCdiJykpKS5pc0RpcmVjdG9yeSgpLCB0cnVlKQogIGFzc2VydC5lcXVhbChmLmhlbGQuc2l6ZSwgMCkKfSkKCnRlc3QoJ+Wuv+S4u+aLkue7neaNn+Wdj+aXpeW/l+aXtuWFqOmHj+i/mOWOn+S4jeW+l+aKpeWRiuaIkOWKnycsIGFzeW5jIHQgPT4gewogIGNvbnN0IGJyb2tlbiA9IGxvZygnYScsIDMpLnJlcGxhY2UoJyJzZXEiOjEnLCAnInNlcSI6OTknKQogIGNvbnN0IGYgPSBhd2FpdCBmaXh0dXJlKHQsIHsgW3JlbCgnYScpXTogbG9nKCdhJywgMSkgfSwgeyBbcmVsKCdhJyldOiBicm9rZW4gfSkKICBjb25zdCByID0gYXdhaXQgZi5ydW4oKQogIGFzc2VydC5lcXVhbChyLm9rLCBmYWxzZSkKICBhc3NlcnQubWF0Y2goci5lcnJvciwgL3NlcSBnYXAvdSkKICBhc3NlcnQuZXF1YWwoYXdhaXQgZi5yZWFkKCdhJyksIGJyb2tlbikKfSkK
+// 全量还原的新语义。真实 Git/文件系统；只在宿主日志检查和租约接口边界注入夹具。
+// 真宿主解码/Windows 写租约另用安装中的实现做过集成验证；这里不模拟 overwriteApply 本身。
+import { test } from 'node:test'
+import assert from 'node:assert/strict'
+import { promises as fs } from 'node:fs'
+import fsSync from 'node:fs'
+import os from 'node:os'
+import path from 'node:path'
+import { execFile } from 'node:child_process'
+import { promisify } from 'node:util'
+import { overwriteApply } from '../lib/restore.mjs'
+
+const exec = promisify(execFile)
+const rel = (id) => 'project/' + id + '/session.v4.jsonl'
+const log = (id, count, changed = false) => JSON.stringify({ type: 'session', version: 4, id, createdAt: 1 }) + '\n'
+  + Array.from({ length: count }, (_, seq) => JSON.stringify({
+    type: 'permission/preset', seq, time: seq + 2,
+    data: { preset: changed && seq === 1 ? 'read-only' : 'workspace-write' },
+  }) + '\n').join('')
+
+// 宿主接口的夹具：核心只依赖“已校验头部与事件”，不依赖压缩编码的细节。
+async function inspectLog(_rel, bytes) {
+  const [meta, ...events] = bytes.toString('utf8').trimEnd().split('\n').map(line => JSON.parse(line))
+  for (const [seq, event] of events.entries()) assert.equal(event.seq, seq, 'seq gap')
+  return { meta, events, inheritedEventCount: 0 }
+}
+
+async function fixture(t, backed, local = {}) {
+  const root = await fs.mkdtemp(path.join(os.tmpdir(), 'sessionsync-overwrite-test-'))
+  t.after(async () => {
+    assert.equal(path.dirname(root), os.tmpdir())
+    assert(path.basename(root).startsWith('sessionsync-overwrite-test-'))
+    await fs.rm(root, { recursive: true, force: true })
+  })
+  const repo = path.join(root, 'repo'), sessionRoot = path.join(root, 'sessions')
+  await fs.mkdir(repo, { recursive: true })
+  await fs.mkdir(sessionRoot, { recursive: true })
+  const git = async args => (await exec('git', args, { cwd: repo, encoding: 'buffer' })).stdout
+  await git(['init', '-b', 'main'])
+  await git(['config', 'user.name', 'test'])
+  await git(['config', 'user.email', 'test@localhost'])
+  for (const [file, bytes] of Object.entries(backed)) {
+    const p = path.join(repo, 'sessions', file)
+    await fs.mkdir(path.dirname(p), { recursive: true })
+    await fs.writeFile(p, bytes)
+  }
+  await git(['add', '-A'])
+  await git(['commit', '-m', 'restore fixture'])
+  const commit = (await git(['rev-parse', 'HEAD'])).toString('utf8').trim()
+  for (const [file, bytes] of Object.entries(local)) {
+    const p = path.join(sessionRoot, file)
+    await fs.mkdir(path.dirname(p), { recursive: true })
+    await fs.writeFile(p, bytes)
+  }
+  const loaded = new Set(), held = new Set()
+  let generation = 0
+  const acquireWriteLease = async (_rel, meta) => {
+    if (loaded.has(meta.id) || held.has(meta.id)) throw new Error('session already loaded or owned')
+    held.add(meta.id)
+    return { release: async () => { held.delete(meta.id) } }
+  }
+  const run = overrides => overwriteApply({
+    git: {
+      listFilesAtRev: async rev => (await git(['ls-tree', '-r', '--name-only', rev])).toString('utf8').trimEnd().split('\n'),
+      readFileAtRev: async (rev, file) => git(['show', rev + ':' + file]),
+    },
+    commit, sessionRoot, snapshotDir: path.join(root, 'snapshots'),
+    stagingDir: path.join(root, 'staging'), id: 'restore-' + (++generation),
+    inspectLog, acquireWriteLease, ...overrides,
+  })
+  return { run, root, sessionRoot, loaded, held, acquireWriteLease,
+    target: id => path.join(sessionRoot, rel(id)),
+    read: id => fs.readFile(path.join(sessionRoot, rel(id)), 'utf8') }
+}
+
+test('全量还原保留本地追加事件、独有会话及日志 inode，第二轮仍能继续写', async t => {
+  const f = await fixture(t, { [rel('a')]: log('a', 2) }, { [rel('a')]: log('a', 4), [rel('local-only')]: log('local-only', 1) })
+  const inode = (await fs.stat(f.target('a'), { bigint: true })).ino
+  f.loaded.add('a')
+  for (let round = 0; round < 2; round++) {
+    const r = await f.run()
+    assert.equal(r.ok, true, r.error)
+    assert.equal(r.replaced, 0)
+    assert.equal(r.preserved, 1)
+    const current = await inspectLog('', Buffer.from(await f.read('a')))
+    const seq = current.events.length
+    await fs.appendFile(f.target('a'), JSON.stringify({ type: 'permission/preset', seq, time: seq + 2, data: { preset: 'workspace-write' } }) + '\n')
+  }
+  assert.equal((await inspectLog('', Buffer.from(await f.read('a')))).events.length, 6)
+  assert.equal(await f.read('local-only'), log('local-only', 1))
+  assert.equal((await fs.stat(f.target('a'), { bigint: true })).ino, inode)
+})
+
+test('恢复较新备份与本地缺失会话，并保留修改前快照', async t => {
+  const f = await fixture(t, { [rel('a')]: log('a', 4), [rel('b')]: log('b', 2) }, { [rel('a')]: log('a', 1) })
+  const r = await f.run()
+  assert.equal(r.ok, true, r.error)
+  assert.equal(r.replaced, 2)
+  assert.equal(await f.read('a'), log('a', 4))
+  assert.equal(await f.read('b'), log('b', 2))
+  assert.equal(await fs.readFile(path.join(r.snapshotDir, rel('a')), 'utf8'), log('a', 1))
+  assert.equal(f.held.size, 0)
+})
+
+test('分叉拒绝发生在任何日志写入前', async t => {
+  const f = await fixture(t, { [rel('a')]: log('a', 2), [rel('b')]: log('b', 3, true) }, { [rel('b')]: log('b', 3) })
+  const r = await f.run()
+  assert.equal(r.ok, false)
+  assert.match(r.error, /分叉/u)
+  assert.equal(await f.read('b'), log('b', 3))
+  await assert.rejects(fs.access(f.target('a')), { code: 'ENOENT' })
+})
+
+test('已加载或占用的待恢复会话拒绝写入，已取得租约也必须释放', async t => {
+  const f = await fixture(t, { [rel('a')]: log('a', 3), [rel('b')]: log('b', 3) }, { [rel('a')]: log('a', 1), [rel('b')]: log('b', 1) })
+  f.loaded.add('b')
+  const r = await f.run()
+  assert.equal(r.ok, false)
+  assert.match(r.error, /loaded or owned/u)
+  assert.equal(await f.read('a'), log('a', 1))
+  assert.equal(await f.read('b'), log('b', 1))
+  assert.equal(f.held.size, 0)
+})
+
+test('预检后新增历史不得被还原覆盖', async t => {
+  const f = await fixture(t, { [rel('a')]: log('a', 4) }, { [rel('a')]: log('a', 1) })
+  const r = await f.run({ acquireWriteLease: async (...args) => {
+    const lease = await f.acquireWriteLease(...args)
+    await fs.writeFile(f.target('a'), log('a', 2))
+    return lease
+  } })
+  assert.equal(r.ok, false)
+  assert.match(r.error, /预检后发生变化/u)
+  assert.equal(await f.read('a'), log('a', 2))
+  assert.equal(f.held.size, 0)
+})
+
+test('后续文件发布失败只回滚本次写入，不删除外部新建目标', async t => {
+  const f = await fixture(t, { [rel('a')]: log('a', 4), [rel('b')]: log('b', 2) }, { [rel('a')]: log('a', 1) })
+  let injected = false
+  const r = await f.run({ onProgress: patch => {
+    if (!injected && patch.files.done === 2) {
+      assert.equal(fsSync.readFileSync(f.target('a'), 'utf8'), log('a', 4))
+      injected = true
+      fsSync.mkdirSync(f.target('b'), { recursive: true })
+    }
+  } })
+  assert.equal(injected, true)
+  assert.equal(r.ok, false)
+  assert.equal(r.rolledBack, true)
+  assert.deepEqual(r.rollbackErrors, [])
+  assert.equal(await f.read('a'), log('a', 1))
+  assert.equal((await fs.stat(f.target('b'))).isDirectory(), true)
+  assert.equal(f.held.size, 0)
+})
+
+test('宿主拒绝损坏日志时全量还原不得报告成功', async t => {
+  const broken = log('a', 3).replace('"seq":1', '"seq":99')
+  const f = await fixture(t, { [rel('a')]: log('a', 1) }, { [rel('a')]: broken })
+  const r = await f.run()
+  assert.equal(r.ok, false)
+  assert.match(r.error, /seq gap/u)
+  assert.equal(await f.read('a'), broken)
+})

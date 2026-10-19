@@ -1,1 +1,256 @@
-Ly8gdGVzdC9wcm9ncmVzcy50ZXN0Lm1qcyDigJQg6L+b5bqm6Kej5p6Q5b+F6aG75pivIuecn+aVsOaNriLvvIzkuJTkuI3lvpfnvJbpgKDnmb7liIbmr5TjgIIKLy8KLy8g5aS55YW35p2l5rqQ77yaMjAyNi0xMC0xNSDmnKzmnLrlrp7mtYsgYGdpdCBwdXNoIC0tcHJvZ3Jlc3Ng77yIZ2l0IDIuNTUuMC53aW5kb3dzLjPvvIkKLy8g55qEIHN0ZGVyciDljp/lp4vovpPlh7rvvIzpgJDooYzmioTlvZXigJTigJTkuI3mmK/mnoTpgKDnmoTnkIbmg7PmoLfmnKzjgIIKaW1wb3J0IHsgdGVzdCB9IGZyb20gJ25vZGU6dGVzdCcKaW1wb3J0IGFzc2VydCBmcm9tICdub2RlOmFzc2VydC9zdHJpY3QnCmltcG9ydCB7CiAgUHJvZ3Jlc3NSZWdpc3RyeSwKICBQUk9HUkVTU19LSU5EUywKICBGSU5JU0hFRF9MSU5HRVJfTVMsCiAgcGFyc2VHaXRQcm9ncmVzc0xpbmUsCiAgZmVlZEdpdFByb2dyZXNzLAp9IGZyb20gJy4uL2xpYi9wcm9ncmVzcy5tanMnCgovLyDlrp7mtYvovpPlh7rvvIjljp/moLfkv53nlZnnqbrmoLzkuI7moIfngrnvvIkKY29uc3QgUkVBTF9HSVRfUFVTSF9TVERFUlIgPSBbCiAgJ0VudW1lcmF0aW5nIG9iamVjdHM6IDMsIGRvbmUuJywKICAnQ291bnRpbmcgb2JqZWN0czogIDMzJSAoMS8zKScsCiAgJ0NvdW50aW5nIG9iamVjdHM6ICA2NiUgKDIvMyknLAogICdDb3VudGluZyBvYmplY3RzOiAxMDAlICgzLzMpJywKICAnQ291bnRpbmcgb2JqZWN0czogMTAwJSAoMy8zKSwgZG9uZS4nLAogICdEZWx0YSBjb21wcmVzc2lvbiB1c2luZyB1cCB0byAyMCB0aHJlYWRzJywKICAnQ29tcHJlc3Npbmcgb2JqZWN0czogIDUwJSAoMS8yKScsCiAgJ0NvbXByZXNzaW5nIG9iamVjdHM6IDEwMCUgKDIvMiknLAogICdDb21wcmVzc2luZyBvYmplY3RzOiAxMDAlICgyLzIpLCBkb25lLicsCiAgJ1dyaXRpbmcgb2JqZWN0czogIDMzJSAoMS8zKScsCiAgJ1dyaXRpbmcgb2JqZWN0czogIDY2JSAoMi8zKScsCiAgJ1dyaXRpbmcgb2JqZWN0czogMTAwJSAoMy8zKScsCiAgJ1dyaXRpbmcgb2JqZWN0czogMTAwJSAoMy8zKSwgMzkyIGJ5dGVzIHwgMzkyLjAwIEtpQi9zLCBkb25lLicsCiAgJ1RvdGFsIDMgKGRlbHRhIDApLCByZXVzZWQgMCAoZGVsdGEgMCksIHBhY2stcmV1c2VkIDAgKGZyb20gMCknLAogICdUbyBDOlxcVXNlcnNcXEhVQU5HWH4xXFxBcHBEYXRhXFxMb2NhbFxcVGVtcFxcZ2l0LXByb2dyZXNzLXByb2JlXFxiYXJlLmdpdCcsCiAgJyAqIFtuZXcgYnJhbmNoXSAgICAgIEhFQUQgLT4gbWFpbicsCl0KCnRlc3QoJ+ino+aekOWunua1iyBnaXQg6L6T5Ye677ya5q+P5p2h55m+5YiG5q+U6YO95p2l6Ieq5Y6f5paH77yM5LiN55Sf5oiQ5Lu75L2V5pWw5a2XJywgKCkgPT4gewogIGNvbnN0IHBhcnNlZCA9IFJFQUxfR0lUX1BVU0hfU1RERVJSLm1hcChwYXJzZUdpdFByb2dyZXNzTGluZSkKCiAgLy8g5LiO5Y6f5paH6YCQ6KGM5a+56b2Q77ya5pyJ55m+5YiG5q+U55qE6KGMIOKGkiDop6PmnpDlh7rnmb7liIbmr5TvvJsoMy8zKSDihpIg6K6h5pWw5q2j56GuCiAgYXNzZXJ0LmRlZXBFcXVhbChwYXJzZWRbMV0sIHsgcGhhc2U6ICdjb3VudGluZycsIHBlcmNlbnQ6IDMzLCBjb3VudHM6IHsgZG9uZTogMSwgdG90YWw6IDMgfSB9KQogIGFzc2VydC5kZWVwRXF1YWwocGFyc2VkWzNdLCB7IHBoYXNlOiAnY291bnRpbmcnLCBwZXJjZW50OiAxMDAsIGNvdW50czogeyBkb25lOiAzLCB0b3RhbDogMyB9IH0pCiAgYXNzZXJ0LmRlZXBFcXVhbChwYXJzZWRbNl0sIHsgcGhhc2U6ICdjb21wcmVzc2luZycsIHBlcmNlbnQ6IDUwLCBjb3VudHM6IHsgZG9uZTogMSwgdG90YWw6IDIgfSB9KQogIGFzc2VydC5kZWVwRXF1YWwocGFyc2VkWzldLCB7IHBoYXNlOiAnd3JpdGluZycsIHBlcmNlbnQ6IDMzLCBjb3VudHM6IHsgZG9uZTogMSwgdG90YWw6IDMgfSB9KQogIGFzc2VydC5kZWVwRXF1YWwocGFyc2VkWzEwXSwgeyBwaGFzZTogJ3dyaXRpbmcnLCBwZXJjZW50OiA2NiwgY291bnRzOiB7IGRvbmU6IDIsIHRvdGFsOiAzIH0gfSkKCiAgLy8g5peg6L+b5bqm55qE6KGM5b+F6aG76L+U5ZueIG51bGzvvIjkuI3ooqvlvZPmiJAgMCXvvIkKICBhc3NlcnQuZXF1YWwocGFyc2VkWzVdLCBudWxsLCAnRGVsdGEgY29tcHJlc3Npb24gLi4uIOS4jeWQq+i/m+W6pu+8jOW6lOS4uiBudWxsJykKICBhc3NlcnQuZXF1YWwocGFyc2VkWzEzXSwgbnVsbCwgJ1RvdGFsIDMgKGRlbHRhIDApIC4uLiDkuI3lkKvov5vluqbvvIzlupTkuLogbnVsbCcpCiAgYXNzZXJ0LmVxdWFsKHBhcnNlZFsxNF0sIG51bGwsICfov5znq6/lnLDlnYDooYzkuI3lkKvov5vluqYnKQogIGFzc2VydC5lcXVhbChwYXJzZWRbMTVdLCBudWxsLCAn5YiG5pSv5byV55So6KGM5LiN5ZCr6L+b5bqmJykKCiAgLy8gRW51bWVyYXRpbmcgb2JqZWN0czogMywgZG9uZS4g4oaSIOiuoeaVsOWeiwogIGFzc2VydC5kZWVwRXF1YWwocGFyc2VkWzBdLCB7IHBoYXNlOiAnZW51bWVyYXRpbmcnLCBwZXJjZW50OiAxMDAsIGNvdW50czogeyBkb25lOiAzLCB0b3RhbDogMyB9IH0pCgogIC8vIOWujOaIkOihjOW4pumAn+eOhwogIGFzc2VydC5lcXVhbChwYXJzZWRbMTJdLnBlcmNlbnQsIDEwMCkKICBhc3NlcnQuZXF1YWwocGFyc2VkWzEyXS5jb3VudHMudG90YWwsIDMpCiAgYXNzZXJ0LmVxdWFsKHBhcnNlZFsxMl0ucmF0ZSwgJzM5Mi4wMCBLaUIvcycpCn0pCgp0ZXN0KCdnaXQg55qE55m+5YiG5q+U5piv44CQ6Zi25q616Ieq6Lqr44CR55qE4oCU4oCU5LiN5b6X5YaS5YWF5YWo5bGA6L+b5bqmJywgKCkgPT4gewogIC8vIOWunua1i+mHjCBDb3VudGluZyDliLDovr4gMTAwJSDkuYvlkI7vvIxDb21wcmVzc2luZyDlj4jku44gNTAlIOW8gOWni+OAggogIC8vIOiLpeaKiuWug+W9k+WFqOWxgOeZvuWIhuavlO+8jOi/m+W6puadoeWwseS8muS7jiAxMDAlIOWAkumAgOOAguazqOWGjOihqOW/hemhu+WOn+agt+S/neWtmCBwaGFzZSArIHBlcmNlbnTjgIIKICBjb25zdCByZWdpc3RyeSA9IG5ldyBQcm9ncmVzc1JlZ2lzdHJ5KCkKICByZWdpc3RyeS5zdGFydCgnc2Vzc2lvbicpCiAgY29uc3Qgc3RhdGUgPSB7IGNhcnJ5OiAnJyB9CiAgZm9yIChjb25zdCBsaW5lIG9mIFJFQUxfR0lUX1BVU0hfU1RERVJSKSB7CiAgICBmZWVkR2l0UHJvZ3Jlc3MocmVnaXN0cnksICdzZXNzaW9uJywgYCR7bGluZX1cbmAsIHN0YXRlKQogIH0KICBjb25zdCBbZW50cnldID0gcmVnaXN0cnkuc25hcHNob3QoKS5lbnRyaWVzCiAgYXNzZXJ0LmVxdWFsKGVudHJ5LnN0YWdlLCAncHVzaCcpCiAgYXNzZXJ0LmVxdWFsKGVudHJ5LnBoYXNlLCAnd3JpdGluZycsICfmnIDlkI7kuIDkuKrluKbov5vluqbnmoTpmLbmrrXmmK8gd3JpdGluZycpCiAgYXNzZXJ0LmRlZXBFcXVhbChlbnRyeS5jb3VudHMsIHsgZG9uZTogMywgdG90YWw6IDMgfSkKICBhc3NlcnQuZXF1YWwoZW50cnkucmF0ZSwgJzM5Mi4wMCBLaUIvcycpCiAgLy8g6Zi25q6155m+5YiG5q+U54Wn5a6e6K6w5b2V77yIMTAw77yJ77yM5L2G5a6D5LiN5Luj6KGoIuaVtOS4quWkh+S7veWujOaIkCIKICBhc3NlcnQuZXF1YWwoZW50cnkucGVyY2VudCwgMTAwKQp9KQoKdGVzdCgn6LeoIGNodW5rIOeahOaui+ihjOW/hemhu+iiq+ato+ehruaLvOaOpe+8iOa1geW8j+ivu+WPlueahOecn+WunuWcuuaZr++8iScsICgpID0+IHsKICBjb25zdCByZWdpc3RyeSA9IG5ldyBQcm9ncmVzc1JlZ2lzdHJ5KCkKICByZWdpc3RyeS5zdGFydCgncGx1Z2luJykKICBjb25zdCBzdGF0ZSA9IHsgY2Fycnk6ICcnIH0KICBjb25zdCB0ZXh0ID0gJ1dyaXRpbmcgb2JqZWN0czogIDY2JSAoMi8zKVxuJwogIC8vIOaVheaEj+WcqOihjOS4remXtOWIh+aWrQogIGZlZWRHaXRQcm9ncmVzcyhyZWdpc3RyeSwgJ3BsdWdpbicsIHRleHQuc2xpY2UoMCwgMTIpLCBzdGF0ZSkKICBjb25zdCBtaWQgPSByZWdpc3RyeS5zbmFwc2hvdCgpLmVudHJpZXNbMF0KICBhc3NlcnQuZXF1YWwobWlkLnBlcmNlbnQsIG51bGwsICfljYrooYzkuI3lvpfkuqfnlJ/ku7vkvZXov5vluqYnKQogIGZlZWRHaXRQcm9ncmVzcyhyZWdpc3RyeSwgJ3BsdWdpbicsIHRleHQuc2xpY2UoMTIpLCBzdGF0ZSkKICBjb25zdCBhZnRlciA9IHJlZ2lzdHJ5LnNuYXBzaG90KCkuZW50cmllc1swXQogIGFzc2VydC5lcXVhbChhZnRlci5wZXJjZW50LCA2NiwgJ+ihpem9kOWQjuW6lOino+aekOWHuiA2NiUnKQogIGFzc2VydC5kZWVwRXF1YWwoYWZ0ZXIuY291bnRzLCB7IGRvbmU6IDIsIHRvdGFsOiAzIH0pCn0pCgp0ZXN0KCfmsqHmnInnnJ/lrp7nmb7liIbmr5Tml7bkv53mjIEgbnVsbO+8iOWJjeerr+aNruatpOi1sOS4jeehruWumuaAge+8iScsICgpID0+IHsKICBjb25zdCByZWdpc3RyeSA9IG5ldyBQcm9ncmVzc1JlZ2lzdHJ5KCkKICBjb25zdCBlbnRyeSA9IHJlZ2lzdHJ5LnN0YXJ0KCdza2lsbCcpCiAgYXNzZXJ0LmVxdWFsKGVudHJ5LnBlcmNlbnQsIG51bGwsICdzdGFydCgpIOS4jeW+l+mihOiuviAwLTEwMCDnmoTlgYflgLwnKQogIGFzc2VydC5lcXVhbChlbnRyeS5zdGF0ZSwgJ3J1bm5pbmcnKQogIGNvbnN0IGFmdGVyID0gcmVnaXN0cnkudXBkYXRlKCdza2lsbCcsIHsgc3RhZ2U6ICdwdXNoJyB9KQogIGFzc2VydC5lcXVhbChhZnRlci5wZXJjZW50LCBudWxsKQp9KQoKdGVzdCgn5LiJ57G75Z+f5LqS5LiN5bmy5omw77yM5LiU5oyJIHNlc3Npb24vcGx1Z2luL3NraWxsIOmhuuW6j+W/q+eFpycsICgpID0+IHsKICBjb25zdCByZWdpc3RyeSA9IG5ldyBQcm9ncmVzc1JlZ2lzdHJ5KCkKICByZWdpc3RyeS5zdGFydCgnc2tpbGwnKQogIHJlZ2lzdHJ5LnN0YXJ0KCdzZXNzaW9uJykKICByZWdpc3RyeS5zdGFydCgncGx1Z2luJykKICBjb25zdCB7IGVudHJpZXMgfSA9IHJlZ2lzdHJ5LnNuYXBzaG90KCkKICBhc3NlcnQuZGVlcEVxdWFsKGVudHJpZXMubWFwKChlKSA9PiBlLmtpbmQpLCBbJ3Nlc3Npb24nLCAncGx1Z2luJywgJ3NraWxsJ10pCiAgYXNzZXJ0LmRlZXBFcXVhbChQUk9HUkVTU19LSU5EUywgWydzZXNzaW9uJywgJ3BsdWdpbicsICdza2lsbCddKQp9KQoKLy8g5Zue5b2S77yaY2xvdWQg6Lev55Sx6Lev5b6E5b+F6aG75oyJ44CQ57uT5bC+44CR5Yy56YWN5aSa5q616Lev55Sx5ZCN44CCCi8vIDIwMjYtMTAtMTUg55yf5a6e5LqL5pWF77yaaW5kZXgubWpzIOabvueUqCBgcGF0aC5zbGljZShwYXRoLmxhc3RJbmRleE9mKCcvJykgKyAxKWAg5Y+W5pyA5ZCO5LiA5q6177yMCi8vIOWvuSBgL2FwaS9kc2gtc2Vzc2lvbi1zeW5jL2Nsb3VkL3NuYXBzaG90L3B1c2hgIOWPquS8muaLv+WIsCBgcHVzaGDvvIzmsLjov5zljLnphY3kuI3kuIoKLy8gYHNuYXBzaG90L3B1c2hg77yM5a+86Ie05o+S5Lu2L+aKgOiDveWkh+S7veeahOi/m+W6puadoeS7juS4jeWHuueOsO+8iOS8muivneWkh+S7veato+W4uO+8ieOAggp0ZXN0KCflpIfku73ot6/nlLHmjInnu5PlsL7ljLnphY3vvJrnnJ/lrp4gY2xvdWQg6Lev5b6E5b+F6aG76KKr6K+G5Yir5Li6IHBsdWdpbi9za2lsbCcsICgpID0+IHsKICAvLyDov5nkuKTkuKrmmK/nnJ/lrp7ot6/lvoTvvIjlrp7mtYvoh6ogbGliL2Nsb3VkLm1qcyDnmoQgY2xvdWRSb3V0ZVBhdGhzKCnvvInjgIIKICBjb25zdCByZWFsUGF0aHMgPSBbCiAgICAnL2FwaS9kc2gtc2Vzc2lvbi1zeW5jL2Nsb3VkL3NuYXBzaG90L3B1c2gnLAogICAgJy9hcGkvZHNoLXNlc3Npb24tc3luYy9jbG91ZC9za2lsbC9wdXNoJywKICAgICcvYXBpL2RzaC1zZXNzaW9uLXN5bmMvY2xvdWQvaW52ZW50b3J5JywKICAgICcvYXBpL2RzaC1zZXNzaW9uLXN5bmMvY2xvdWQvc25hcHNob3QvaGlzdG9yeScsCiAgXQoKICAvLyDlvZPliY3lrp7njrDvvJrnu5PlsL7ljLnphY0KICBjb25zdCBraW5kT2YgPSAocGF0aCkgPT4gKHBhdGguZW5kc1dpdGgoJy9za2lsbC9wdXNoJykgPyAnc2tpbGwnIDogcGF0aC5lbmRzV2l0aCgnL3NuYXBzaG90L3B1c2gnKSA/ICdwbHVnaW4nIDogbnVsbCkKICAvLyDml6fnmoTplJnor6/lrp7njrDvvJrlj5bmnIDlkI7kuIDmrrUKICBjb25zdCBidWdneUtpbmRPZiA9IChwYXRoKSA9PiB7CiAgICBjb25zdCB0YWlsID0gcGF0aC5zbGljZShwYXRoLmxhc3RJbmRleE9mKCcvJykgKyAxKQogICAgcmV0dXJuIHRhaWwgPT09ICdza2lsbC9wdXNoJyA/ICdza2lsbCcgOiB0YWlsID09PSAnc25hcHNob3QvcHVzaCcgPyAncGx1Z2luJyA6IG51bGwKICB9CgogIGFzc2VydC5lcXVhbChraW5kT2YocmVhbFBhdGhzWzBdKSwgJ3BsdWdpbicsICdzbmFwc2hvdC9wdXNoIOW/hemhu+ivhuWIq+S4uiBwbHVnaW4nKQogIGFzc2VydC5lcXVhbChraW5kT2YocmVhbFBhdGhzWzFdKSwgJ3NraWxsJywgJ3NraWxsL3B1c2gg5b+F6aG76K+G5Yir5Li6IHNraWxsJykKICBhc3NlcnQuZXF1YWwoa2luZE9mKHJlYWxQYXRoc1syXSksIG51bGwsICdpbnZlbnRvcnkg5LiN5b6X6KKr6K+G5Yir5Li65aSH5Lu9JykKICBhc3NlcnQuZXF1YWwoa2luZE9mKHJlYWxQYXRoc1szXSksIG51bGwsICdzbmFwc2hvdC9oaXN0b3J5IOS4jeW+l+iiq+ivhuWIq+S4uuWkh+S7vScpCgogIC8vIOmUgeatu+WbnuW9ku+8muaXp+eahCLlj5bmnIDlkI7kuIDmrrUi5a6e546w5Zyo55yf5a6e6Lev5b6E5LiK5b+F6aG75aSx5pWI77yI6K+B5piO5a6D56Gu5a6e5pyJIGJ1Z++8iQogIGFzc2VydC5lcXVhbChidWdneUtpbmRPZihyZWFsUGF0aHNbMF0pLCBudWxsLCAn5pen5a6e546w5Y+W5pyA5ZCO5LiA5q615ou/5LiN5YiwIHNuYXBzaG90L3B1c2gnKQogIGFzc2VydC5lcXVhbChidWdneUtpbmRPZihyZWFsUGF0aHNbMV0pLCBudWxsLCAn5pen5a6e546w5Y+W5pyA5ZCO5LiA5q615ou/5LiN5YiwIHNraWxsL3B1c2gnKQp9KQoKdGVzdCgn5pyq5YyF6KOF55qE6Lev55Sx5LiN5Lqn55Sf5Lu75L2V6L+b5bqm5p2h55uu77yI5LiN6K+v5Lyk6Z2e5aSH5Lu95pON5L2c77yJJywgKCkgPT4gewogIGNvbnN0IHJlZ2lzdHJ5ID0gbmV3IFByb2dyZXNzUmVnaXN0cnkoKQogIC8vIOWPquacieiiq+aYvuW8jyBzdGFydCDnmoTln5/miY3mnInmnaHnm67vvJvku4XosIPnlKggc25hcHNob3Qg5LiN5b6X5Yet56m65Lqn55Sf5p2h55uuCiAgYXNzZXJ0LmRlZXBFcXVhbChyZWdpc3RyeS5zbmFwc2hvdCgpLmVudHJpZXMsIFtdKQogIGFzc2VydC5lcXVhbChyZWdpc3RyeS5oYXNSdW5uaW5nKCksIGZhbHNlKQp9KQoKLy8g4oCU4oCUIGFjdGlvbiDnu7TluqbvvJrlpIfku73kuI7liKDpmaTlkIzln5/lubblrZjvvIjmnKzmrKHmlLnliqjnmoTmoLjlv4PlpZHnuqbvvInigJTigJQKdGVzdCgn5ZCM5Z+f55qE5aSH5Lu95LiO5Yig6Zmk5piv5Lik5p2h54us56uL5p2h55uu77yM5LqS5LiN6KaG55uWJywgKCkgPT4gewogIGNvbnN0IHJlZ2lzdHJ5ID0gbmV3IFByb2dyZXNzUmVnaXN0cnkoKQogIHJlZ2lzdHJ5LnN0YXJ0KCdwbHVnaW4nLCB7IGxhYmVsOiAn5o+S5Lu25aSH5Lu9JywgYWN0aW9uOiAnYmFja3VwJyB9KQogIHJlZ2lzdHJ5LnN0YXJ0KCdwbHVnaW4nLCB7IGxhYmVsOiAn5o+S5Lu25aSH5Lu95Yig6ZmkJywgYWN0aW9uOiAnZGVsZXRlJywgc3RhZ2U6ICdkZWxldGUnIH0pCgogIGNvbnN0IGVudHJpZXMgPSByZWdpc3RyeS5zbmFwc2hvdCgpLmVudHJpZXMKICBhc3NlcnQuZXF1YWwoZW50cmllcy5sZW5ndGgsIDIsICflkIzln58gYmFja3VwICsgZGVsZXRlIOW/hemhu+WQjOaXtuWtmOWcqO+8jOS4jeiDveiiq+WQjuiAheimhueblicpCiAgYXNzZXJ0LmRlZXBFcXVhbChlbnRyaWVzLm1hcCgoZSkgPT4gZS5hY3Rpb24pLCBbJ2JhY2t1cCcsICdkZWxldGUnXSwgJ+WQjCBraW5kIOWGhSBiYWNrdXAg5Zyo5YmN44CBZGVsZXRlIOWcqOWQjicpCiAgYXNzZXJ0LmRlZXBFcXVhbChlbnRyaWVzLm1hcCgoZSkgPT4gZS5sYWJlbCksIFsn5o+S5Lu25aSH5Lu9JywgJ+aPkuS7tuWkh+S7veWIoOmZpCddKQp9KQoKdGVzdCgn5Y+q5pu05pawIGRlbGV0ZSDmnaHnm67ml7bvvIzlkIzln5/nmoQgYmFja3VwIOadoeebruS4jeWPl+W9seWTjScsICgpID0+IHsKICBjb25zdCByZWdpc3RyeSA9IG5ldyBQcm9ncmVzc1JlZ2lzdHJ5KCkKICByZWdpc3RyeS5zdGFydCgncGx1Z2luJywgeyBhY3Rpb246ICdiYWNrdXAnLCBzdGFnZTogJ2NvbGxlY3RpbmcnIH0pCiAgcmVnaXN0cnkuc3RhcnQoJ3BsdWdpbicsIHsgYWN0aW9uOiAnZGVsZXRlJywgc3RhZ2U6ICdkZWxldGUnIH0pCgogIHJlZ2lzdHJ5LnVwZGF0ZSgncGx1Z2luJywgeyBhY3Rpb246ICdkZWxldGUnLCBzdGFnZTogJ2RlbGV0ZScsIGZpbGVzOiB7IGRvbmU6IDIsIHRvdGFsOiA1IH0gfSkKCiAgY29uc3QgZW50cmllcyA9IHJlZ2lzdHJ5LnNuYXBzaG90KCkuZW50cmllcwogIGNvbnN0IGJhY2t1cCA9IGVudHJpZXMuZmluZCgoZSkgPT4gZS5hY3Rpb24gPT09ICdiYWNrdXAnKQogIGNvbnN0IGRlbCA9IGVudHJpZXMuZmluZCgoZSkgPT4gZS5hY3Rpb24gPT09ICdkZWxldGUnKQogIGFzc2VydC5kZWVwRXF1YWwoZGVsLmZpbGVzLCB7IGRvbmU6IDIsIHRvdGFsOiA1IH0sICdkZWxldGUg5p2h55uu5bqU6KKr5pu05pawJykKICBhc3NlcnQuZXF1YWwoYmFja3VwLmZpbGVzLCBudWxsLCAnYmFja3VwIOadoeebruS4jeW+l+iiqyBkZWxldGUg55qE5pu05paw5rGh5p+TJykKICBhc3NlcnQuZXF1YWwoYmFja3VwLnN0YWdlLCAnY29sbGVjdGluZycsICdiYWNrdXAg55qEIHN0YWdlIOS4jeW+l+iiq+aUueWGmScpCn0pCgp0ZXN0KCfliKDpmaTlpLHotKXkuI3lvbHlk43lkIzln5/lpIfku73mnaHnm67nmoTnirbmgIEnLCAoKSA9PiB7CiAgY29uc3QgcmVnaXN0cnkgPSBuZXcgUHJvZ3Jlc3NSZWdpc3RyeSgpCiAgcmVnaXN0cnkuc3RhcnQoJ3NraWxsJywgeyBhY3Rpb246ICdiYWNrdXAnIH0pCiAgcmVnaXN0cnkuc3RhcnQoJ3NraWxsJywgeyBhY3Rpb246ICdkZWxldGUnIH0pCgogIGNvbnN0IGZhaWxlZCA9IHJlZ2lzdHJ5LmZpbmlzaCgnc2tpbGwnLCB7IG9rOiBmYWxzZSwgZXJyb3I6ICdyZW1vdmUgZmFpbGVkJywgYWN0aW9uOiAnZGVsZXRlJyB9KQogIGFzc2VydC5lcXVhbChmYWlsZWQuc3RhdGUsICdmaW5pc2hlZCcpCiAgYXNzZXJ0LmVxdWFsKGZhaWxlZC5vaywgZmFsc2UpCiAgYXNzZXJ0LmVxdWFsKGZhaWxlZC5lcnJvciwgJ3JlbW92ZSBmYWlsZWQnKQoKICBjb25zdCBiYWNrdXAgPSByZWdpc3RyeS5zbmFwc2hvdCgpLmVudHJpZXMuZmluZCgoZSkgPT4gZS5hY3Rpb24gPT09ICdiYWNrdXAnKQogIGFzc2VydC5lcXVhbChiYWNrdXAuc3RhdGUsICdydW5uaW5nJywgJ+WQjOWfn+Wkh+S7veadoeebruS4jeW+l+iiq+WIoOmZpOeahOWksei0peaUtuWwvuazouWPiicpCn0pCgp0ZXN0KCfkuI3kvKAgYWN0aW9uIOeahOaXp+iwg+eUqOaWueS7jeaMh+WQkSBiYWNrdXAg5p2h55uu77yI5ZCR5ZCO5YW85a6577yJJywgKCkgPT4gewogIGNvbnN0IHJlZ2lzdHJ5ID0gbmV3IFByb2dyZXNzUmVnaXN0cnkoKQogIHJlZ2lzdHJ5LnN0YXJ0KCdzZXNzaW9uJykgICAgICAgICAgICAgICAgICAgICAgIC8vIOaXp+W8j++8muWPquaciSBraW5kCiAgcmVnaXN0cnkuc3RhcnQoJ3Nlc3Npb24nLCB7IGFjdGlvbjogJ2RlbGV0ZScgfSkgLy8g5paw5byP77ya5Yig6ZmkCiAgY29uc3QgdXBkYXRlZCA9IHJlZ2lzdHJ5LnVwZGF0ZSgnc2Vzc2lvbicsIHsgc3RhZ2U6ICdwdXNoJyB9KQogIGFzc2VydC5lcXVhbCh1cGRhdGVkLmFjdGlvbiwgJ2JhY2t1cCcsICfmnKrmjIflrpogYWN0aW9uIOaXtuW6lOWRveS4rSBiYWNrdXAg5p2h55uuJykKICBjb25zdCBmaW5pc2hlZCA9IHJlZ2lzdHJ5LmZpbmlzaCgnc2Vzc2lvbicsIHsgb2s6IHRydWUgfSkKICBhc3NlcnQuZXF1YWwoZmluaXNoZWQuYWN0aW9uLCAnYmFja3VwJykKfSkKCnRlc3QoJ+mdnuazlSBhY3Rpb24g5ZON5Lqu5aSx6LSl77yM5LiN6Z2Z6buY5b2T5L2cIGJhY2t1cCcsICgpID0+IHsKICBjb25zdCByZWdpc3RyeSA9IG5ldyBQcm9ncmVzc1JlZ2lzdHJ5KCkKICBhc3NlcnQudGhyb3dzKCgpID0+IHJlZ2lzdHJ5LnN0YXJ0KCdzZXNzaW9uJywgeyBhY3Rpb246ICdwdXJnZScgfSksIC91bmtub3duIHByb2dyZXNzIGFjdGlvbi91KQogIHJlZ2lzdHJ5LnN0YXJ0KCdzZXNzaW9uJykKICBhc3NlcnQudGhyb3dzKCgpID0+IHJlZ2lzdHJ5LnVwZGF0ZSgnc2Vzc2lvbicsIHsgYWN0aW9uOiAncHVyZ2UnIH0pLCAvdW5rbm93biBwcm9ncmVzcyBhY3Rpb24vdSkKICBhc3NlcnQudGhyb3dzKCgpID0+IHJlZ2lzdHJ5LmZpbmlzaCgnc2Vzc2lvbicsIHsgYWN0aW9uOiAncHVyZ2UnIH0pLCAvdW5rbm93biBwcm9ncmVzcyBhY3Rpb24vdSkKfSkKCnRlc3QoJ+WIoOmZpOadoeebruWujOaIkOWQjuWQjOagt+i/m+WFpeS/neeVmeacn++8iOS+m+aSreaUvuaUtuWwvuWKqOeUu++8iScsICgpID0+IHsKICBsZXQgY2xvY2sgPSAxXzAwMF8wMDAKICBjb25zdCByZWdpc3RyeSA9IG5ldyBQcm9ncmVzc1JlZ2lzdHJ5KHsgbm93OiAoKSA9PiBjbG9jayB9KQogIHJlZ2lzdHJ5LnN0YXJ0KCdwbHVnaW4nLCB7IGFjdGlvbjogJ2RlbGV0ZScgfSkKICByZWdpc3RyeS5maW5pc2goJ3BsdWdpbicsIHsgb2s6IHRydWUsIGFjdGlvbjogJ2RlbGV0ZScgfSkKICBhc3NlcnQuZXF1YWwocmVnaXN0cnkuc25hcHNob3QoKS5lbnRyaWVzLmxlbmd0aCwgMSkKICBjbG9jayArPSBGSU5JU0hFRF9MSU5HRVJfTVMgKyAyCiAgYXNzZXJ0LmVxdWFsKHJlZ2lzdHJ5LnNuYXBzaG90KCkuZW50cmllcy5sZW5ndGgsIDAsICfotoXov4fkv53nlZnmnJ/lupTooqvmuIXnkIYnKQp9KQoKdGVzdCgnZmluaXNoKCkg5L+d55WZ5p2h55uu5Lul5L6/5pKt5pS+5pS25bC+5Yqo55S777yM6LaF5pyf5ZCO5oOw5oCn5riF55CGJywgKCkgPT4gewogIGxldCBjbG9jayA9IDFfMDAwXzAwMAogIGNvbnN0IHJlZ2lzdHJ5ID0gbmV3IFByb2dyZXNzUmVnaXN0cnkoeyBub3c6ICgpID0+IGNsb2NrIH0pCiAgcmVnaXN0cnkuc3RhcnQoJ3Nlc3Npb24nKQogIHJlZ2lzdHJ5LmZpbmlzaCgnc2Vzc2lvbicsIHsgb2s6IHRydWUgfSkKICBhc3NlcnQuZXF1YWwocmVnaXN0cnkuc25hcHNob3QoKS5lbnRyaWVzLmxlbmd0aCwgMSwgJ+WImue7k+adn+S7jeWcqOW/q+eFp+WGhScpCgogIGNsb2NrICs9IEZJTklTSEVEX0xJTkdFUl9NUyAtIDEKICBhc3NlcnQuZXF1YWwocmVnaXN0cnkuc25hcHNob3QoKS5lbnRyaWVzLmxlbmd0aCwgMSkKCiAgY2xvY2sgKz0gMgogIGFzc2VydC5lcXVhbChyZWdpc3RyeS5zbmFwc2hvdCgpLmVudHJpZXMubGVuZ3RoLCAwLCAn6LaF6L+H5L+d55WZ5pyf5bqU6KKr5riF55CGJykKfSkKCnRlc3QoJ+Wksei0peeahOWkh+S7veWmguWunuiusOW9lemUmeivr++8jOS4lOS4jeaKiiBwZXJjZW50IOWIt+aIkCAxMDAnLCAoKSA9PiB7CiAgY29uc3QgcmVnaXN0cnkgPSBuZXcgUHJvZ3Jlc3NSZWdpc3RyeSgpCiAgcmVnaXN0cnkuc3RhcnQoJ3BsdWdpbicpCiAgcmVnaXN0cnkudXBkYXRlKCdwbHVnaW4nLCB7IHN0YWdlOiAncHVzaCcsIHBlcmNlbnQ6IDQyIH0pCiAgY29uc3QgZW50cnkgPSByZWdpc3RyeS5maW5pc2goJ3BsdWdpbicsIHsgb2s6IGZhbHNlLCBlcnJvcjogJ2dpdCBwdXNoIGZhaWxlZDogcmVqZWN0ZWQnIH0pCiAgYXNzZXJ0LmVxdWFsKGVudHJ5LnN0YXRlLCAnZmluaXNoZWQnKQogIGFzc2VydC5lcXVhbChlbnRyeS5vaywgZmFsc2UpCiAgYXNzZXJ0LmVxdWFsKGVudHJ5LmVycm9yLCAnZ2l0IHB1c2ggZmFpbGVkOiByZWplY3RlZCcpCiAgYXNzZXJ0LmVxdWFsKGVudHJ5LnBlcmNlbnQsIDQyLCAn5aSx6LSl5pe25L+d55WZ5pyA5ZCO5LiA5qyh55yf5a6e6L+b5bqm77yM5LiN5Lyq6KOF5a6M5oiQJykKfSkKCnRlc3QoJ+acquefpeWfn+WTjeS6ruWksei0pe+8jOS4jemdmem7mOWQnuaOieiwg+eUqOmUmeivrycsICgpID0+IHsKICBjb25zdCByZWdpc3RyeSA9IG5ldyBQcm9ncmVzc1JlZ2lzdHJ5KCkKICBhc3NlcnQudGhyb3dzKCgpID0+IC8qKiBAdHlwZSB7YW55fSAqLyAocmVnaXN0cnkpLnN0YXJ0KCd1bmtub3duJyksIC91bmtub3duIHByb2dyZXNzIGtpbmQvdSkKfSkKCnRlc3QoJ+mVnOWDj+mYtuauteeahOaWh+S7tuiuoeaVsOaYr+ecn+WunuiuoeaVsO+8jOS4jeaYr+eZvuWIhuavlOaNoueulycsICgpID0+IHsKICBjb25zdCByZWdpc3RyeSA9IG5ldyBQcm9ncmVzc1JlZ2lzdHJ5KCkKICByZWdpc3RyeS5zdGFydCgnc2Vzc2lvbicsIHsgdG90YWw6IDE0IH0pCiAgcmVnaXN0cnkudXBkYXRlKCdzZXNzaW9uJywgeyBzdGFnZTogJ21pcnJvcicsIGZpbGVzOiB7IGRvbmU6IDksIHRvdGFsOiAxNCB9IH0pCiAgY29uc3QgW2VudHJ5XSA9IHJlZ2lzdHJ5LnNuYXBzaG90KCkuZW50cmllcwogIGFzc2VydC5kZWVwRXF1YWwoZW50cnkuZmlsZXMsIHsgZG9uZTogOSwgdG90YWw6IDE0IH0pCiAgYXNzZXJ0LmVxdWFsKGVudHJ5LnBlcmNlbnQsIG51bGwsICfmlofku7borqHmlbDkuI3nrYnkuo7lt7LmjqjpgIHnmb7liIbmr5QnKQp9KQo=
+// test/progress.test.mjs — 进度解析必须是"真数据"，且不得编造百分比。
+//
+// 夹具来源：2026-10-15 本机实测 `git push --progress`（git 2.55.0.windows.3）
+// 的 stderr 原始输出，逐行抄录——不是构造的理想样本。
+import { test } from 'node:test'
+import assert from 'node:assert/strict'
+import {
+  ProgressRegistry,
+  PROGRESS_KINDS,
+  FINISHED_LINGER_MS,
+  parseGitProgressLine,
+  feedGitProgress,
+} from '../lib/progress.mjs'
+
+// 实测输出（原样保留空格与标点）
+const REAL_GIT_PUSH_STDERR = [
+  'Enumerating objects: 3, done.',
+  'Counting objects:  33% (1/3)',
+  'Counting objects:  66% (2/3)',
+  'Counting objects: 100% (3/3)',
+  'Counting objects: 100% (3/3), done.',
+  'Delta compression using up to 20 threads',
+  'Compressing objects:  50% (1/2)',
+  'Compressing objects: 100% (2/2)',
+  'Compressing objects: 100% (2/2), done.',
+  'Writing objects:  33% (1/3)',
+  'Writing objects:  66% (2/3)',
+  'Writing objects: 100% (3/3)',
+  'Writing objects: 100% (3/3), 392 bytes | 392.00 KiB/s, done.',
+  'Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)',
+  'To C:\\Users\\HUANGX~1\\AppData\\Local\\Temp\\git-progress-probe\\bare.git',
+  ' * [new branch]      HEAD -> main',
+]
+
+test('解析实测 git 输出：每条百分比都来自原文，不生成任何数字', () => {
+  const parsed = REAL_GIT_PUSH_STDERR.map(parseGitProgressLine)
+
+  // 与原文逐行对齐：有百分比的行 → 解析出百分比；(3/3) → 计数正确
+  assert.deepEqual(parsed[1], { phase: 'counting', percent: 33, counts: { done: 1, total: 3 } })
+  assert.deepEqual(parsed[3], { phase: 'counting', percent: 100, counts: { done: 3, total: 3 } })
+  assert.deepEqual(parsed[6], { phase: 'compressing', percent: 50, counts: { done: 1, total: 2 } })
+  assert.deepEqual(parsed[9], { phase: 'writing', percent: 33, counts: { done: 1, total: 3 } })
+  assert.deepEqual(parsed[10], { phase: 'writing', percent: 66, counts: { done: 2, total: 3 } })
+
+  // 无进度的行必须返回 null（不被当成 0%）
+  assert.equal(parsed[5], null, 'Delta compression ... 不含进度，应为 null')
+  assert.equal(parsed[13], null, 'Total 3 (delta 0) ... 不含进度，应为 null')
+  assert.equal(parsed[14], null, '远端地址行不含进度')
+  assert.equal(parsed[15], null, '分支引用行不含进度')
+
+  // Enumerating objects: 3, done. → 计数型
+  assert.deepEqual(parsed[0], { phase: 'enumerating', percent: 100, counts: { done: 3, total: 3 } })
+
+  // 完成行带速率
+  assert.equal(parsed[12].percent, 100)
+  assert.equal(parsed[12].counts.total, 3)
+  assert.equal(parsed[12].rate, '392.00 KiB/s')
+})
+
+test('git 的百分比是【阶段自身】的——不得冒充全局进度', () => {
+  // 实测里 Counting 到达 100% 之后，Compressing 又从 50% 开始。
+  // 若把它当全局百分比，进度条就会从 100% 倒退。注册表必须原样保存 phase + percent。
+  const registry = new ProgressRegistry()
+  registry.start('session')
+  const state = { carry: '' }
+  for (const line of REAL_GIT_PUSH_STDERR) {
+    feedGitProgress(registry, 'session', `${line}\n`, state)
+  }
+  const [entry] = registry.snapshot().entries
+  assert.equal(entry.stage, 'push')
+  assert.equal(entry.phase, 'writing', '最后一个带进度的阶段是 writing')
+  assert.deepEqual(entry.counts, { done: 3, total: 3 })
+  assert.equal(entry.rate, '392.00 KiB/s')
+  // 阶段百分比照实记录（100），但它不代表"整个备份完成"
+  assert.equal(entry.percent, 100)
+})
+
+test('跨 chunk 的残行必须被正确拼接（流式读取的真实场景）', () => {
+  const registry = new ProgressRegistry()
+  registry.start('plugin')
+  const state = { carry: '' }
+  const text = 'Writing objects:  66% (2/3)\n'
+  // 故意在行中间切断
+  feedGitProgress(registry, 'plugin', text.slice(0, 12), state)
+  const mid = registry.snapshot().entries[0]
+  assert.equal(mid.percent, null, '半行不得产生任何进度')
+  feedGitProgress(registry, 'plugin', text.slice(12), state)
+  const after = registry.snapshot().entries[0]
+  assert.equal(after.percent, 66, '补齐后应解析出 66%')
+  assert.deepEqual(after.counts, { done: 2, total: 3 })
+})
+
+test('没有真实百分比时保持 null（前端据此走不确定态）', () => {
+  const registry = new ProgressRegistry()
+  const entry = registry.start('skill')
+  assert.equal(entry.percent, null, 'start() 不得预设 0-100 的假值')
+  assert.equal(entry.state, 'running')
+  const after = registry.update('skill', { stage: 'push' })
+  assert.equal(after.percent, null)
+})
+
+test('三类域互不干扰，且按 session/plugin/skill 顺序快照', () => {
+  const registry = new ProgressRegistry()
+  registry.start('skill')
+  registry.start('session')
+  registry.start('plugin')
+  const { entries } = registry.snapshot()
+  assert.deepEqual(entries.map((e) => e.kind), ['session', 'plugin', 'skill'])
+  assert.deepEqual(PROGRESS_KINDS, ['session', 'plugin', 'skill'])
+})
+
+// 回归：cloud 路由路径必须按【结尾】匹配多段路由名。
+// 2026-10-15 真实事故：index.mjs 曾用 `path.slice(path.lastIndexOf('/') + 1)` 取最后一段，
+// 对 `/api/dsh-session-sync/cloud/snapshot/push` 只会拿到 `push`，永远匹配不上
+// `snapshot/push`，导致插件/技能备份的进度条从不出现（会话备份正常）。
+test('备份路由按结尾匹配：真实 cloud 路径必须被识别为 plugin/skill', () => {
+  // 这两个是真实路径（实测自 lib/cloud.mjs 的 cloudRoutePaths()）。
+  const realPaths = [
+    '/api/dsh-session-sync/cloud/snapshot/push',
+    '/api/dsh-session-sync/cloud/skill/push',
+    '/api/dsh-session-sync/cloud/inventory',
+    '/api/dsh-session-sync/cloud/snapshot/history',
+  ]
+
+  // 当前实现：结尾匹配
+  const kindOf = (path) => (path.endsWith('/skill/push') ? 'skill' : path.endsWith('/snapshot/push') ? 'plugin' : null)
+  // 旧的错误实现：取最后一段
+  const buggyKindOf = (path) => {
+    const tail = path.slice(path.lastIndexOf('/') + 1)
+    return tail === 'skill/push' ? 'skill' : tail === 'snapshot/push' ? 'plugin' : null
+  }
+
+  assert.equal(kindOf(realPaths[0]), 'plugin', 'snapshot/push 必须识别为 plugin')
+  assert.equal(kindOf(realPaths[1]), 'skill', 'skill/push 必须识别为 skill')
+  assert.equal(kindOf(realPaths[2]), null, 'inventory 不得被识别为备份')
+  assert.equal(kindOf(realPaths[3]), null, 'snapshot/history 不得被识别为备份')
+
+  // 锁死回归：旧的"取最后一段"实现在真实路径上必须失效（证明它确实有 bug）
+  assert.equal(buggyKindOf(realPaths[0]), null, '旧实现取最后一段拿不到 snapshot/push')
+  assert.equal(buggyKindOf(realPaths[1]), null, '旧实现取最后一段拿不到 skill/push')
+})
+
+test('未包装的路由不产生任何进度条目（不误伤非备份操作）', () => {
+  const registry = new ProgressRegistry()
+  // 只有被显式 start 的域才有条目；仅调用 snapshot 不得凭空产生条目
+  assert.deepEqual(registry.snapshot().entries, [])
+  assert.equal(registry.hasRunning(), false)
+})
+
+// —— action 维度：备份与删除同域并存（本次改动的核心契约）——
+test('同域的备份与删除是两条独立条目，互不覆盖', () => {
+  const registry = new ProgressRegistry()
+  registry.start('plugin', { label: '插件备份', action: 'backup' })
+  registry.start('plugin', { label: '插件备份删除', action: 'delete', stage: 'delete' })
+
+  const entries = registry.snapshot().entries
+  assert.equal(entries.length, 2, '同域 backup + delete 必须同时存在，不能被后者覆盖')
+  assert.deepEqual(entries.map((e) => e.action), ['backup', 'delete'], '同 kind 内 backup 在前、delete 在后')
+  assert.deepEqual(entries.map((e) => e.label), ['插件备份', '插件备份删除'])
+})
+
+test('只更新 delete 条目时，同域的 backup 条目不受影响', () => {
+  const registry = new ProgressRegistry()
+  registry.start('plugin', { action: 'backup', stage: 'collecting' })
+  registry.start('plugin', { action: 'delete', stage: 'delete' })
+
+  registry.update('plugin', { action: 'delete', stage: 'delete', files: { done: 2, total: 5 } })
+
+  const entries = registry.snapshot().entries
+  const backup = entries.find((e) => e.action === 'backup')
+  const del = entries.find((e) => e.action === 'delete')
+  assert.deepEqual(del.files, { done: 2, total: 5 }, 'delete 条目应被更新')
+  assert.equal(backup.files, null, 'backup 条目不得被 delete 的更新污染')
+  assert.equal(backup.stage, 'collecting', 'backup 的 stage 不得被改写')
+})
+
+test('删除失败不影响同域备份条目的状态', () => {
+  const registry = new ProgressRegistry()
+  registry.start('skill', { action: 'backup' })
+  registry.start('skill', { action: 'delete' })
+
+  const failed = registry.finish('skill', { ok: false, error: 'remove failed', action: 'delete' })
+  assert.equal(failed.state, 'finished')
+  assert.equal(failed.ok, false)
+  assert.equal(failed.error, 'remove failed')
+
+  const backup = registry.snapshot().entries.find((e) => e.action === 'backup')
+  assert.equal(backup.state, 'running', '同域备份条目不得被删除的失败收尾波及')
+})
+
+test('不传 action 的旧调用方仍指向 backup 条目（向后兼容）', () => {
+  const registry = new ProgressRegistry()
+  registry.start('session')                       // 旧式：只有 kind
+  registry.start('session', { action: 'delete' }) // 新式：删除
+  const updated = registry.update('session', { stage: 'push' })
+  assert.equal(updated.action, 'backup', '未指定 action 时应命中 backup 条目')
+  const finished = registry.finish('session', { ok: true })
+  assert.equal(finished.action, 'backup')
+})
+
+test('非法 action 响亮失败，不静默当作 backup', () => {
+  const registry = new ProgressRegistry()
+  assert.throws(() => registry.start('session', { action: 'purge' }), /unknown progress action/u)
+  registry.start('session')
+  assert.throws(() => registry.update('session', { action: 'purge' }), /unknown progress action/u)
+  assert.throws(() => registry.finish('session', { action: 'purge' }), /unknown progress action/u)
+})
+
+test('删除条目完成后同样进入保留期（供播放收尾动画）', () => {
+  let clock = 1_000_000
+  const registry = new ProgressRegistry({ now: () => clock })
+  registry.start('plugin', { action: 'delete' })
+  registry.finish('plugin', { ok: true, action: 'delete' })
+  assert.equal(registry.snapshot().entries.length, 1)
+  clock += FINISHED_LINGER_MS + 2
+  assert.equal(registry.snapshot().entries.length, 0, '超过保留期应被清理')
+})
+
+test('finish() 保留条目以便播放收尾动画，超期后惰性清理', () => {
+  let clock = 1_000_000
+  const registry = new ProgressRegistry({ now: () => clock })
+  registry.start('session')
+  registry.finish('session', { ok: true })
+  assert.equal(registry.snapshot().entries.length, 1, '刚结束仍在快照内')
+
+  clock += FINISHED_LINGER_MS - 1
+  assert.equal(registry.snapshot().entries.length, 1)
+
+  clock += 2
+  assert.equal(registry.snapshot().entries.length, 0, '超过保留期应被清理')
+})
+
+test('失败的备份如实记录错误，且不把 percent 刷成 100', () => {
+  const registry = new ProgressRegistry()
+  registry.start('plugin')
+  registry.update('plugin', { stage: 'push', percent: 42 })
+  const entry = registry.finish('plugin', { ok: false, error: 'git push failed: rejected' })
+  assert.equal(entry.state, 'finished')
+  assert.equal(entry.ok, false)
+  assert.equal(entry.error, 'git push failed: rejected')
+  assert.equal(entry.percent, 42, '失败时保留最后一次真实进度，不伪装完成')
+})
+
+test('未知域响亮失败，不静默吞掉调用错误', () => {
+  const registry = new ProgressRegistry()
+  assert.throws(() => /** @type {any} */ (registry).start('unknown'), /unknown progress kind/u)
+})
+
+test('镜像阶段的文件计数是真实计数，不是百分比换算', () => {
+  const registry = new ProgressRegistry()
+  registry.start('session', { total: 14 })
+  registry.update('session', { stage: 'mirror', files: { done: 9, total: 14 } })
+  const [entry] = registry.snapshot().entries
+  assert.deepEqual(entry.files, { done: 9, total: 14 })
+  assert.equal(entry.percent, null, '文件计数不等于已推送百分比')
+})

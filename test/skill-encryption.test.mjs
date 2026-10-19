@@ -1,1 +1,122 @@
-Ly8gdGVzdC9za2lsbC1lbmNyeXB0aW9uLnRlc3QubWpzIOKAlCDmioDog73lpIfku73ln5/vvIhza2lsbHMv77yJ55qE5Yqg5a+G5aWR57qm6Zeo44CCCi8vCi8vIOiDjOaZr++8mkVuY3J5cHRlZFByb3ZpZGVyIOeahCBlbmNyeXB0ZWRLZXkoKSDljp/lhYjlj6ropobnm5Ygc25hcHNob3RzLyDkuI4gc291cmNlcy/vvIwKLy8g5ryP5o6J5oqA6IO95aSH5Lu95Z+fIHNraWxscy8g4oCU4oCUIOW8gOWQr+WuouaIt+err+WKoOWvhuWQju+8jOaKgOiDveW9kuaho++8iFNLSUxMLm1kIOS4jumZhOS7tu+8iQovLyDku43ku6XmmI7mlofokL3liLDov5znq6/jgILmnKzpl6jnq6/liLDnq6/plIHlrprkuInku7bkuovvvJoKLy8gICAxLiBza2lsbHMvIOW9kuaho+iQvei/nOerr+eahOaYr+WvhuaWh++8jOS4lOS4jeWQq+WOn+Wni+aYjuaWh+Wtl+iKgu+8iOS4jeW+l+aYjuaWh+S4iuS8oO+8ie+8mwovLyAgIDIuIOWGmeWFpeWQjuivu+WbnuiDvei/mOWOn+S4uuWOn+Wni+aYjuaWh++8iHJvdW5kLXRyaXDvvInvvJsKLy8gICAzLiDlvIDlkK/liqDlr4bliY3kuIrkvKDnmoTml6fmmI7mloflvZLmoaPku43lj6/or7vlm54g4oCU4oCUIGRlY3J5cHRFbnZlbG9wZSDlr7kgZm9ybWF0Ci8vICAgICAg5LiN5Yy56YWN55qE5q2j5paH5Y6f5qC36YCP5Lyg77yM5omA5Lul6L+Z5Liq5L+u5aSN5LiN5Lya5oqK5Y6G5Y+y5pWw5o2u5Y+Y5oiQ5o2f5Z2P5pWw5o2u44CCCmltcG9ydCB7IHRlc3QgfSBmcm9tICdub2RlOnRlc3QnCmltcG9ydCBhc3NlcnQgZnJvbSAnbm9kZTphc3NlcnQvc3RyaWN0JwppbXBvcnQgeyBta2R0ZW1wLCBta2Rpciwgcm0sIHdyaXRlRmlsZSB9IGZyb20gJ25vZGU6ZnMvcHJvbWlzZXMnCmltcG9ydCB7IHRtcGRpciB9IGZyb20gJ25vZGU6b3MnCmltcG9ydCB7IGpvaW4gfSBmcm9tICdub2RlOnBhdGgnCmltcG9ydCB7IHByb3ZpZGVyRnJvbSwgdW5sb2NrRW5jcnlwdGlvbiB9IGZyb20gJy4uL2xpYi9jbG91ZC1jb3JlLm1qcycKCi8vIOS4jiBjbG91ZC1jb3JlIOeahCBFTkNSWVBURURfRk9STUFUIOWQjOWAvO+8iOivpeW4uOmHj+acquWvvOWHuu+8jOaVheWcqOatpOmVnOWDj++8mwovLyDoi6XkuIrmuLjmlLnlkI3vvIzmnKzpl6jkvJrlpLHotKXogIzkuI3mmK/pnZnpu5jmlL7ov4fvvInjgIIKY29uc3QgRU5DUllQVEVEX0ZPUk1BVCA9ICdkc2gtY2xvdWQtc3luYy9lbmNyeXB0ZWQvdjEnCmNvbnN0IFBBU1NQSFJBU0UgPSAnY29ycmVjdC1ob3JzZS1iYXR0ZXJ5LXN0YXBsZScKCmZ1bmN0aW9uIGlzRW52ZWxvcGUoYnVmKSB7CiAgdHJ5IHsKICAgIHJldHVybiBKU09OLnBhcnNlKGJ1Zi50b1N0cmluZygndXRmOCcpKT8uZm9ybWF0ID09PSBFTkNSWVBURURfRk9STUFUCiAgfSBjYXRjaCB7CiAgICByZXR1cm4gZmFsc2UKICB9Cn0KCmFzeW5jIGZ1bmN0aW9uIG1ha2VIb21lKCkgewogIGNvbnN0IGhvbWUgPSBhd2FpdCBta2R0ZW1wKGpvaW4odG1wZGlyKCksICdkc2gtc2tpbGwtZW5jLScpKQogIGF3YWl0IG1rZGlyKGpvaW4oaG9tZSwgJ2RzaC1jbG91ZC1zeW5jJyksIHsgcmVjdXJzaXZlOiB0cnVlIH0pCiAgYXdhaXQgd3JpdGVGaWxlKAogICAgam9pbihob21lLCAnZHNoLWNsb3VkLXN5bmMnLCAnc2V0dGluZ3MuanNvbicpLAogICAgSlNPTi5zdHJpbmdpZnkoewogICAgICBzY2hlbWE6ICdkc2gtY2xvdWQtc3luYy92MScsCiAgICAgIHByb3ZpZGVyOiB7IHR5cGU6ICdnaXN0JywgZ2lzdElkOiAnZzEnLCB0b2tlbjogJ3RvaycgfSwKICAgICAgZW5jcnlwdGlvbjogeyBlbmFibGVkOiBmYWxzZSwgc2FsdDogJycgfSwKICAgIH0pLAogICkKICByZXR1cm4gaG9tZQp9Cgphc3luYyBmdW5jdGlvbiBlbmNyeXB0ZWRQcm92aWRlckZvcihob21lKSB7CiAgY29uc3Qgd3JpdHRlbiA9IG5ldyBNYXAoKQogIGF3YWl0IHVubG9ja0VuY3J5cHRpb24oeyBwYXNzcGhyYXNlOiBQQVNTUEhSQVNFLCBlbmFibGU6IHRydWUgfSwgeyBob21lIH0pCiAgLyoqIEB0eXBlIHthbnl9ICovCiAgY29uc3Qgd3JhcHBlZCA9IHByb3ZpZGVyRnJvbSgKICAgIHsgcHJvdmlkZXI6IHsgdHlwZTogJ2dpc3QnLCBnaXN0SWQ6ICdnMScsIHRva2VuOiAndG9rJyB9LCBlbmNyeXB0aW9uOiB7IGVuYWJsZWQ6IHRydWUsIHNhbHQ6ICcnIH0gfSwKICAgIGhvbWUsCiAgKQogIHdyYXBwZWQucHJvdmlkZXIgPSB7CiAgICBhc3luYyBwdXQoa2V5LCBib2R5KSB7IHdyaXR0ZW4uc2V0KGtleSwgQnVmZmVyLmZyb20oYm9keSkpIH0sCiAgICBhc3luYyBnZXRXaXRoTWV0YShrZXkpIHsKICAgICAgY29uc3QgYm9keSA9IHdyaXR0ZW4uZ2V0KGtleSkKICAgICAgaWYgKGJvZHkgPT09IHVuZGVmaW5lZCkgdGhyb3cgbmV3IEVycm9yKCdtaXNzaW5nICcgKyBrZXkpCiAgICAgIHJldHVybiB7IGJvZHksIGV0YWc6IFN0cmluZy5mcm9tQ2hhckNvZGUoMzQpICsgJ2UxJyArIFN0cmluZy5mcm9tQ2hhckNvZGUoMzQpIH0KICAgIH0sCiAgfQogIHJldHVybiB7IHByb3ZpZGVyOiB3cmFwcGVkLCB3cml0dGVuIH0KfQoKYXN5bmMgZnVuY3Rpb24gd2l0aEhvbWUoZm4pIHsKICBjb25zdCBob21lID0gYXdhaXQgbWFrZUhvbWUoKQogIHRyeSB7IHJldHVybiBhd2FpdCBmbihob21lKSB9IGZpbmFsbHkgeyBhd2FpdCBybShob21lLCB7IHJlY3Vyc2l2ZTogdHJ1ZSwgZm9yY2U6IHRydWUgfSkgfQp9Cgp0ZXN0KCdza2lsbHMvIOW9kuaho+iQvei/nOerr+S4uuWvhuaWh+S4lOS4jeWQq+aYjuaWh+Wtl+iKgicsIGFzeW5jICgpID0+IHsKICBhd2FpdCB3aXRoSG9tZShhc3luYyAoaG9tZSkgPT4gewogICAgY29uc3QgeyBwcm92aWRlciwgd3JpdHRlbiB9ID0gYXdhaXQgZW5jcnlwdGVkUHJvdmlkZXJGb3IoaG9tZSkKICAgIGNvbnN0IHBheWxvYWQgPSBCdWZmZXIuZnJvbSgnU0tJTEwubWQgY29udGVudHMgdGhhdCBtdXN0IG5ldmVyIGJlIHBsYWludGV4dCcpCiAgICBjb25zdCBrZXkgPSAnc2tpbGxzL2FscGhhLWFhYWExMjM0LXAxb2YyLmpzb24uZ3onCiAgICBhd2FpdCBwcm92aWRlci5wdXQoa2V5LCBwYXlsb2FkKQogICAgY29uc3Qgc3RvcmVkID0gd3JpdHRlbi5nZXQoa2V5KQogICAgYXNzZXJ0Lm9rKHN0b3JlZCAhPT0gdW5kZWZpbmVkLCAn5b+F6aG75YaZ5YWl6L+c56uvJykKICAgIGFzc2VydC5lcXVhbChpc0VudmVsb3BlKHN0b3JlZCksIHRydWUsICdza2lsbHMvIOiQveebmOW/hemhu+aYr+WKoOWvhuS/oeWwge+8jOS4jeiDveaYr+aYjuaWhycpCiAgICBhc3NlcnQuZXF1YWwoc3RvcmVkLmluY2x1ZGVzKHBheWxvYWQpLCBmYWxzZSwgJ+WvhuaWh+S4reS4jeW+l+WMheWQq+WOn+Wni+aYjuaWh+Wtl+iKgicpCiAgfSkKfSkKCnRlc3QoJ+aKgOiDveW9kuahoyByb3VuZC10cmlw77ya5YaZ5YWl5ZCO6K+75Zue6L+Y5Y6f5Li65Y6f5aeL5piO5paHJywgYXN5bmMgKCkgPT4gewogIGF3YWl0IHdpdGhIb21lKGFzeW5jIChob21lKSA9PiB7CiAgICBjb25zdCB7IHByb3ZpZGVyIH0gPSBhd2FpdCBlbmNyeXB0ZWRQcm92aWRlckZvcihob21lKQogICAgY29uc3QgcGF5bG9hZCA9IEJ1ZmZlci5mcm9tKCdyb3VuZC10cmlwIHNraWxsIGFyY2hpdmUgYnl0ZXMnKQogICAgY29uc3Qga2V5ID0gJ3NraWxscy9iZXRhLWJiYmI1Njc4Lmpzb24uZ3onCiAgICBhd2FpdCBwcm92aWRlci5wdXQoa2V5LCBwYXlsb2FkKQogICAgY29uc3QgYmFjayA9IGF3YWl0IHByb3ZpZGVyLmdldChrZXkpCiAgICBhc3NlcnQuZGVlcEVxdWFsKEJ1ZmZlci5mcm9tKGJhY2spLCBwYXlsb2FkLCAn6K+75Zue5bqU6L+Y5Y6f5Li65Y6f5aeL5piO5paHJykKICB9KQp9KQoKdGVzdCgn5LiJ5Liq56eB5pyJ5YaF5a655YmN57yA6YO96KKr5Yqg5a+G77yM5pyq55+l5YmN57yA5L+d5oyB5piO5paHJywgYXN5bmMgKCkgPT4gewogIGF3YWl0IHdpdGhIb21lKGFzeW5jIChob21lKSA9PiB7CiAgICBjb25zdCB7IHByb3ZpZGVyLCB3cml0dGVuIH0gPSBhd2FpdCBlbmNyeXB0ZWRQcm92aWRlckZvcihob21lKQogICAgY29uc3QgY2FzZXMgPSBbCiAgICAgIFsnc25hcHNob3RzL2xhdGVzdC5qc29uLmd6JywgdHJ1ZV0sCiAgICAgIFsnc291cmNlcy9wbHVnaW4tYS50Z3onLCB0cnVlXSwKICAgICAgWydza2lsbHMvYmF0Y2gtZmZmZi5qc29uLmd6JywgdHJ1ZV0sCiAgICAgIFsnaW5kZXgvYW55dGhpbmcuanNvbicsIGZhbHNlXSwKICAgIF0KICAgIGZvciAoY29uc3QgaXRlbSBvZiBjYXNlcykgewogICAgICBjb25zdCBrZXkgPSBpdGVtWzBdCiAgICAgIGNvbnN0IHNob3VsZEVuY3J5cHQgPSBpdGVtWzFdCiAgICAgIGNvbnN0IHBheWxvYWQgPSBCdWZmZXIuZnJvbSgncGF5bG9hZC1mb3ItJyArIFN0cmluZyhrZXkpKQogICAgICBhd2FpdCBwcm92aWRlci5wdXQoa2V5LCBwYXlsb2FkKQogICAgICBjb25zdCBzdG9yZWQgPSB3cml0dGVuLmdldChrZXkpCiAgICAgIGFzc2VydC5lcXVhbChpc0VudmVsb3BlKHN0b3JlZCksIHNob3VsZEVuY3J5cHQsIGtleSArICcg5Yqg5a+G5Yik5a6a6ZSZ6K+vJykKICAgIH0KICB9KQp9KQoKdGVzdCgn5pen5piO5paH5b2S5qGj5Zyo5Yqg5a+G5qih5byP5LiL5LuN5Y+v6K+75Zue77yI5ZCR5ZCO5YW85a6577yJJywgYXN5bmMgKCkgPT4gewogIGF3YWl0IHdpdGhIb21lKGFzeW5jIChob21lKSA9PiB7CiAgICBjb25zdCB7IHByb3ZpZGVyLCB3cml0dGVuIH0gPSBhd2FpdCBlbmNyeXB0ZWRQcm92aWRlckZvcihob21lKQogICAgY29uc3QgbGVnYWN5ID0gQnVmZmVyLmZyb20oJ2xlZ2FjeS1wbGFpbnRleHQtc2tpbGwtYXJjaGl2ZScpCiAgICBjb25zdCBrZXkgPSAnc2tpbGxzL2xlZ2FjeS5qc29uLmd6JwogICAgLy8g5qih5ouf5byA5ZCv5Yqg5a+G5LmL5YmN5LiK5Lyg55qE5piO5paH5b2S5qGj77ya55u05o6l5YaZ6L+b5bqV5bGC77yM57uV5byA5Yqg5a+G5YyF6KOF44CCCiAgICB3cml0dGVuLnNldChrZXksIGxlZ2FjeSkKICAgIGNvbnN0IGJhY2sgPSBhd2FpdCBwcm92aWRlci5nZXQoa2V5KQogICAgYXNzZXJ0LmRlZXBFcXVhbChCdWZmZXIuZnJvbShiYWNrKSwgbGVnYWN5LCAn5pen5piO5paH5b2S5qGj5b+F6aG75Y6f5qC36K+75ZueJykKICB9KQp9KQo=
+// test/skill-encryption.test.mjs — 技能备份域（skills/）的加密契约门。
+//
+// 背景：EncryptedProvider 的 encryptedKey() 原先只覆盖 snapshots/ 与 sources/，
+// 漏掉技能备份域 skills/ —— 开启客户端加密后，技能归档（SKILL.md 与附件）
+// 仍以明文落到远端。本门端到端锁定三件事：
+//   1. skills/ 归档落远端的是密文，且不含原始明文字节（不得明文上传）；
+//   2. 写入后读回能还原为原始明文（round-trip）；
+//   3. 开启加密前上传的旧明文归档仍可读回 —— decryptEnvelope 对 format
+//      不匹配的正文原样透传，所以这个修复不会把历史数据变成损坏数据。
+import { test } from 'node:test'
+import assert from 'node:assert/strict'
+import { mkdtemp, mkdir, rm, writeFile } from 'node:fs/promises'
+import { tmpdir } from 'node:os'
+import { join } from 'node:path'
+import { providerFrom, unlockEncryption } from '../lib/cloud-core.mjs'
+
+// 与 cloud-core 的 ENCRYPTED_FORMAT 同值（该常量未导出，故在此镜像；
+// 若上游改名，本门会失败而不是静默放过）。
+const ENCRYPTED_FORMAT = 'dsh-cloud-sync/encrypted/v1'
+const PASSPHRASE = 'correct-horse-battery-staple'
+
+function isEnvelope(buf) {
+  try {
+    return JSON.parse(buf.toString('utf8'))?.format === ENCRYPTED_FORMAT
+  } catch {
+    return false
+  }
+}
+
+async function makeHome() {
+  const home = await mkdtemp(join(tmpdir(), 'dsh-skill-enc-'))
+  await mkdir(join(home, 'dsh-cloud-sync'), { recursive: true })
+  await writeFile(
+    join(home, 'dsh-cloud-sync', 'settings.json'),
+    JSON.stringify({
+      schema: 'dsh-cloud-sync/v1',
+      provider: { type: 'gist', gistId: 'g1', token: 'tok' },
+      encryption: { enabled: false, salt: '' },
+    }),
+  )
+  return home
+}
+
+async function encryptedProviderFor(home) {
+  const written = new Map()
+  await unlockEncryption({ passphrase: PASSPHRASE, enable: true }, { home })
+  /** @type {any} */
+  const wrapped = providerFrom(
+    { provider: { type: 'gist', gistId: 'g1', token: 'tok' }, encryption: { enabled: true, salt: '' } },
+    home,
+  )
+  wrapped.provider = {
+    async put(key, body) { written.set(key, Buffer.from(body)) },
+    async getWithMeta(key) {
+      const body = written.get(key)
+      if (body === undefined) throw new Error('missing ' + key)
+      return { body, etag: String.fromCharCode(34) + 'e1' + String.fromCharCode(34) }
+    },
+  }
+  return { provider: wrapped, written }
+}
+
+async function withHome(fn) {
+  const home = await makeHome()
+  try { return await fn(home) } finally { await rm(home, { recursive: true, force: true }) }
+}
+
+test('skills/ 归档落远端为密文且不含明文字节', async () => {
+  await withHome(async (home) => {
+    const { provider, written } = await encryptedProviderFor(home)
+    const payload = Buffer.from('SKILL.md contents that must never be plaintext')
+    const key = 'skills/alpha-aaaa1234-p1of2.json.gz'
+    await provider.put(key, payload)
+    const stored = written.get(key)
+    assert.ok(stored !== undefined, '必须写入远端')
+    assert.equal(isEnvelope(stored), true, 'skills/ 落盘必须是加密信封，不能是明文')
+    assert.equal(stored.includes(payload), false, '密文中不得包含原始明文字节')
+  })
+})
+
+test('技能归档 round-trip：写入后读回还原为原始明文', async () => {
+  await withHome(async (home) => {
+    const { provider } = await encryptedProviderFor(home)
+    const payload = Buffer.from('round-trip skill archive bytes')
+    const key = 'skills/beta-bbbb5678.json.gz'
+    await provider.put(key, payload)
+    const back = await provider.get(key)
+    assert.deepEqual(Buffer.from(back), payload, '读回应还原为原始明文')
+  })
+})
+
+test('三个私有内容前缀都被加密，未知前缀保持明文', async () => {
+  await withHome(async (home) => {
+    const { provider, written } = await encryptedProviderFor(home)
+    const cases = [
+      ['snapshots/latest.json.gz', true],
+      ['sources/plugin-a.tgz', true],
+      ['skills/batch-ffff.json.gz', true],
+      ['index/anything.json', false],
+    ]
+    for (const item of cases) {
+      const key = item[0]
+      const shouldEncrypt = item[1]
+      const payload = Buffer.from('payload-for-' + String(key))
+      await provider.put(key, payload)
+      const stored = written.get(key)
+      assert.equal(isEnvelope(stored), shouldEncrypt, key + ' 加密判定错误')
+    }
+  })
+})
+
+test('旧明文归档在加密模式下仍可读回（向后兼容）', async () => {
+  await withHome(async (home) => {
+    const { provider, written } = await encryptedProviderFor(home)
+    const legacy = Buffer.from('legacy-plaintext-skill-archive')
+    const key = 'skills/legacy.json.gz'
+    // 模拟开启加密之前上传的明文归档：直接写进底层，绕开加密包装。
+    written.set(key, legacy)
+    const back = await provider.get(key)
+    assert.deepEqual(Buffer.from(back), legacy, '旧明文归档必须原样读回')
+  })
+})

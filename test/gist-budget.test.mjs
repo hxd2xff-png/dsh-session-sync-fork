@@ -1,1 +1,15 @@
-aW1wb3J0IHsgdGVzdCB9IGZyb20gJ25vZGU6dGVzdCcKaW1wb3J0IGFzc2VydCBmcm9tICdub2RlOmFzc2VydC9zdHJpY3QnCmltcG9ydCB7IGdpc3RIaXN0b3J5QnVkZ2V0IH0gZnJvbSAnLi4vbGliL2dpc3QtYnVkZ2V0Lm1qcycKdGVzdCgna2VlcHMgdXNlciByZXRlbnRpb24gcHJlZmVyZW5jZSB3aGVuIHNwYWNlIGFsbG93cycsICgpID0+IHsKICBhc3NlcnQuZXF1YWwoZ2lzdEhpc3RvcnlCdWRnZXQoeyByZXF1ZXN0ZWQ6IDMwLCBmaWxlczogWydtYXJrZXInXSwgaGlzdG9yeU5hbWVzOiBbXSwgbmV3TmFtZTogJ25ldycsIGluZGV4TmFtZTogJ2luZGV4JyB9KSwgMzApCn0pCnRlc3QoJ2NvdW50cyBza2lsbHMsIHNvdXJjZXMgYW5kIGZvcmVpZ24gZmlsZXMgYWdhaW5zdCBzaGFyZWQgYnVkZ2V0JywgKCkgPT4gewogIGFzc2VydC5lcXVhbChnaXN0SGlzdG9yeUJ1ZGdldCh7IHJlcXVlc3RlZDogMzAsIGZpbGVzOiBBcnJheS5mcm9tKHtsZW5ndGg6IDE5MH0sIChfLCBpKSA9PiBTdHJpbmcoaSkpLCBoaXN0b3J5TmFtZXM6IFtdLCBuZXdOYW1lOiAnbmV3JywgaW5kZXhOYW1lOiAnaW5kZXgnIH0pLCA4KQp9KQp0ZXN0KCdyZXBsYWNlcyBvbGQgaGlzdG9yeSByYXRoZXIgdGhhbiBjb3VudGluZyBpdCBhcyBvdGhlci1kb21haW4gb2NjdXBhbmN5JywgKCkgPT4gewogIGFzc2VydC5lcXVhbChnaXN0SGlzdG9yeUJ1ZGdldCh7IHJlcXVlc3RlZDogMzAsIGZpbGVzOiBBcnJheS5mcm9tKHtsZW5ndGg6IDIwMH0sIChfLCBpKSA9PiBTdHJpbmcoaSkpLCBoaXN0b3J5TmFtZXM6IFsnMCcsJzEnLCcyJywnMycsJzQnXSwgbmV3TmFtZTogJ25ldycsIGluZGV4TmFtZTogJzQnIH0pLCAzKQp9KQp0ZXN0KCdubyByb29tIGZhaWxzIGNsb3NlZCB3aXRob3V0IHByZXNjcmliaW5nIGRlbGV0aW9uJywgKCkgPT4gewogIGFzc2VydC5lcXVhbChnaXN0SGlzdG9yeUJ1ZGdldCh7IHJlcXVlc3RlZDogMzAsIGZpbGVzOiBBcnJheS5mcm9tKHtsZW5ndGg6IDIwMH0sIChfLCBpKSA9PiBTdHJpbmcoaSkpLCBoaXN0b3J5TmFtZXM6IFtdLCBuZXdOYW1lOiAnbmV3JywgaW5kZXhOYW1lOiAnaW5kZXgnIH0pLCAwKQp9KQo=
+import { test } from 'node:test'
+import assert from 'node:assert/strict'
+import { gistHistoryBudget } from '../lib/gist-budget.mjs'
+test('keeps user retention preference when space allows', () => {
+  assert.equal(gistHistoryBudget({ requested: 30, files: ['marker'], historyNames: [], newName: 'new', indexName: 'index' }), 30)
+})
+test('counts skills, sources and foreign files against shared budget', () => {
+  assert.equal(gistHistoryBudget({ requested: 30, files: Array.from({length: 190}, (_, i) => String(i)), historyNames: [], newName: 'new', indexName: 'index' }), 8)
+})
+test('replaces old history rather than counting it as other-domain occupancy', () => {
+  assert.equal(gistHistoryBudget({ requested: 30, files: Array.from({length: 200}, (_, i) => String(i)), historyNames: ['0','1','2','3','4'], newName: 'new', indexName: '4' }), 3)
+})
+test('no room fails closed without prescribing deletion', () => {
+  assert.equal(gistHistoryBudget({ requested: 30, files: Array.from({length: 200}, (_, i) => String(i)), historyNames: [], newName: 'new', indexName: 'index' }), 0)
+})

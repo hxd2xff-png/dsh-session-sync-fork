@@ -1,1 +1,27 @@
-Ly8gc2NyaXB0cy92ZXJpZnktc2VsZi1jb250YWluZWQubWpzIOKAlCDmi5Lnu53miorkvp3otZYgc3BlYyDmjIflkJHku5PlupPlpJYKLy8g77yIZmlsZS9saW5rL3BvcnRhbC93b3Jrc3BhY2UvZ2l0L2h0dHAg6Lev5b6E77yJ77yM5L+d6K+B5Y+R5biD5YyF5Y+v5LuOIHJlZ2lzdHJ5IOaIlgovLyB0YXJiYWxsIOWuieijheOAgeaXoOWklumDqOW8leeUqOOAggppbXBvcnQgeyByZWFkRmlsZVN5bmMgfSBmcm9tICdub2RlOmZzJwppbXBvcnQgcGF0aCBmcm9tICdub2RlOnBhdGgnCmltcG9ydCB7IGZpbGVVUkxUb1BhdGggfSBmcm9tICdub2RlOnVybCcKCmNvbnN0IHJvb3QgPSBwYXRoLmRpcm5hbWUocGF0aC5kaXJuYW1lKGZpbGVVUkxUb1BhdGgoaW1wb3J0Lm1ldGEudXJsKSkpCmNvbnN0IHBrZyA9IEpTT04ucGFyc2UocmVhZEZpbGVTeW5jKHBhdGguam9pbihyb290LCAncGFja2FnZS5qc29uJyksICd1dGY4JykpCgpjb25zdCBmYWlsdXJlcyA9IFtdCmNvbnN0IGNoZWNrID0gKGRlcHMsIGxhYmVsKSA9PiB7CiAgZm9yIChjb25zdCBbbmFtZSwgc3BlY10gb2YgT2JqZWN0LmVudHJpZXMoZGVwcyA/PyB7fSkpIHsKICAgIGlmICgvXig/OmZpbGV8bGlua3xwb3J0YWx8d29ya3NwYWNlfGdpdFwrfGh0dHBzPyk6L2l1LnRlc3Qoc3BlYykgfHwgc3BlYy5zdGFydHNXaXRoKCcuJykgfHwgcGF0aC5pc0Fic29sdXRlKHNwZWMpKSB7CiAgICAgIGZhaWx1cmVzLnB1c2goYCR7bGFiZWx9ICIke25hbWV9IiB1c2VzIG91dC1vZi1yZXBvIHNwZWMgJHtKU09OLnN0cmluZ2lmeShzcGVjKX1gKQogICAgfQogIH0KfQpjaGVjayhwa2cuZGVwZW5kZW5jaWVzLCAnZGVwZW5kZW5jaWVzJykKY2hlY2socGtnLmRldkRlcGVuZGVuY2llcywgJ2RldkRlcGVuZGVuY2llcycpCmNoZWNrKHBrZy5wZWVyRGVwZW5kZW5jaWVzLCAncGVlckRlcGVuZGVuY2llcycpCgppZiAoZmFpbHVyZXMubGVuZ3RoID4gMCkgewogIGNvbnNvbGUuZXJyb3IoZmFpbHVyZXMuam9pbignXG4nKSkKICBwcm9jZXNzLmV4aXQoMSkKfQpjb25zb2xlLmxvZygnc2VsZi1jb250YWluZWQ6IGFsbCBkZXBlbmRlbmN5IHNwZWNzIHJlc29sdmUgZnJvbSB0aGUgcmVnaXN0cnknKQo=
+// scripts/verify-self-contained.mjs — 拒绝把依赖 spec 指向仓库外
+// （file/link/portal/workspace/git/http 路径），保证发布包可从 registry 或
+// tarball 安装、无外部引用。
+import { readFileSync } from 'node:fs'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
+
+const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)))
+const pkg = JSON.parse(readFileSync(path.join(root, 'package.json'), 'utf8'))
+
+const failures = []
+const check = (deps, label) => {
+  for (const [name, spec] of Object.entries(deps ?? {})) {
+    if (/^(?:file|link|portal|workspace|git\+|https?):/iu.test(spec) || spec.startsWith('.') || path.isAbsolute(spec)) {
+      failures.push(`${label} "${name}" uses out-of-repo spec ${JSON.stringify(spec)}`)
+    }
+  }
+}
+check(pkg.dependencies, 'dependencies')
+check(pkg.devDependencies, 'devDependencies')
+check(pkg.peerDependencies, 'peerDependencies')
+
+if (failures.length > 0) {
+  console.error(failures.join('\n'))
+  process.exit(1)
+}
+console.log('self-contained: all dependency specs resolve from the registry')

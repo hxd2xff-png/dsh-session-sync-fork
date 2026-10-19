@@ -1,1 +1,25 @@
-IyBUaGlyZC1wYXJ0eSBub3RpY2VzCgpgZHNoLXNlc3Npb24tc3luY2AgYnVuZGxlcyBubyB0aGlyZC1wYXJ0eSBzb3VyY2UgY29kZS4gQWxsIEphdmFTY3JpcHQgaW4gdGhpcwpyZXBvc2l0b3J5IChgaW5kZXgubWpzYCBhbmQgYGxpYi9gKSBpcyBvcmlnaW5hbCB3b3JrIGJ5IHRoZSBkc2gtc2Vzc2lvbi1zeW5jCmNvbnRyaWJ1dG9ycywgbGljZW5zZWQgdW5kZXIgQXBhY2hlLTIuMCAoc2VlIGBMSUNFTlNFYCkuCgpUaGUgcGFja2FnZSBkZXBlbmRzIG9uIHRoZSBmb2xsb3dpbmcgc29mdHdhcmUuIE5vbmUgb2YgaXQgaXMgYnVuZGxlZCBpbnRvIHRoZQpwdWJsaXNoZWQgdGFyYmFsbDsgdGhlc2UgYXJlIGluc3RhbGwtdGltZSBkZXBlbmRlbmNpZXM6Cgp8IFBhY2thZ2UgfCBWZXJzaW9uIHJhbmdlIHwgTGljZW5zZSB8IFB1cnBvc2UgfAp8LS0tfC0tLXwtLS18LS0tfAp8IFt6b2RdKGh0dHBzOi8vZ2l0aHViLmNvbS9jb2xpbmhhY2tzL3pvZCkgfCBgXjQuNC4zYCB8IE1JVCB8IFJ1bnRpbWUgc2NoZW1hIGZvciB0aGUgYHNlc3Npb24tc3luY2Agc3RvcmFnZS1kb21haW4gcmVjb3JkIChwZXJzaXN0ZW5jZS1ib3VuZGFyeSB2YWxpZGF0b3IpIHwKfCBbdHlwZXNjcmlwdF0oaHR0cHM6Ly9naXRodWIuY29tL21pY3Jvc29mdC9UeXBlU2NyaXB0KSB8IGBeNS45LjBgIHwgQXBhY2hlLTIuMCB8IGB0c2MgLS1jaGVja0pzYCB0eXBlY2hlY2sgZ2F0ZSAoYHRzY29uZmlnLmNoZWNrLmpzb25gKSB8CnwgW0BkZWVwc2Vlay1haS9jb3JkaXNdKGh0dHBzOi8vd3d3Lm5wbWpzLmNvbS9wYWNrYWdlL0BkZWVwc2Vlay1haS9jb3JkaXMpIHwgYF40LjAuMmAgKHBlZXIpIHwgU2VlIHBhY2thZ2UgfCBUaGUgcGx1Z2luIHJ1bnRpbWUgfAp8IFtAZGVlcHNlZWstYWkvc2NoZW1hc3RlcnldKGh0dHBzOi8vd3d3Lm5wbWpzLmNvbS9wYWNrYWdlL0BkZWVwc2Vlay1haS9zY2hlbWFzdGVyeSkgfCBgXjMuMTguMmAgKHBlZXIpIHwgU2VlIHBhY2thZ2UgfCBDb25maWd1cmF0aW9uIHNjaGVtYSB8CnwgYEBkZWVwc2Vlay1haS9kc2gtKmAgcGVlcnMgfCBgMC4xLjAtcmMuOGAgKHBlZXIpIHwgU2VlIHBhY2thZ2VzIHwgT2ZmaWNpYWwgaGFybmVzcyBzZWFtcyAoYGRzaC1zZXNzaW9uYCwgYGRzaC1zdG9yYWdlLWRvbWFpbmAsIGBkc2gtdG9vbHNgKSB8CgpEZXZlbG9wbWVudC1vbmx5IGRlcGVuZGVuY2llcyAobm90IHNoaXBwZWQsIHVzZWQgYnkgdGVzdHMgYW5kIHRoZSB0eXBlY2hlY2sKZ2F0ZSkgYWRkIGBAZGVlcHNlZWstYWkvZHNoLWNvbW1hbmRzYCwgYEBkZWVwc2Vlay1haS9kc2gtbGxtYCwgYEBkZWVwc2Vlay1haS9kc2gtc3RvcmFnZWAsCmBAZGVlcHNlZWstYWkvZHNoLXN0b3JhZ2UtanNvbmAsIGBAZGVlcHNlZWstYWkvZHNoLXN1YnByb2Nlc3NgLCBgQGRlZXBzZWVrLWFpL2RzaC11c2VyLWFwcHJvdmFsYCwKYEBkZWVwc2Vlay1haS9kc2gtdXNlci1xdWVzdGlvbnNgIGF0IGAwLjEuMi1hbHBoYS41YCwgYW5kIGBAdHlwZXMvbm9kZWAuCgpBdCBydW50aW1lIHRoZSBwbHVnaW4gb25seSB0YWxrcyB0byB0aGUgaGFybmVzcyBzZXJ2aWNlcyBsaXN0ZWQgYXMKcGVlckRlcGVuZGVuY2llczsgaXQgcGVyZm9ybXMgbm8gbmV0d29yayByZXF1ZXN0cyBvZiBpdHMgb3duIOKAlCBhbGwgbmV0d29yawp0cmFmZmljIGlzIGBnaXRgIHRvIHRoZSByZW1vdGUgdGhlIHVzZXIgY29uZmlndXJlcy4K
+# Third-party notices
+
+`dsh-session-sync` bundles no third-party source code. All JavaScript in this
+repository (`index.mjs` and `lib/`) is original work by the dsh-session-sync
+contributors, licensed under Apache-2.0 (see `LICENSE`).
+
+The package depends on the following software. None of it is bundled into the
+published tarball; these are install-time dependencies:
+
+| Package | Version range | License | Purpose |
+|---|---|---|---|
+| [zod](https://github.com/colinhacks/zod) | `^4.4.3` | MIT | Runtime schema for the `session-sync` storage-domain record (persistence-boundary validator) |
+| [typescript](https://github.com/microsoft/TypeScript) | `^5.9.0` | Apache-2.0 | `tsc --checkJs` typecheck gate (`tsconfig.check.json`) |
+| [@deepseek-ai/cordis](https://www.npmjs.com/package/@deepseek-ai/cordis) | `^4.0.2` (peer) | See package | The plugin runtime |
+| [@deepseek-ai/schemastery](https://www.npmjs.com/package/@deepseek-ai/schemastery) | `^3.18.2` (peer) | See package | Configuration schema |
+| `@deepseek-ai/dsh-*` peers | `0.1.0-rc.8` (peer) | See packages | Official harness seams (`dsh-session`, `dsh-storage-domain`, `dsh-tools`) |
+
+Development-only dependencies (not shipped, used by tests and the typecheck
+gate) add `@deepseek-ai/dsh-commands`, `@deepseek-ai/dsh-llm`, `@deepseek-ai/dsh-storage`,
+`@deepseek-ai/dsh-storage-json`, `@deepseek-ai/dsh-subprocess`, `@deepseek-ai/dsh-user-approval`,
+`@deepseek-ai/dsh-user-questions` at `0.1.2-alpha.5`, and `@types/node`.
+
+At runtime the plugin only talks to the harness services listed as
+peerDependencies; it performs no network requests of its own — all network
+traffic is `git` to the remote the user configures.

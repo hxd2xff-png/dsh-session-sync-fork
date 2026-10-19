@@ -1,1 +1,11 @@
-Ly8gUmVhZC1vbmx5IGluc3BlY3Rpb24gb2YgYW4gZXhwbGljaXRseSBzZWxlY3RlZCBleGlzdGluZyBHaXN0LgppbXBvcnQgeyBsb2FkU2V0dGluZ3MsIGRzaEhvbWUsIHByb3ZpZGVyRnJvbSB9IGZyb20gJy4uL2xpYi9jbG91ZC1jb3JlLm1qcycKY29uc3QgaWQgPSBwcm9jZXNzLmFyZ3ZbMl0KaWYgKCEvXlthLWYwLTldezIwLDY0fSQvaS50ZXN0KGlkID8/ICcnKSkgdGhyb3cgbmV3IEVycm9yKCdTdXBwbHkgYW4gZXhpc3RpbmcgR2lzdCBJRCcpCmNvbnN0IHNldHRpbmdzID0gYXdhaXQgbG9hZFNldHRpbmdzKGRzaEhvbWUoKSkKY29uc3QgcHJvdmlkZXIgPSBwcm92aWRlckZyb20oeyAuLi5zZXR0aW5ncywgcHJvdmlkZXI6IHsgLi4uc2V0dGluZ3MucHJvdmlkZXIsIGdpc3RJZDogaWQgfSB9KQpmb3IgKGNvbnN0IGtleSBvZiBbJ3NuYXBzaG90cy9oaXN0b3J5L2luZGV4Lmpzb24nLCAnc2tpbGxzL2luZGV4Lmpzb24nXSkgewogIGNvbnN0IGJvZHkgPSBhd2FpdCBwcm92aWRlci5nZXQoa2V5KQogIGNvbnN0IGluZGV4ID0gSlNPTi5wYXJzZShib2R5LnRvU3RyaW5nKCd1dGY4JykpCiAgY29uc29sZS5sb2coSlNPTi5zdHJpbmdpZnkoeyBnaXN0SWQ6IGlkLCBrZXksIGVudHJ5Q291bnQ6IGluZGV4LmVudHJpZXM/Lmxlbmd0aCwgZW50cmllczogaW5kZXguZW50cmllcz8ubWFwKGVudHJ5ID0+ICh7IGNyZWF0ZWRBdDogZW50cnkuY3JlYXRlZEF0LCBkZXZpY2VOYW1lOiBlbnRyeS5kZXZpY2VOYW1lLCBza2lsbENvdW50OiBlbnRyeS5za2lsbHM/Lmxlbmd0aCB9KSkgfSkpCn0K
+// Read-only inspection of an explicitly selected existing Gist.
+import { loadSettings, dshHome, providerFrom } from '../lib/cloud-core.mjs'
+const id = process.argv[2]
+if (!/^[a-f0-9]{20,64}$/i.test(id ?? '')) throw new Error('Supply an existing Gist ID')
+const settings = await loadSettings(dshHome())
+const provider = providerFrom({ ...settings, provider: { ...settings.provider, gistId: id } })
+for (const key of ['snapshots/history/index.json', 'skills/index.json']) {
+  const body = await provider.get(key)
+  const index = JSON.parse(body.toString('utf8'))
+  console.log(JSON.stringify({ gistId: id, key, entryCount: index.entries?.length, entries: index.entries?.map(entry => ({ createdAt: entry.createdAt, deviceName: entry.deviceName, skillCount: entry.skills?.length })) }))
+}

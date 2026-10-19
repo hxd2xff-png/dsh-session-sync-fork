@@ -1,1 +1,21 @@
-Ly8gUmVhZC1vbmx5IGluc3RhbGxlZCByZXNvbHZlciBzbW9rZSBjaGVjay4gVGhpcyBpcyBub3QgYSBsaXZlLWhvc3QgYWNjZXB0YW5jZSB0ZXN0LgppbXBvcnQgeyBleGVjRmlsZSB9IGZyb20gJ25vZGU6Y2hpbGRfcHJvY2VzcycKaW1wb3J0IHsgcHJvbWlzaWZ5IH0gZnJvbSAnbm9kZTp1dGlsJwppbXBvcnQgeyBhY2Nlc3MgfSBmcm9tICdub2RlOmZzL3Byb21pc2VzJwppbXBvcnQgeyBqb2luLCBpc0Fic29sdXRlIH0gZnJvbSAnbm9kZTpwYXRoJwppbXBvcnQgeyBwYXRoVG9GaWxlVVJMIH0gZnJvbSAnbm9kZTp1cmwnCmNvbnN0IHByb2ZpbGUgPSBwcm9jZXNzLmVudi5EU0hfUFJPRklMRV9ESVIKaWYgKCFwcm9maWxlKSB0aHJvdyBuZXcgRXJyb3IoJ0RTSF9QUk9GSUxFX0RJUiBpcyByZXF1aXJlZCcpCmNvbnN0IHsgcmVzb2x2ZUdpdEV4ZWN1dGFibGUgfSA9IGF3YWl0IGltcG9ydChwYXRoVG9GaWxlVVJMKGpvaW4ocHJvZmlsZSwgJ25vZGVfbW9kdWxlcycsICdkc2gtc2Vzc2lvbi1zeW5jJywgJ2xpYicsICdnaXQtZXhlY3V0YWJsZS5tanMnKSkuaHJlZikKbGV0IGZhbGxiYWNrID0gZmFsc2UKY29uc3QgcnVudGltZSA9IHsgYXN5bmMgcmVzb2x2ZUV4ZWN1dGFibGUoY29tbWFuZCkgewogIGlmIChjb21tYW5kID09PSAnZ2l0JykgdGhyb3cgbmV3IEVycm9yKCdjb21tYW5kIGdpdCB3YXMgbm90IGZvdW5kIG9uIFBBVEgnKQogIGlmICghaXNBYnNvbHV0ZShjb21tYW5kKSkgdGhyb3cgbmV3IEVycm9yKCdFeHBlY3RlZCBhYnNvbHV0ZSBHaXQgZmFsbGJhY2snKQogIGF3YWl0IGFjY2Vzcyhjb21tYW5kKQogIGZhbGxiYWNrID0gdHJ1ZQogIHJldHVybiBjb21tYW5kCn0gfQpjb25zdCBleGVjdXRhYmxlID0gYXdhaXQgcmVzb2x2ZUdpdEV4ZWN1dGFibGUocnVudGltZSwgJ2dpdCcpCmNvbnN0IHJlc3VsdCA9IGF3YWl0IHByb21pc2lmeShleGVjRmlsZSkoZXhlY3V0YWJsZSwgWyctLXZlcnNpb24nXSwgeyB0aW1lb3V0OiAxNTAwMCwgd2luZG93c0hpZGU6IHRydWUgfSkKaWYgKCFmYWxsYmFjaykgdGhyb3cgbmV3IEVycm9yKCdJbnN0YWxsZWQgR2l0IGZhbGxiYWNrIHdhcyBub3QgZXhlcmNpc2VkJykKY29uc29sZS5sb2coSlNPTi5zdHJpbmdpZnkoeyBpbnN0YWxsZWRSZXNvbHZlcjogdHJ1ZSwgc2ltdWxhdGVkTWlzc2luZ1BhdGg6IHRydWUsIGZhbGxiYWNrVXNlZDogZmFsbGJhY2ssIHZlcnNpb246IHJlc3VsdC5zdGRvdXQudHJpbSgpIH0pKQo=
+// Read-only installed resolver smoke check. This is not a live-host acceptance test.
+import { execFile } from 'node:child_process'
+import { promisify } from 'node:util'
+import { access } from 'node:fs/promises'
+import { join, isAbsolute } from 'node:path'
+import { pathToFileURL } from 'node:url'
+const profile = process.env.DSH_PROFILE_DIR
+if (!profile) throw new Error('DSH_PROFILE_DIR is required')
+const { resolveGitExecutable } = await import(pathToFileURL(join(profile, 'node_modules', 'dsh-session-sync', 'lib', 'git-executable.mjs')).href)
+let fallback = false
+const runtime = { async resolveExecutable(command) {
+  if (command === 'git') throw new Error('command git was not found on PATH')
+  if (!isAbsolute(command)) throw new Error('Expected absolute Git fallback')
+  await access(command)
+  fallback = true
+  return command
+} }
+const executable = await resolveGitExecutable(runtime, 'git')
+const result = await promisify(execFile)(executable, ['--version'], { timeout: 15000, windowsHide: true })
+if (!fallback) throw new Error('Installed Git fallback was not exercised')
+console.log(JSON.stringify({ installedResolver: true, simulatedMissingPath: true, fallbackUsed: fallback, version: result.stdout.trim() }))

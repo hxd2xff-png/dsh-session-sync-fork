@@ -1,1 +1,51 @@
-Ly8gdGVzdC90aW1lb3V0LWJ1ZGdldC50ZXN0Lm1qcyDigJQg5ZG95Luk6LaF5pe25b+F6aG75a655b6X5LiL6aaW5qyh5aSn5o6o6YCB44CCCi8vIOWunua1i+S+neaNru+8iDIwMjYtMTAtMTXvvIzmnKzmnLrvvInvvJozNk1CIOS8muivneaVsOaNrummluasoeaOqOmAgeiAl+aXtiAyNjQuMHPvvIhnaXQgcHVzaCDmiYvlt6XorqHml7bvvInvvIwKLy8g5ZCM5LiA5ZG95Luk5peg5paw5pWw5o2u5pe2IDIuMHPjgILml6fpu5jorqQgMTIwMDAwbXMg5Lya6K6p5q2j5bi46aaW5qyh5o6o6YCB5aSx6LSl77yaCi8vICJnaXQgcHVzaCBmYWlsZWQ6IGdpdCBwdXNoIHRpbWVkIG91dCBhZnRlciAxMjAwMDBtcyLjgIIKaW1wb3J0IHsgdGVzdCB9IGZyb20gJ25vZGU6dGVzdCcKaW1wb3J0IGFzc2VydCBmcm9tICdub2RlOmFzc2VydC9zdHJpY3QnCmltcG9ydCB7IHJlYWRGaWxlU3luYyB9IGZyb20gJ25vZGU6ZnMnCmltcG9ydCB7IERFRkFVTFRTLCBMSU1JVFMgfSBmcm9tICcuLi9saWIvY29uc3RhbnRzLm1qcycKCmNvbnN0IE1FQVNVUkVEX0ZJUlNUX1BVU0hfTVMgPSAyNjRfMDAwCgp0ZXN0KCfpu5jorqTlkb3ku6TotoXml7blrrnlvpfkuIvlrp7mtYvpppbmrKHmjqjpgIHogJfml7blubbnlZnmnInkvZnph48nLCAoKSA9PiB7CiAgYXNzZXJ0Lm9rKAogICAgREVGQVVMVFMuQ09NTUFORF9USU1FT1VUX01TID49IE1FQVNVUkVEX0ZJUlNUX1BVU0hfTVMgKiAxLjUsCiAgICBgQ09NTUFORF9USU1FT1VUX01TPSR7REVGQVVMVFMuQ09NTUFORF9USU1FT1VUX01TfSDlr7nlrp7mtYvpppbmrKHmjqjpgIEgJHtNRUFTVVJFRF9GSVJTVF9QVVNIX01TfW1zIOS9memHj+S4jei2s2AsCiAgKQp9KQoKdGVzdCgn6buY6K6k5ZG95Luk6LaF5pe25LiN6LaF6L+H6YWN572u5LiK6ZmQ77yI5Y+v6KKrIGNvbW1hbmRUaW1lb3V0TXMg6KaG55uW77yJJywgKCkgPT4gewogIGFzc2VydC5vayhERUZBVUxUUy5DT01NQU5EX1RJTUVPVVRfTVMgPD0gTElNSVRTLk1BWF9DT01NQU5EX1RJTUVPVVRfTVMpCiAgYXNzZXJ0Lm9rKERFRkFVTFRTLkNPTU1BTkRfVElNRU9VVF9NUyA+IExJTUlUUy5NSU5fQ09NTUFORF9USU1FT1VUX01TKQp9KQoKLy8g5Zue5b2S77ya6ZqP5YyFIHBhdGNoIOWxguS4gOaXpuWGmeS4iyBjb21tYW5kVGltZW91dE1z77yM5bCx5oiQ5LqG5LiA5p2h5pi+5byP6YWN572u77yM5rC46L+c5Y6L6L+HCi8vIERFRkFVTFRTIOKAlOKAlCAyMDI2LTEwLTE1IOeahOecn+WunuS6i+aVhe+8mmNvbnN0YW50cy5tanMg5bey5pS55YiwIDYwMDAwMO+8jOmaj+WMhSBwYXRjaCDku40KLy8g6ZKJ552AIDEyMDAwMO+8jOaJgOacieaMgui9veivpSBidW5kbGUg55qEIHByb2ZpbGUg57un57utICJnaXQgcHVzaCB0aW1lZCBvdXQgYWZ0ZXIgMTIwMDAwbXMi44CCCi8vIOS/riBERUZBVUxUUyDljbTmvI/kuoYgcGF0Y2gg5bGCID0g5omT6ZSZ6Z225a2Q44CC5q2k5pat6KiA6ZSB5q27IuivpeWtl+auteWPquiDveacieS4gOS4quS6i+Wunua6kCLjgIIKdGVzdCgn6ZqP5YyFIGNvcmRpcy5wYXRjaC55bWwg5LiN5b6X6ZKJ5L2PIGNvbW1hbmRUaW1lb3V0TXPvvIjpu5jorqTlgLzlj6rog73mnaXoh6ogY29uc3RhbnRzLm1qc++8iScsICgpID0+IHsKICBjb25zdCBwYXRjaCA9IHJlYWRGaWxlU3luYyhuZXcgVVJMKCcuLi9jb3JkaXMucGF0Y2gueW1sJywgaW1wb3J0Lm1ldGEudXJsKSwgJ3V0ZjgnKQogIGNvbnN0IHBpbm5lZCA9IHBhdGNoCiAgICAuc3BsaXQoL1xyP1xuL3UpCiAgICAubWFwKChsaW5lLCBpbmRleCkgPT4gKHsgbGluZSwgbnVtYmVyOiBpbmRleCArIDEgfSkpCiAgICAuZmlsdGVyKCh7IGxpbmUgfSkgPT4gL15ccypjb21tYW5kVGltZW91dE1zXHMqOi91LnRlc3QobGluZSkpCiAgYXNzZXJ0LmRlZXBFcXVhbCgKICAgIHBpbm5lZCwKICAgIFtdLAogICAgcGlubmVkLmxlbmd0aCA9PT0gMAogICAgICA/ICcnCiAgICAgIDogYGNvcmRpcy5wYXRjaC55bWwg56ysICR7cGlubmVkLm1hcCgocCkgPT4gcC5udW1iZXIpLmpvaW4oJywgJyl9IOihjOmSieS9j+S6hiBjb21tYW5kVGltZW91dE1z77yaYCArCiAgICAgICAgYCR7cGlubmVkLm1hcCgocCkgPT4gcC5saW5lLnRyaW0oKSkuam9pbignIHwgJyl944CCYCArCiAgICAgICAgJ+aYvuW8j+mFjee9ruS8muWOi+i/hyBERUZBVUxUU++8jOivt+WIoOaOieivpeihjO+8jOaKiuWAvOeVmeWcqCBsaWIvY29uc3RhbnRzLm1qc++8mycgKwogICAgICAgICfpnIDopoHkuI3lkIzlgLznmoTpg6jnvbLlupTmlLnoh6rlt7HnmoQgcHJvZmlsZSBwYXRjaOOAgicsCiAgKQp9KQoKdGVzdCgn6ZqP5YyFIGNvcmRpcy5wYXRjaC55bWwg5LuN54S25oyC6L29IHNlc3Npb24tc3luYyDooYzvvIjliKDpmaTlrZfmrrXkuI3nrYnkuo7liKDmjonmj5Lku7bvvIknLCAoKSA9PiB7CiAgY29uc3QgcGF0Y2ggPSByZWFkRmlsZVN5bmMobmV3IFVSTCgnLi4vY29yZGlzLnBhdGNoLnltbCcsIGltcG9ydC5tZXRhLnVybCksICd1dGY4JykKICBhc3NlcnQubWF0Y2gocGF0Y2gsIC9eLSBpbnNlcnQ6XHMqJC9tdSwgJ3BhdGNoIOW/hemhu+S7jeS7pSBpbnNlcnQg5b2i5byP5oyC6L295o+S5Lu26KGMJykKICBhc3NlcnQubWF0Y2gocGF0Y2gsIC9eXHMrLSBpZDogc2Vzc2lvbi1zeW5jXHMqJC9tdSwgJ3BhdGNoIOW/hemhu+S7jeaPkuWFpSBpZDogc2Vzc2lvbi1zeW5jIOihjCcpCiAgYXNzZXJ0Lm1hdGNoKHBhdGNoLCAvXlxzK25hbWU6IGRzaC1zZXNzaW9uLXN5bmNccyokL211LCAncGF0Y2gg5b+F6aG75LuN5oyH5ZCRIGRzaC1zZXNzaW9uLXN5bmMg5YyFJykKfSkK
+// test/timeout-budget.test.mjs — 命令超时必须容得下首次大推送。
+// 实测依据（2026-10-15，本机）：36MB 会话数据首次推送耗时 264.0s（git push 手工计时），
+// 同一命令无新数据时 2.0s。旧默认 120000ms 会让正常首次推送失败：
+// "git push failed: git push timed out after 120000ms"。
+import { test } from 'node:test'
+import assert from 'node:assert/strict'
+import { readFileSync } from 'node:fs'
+import { DEFAULTS, LIMITS } from '../lib/constants.mjs'
+
+const MEASURED_FIRST_PUSH_MS = 264_000
+
+test('默认命令超时容得下实测首次推送耗时并留有余量', () => {
+  assert.ok(
+    DEFAULTS.COMMAND_TIMEOUT_MS >= MEASURED_FIRST_PUSH_MS * 1.5,
+    `COMMAND_TIMEOUT_MS=${DEFAULTS.COMMAND_TIMEOUT_MS} 对实测首次推送 ${MEASURED_FIRST_PUSH_MS}ms 余量不足`,
+  )
+})
+
+test('默认命令超时不超过配置上限（可被 commandTimeoutMs 覆盖）', () => {
+  assert.ok(DEFAULTS.COMMAND_TIMEOUT_MS <= LIMITS.MAX_COMMAND_TIMEOUT_MS)
+  assert.ok(DEFAULTS.COMMAND_TIMEOUT_MS > LIMITS.MIN_COMMAND_TIMEOUT_MS)
+})
+
+// 回归：随包 patch 层一旦写下 commandTimeoutMs，就成了一条显式配置，永远压过
+// DEFAULTS —— 2026-10-15 的真实事故：constants.mjs 已改到 600000，随包 patch 仍
+// 钉着 120000，所有挂载该 bundle 的 profile 继续 "git push timed out after 120000ms"。
+// 修 DEFAULTS 却漏了 patch 层 = 打错靶子。此断言锁死"该字段只能有一个事实源"。
+test('随包 cordis.patch.yml 不得钉住 commandTimeoutMs（默认值只能来自 constants.mjs）', () => {
+  const patch = readFileSync(new URL('../cordis.patch.yml', import.meta.url), 'utf8')
+  const pinned = patch
+    .split(/\r?\n/u)
+    .map((line, index) => ({ line, number: index + 1 }))
+    .filter(({ line }) => /^\s*commandTimeoutMs\s*:/u.test(line))
+  assert.deepEqual(
+    pinned,
+    [],
+    pinned.length === 0
+      ? ''
+      : `cordis.patch.yml 第 ${pinned.map((p) => p.number).join(', ')} 行钉住了 commandTimeoutMs：` +
+        `${pinned.map((p) => p.line.trim()).join(' | ')}。` +
+        '显式配置会压过 DEFAULTS，请删掉该行，把值留在 lib/constants.mjs；' +
+        '需要不同值的部署应改自己的 profile patch。',
+  )
+})
+
+test('随包 cordis.patch.yml 仍然挂载 session-sync 行（删除字段不等于删掉插件）', () => {
+  const patch = readFileSync(new URL('../cordis.patch.yml', import.meta.url), 'utf8')
+  assert.match(patch, /^- insert:\s*$/mu, 'patch 必须仍以 insert 形式挂载插件行')
+  assert.match(patch, /^\s+- id: session-sync\s*$/mu, 'patch 必须仍插入 id: session-sync 行')
+  assert.match(patch, /^\s+name: dsh-session-sync\s*$/mu, 'patch 必须仍指向 dsh-session-sync 包')
+})

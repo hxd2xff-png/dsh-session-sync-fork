@@ -1,1 +1,214 @@
-aW1wb3J0IHsgdGVzdCB9IGZyb20gJ25vZGU6dGVzdCcKaW1wb3J0IGFzc2VydCBmcm9tICdub2RlOmFzc2VydC9zdHJpY3QnCmltcG9ydCB7IHByb21pc2VzIGFzIGZzIH0gZnJvbSAnbm9kZTpmcycKaW1wb3J0IG9zIGZyb20gJ25vZGU6b3MnCmltcG9ydCBwYXRoIGZyb20gJ25vZGU6cGF0aCcKaW1wb3J0IHsgZ3ppcFN5bmMsIHpzdGRDb21wcmVzc1N5bmMsIHpzdGREZWNvbXByZXNzU3luYyB9IGZyb20gJ25vZGU6emxpYicKaW1wb3J0IHsgcG9ydGFibGVGaWxlLCBwb3J0YWJsZVRleHQsIGxvY2FsVGV4dCB9IGZyb20gJy4uL2xpYi9wb3J0YWJsZS5tanMnCmltcG9ydCB7IGNyZWF0ZVNlc3Npb25NYXBwZXIsIHNlc3Npb25IZWFkZXIgfSBmcm9tICcuLi9saWIvc2Vzc2lvbi1wb3J0YWJsZS5tanMnCmltcG9ydCB7IHByZXZpZXdSZXN0b3JlLCBtZXJnZVJlc3RvcmUsIG92ZXJ3cml0ZUFwcGx5IH0gZnJvbSAnLi4vbGliL3Jlc3RvcmUubWpzJwppbXBvcnQgeyBiYWNrdXBMb2NhbFBsdWdpbiwgY3JlYXRlU25hcHNob3QsIHB1bGxTbmFwc2hvdCwgcHVzaFNraWxsQmFja3VwLCByZXN0b3JlU2tpbGxzLCBzeW5jUm9vdCB9IGZyb20gJy4uL2xpYi9jbG91ZC1jb3JlLm1qcycKCmNsYXNzIFByb3ZpZGVyIHsKICBvYmplY3RzID0gbmV3IE1hcCgpCiAgYXN5bmMgcHV0KGtleSwgYnl0ZXMpIHsgdGhpcy5vYmplY3RzLnNldChrZXksIEJ1ZmZlci5mcm9tKGJ5dGVzKSkgfQogIGFzeW5jIGdldChrZXkpIHsgaWYgKCF0aGlzLm9iamVjdHMuaGFzKGtleSkpIHRocm93IG5ldyBFcnJvcignSFRUUCA0MDQnKTsgcmV0dXJuIHRoaXMub2JqZWN0cy5nZXQoa2V5KSB9CiAgYXN5bmMgZ2V0V2l0aE1ldGEoa2V5KSB7IHJldHVybiB7IGJvZHk6IGF3YWl0IHRoaXMuZ2V0KGtleSksIGV0YWc6ICdmaXh0dXJlJyB9IH0KICBhc3luYyByZW1vdmUoa2V5KSB7IHRoaXMub2JqZWN0cy5kZWxldGUoa2V5KSB9Cn0KYXN5bmMgZnVuY3Rpb24gZml4dHVyZSh0KSB7CiAgY29uc3Qgcm9vdCA9IGF3YWl0IGZzLm1rZHRlbXAocGF0aC5qb2luKG9zLnRtcGRpcigpLCAnZHNoLXBvcnRhYmxlLScpKQogIHQuYWZ0ZXIoYXN5bmMgKCkgPT4geyBhc3NlcnQuZXF1YWwocGF0aC5kaXJuYW1lKHJvb3QpLCBvcy50bXBkaXIoKSk7IGFzc2VydChwYXRoLmJhc2VuYW1lKHJvb3QpLnN0YXJ0c1dpdGgoJ2RzaC1wb3J0YWJsZS0nKSk7IGF3YWl0IGZzLnJtKHJvb3QsIHsgcmVjdXJzaXZlOiB0cnVlLCBmb3JjZTogdHJ1ZSB9KSB9KQogIGNvbnN0IHByb2plY3QgPSBwYXRoLmpvaW4ocm9vdCwgJ+ebruaghyDpobnnm64nKSwgc2Vzc2lvblJvb3QgPSBwYXRoLmpvaW4ocm9vdCwgJ3Nlc3Npb25zJykKICBhd2FpdCBmcy5ta2Rpcihwcm9qZWN0KTsgYXdhaXQgZnMubWtkaXIoc2Vzc2lvblJvb3QpCiAgcmV0dXJuIHsgcm9vdCwgcHJvamVjdCwgc2Vzc2lvblJvb3QgfQp9CmNvbnN0IGZvcmVpZ24gPSAnWjpcXFVzZXJzXFxzb3VyY2UtZGV2aWNlXFxEb2N1bWVudHNcXOadpea6kOmhueebricKY29uc3QgaGVhZGVyID0geyB0eXBlOiAnc2Vzc2lvbicsIHZlcnNpb246IDQsIGlkOiAnc2Vzc2lvbi1wb3J0YWJsZScsIGN3ZDogZm9yZWlnbiwgY3JlYXRlZEF0OiAxLCBpc1NlZWRlZDogZmFsc2UsIGRlbGVnYXRpb25EZXB0aDogMCB9CmNvbnN0IGJvZHkgPSBCdWZmZXIuZnJvbShKU09OLnN0cmluZ2lmeSh7IHR5cGU6ICdwZXJtaXNzaW9uL3ByZXNldCcsIHNlcTogMCwgdGltZTogMiwgZGF0YTogeyBwcmVzZXQ6ICd3b3Jrc3BhY2Utd3JpdGUnLCBub3RlOiBmb3JlaWduIH0gfSkgKyAnXG4nKQpjb25zdCBsb2cgPSBjb21wcmVzc2VkID0+IGNvbXByZXNzZWQgPyBCdWZmZXIuY29uY2F0KFt6c3RkQ29tcHJlc3NTeW5jKEpTT04uc3RyaW5naWZ5KGhlYWRlcikgKyAnXG4nKSwgenN0ZENvbXByZXNzU3luYyhib2R5KV0pIDogQnVmZmVyLmNvbmNhdChbQnVmZmVyLmZyb20oSlNPTi5zdHJpbmdpZnkoaGVhZGVyKSArICdcbicpLCBib2R5XSkKY29uc3QgcmVsID0gJ3NvdXJjZS1wcm9qZWN0LycgKyBoZWFkZXIuaWQgKyAnL3Nlc3Npb24udjQuanNvbmwuenN0ZCcKZnVuY3Rpb24gcGVyc2lzdGVuY2Uoc2Vzc2lvblJvb3QpIHsKICByZXR1cm4geyBsb2NhdGUobWV0YSkgeyByZXR1cm4geyBwYXRoOiBwYXRoLmpvaW4oc2Vzc2lvblJvb3QsIGVuY29kZVVSSUNvbXBvbmVudChtZXRhLmN3ZCA/PyAnX25vLWN3ZCcpLCBtZXRhLmlkLCAnc2Vzc2lvbi52NC5qc29ubC56c3RkJykgfSB9IH0KfQphc3luYyBmdW5jdGlvbiBpbnNwZWN0KF9yZWwsIGJ5dGVzKSB7CiAgY29uc3QgcGFyc2VkID0gc2Vzc2lvbkhlYWRlcihfcmVsLCBieXRlcykKICBjb25zdCBsaW5lcyA9IChwYXJzZWQuY29tcHJlc3NlZCA/IHpzdGREZWNvbXByZXNzU3luYyhwYXJzZWQuYm9keSkgOiBwYXJzZWQuYm9keSkudG9TdHJpbmcoJ3V0ZjgnKS50cmltKCkuc3BsaXQoJ1xuJykuZmlsdGVyKEJvb2xlYW4pLm1hcChKU09OLnBhcnNlKQogIGxpbmVzLmZvckVhY2goKGV2ZW50LCBzZXEpID0+IGFzc2VydC5lcXVhbChldmVudC5zZXEsIHNlcSkpCiAgcmV0dXJuIHsgbWV0YTogcGFyc2VkLmhlYWRlciwgZXZlbnRzOiBsaW5lcywgaW5oZXJpdGVkRXZlbnRDb3VudDogMCB9Cn0KZnVuY3Rpb24gYmFja2VuZChieXRlcykgeyByZXR1cm4geyBsaXN0RmlsZXNBdFJldjogYXN5bmMgKCkgPT4gWydzZXNzaW9ucy8nICsgcmVsXSwgcmVhZEZpbGVBdFJldjogYXN5bmMgKCkgPT4gYnl0ZXMgfSB9CgovLyBEaXN0aW5jdCBkZXZpY2Ugcm9vdHMgYXJlIGludGVudGlvbmFsOyBubyBwYXRoIGlzIHRha2VuIGZyb20gYSBzcGVjaWZpYyBkZXZlbG9wZXIgbWFjaGluZS4KdGVzdCgn5L6/5pC66Lev5b6E5Lul5p2l5rqQ5qC55Li66L6555WM77yM5oyJ55uu5qCH6K6+5aSH54us56uL6Kej5p6Q77yM5LqM6L+b5Yi25ZKM5pmu6YCa5paH5a2X5LiN5Y+YJywgKCkgPT4gewogIGNvbnN0IHNvdXJjZSA9IHsgdXNlckhvbWU6ICdDOi9Vc2Vycy9zb3VyY2UnLCBkc2hIb21lOiAnRDovZHNoJywgc2tpbGxzUm9vdDogJ0U6L3NraWxscycsIHNvdXJjZVJvb3Q6ICdGOi9wbHVnaW4nIH0KICBjb25zdCB0YXJnZXQgPSB7IHVzZXJIb21lOiAnL2hvbWUvdGFyZ2V0JywgZHNoSG9tZTogJy9zcnYvZHNoJywgc2tpbGxzUm9vdDogJy9vcHQvc2tpbGxzJywgc291cmNlUm9vdDogJy9vcHQvcGx1Z2luJyB9CiAgY29uc3QgaW5wdXQgPSB7IGNhY2hlOiAnRDovZHNoL2NhY2hlJywgc2NyaXB0OiAnRjovcGx1Z2luL3NjcmlwdHMvcnVuLm1qcycsIHNraWxsOiAnRTovc2tpbGxzL2FscGhhL1NLSUxMLm1kJywgb3RoZXI6ICdDOi9Vc2Vycy9zb3VyY2Utb3RoZXIva2VlcCcgfQogIGNvbnN0IHBhY2tlZCA9IHBvcnRhYmxlRmlsZSgnY29uZmlnLmpzb24nLCBCdWZmZXIuZnJvbShKU09OLnN0cmluZ2lmeShpbnB1dCkpLCBzb3VyY2UpCiAgYXNzZXJ0KCFwYWNrZWQudG9TdHJpbmcoKS5pbmNsdWRlcygnRDovZHNoJykpCiAgY29uc3Qgb3V0cHV0ID0gSlNPTi5wYXJzZShwb3J0YWJsZUZpbGUoJ2NvbmZpZy5qc29uJywgcGFja2VkLCB0YXJnZXQsIHRydWUpKQogIGFzc2VydC5kZWVwRXF1YWwob3V0cHV0LCB7IGNhY2hlOiAnL3Nydi9kc2gvY2FjaGUnLCBzY3JpcHQ6ICcvb3B0L3BsdWdpbi9zY3JpcHRzL3J1bi5tanMnLCBza2lsbDogJy9vcHQvc2tpbGxzL2FscGhhL1NLSUxMLm1kJywgb3RoZXI6IGlucHV0Lm90aGVyIH0pCiAgY29uc3QgYmluYXJ5ID0gQnVmZmVyLmZyb20oWzAsIDI1NSwgMTI4LCAxXSkKICBhc3NlcnQuZXF1YWwocG9ydGFibGVGaWxlKCdpbWFnZS5wbmcnLCBiaW5hcnksIHRhcmdldCwgdHJ1ZSksIGJpbmFyeSkKICBhc3NlcnQuZXF1YWwocG9ydGFibGVUZXh0KCdvcmRpbmFyeSB3b3JkcyAuL3JlbGF0aXZlIHVzZXJ+bmFtZScsIHNvdXJjZSksICdvcmRpbmFyeSB3b3JkcyAuL3JlbGF0aXZlIHVzZXJ+bmFtZScpCn0pCgp0ZXN0KCfml6flpIfku71XaW5kb3dzIEpTT07ovazkuYnot6/lvoTmmKDlsITliLDnm67moIdob21l77yMSlNPTuS7jeacieaViCcsICgpID0+IHsKICBjb25zdCBieXRlcyA9IEJ1ZmZlci5mcm9tKEpTT04uc3RyaW5naWZ5KHsgcm9vdDogJ0M6XFxVc2Vyc1xcb2xkLWRldmljZVxcLmRzaFxccHJvZmlsZXNcXGRlc2t0b3AnLCBza2lsbDogJ0M6XFxVc2Vyc1xcb2xkLWRldmljZVxcLmFnZW50c1xcc2tpbGxzXFxhbHBoYScgfSkpCiAgY29uc3QgcmVzdWx0ID0gSlNPTi5wYXJzZShwb3J0YWJsZUZpbGUoJ2NvbmZpZy5qc29uJywgYnl0ZXMsIHsgdXNlckhvbWU6ICcvaG9tZS9uZXcnLCBkc2hIb21lOiAnL3Nydi9kc2gnLCBza2lsbHNSb290OiAnL3Nydi9za2lsbHMnIH0sIHRydWUpKQogIGFzc2VydC5lcXVhbChyZXN1bHQucm9vdCwgJy9zcnYvZHNoL3Byb2ZpbGVzL2Rlc2t0b3AnKQogIGFzc2VydC5lcXVhbChyZXN1bHQuc2tpbGwsICcvc3J2L3NraWxscy9hbHBoYScpCiAgYXNzZXJ0LmVxdWFsKGxvY2FsVGV4dCgnfi9hJywgeyB1c2VySG9tZTogJy9ob21lL25ldycgfSksICcvaG9tZS9uZXcvYScpCn0pCgp0ZXN0KCfljovnvKnml6Xlv5flj6rmlLnlpLTpg6hjd2TvvIzlhajpg6jmtojmga/kuovku7bljovnvKnluKfljp/lrZfoioLkv53nlZknLCBhc3luYyB0ID0+IHsKICBjb25zdCBmID0gYXdhaXQgZml4dHVyZSh0KQogIGNvbnN0IG1hcHBlciA9IGNyZWF0ZVNlc3Npb25NYXBwZXIoeyAuLi5mLCBwZXJzaXN0ZW5jZTogcGVyc2lzdGVuY2UoZi5zZXNzaW9uUm9vdCksIHByb2plY3RQYXRoczogeyBbZm9yZWlnbl06IGYucHJvamVjdCB9LCBpbnNwZWN0TG9nOiBpbnNwZWN0IH0pCiAgY29uc3Qgb3JpZ2luYWwgPSBsb2codHJ1ZSksIGVudHJ5ID0gYXdhaXQgbWFwcGVyLm1hcEVudHJ5KHJlbCwgb3JpZ2luYWwpCiAgYXNzZXJ0LmVxdWFsKHNlc3Npb25IZWFkZXIoZW50cnkucmVsLCBlbnRyeS5ibG9iKS5oZWFkZXIuY3dkLCBmLnByb2plY3QpCiAgYXNzZXJ0KHNlc3Npb25IZWFkZXIoZW50cnkucmVsLCBlbnRyeS5ibG9iKS5ib2R5LmVxdWFscyhzZXNzaW9uSGVhZGVyKHJlbCwgb3JpZ2luYWwpLmJvZHkpKQogIGFzc2VydChlbnRyeS5yZWwuaW5jbHVkZXMoZW5jb2RlVVJJQ29tcG9uZW50KGYucHJvamVjdCkpKQogIGFzc2VydC5lcXVhbCgoYXdhaXQgaW5zcGVjdChlbnRyeS5yZWwsIGVudHJ5LmJsb2IpKS5ldmVudHNbMF0uZGF0YS5ub3RlLCBmb3JlaWduKQp9KQoKdGVzdCgn5pyq5Y6L57yp5pel5b+X6L+B56e75ZCO5q2j5paH6YCQ5a2X6IqC5LiN5Y+YJywgYXN5bmMgdCA9PiB7CiAgY29uc3QgZiA9IGF3YWl0IGZpeHR1cmUodCkKICBjb25zdCBob3N0ID0gcGVyc2lzdGVuY2UoZi5zZXNzaW9uUm9vdCkKICBob3N0LmxvY2F0ZSA9IG1ldGEgPT4gKHsgcGF0aDogcGF0aC5qb2luKGYuc2Vzc2lvblJvb3QsIGVuY29kZVVSSUNvbXBvbmVudChtZXRhLmN3ZCksIG1ldGEuaWQsICdzZXNzaW9uLnY0Lmpzb25sJykgfSkKICBjb25zdCBtYXBwZXIgPSBjcmVhdGVTZXNzaW9uTWFwcGVyKHsgLi4uZiwgcGVyc2lzdGVuY2U6IGhvc3QsIHByb2plY3RQYXRoczogeyBbZm9yZWlnbl06IGYucHJvamVjdCB9LCBpbnNwZWN0TG9nOiBpbnNwZWN0IH0pCiAgY29uc3QgZW50cnkgPSBhd2FpdCBtYXBwZXIubWFwRW50cnkocmVsLnNsaWNlKDAsIC01KSwgbG9nKGZhbHNlKSkKICBhc3NlcnQuZXF1YWwoc2Vzc2lvbkhlYWRlcihlbnRyeS5yZWwsIGVudHJ5LmJsb2IpLmhlYWRlci5jd2QsIGYucHJvamVjdCkKICBhc3NlcnQoc2Vzc2lvbkhlYWRlcihlbnRyeS5yZWwsIGVudHJ5LmJsb2IpLmJvZHkuZXF1YWxzKGJvZHkpKQp9KQoKdGVzdCgn57y65aSx6aG555uu6aKE6KeI57uZ5Ye65b6F6YCJ5oup55uu5b2V77yM5omn6KGM5ouS57ud5LiU5LiN5Yib5bu656m66aG555uuJywgYXN5bmMgdCA9PiB7CiAgY29uc3QgZiA9IGF3YWl0IGZpeHR1cmUodCksIGdpdCA9IGJhY2tlbmQobG9nKHRydWUpKQogIGNvbnN0IG9wdGlvbnMgPSB7IC4uLmYsIHBlcnNpc3RlbmNlOiBwZXJzaXN0ZW5jZShmLnNlc3Npb25Sb290KSwgaW5zcGVjdExvZzogaW5zcGVjdCB9CiAgY29uc3QgcHJldmlld01hcCA9IGNyZWF0ZVNlc3Npb25NYXBwZXIoeyAuLi5vcHRpb25zLCBwcmV2aWV3OiB0cnVlIH0pCiAgY29uc3QgcHJldmlldyA9IGF3YWl0IHByZXZpZXdSZXN0b3JlKHsgZ2l0LCBjb21taXQ6ICdhJywgLi4uZiwgLi4ucHJldmlld01hcCB9KQogIGFzc2VydC5lcXVhbChwcmV2aWV3Lm9rLCB0cnVlLCBwcmV2aWV3LmVycm9yKQogIGFzc2VydC5lcXVhbChwcmV2aWV3LnByb2plY3RzWzBdLnJlcXVpcmVzU2VsZWN0aW9uLCB0cnVlKQogIC8vIOebruW9leS4jeWtmOWcqOaXtuS4jeWGjemYu+aWrei/mOWOn++8jOebtOaOpeS9v+eUqCBzdWdnZXN0ZWQg6Lev5b6ECiAgY29uc3QgbWFwcGVyID0gY3JlYXRlU2Vzc2lvbk1hcHBlcihvcHRpb25zKQogIGNvbnN0IHJlc3VsdCA9IGF3YWl0IG1lcmdlUmVzdG9yZSh7IGdpdCwgY29tbWl0OiAnYScsIC4uLmYsIC4uLm1hcHBlciB9KQogIGFzc2VydC5lcXVhbChyZXN1bHQub2ssIHRydWUsIHJlc3VsdC5lcnJvcikKfSkKCnRlc3QoJ+aYvuW8j+ebruagh+ebruW9leW/hemhu+WtmOWcqO+8jOi3qOiuvuWkh+WQiOW5tuesrOS6jOi9ruS4jeS8muWkjeWItuWHuuadpea6kOiuvuWkh+ebruW9lScsIGFzeW5jIHQgPT4gewogIGNvbnN0IGYgPSBhd2FpdCBmaXh0dXJlKHQpLCBnaXQgPSBiYWNrZW5kKGxvZyh0cnVlKSkKICBjb25zdCBvcHRpb25zID0geyAuLi5mLCBwZXJzaXN0ZW5jZTogcGVyc2lzdGVuY2UoZi5zZXNzaW9uUm9vdCksIGluc3BlY3RMb2c6IGluc3BlY3QgfQogIGNvbnN0IGJhZCA9IGNyZWF0ZVNlc3Npb25NYXBwZXIoeyAuLi5vcHRpb25zLCBwcm9qZWN0UGF0aHM6IHsgW2ZvcmVpZ25dOiBwYXRoLmpvaW4oZi5yb290LCAnbWlzc2luZycpIH0gfSkKICAvLyDkuI3lho3pmLvmlq3vvJrmmL7lvI/nm67moIfnm67lvZXkuI3lrZjlnKjml7YgZmFsbGJhY2sg5YiwIHN1Z2dlc3RlZCDot6/lvoTnu6fnu63ov5jljp8KICBjb25zdCBiYWRSZXN1bHQgPSBhd2FpdCBiYWQubWFwRW50cnkocmVsLCBsb2codHJ1ZSkpCiAgYXNzZXJ0Lm9rKGJhZFJlc3VsdCwgJ2ZhbGxiYWNrIHRvIHN1Z2dlc3RlZCBwYXRoIGluc3RlYWQgb2YgdGhyb3dpbmcnKQogIGZvciAobGV0IHJvdW5kID0gMDsgcm91bmQgPCAyOyByb3VuZCsrKSB7CiAgICBjb25zdCBtYXBwZXIgPSBjcmVhdGVTZXNzaW9uTWFwcGVyKHsgLi4ub3B0aW9ucywgcHJvamVjdFBhdGhzOiB7IFtmb3JlaWduXTogZi5wcm9qZWN0IH0gfSkKICAgIGNvbnN0IHJlc3VsdCA9IGF3YWl0IG1lcmdlUmVzdG9yZSh7IGdpdCwgY29tbWl0OiAnYScsIC4uLmYsIC4uLm1hcHBlciB9KQogICAgYXNzZXJ0LmVxdWFsKHJlc3VsdC5vaywgdHJ1ZSwgcmVzdWx0LmVycm9yKQogICAgYXNzZXJ0LmVxdWFsKHJlc3VsdC53cml0dGVuLCByb3VuZCA9PT0gMCA/IDEgOiAwKQogICAgYXNzZXJ0LmVxdWFsKHJlc3VsdC5mb3Jrcy5sZW5ndGgsIDApCiAgfQogIGFzc2VydC5kZWVwRXF1YWwoYXdhaXQgZnMucmVhZGRpcihmLnNlc3Npb25Sb290KSwgW2VuY29kZVVSSUNvbXBvbmVudChmLnByb2plY3QpXSkKfSkKCnRlc3QoJ+S4jeWQjOadpea6kOaWh+S7tuaYoOWwhOWQjOS4gOS8muivneaXpeW/l+aXtuaPkOWJjeaLkue7nScsIGFzeW5jIHQgPT4gewogIGNvbnN0IGYgPSBhd2FpdCBmaXh0dXJlKHQpCiAgY29uc3QgbWFwcGVyID0gY3JlYXRlU2Vzc2lvbk1hcHBlcih7IC4uLmYsIHBlcnNpc3RlbmNlOiBwZXJzaXN0ZW5jZShmLnNlc3Npb25Sb290KSwgcHJvamVjdFBhdGhzOiB7IFtmb3JlaWduXTogZi5wcm9qZWN0IH0sIGluc3BlY3RMb2c6IGluc3BlY3QgfSkKICBhd2FpdCBtYXBwZXIubWFwRW50cnkocmVsLCBsb2codHJ1ZSkpCiAgYXdhaXQgYXNzZXJ0LnJlamVjdHMoKCkgPT4gbWFwcGVyLm1hcEVudHJ5KCdvdGhlci1wcm9qZWN0LycgKyBoZWFkZXIuaWQgKyAnL3Nlc3Npb24udjQuanNvbmwuenN0ZCcsIGxvZyh0cnVlKSksIC/lkIzkuIDml6Xlv5cvdSkKfSkKCnRlc3QoJ+ebruagh+iuvuWkh+W3suacieWQjElE5YW25LuW55uu5b2V5Lya6K+d5pe25ouS57ud5Yi26YCg6YeN5aSN6Lqr5Lu9JywgYXN5bmMgdCA9PiB7CiAgY29uc3QgZiA9IGF3YWl0IGZpeHR1cmUodCksIGhvc3QgPSBwZXJzaXN0ZW5jZShmLnNlc3Npb25Sb290KQogIGhvc3QuZmluZExvZyA9IGFzeW5jICgpID0+ICh7IHNvdXJjZVBhdGg6IHBhdGguam9pbihmLnNlc3Npb25Sb290LCAnb3RoZXInLCBoZWFkZXIuaWQsICdzZXNzaW9uLnY0Lmpzb25sLnpzdGQnKSB9KQogIGNvbnN0IG1hcHBlciA9IGNyZWF0ZVNlc3Npb25NYXBwZXIoeyAuLi5mLCBwZXJzaXN0ZW5jZTogaG9zdCwgcHJvamVjdFBhdGhzOiB7IFtmb3JlaWduXTogZi5wcm9qZWN0IH0sIGluc3BlY3RMb2c6IGluc3BlY3QgfSkKICBhd2FpdCBhc3NlcnQucmVqZWN0cygoKSA9PiBtYXBwZXIubWFwRW50cnkocmVsLCBsb2codHJ1ZSkpLCAv5ZCMIElEL3UpCn0pCgp0ZXN0KCflhajph4/ov5jljp/kvb/nlKjnm67moIforr7lpIfmmKDlsITlubbkv53nlZnmnKzlnLDov73liqDljoblj7InLCBhc3luYyB0ID0+IHsKICBjb25zdCBmID0gYXdhaXQgZml4dHVyZSh0KSwgaG9zdCA9IHBlcnNpc3RlbmNlKGYuc2Vzc2lvblJvb3QpLCBnaXQgPSBiYWNrZW5kKGxvZyh0cnVlKSkKICBjb25zdCBvcHRzID0geyAuLi5mLCBwZXJzaXN0ZW5jZTogaG9zdCwgcHJvamVjdFBhdGhzOiB7IFtmb3JlaWduXTogZi5wcm9qZWN0IH0sIGluc3BlY3RMb2c6IGluc3BlY3QgfQogIGNvbnN0IG1hcHBlZCA9IGF3YWl0IGNyZWF0ZVNlc3Npb25NYXBwZXIob3B0cykubWFwRW50cnkocmVsLCBsb2codHJ1ZSkpCiAgY29uc3QgdGFyZ2V0ID0gcGF0aC5qb2luKGYuc2Vzc2lvblJvb3QsIC4uLm1hcHBlZC5yZWwuc3BsaXQoJy8nKSkKICBhd2FpdCBmcy5ta2RpcihwYXRoLmRpcm5hbWUodGFyZ2V0KSwgeyByZWN1cnNpdmU6IHRydWUgfSkKICBjb25zdCBleHRyYSA9IHpzdGRDb21wcmVzc1N5bmMoSlNPTi5zdHJpbmdpZnkoeyB0eXBlOiAncGVybWlzc2lvbi9wcmVzZXQnLCBzZXE6IDEsIHRpbWU6IDMsIGRhdGE6IHsgcHJlc2V0OiAncmVhZC1vbmx5JyB9IH0pICsgJ1xuJykKICBjb25zdCBsb2NhbCA9IEJ1ZmZlci5jb25jYXQoW21hcHBlZC5ibG9iLCBleHRyYV0pCiAgYXdhaXQgZnMud3JpdGVGaWxlKHRhcmdldCwgbG9jYWwpCiAgLy8gSW50ZXJmYWNlLWJvdW5kYXJ5IGRlY29kZXIgc3VwcG9ydHMgbXVsdGlwbGUgYXBwZW5kIGZyYW1lcywgYXMgdGhlIHJlYWwgaG9zdCBkb2VzLgogIGNvbnN0IGluc3BlY3RBbGwgPSBhc3luYyAoZmlsZSwgYnl0ZXMpID0+IHsKICAgIGNvbnN0IGggPSBzZXNzaW9uSGVhZGVyKGZpbGUsIGJ5dGVzKSwgZXZlbnRzID0gW10KICAgIGxldCBidWZmZXIgPSBoLmJvZHkKICAgIHdoaWxlIChidWZmZXIubGVuZ3RoID4gMCkgeyBjb25zdCBkZWNvZGVkID0gLyoqIEB0eXBlIHthbnl9ICovICh6c3RkRGVjb21wcmVzc1N5bmMoYnVmZmVyLCB7IGluZm86IHRydWUgfSkpOyBldmVudHMucHVzaCguLi5kZWNvZGVkLmJ1ZmZlci50b1N0cmluZygndXRmOCcpLnRyaW0oKS5zcGxpdCgnXG4nKS5tYXAoSlNPTi5wYXJzZSkpOyBidWZmZXIgPSBidWZmZXIuc3ViYXJyYXkoZGVjb2RlZC5lbmdpbmUuYnl0ZXNXcml0dGVuKSB9CiAgICBldmVudHMuZm9yRWFjaCgoZXZlbnQsIHNlcSkgPT4gYXNzZXJ0LmVxdWFsKGV2ZW50LnNlcSwgc2VxKSkKICAgIHJldHVybiB7IG1ldGE6IGguaGVhZGVyLCBldmVudHMsIGluaGVyaXRlZEV2ZW50Q291bnQ6IDAgfQogIH0KICBjb25zdCBtYXBwZXIgPSBjcmVhdGVTZXNzaW9uTWFwcGVyKHsgLi4ub3B0cywgaW5zcGVjdExvZzogaW5zcGVjdEFsbCB9KQogIGNvbnN0IHJlc3VsdCA9IGF3YWl0IG92ZXJ3cml0ZUFwcGx5KHsgLi4uZiwgZ2l0LCBjb21taXQ6ICdhJywgLi4ubWFwcGVyLCBpbnNwZWN0TG9nOiBpbnNwZWN0QWxsLCBhY3F1aXJlV3JpdGVMZWFzZTogYXN5bmMgKCkgPT4geyB0aHJvdyBuZXcgRXJyb3IoJ3ByZXNlcnZlZCBoaXN0b3J5IG11c3Qgbm90IGJlIHJld3JpdHRlbicpIH0sIHN0YWdpbmdEaXI6IHBhdGguam9pbihmLnJvb3QsICdzdGFnaW5nJyksIHNuYXBzaG90RGlyOiBwYXRoLmpvaW4oZi5yb290LCAnc25hcHNob3RzJyksIGlkOiAncnVuJyB9KQogIGFzc2VydC5lcXVhbChyZXN1bHQub2ssIHRydWUsIHJlc3VsdC5lcnJvcikKICBhc3NlcnQuZXF1YWwocmVzdWx0LnByZXNlcnZlZCwgMSkKICBhc3NlcnQoKGF3YWl0IGZzLnJlYWRGaWxlKHRhcmdldCkpLmVxdWFscyhsb2NhbCkpCn0pCgp0ZXN0KCfmioDog73lpIfku73ov5jljp/lnKjlj6bkuIDmoLnnm67lvZXlsZXlvIDmioDog73lhoXpg6jlvJXnlKjlubbkv53mjIHkuozov5vliLbkuI3lj5gnLCBhc3luYyB0ID0+IHsKICBjb25zdCBmID0gYXdhaXQgZml4dHVyZSh0KSwgcHJvdmlkZXIgPSBuZXcgUHJvdmlkZXIoKSwgc291cmNlID0gcGF0aC5qb2luKGYucm9vdCwgJ3NvdXJjZS1za2lsbHMnKSwgdGFyZ2V0ID0gcGF0aC5qb2luKGYucm9vdCwgJ3RhcmdldC1za2lsbHMnKQogIGF3YWl0IGZzLm1rZGlyKHBhdGguam9pbihzb3VyY2UsICdhbHBoYScpLCB7IHJlY3Vyc2l2ZTogdHJ1ZSB9KQogIGF3YWl0IGZzLndyaXRlRmlsZShwYXRoLmpvaW4oc291cmNlLCAnYWxwaGEnLCAnU0tJTEwubWQnKSwgJ1J1biAnICsgcGF0aC5qb2luKHNvdXJjZSwgJ2FscGhhJywgJ3J1bi5tanMnKSArICdcbicpCiAgY29uc3QgYmluYXJ5ID0gQnVmZmVyLmZyb20oWzAsIDI1NSwgNDJdKQogIGF3YWl0IGZzLndyaXRlRmlsZShwYXRoLmpvaW4oc291cmNlLCAnYWxwaGEnLCAnaW1hZ2UucG5nJyksIGJpbmFyeSkKICBhd2FpdCBwdXNoU2tpbGxCYWNrdXAoeyBob21lOiBwYXRoLmpvaW4oZi5yb290LCAnc291cmNlLWhvbWUnKSwgcm9vdDogc291cmNlLCBwcm92aWRlciB9KQogIGNvbnN0IHJlc3RvcmVkID0gYXdhaXQgcmVzdG9yZVNraWxscyh7IGhvbWU6IHBhdGguam9pbihmLnJvb3QsICd0YXJnZXQtaG9tZScpLCByb290OiB0YXJnZXQsIHByb3ZpZGVyIH0pCiAgYXNzZXJ0LmRlZXBFcXVhbChyZXN0b3JlZC5yZXN0b3JlZCwgWydhbHBoYSddKQogIGNvbnN0IHRleHQgPSBhd2FpdCBmcy5yZWFkRmlsZShwYXRoLmpvaW4odGFyZ2V0LCAnYWxwaGEnLCAnU0tJTEwubWQnKSwgJ3V0ZjgnKQogIGFzc2VydCh0ZXh0LmluY2x1ZGVzKHBhdGguam9pbih0YXJnZXQsICdhbHBoYScpLnJlcGxhY2VBbGwoJ1xcJywgJy8nKSkpCiAgYXNzZXJ0KCF0ZXh0LmluY2x1ZGVzKCdzb3VyY2Utc2tpbGxzJykpCiAgYXNzZXJ0KChhd2FpdCBmcy5yZWFkRmlsZShwYXRoLmpvaW4odGFyZ2V0LCAnYWxwaGEnLCAnaW1hZ2UucG5nJykpKS5lcXVhbHMoYmluYXJ5KSkKfSkKCnRlc3QoJ+aPkuS7tuW/q+eFp+WcqOWPpuS4gOiuvuWkh+agueaBouWkjea6kOeggeW5tumHjee7kWZpbGXkvp3otZblj4rphY3nva7ot6/lvoQnLCBhc3luYyB0ID0+IHsKICBjb25zdCBmID0gYXdhaXQgZml4dHVyZSh0KSwgc291cmNlSG9tZSA9IHBhdGguam9pbihmLnJvb3QsICdzb3VyY2UtaG9tZScpLCB0YXJnZXRIb21lID0gcGF0aC5qb2luKGYucm9vdCwgJ3RhcmdldC1ob21lJyksIHNvdXJjZSA9IHBhdGguam9pbihmLnJvb3QsICdwbHVnaW4tc291cmNlJyksIHByb3ZpZGVyID0gbmV3IFByb3ZpZGVyKCkKICBhd2FpdCBmcy5ta2Rpcihzb3VyY2UpCiAgYXdhaXQgZnMud3JpdGVGaWxlKHBhdGguam9pbihzb3VyY2UsICdwYWNrYWdlLmpzb24nKSwgSlNPTi5zdHJpbmdpZnkoeyBuYW1lOiAnZGVtby1wbHVnaW4nLCB2ZXJzaW9uOiAnMS4wLjAnIH0pKQogIGF3YWl0IGZzLndyaXRlRmlsZShwYXRoLmpvaW4oc291cmNlLCAnY29uZmlnLmpzb24nKSwgSlNPTi5zdHJpbmdpZnkoeyBjYWNoZTogcGF0aC5qb2luKHNvdXJjZUhvbWUsICdjYWNoZScpLCBzY3JpcHQ6IHBhdGguam9pbihzb3VyY2UsICdydW4ubWpzJykgfSkpCiAgYXdhaXQgZnMud3JpdGVGaWxlKHBhdGguam9pbihzb3VyY2UsICdydW4ubWpzJyksICdleHBvcnQgZGVmYXVsdCAxXG4nKQogIGNvbnN0IHByb2ZpbGUgPSBwYXRoLmpvaW4oc291cmNlSG9tZSwgJ3Byb2ZpbGVzJywgJ2Rlc2t0b3AnKQogIGF3YWl0IGZzLm1rZGlyKHByb2ZpbGUsIHsgcmVjdXJzaXZlOiB0cnVlIH0pCiAgYXdhaXQgZnMud3JpdGVGaWxlKHBhdGguam9pbihwcm9maWxlLCAncGFja2FnZS5qc29uJyksIEpTT04uc3RyaW5naWZ5KHsgbmFtZTogJ3Byb2ZpbGUnLCBkZXBlbmRlbmNpZXM6IHsgJ2RlbW8tcGx1Z2luJzogJ2ZpbGU6JyArIHNvdXJjZSB9IH0pKQogIGNvbnN0IGVudHJ5ID0gYXdhaXQgYmFja3VwTG9jYWxQbHVnaW4oc291cmNlLCB7IGhvbWU6IHNvdXJjZUhvbWUgfSkKICBhd2FpdCBwcm92aWRlci5wdXQoZW50cnkub2JqZWN0S2V5LCBhd2FpdCBmcy5yZWFkRmlsZShwYXRoLmpvaW4oc3luY1Jvb3Qoc291cmNlSG9tZSksICdhcmNoaXZlcycsIGVudHJ5LmFyY2hpdmUpKSkKICBjb25zdCBzbmFwc2hvdCA9IGF3YWl0IGNyZWF0ZVNuYXBzaG90KHsgaG9tZTogc291cmNlSG9tZSwgcHJvZmlsZXM6IFsnZGVza3RvcCddIH0pCiAgYXdhaXQgcHJvdmlkZXIucHV0KCdzbmFwc2hvdHMvbGF0ZXN0Lmpzb24uZ3onLCBzbmFwc2hvdC5lbmNvZGVkKQogIGNvbnN0IHJlc3RvcmVkID0gYXdhaXQgcHVsbFNuYXBzaG90KHsgaG9tZTogdGFyZ2V0SG9tZSwgYXBwbHk6IHRydWUsIHByb3ZpZGVyIH0pCiAgYXNzZXJ0LmVxdWFsKHJlc3RvcmVkLmFwcGxpZWQsIHRydWUpCiAgY29uc3QgZGlyZWN0b3J5ID0gcmVzdG9yZWQucmVzdG9yZWRTb3VyY2VzWydkZW1vLXBsdWdpbiddCiAgY29uc3QgbWFuaWZlc3QgPSBKU09OLnBhcnNlKGF3YWl0IGZzLnJlYWRGaWxlKHBhdGguam9pbih0YXJnZXRIb21lLCAncHJvZmlsZXMnLCAnZGVza3RvcCcsICdwYWNrYWdlLmpzb24nKSwgJ3V0ZjgnKSkKICBhc3NlcnQuZXF1YWwobWFuaWZlc3QuZGVwZW5kZW5jaWVzWydkZW1vLXBsdWdpbiddLCAnZmlsZTonICsgZGlyZWN0b3J5LnJlcGxhY2VBbGwoJ1xcJywgJy8nKSkKICBjb25zdCBjb25maWcgPSBKU09OLnBhcnNlKGF3YWl0IGZzLnJlYWRGaWxlKHBhdGguam9pbihkaXJlY3RvcnksICdjb25maWcuanNvbicpLCAndXRmOCcpKQogIGFzc2VydC5lcXVhbChjb25maWcuY2FjaGUsIHBhdGguam9pbih0YXJnZXRIb21lLCAnY2FjaGUnKS5yZXBsYWNlQWxsKCdcXCcsICcvJykpCiAgYXNzZXJ0LmVxdWFsKGNvbmZpZy5zY3JpcHQsIHBhdGguam9pbihkaXJlY3RvcnksICdydW4ubWpzJykucmVwbGFjZUFsbCgnXFwnLCAnLycpKQogIGFzc2VydC5lcXVhbChyZXN0b3JlZC5yZXN0YXJ0UmVxdWlyZWQsIHRydWUpCn0pCgp0ZXN0KCfljovnvKnlkozmnKrljovnvKnlpIfku73lnYfmjInnm67moIflrr/kuLvnvJbnoIHokL3lnLDvvIzkuovku7bljp/lp4tKU09O5a2X6IqC5LiN5Y+YJywgYXN5bmMgdCA9PiB7CiAgY29uc3QgZiA9IGF3YWl0IGZpeHR1cmUodCkKICBmb3IgKGNvbnN0IGNvbXByZXNzZWQgb2YgW2ZhbHNlLCB0cnVlXSkgewogICAgY29uc3QgaG9zdCA9IHBlcnNpc3RlbmNlKGYuc2Vzc2lvblJvb3QpCiAgICBob3N0LmxvY2F0ZSA9IG1ldGEgPT4gKHsgcGF0aDogcGF0aC5qb2luKGYuc2Vzc2lvblJvb3QsIGVuY29kZVVSSUNvbXBvbmVudChtZXRhLmN3ZCksIG1ldGEuaWQsICdzZXNzaW9uLnY0Lmpzb25sJyArIChjb21wcmVzc2VkID8gJy56c3RkJyA6ICcnKSkgfSkKICAgIGNvbnN0IG1hcHBlciA9IGNyZWF0ZVNlc3Npb25NYXBwZXIoeyAuLi5mLCBwZXJzaXN0ZW5jZTogaG9zdCwgcHJvamVjdFBhdGhzOiB7IFtmb3JlaWduXTogZi5wcm9qZWN0IH0sIGluc3BlY3RMb2c6IGluc3BlY3QgfSkKICAgIGNvbnN0IGVudHJ5ID0gYXdhaXQgbWFwcGVyLm1hcEVudHJ5KGNvbXByZXNzZWQgPyByZWwuc2xpY2UoMCwgLTUpIDogcmVsLCBsb2coIWNvbXByZXNzZWQpKQogICAgY29uc3QgZGVjb2RlZCA9IHNlc3Npb25IZWFkZXIoZW50cnkucmVsLCBlbnRyeS5ibG9iKQogICAgYXNzZXJ0LmVxdWFsKGRlY29kZWQuY29tcHJlc3NlZCwgY29tcHJlc3NlZCkKICAgIGFzc2VydCgoY29tcHJlc3NlZCA/IHpzdGREZWNvbXByZXNzU3luYyhkZWNvZGVkLmJvZHkpIDogZGVjb2RlZC5ib2R5KS5lcXVhbHMoYm9keSkpCiAgfQp9KQoKdGVzdCgn57y65bCR5aSH5Lu95Lit55qE5pys5Zyw5o+S5Lu25rqQ56CB5pe277yM5Zyo5YaZcHJvZmlsZeWJjeaLkue7neiZmuaKpei/mOWOn+WPr+eUqCcsIGFzeW5jIHQgPT4gewogIGNvbnN0IGYgPSBhd2FpdCBmaXh0dXJlKHQpLCBzb3VyY2VIb21lID0gcGF0aC5qb2luKGYucm9vdCwgJ3NvdXJjZS1ob21lJyksIHRhcmdldEhvbWUgPSBwYXRoLmpvaW4oZi5yb290LCAndGFyZ2V0LWhvbWUnKSwgcHJvdmlkZXIgPSBuZXcgUHJvdmlkZXIoKQogIGNvbnN0IHByb2ZpbGUgPSBwYXRoLmpvaW4oc291cmNlSG9tZSwgJ3Byb2ZpbGVzJywgJ2Rlc2t0b3AnKQogIGF3YWl0IGZzLm1rZGlyKHByb2ZpbGUsIHsgcmVjdXJzaXZlOiB0cnVlIH0pCiAgYXdhaXQgZnMud3JpdGVGaWxlKHBhdGguam9pbihwcm9maWxlLCAncGFja2FnZS5qc29uJyksIEpTT04uc3RyaW5naWZ5KHsgbmFtZTogJ3Byb2ZpbGUnLCBkZXBlbmRlbmNpZXM6IHsgJ21pc3NpbmctcGx1Z2luJzogJ2ZpbGU6WjovbWlzc2luZy1wbHVnaW4nIH0gfSkpCiAgY29uc3Qgc25hcHNob3QgPSBhd2FpdCBjcmVhdGVTbmFwc2hvdCh7IGhvbWU6IHNvdXJjZUhvbWUsIHByb2ZpbGVzOiBbJ2Rlc2t0b3AnXSB9KQogIGF3YWl0IHByb3ZpZGVyLnB1dCgnc25hcHNob3RzL2xhdGVzdC5qc29uLmd6Jywgc25hcHNob3QuZW5jb2RlZCkKICBhd2FpdCBhc3NlcnQucmVqZWN0cygoKSA9PiBwdWxsU25hcHNob3QoeyBob21lOiB0YXJnZXRIb21lLCBhcHBseTogdHJ1ZSwgcHJvdmlkZXIgfSksIC/mnKzlnLDmj5Lku7bkvp3otZbmnKrljIXlkKvlnKjlpIfku73kuK0vdSkKICBhd2FpdCBhc3NlcnQucmVqZWN0cygoKSA9PiBmcy5zdGF0KHBhdGguam9pbih0YXJnZXRIb21lLCAncHJvZmlsZXMnLCAnZGVza3RvcCcsICdwYWNrYWdlLmpzb24nKSksIHsgY29kZTogJ0VOT0VOVCcgfSkKfSkKCg==
+import { test } from 'node:test'
+import assert from 'node:assert/strict'
+import { promises as fs } from 'node:fs'
+import os from 'node:os'
+import path from 'node:path'
+import { gzipSync, zstdCompressSync, zstdDecompressSync } from 'node:zlib'
+import { portableFile, portableText, localText } from '../lib/portable.mjs'
+import { createSessionMapper, sessionHeader } from '../lib/session-portable.mjs'
+import { previewRestore, mergeRestore, overwriteApply } from '../lib/restore.mjs'
+import { backupLocalPlugin, createSnapshot, pullSnapshot, pushSkillBackup, restoreSkills, syncRoot } from '../lib/cloud-core.mjs'
+
+class Provider {
+  objects = new Map()
+  async put(key, bytes) { this.objects.set(key, Buffer.from(bytes)) }
+  async get(key) { if (!this.objects.has(key)) throw new Error('HTTP 404'); return this.objects.get(key) }
+  async getWithMeta(key) { return { body: await this.get(key), etag: 'fixture' } }
+  async remove(key) { this.objects.delete(key) }
+}
+async function fixture(t) {
+  const root = await fs.mkdtemp(path.join(os.tmpdir(), 'dsh-portable-'))
+  t.after(async () => { assert.equal(path.dirname(root), os.tmpdir()); assert(path.basename(root).startsWith('dsh-portable-')); await fs.rm(root, { recursive: true, force: true }) })
+  const project = path.join(root, '目标 项目'), sessionRoot = path.join(root, 'sessions')
+  await fs.mkdir(project); await fs.mkdir(sessionRoot)
+  return { root, project, sessionRoot }
+}
+const foreign = 'Z:\\Users\\source-device\\Documents\\来源项目'
+const header = { type: 'session', version: 4, id: 'session-portable', cwd: foreign, createdAt: 1, isSeeded: false, delegationDepth: 0 }
+const body = Buffer.from(JSON.stringify({ type: 'permission/preset', seq: 0, time: 2, data: { preset: 'workspace-write', note: foreign } }) + '\n')
+const log = compressed => compressed ? Buffer.concat([zstdCompressSync(JSON.stringify(header) + '\n'), zstdCompressSync(body)]) : Buffer.concat([Buffer.from(JSON.stringify(header) + '\n'), body])
+const rel = 'source-project/' + header.id + '/session.v4.jsonl.zstd'
+function persistence(sessionRoot) {
+  return { locate(meta) { return { path: path.join(sessionRoot, encodeURIComponent(meta.cwd ?? '_no-cwd'), meta.id, 'session.v4.jsonl.zstd') } } }
+}
+async function inspect(_rel, bytes) {
+  const parsed = sessionHeader(_rel, bytes)
+  const lines = (parsed.compressed ? zstdDecompressSync(parsed.body) : parsed.body).toString('utf8').trim().split('\n').filter(Boolean).map(JSON.parse)
+  lines.forEach((event, seq) => assert.equal(event.seq, seq))
+  return { meta: parsed.header, events: lines, inheritedEventCount: 0 }
+}
+function backend(bytes) { return { listFilesAtRev: async () => ['sessions/' + rel], readFileAtRev: async () => bytes } }
+
+// Distinct device roots are intentional; no path is taken from a specific developer machine.
+test('便携路径以来源根为边界，按目标设备独立解析，二进制和普通文字不变', () => {
+  const source = { userHome: 'C:/Users/source', dshHome: 'D:/dsh', skillsRoot: 'E:/skills', sourceRoot: 'F:/plugin' }
+  const target = { userHome: '/home/target', dshHome: '/srv/dsh', skillsRoot: '/opt/skills', sourceRoot: '/opt/plugin' }
+  const input = { cache: 'D:/dsh/cache', script: 'F:/plugin/scripts/run.mjs', skill: 'E:/skills/alpha/SKILL.md', other: 'C:/Users/source-other/keep' }
+  const packed = portableFile('config.json', Buffer.from(JSON.stringify(input)), source)
+  assert(!packed.toString().includes('D:/dsh'))
+  const output = JSON.parse(portableFile('config.json', packed, target, true))
+  assert.deepEqual(output, { cache: '/srv/dsh/cache', script: '/opt/plugin/scripts/run.mjs', skill: '/opt/skills/alpha/SKILL.md', other: input.other })
+  const binary = Buffer.from([0, 255, 128, 1])
+  assert.equal(portableFile('image.png', binary, target, true), binary)
+  assert.equal(portableText('ordinary words ./relative user~name', source), 'ordinary words ./relative user~name')
+})
+
+test('旧备份Windows JSON转义路径映射到目标home，JSON仍有效', () => {
+  const bytes = Buffer.from(JSON.stringify({ root: 'C:\\Users\\old-device\\.dsh\\profiles\\desktop', skill: 'C:\\Users\\old-device\\.agents\\skills\\alpha' }))
+  const result = JSON.parse(portableFile('config.json', bytes, { userHome: '/home/new', dshHome: '/srv/dsh', skillsRoot: '/srv/skills' }, true))
+  assert.equal(result.root, '/srv/dsh/profiles/desktop')
+  assert.equal(result.skill, '/srv/skills/alpha')
+  assert.equal(localText('~/a', { userHome: '/home/new' }), '/home/new/a')
+})
+
+test('压缩日志只改头部cwd，全部消息事件压缩帧原字节保留', async t => {
+  const f = await fixture(t)
+  const mapper = createSessionMapper({ ...f, persistence: persistence(f.sessionRoot), projectPaths: { [foreign]: f.project }, inspectLog: inspect })
+  const original = log(true), entry = await mapper.mapEntry(rel, original)
+  assert.equal(sessionHeader(entry.rel, entry.blob).header.cwd, f.project)
+  assert(sessionHeader(entry.rel, entry.blob).body.equals(sessionHeader(rel, original).body))
+  assert(entry.rel.includes(encodeURIComponent(f.project)))
+  assert.equal((await inspect(entry.rel, entry.blob)).events[0].data.note, foreign)
+})
+
+test('未压缩日志迁移后正文逐字节不变', async t => {
+  const f = await fixture(t)
+  const host = persistence(f.sessionRoot)
+  host.locate = meta => ({ path: path.join(f.sessionRoot, encodeURIComponent(meta.cwd), meta.id, 'session.v4.jsonl') })
+  const mapper = createSessionMapper({ ...f, persistence: host, projectPaths: { [foreign]: f.project }, inspectLog: inspect })
+  const entry = await mapper.mapEntry(rel.slice(0, -5), log(false))
+  assert.equal(sessionHeader(entry.rel, entry.blob).header.cwd, f.project)
+  assert(sessionHeader(entry.rel, entry.blob).body.equals(body))
+})
+
+test('缺失项目预览给出待选择目录，执行拒绝且不创建空项目', async t => {
+  const f = await fixture(t), git = backend(log(true))
+  const options = { ...f, persistence: persistence(f.sessionRoot), inspectLog: inspect }
+  const previewMap = createSessionMapper({ ...options, preview: true })
+  const preview = await previewRestore({ git, commit: 'a', ...f, ...previewMap })
+  assert.equal(preview.ok, true, preview.error)
+  assert.equal(preview.projects[0].requiresSelection, true)
+  // 目录不存在时不再阻断还原，直接使用 suggested 路径
+  const mapper = createSessionMapper(options)
+  const result = await mergeRestore({ git, commit: 'a', ...f, ...mapper })
+  assert.equal(result.ok, true, result.error)
+})
+
+test('显式目标目录必须存在，跨设备合并第二轮不会复制出来源设备目录', async t => {
+  const f = await fixture(t), git = backend(log(true))
+  const options = { ...f, persistence: persistence(f.sessionRoot), inspectLog: inspect }
+  const bad = createSessionMapper({ ...options, projectPaths: { [foreign]: path.join(f.root, 'missing') } })
+  // 不再阻断：显式目标目录不存在时 fallback 到 suggested 路径继续还原
+  const badResult = await bad.mapEntry(rel, log(true))
+  assert.ok(badResult, 'fallback to suggested path instead of throwing')
+  for (let round = 0; round < 2; round++) {
+    const mapper = createSessionMapper({ ...options, projectPaths: { [foreign]: f.project } })
+    const result = await mergeRestore({ git, commit: 'a', ...f, ...mapper })
+    assert.equal(result.ok, true, result.error)
+    assert.equal(result.written, round === 0 ? 1 : 0)
+    assert.equal(result.forks.length, 0)
+  }
+  assert.deepEqual(await fs.readdir(f.sessionRoot), [encodeURIComponent(f.project)])
+})
+
+test('不同来源文件映射同一会话日志时提前拒绝', async t => {
+  const f = await fixture(t)
+  const mapper = createSessionMapper({ ...f, persistence: persistence(f.sessionRoot), projectPaths: { [foreign]: f.project }, inspectLog: inspect })
+  await mapper.mapEntry(rel, log(true))
+  await assert.rejects(() => mapper.mapEntry('other-project/' + header.id + '/session.v4.jsonl.zstd', log(true)), /同一日志/u)
+})
+
+test('目标设备已有同ID其他目录会话时拒绝制造重复身份', async t => {
+  const f = await fixture(t), host = persistence(f.sessionRoot)
+  host.findLog = async () => ({ sourcePath: path.join(f.sessionRoot, 'other', header.id, 'session.v4.jsonl.zstd') })
+  const mapper = createSessionMapper({ ...f, persistence: host, projectPaths: { [foreign]: f.project }, inspectLog: inspect })
+  await assert.rejects(() => mapper.mapEntry(rel, log(true)), /同 ID/u)
+})
+
+test('全量还原使用目标设备映射并保留本地追加历史', async t => {
+  const f = await fixture(t), host = persistence(f.sessionRoot), git = backend(log(true))
+  const opts = { ...f, persistence: host, projectPaths: { [foreign]: f.project }, inspectLog: inspect }
+  const mapped = await createSessionMapper(opts).mapEntry(rel, log(true))
+  const target = path.join(f.sessionRoot, ...mapped.rel.split('/'))
+  await fs.mkdir(path.dirname(target), { recursive: true })
+  const extra = zstdCompressSync(JSON.stringify({ type: 'permission/preset', seq: 1, time: 3, data: { preset: 'read-only' } }) + '\n')
+  const local = Buffer.concat([mapped.blob, extra])
+  await fs.writeFile(target, local)
+  // Interface-boundary decoder supports multiple append frames, as the real host does.
+  const inspectAll = async (file, bytes) => {
+    const h = sessionHeader(file, bytes), events = []
+    let buffer = h.body
+    while (buffer.length > 0) { const decoded = /** @type {any} */ (zstdDecompressSync(buffer, { info: true })); events.push(...decoded.buffer.toString('utf8').trim().split('\n').map(JSON.parse)); buffer = buffer.subarray(decoded.engine.bytesWritten) }
+    events.forEach((event, seq) => assert.equal(event.seq, seq))
+    return { meta: h.header, events, inheritedEventCount: 0 }
+  }
+  const mapper = createSessionMapper({ ...opts, inspectLog: inspectAll })
+  const result = await overwriteApply({ ...f, git, commit: 'a', ...mapper, inspectLog: inspectAll, acquireWriteLease: async () => { throw new Error('preserved history must not be rewritten') }, stagingDir: path.join(f.root, 'staging'), snapshotDir: path.join(f.root, 'snapshots'), id: 'run' })
+  assert.equal(result.ok, true, result.error)
+  assert.equal(result.preserved, 1)
+  assert((await fs.readFile(target)).equals(local))
+})
+
+test('技能备份还原在另一根目录展开技能内部引用并保持二进制不变', async t => {
+  const f = await fixture(t), provider = new Provider(), source = path.join(f.root, 'source-skills'), target = path.join(f.root, 'target-skills')
+  await fs.mkdir(path.join(source, 'alpha'), { recursive: true })
+  await fs.writeFile(path.join(source, 'alpha', 'SKILL.md'), 'Run ' + path.join(source, 'alpha', 'run.mjs') + '\n')
+  const binary = Buffer.from([0, 255, 42])
+  await fs.writeFile(path.join(source, 'alpha', 'image.png'), binary)
+  await pushSkillBackup({ home: path.join(f.root, 'source-home'), root: source, provider })
+  const restored = await restoreSkills({ home: path.join(f.root, 'target-home'), root: target, provider })
+  assert.deepEqual(restored.restored, ['alpha'])
+  const text = await fs.readFile(path.join(target, 'alpha', 'SKILL.md'), 'utf8')
+  assert(text.includes(path.join(target, 'alpha').replaceAll('\\', '/')))
+  assert(!text.includes('source-skills'))
+  assert((await fs.readFile(path.join(target, 'alpha', 'image.png'))).equals(binary))
+})
+
+test('插件快照在另一设备根恢复源码并重绑file依赖及配置路径', async t => {
+  const f = await fixture(t), sourceHome = path.join(f.root, 'source-home'), targetHome = path.join(f.root, 'target-home'), source = path.join(f.root, 'plugin-source'), provider = new Provider()
+  await fs.mkdir(source)
+  await fs.writeFile(path.join(source, 'package.json'), JSON.stringify({ name: 'demo-plugin', version: '1.0.0' }))
+  await fs.writeFile(path.join(source, 'config.json'), JSON.stringify({ cache: path.join(sourceHome, 'cache'), script: path.join(source, 'run.mjs') }))
+  await fs.writeFile(path.join(source, 'run.mjs'), 'export default 1\n')
+  const profile = path.join(sourceHome, 'profiles', 'desktop')
+  await fs.mkdir(profile, { recursive: true })
+  await fs.writeFile(path.join(profile, 'package.json'), JSON.stringify({ name: 'profile', dependencies: { 'demo-plugin': 'file:' + source } }))
+  const entry = await backupLocalPlugin(source, { home: sourceHome })
+  await provider.put(entry.objectKey, await fs.readFile(path.join(syncRoot(sourceHome), 'archives', entry.archive)))
+  const snapshot = await createSnapshot({ home: sourceHome, profiles: ['desktop'] })
+  await provider.put('snapshots/latest.json.gz', snapshot.encoded)
+  const restored = await pullSnapshot({ home: targetHome, apply: true, provider })
+  assert.equal(restored.applied, true)
+  const directory = restored.restoredSources['demo-plugin']
+  const manifest = JSON.parse(await fs.readFile(path.join(targetHome, 'profiles', 'desktop', 'package.json'), 'utf8'))
+  assert.equal(manifest.dependencies['demo-plugin'], 'file:' + directory.replaceAll('\\', '/'))
+  const config = JSON.parse(await fs.readFile(path.join(directory, 'config.json'), 'utf8'))
+  assert.equal(config.cache, path.join(targetHome, 'cache').replaceAll('\\', '/'))
+  assert.equal(config.script, path.join(directory, 'run.mjs').replaceAll('\\', '/'))
+  assert.equal(restored.restartRequired, true)
+})
+
+test('压缩和未压缩备份均按目标宿主编码落地，事件原始JSON字节不变', async t => {
+  const f = await fixture(t)
+  for (const compressed of [false, true]) {
+    const host = persistence(f.sessionRoot)
+    host.locate = meta => ({ path: path.join(f.sessionRoot, encodeURIComponent(meta.cwd), meta.id, 'session.v4.jsonl' + (compressed ? '.zstd' : '')) })
+    const mapper = createSessionMapper({ ...f, persistence: host, projectPaths: { [foreign]: f.project }, inspectLog: inspect })
+    const entry = await mapper.mapEntry(compressed ? rel.slice(0, -5) : rel, log(!compressed))
+    const decoded = sessionHeader(entry.rel, entry.blob)
+    assert.equal(decoded.compressed, compressed)
+    assert((compressed ? zstdDecompressSync(decoded.body) : decoded.body).equals(body))
+  }
+})
+
+test('缺少备份中的本地插件源码时，在写profile前拒绝虚报还原可用', async t => {
+  const f = await fixture(t), sourceHome = path.join(f.root, 'source-home'), targetHome = path.join(f.root, 'target-home'), provider = new Provider()
+  const profile = path.join(sourceHome, 'profiles', 'desktop')
+  await fs.mkdir(profile, { recursive: true })
+  await fs.writeFile(path.join(profile, 'package.json'), JSON.stringify({ name: 'profile', dependencies: { 'missing-plugin': 'file:Z:/missing-plugin' } }))
+  const snapshot = await createSnapshot({ home: sourceHome, profiles: ['desktop'] })
+  await provider.put('snapshots/latest.json.gz', snapshot.encoded)
+  await assert.rejects(() => pullSnapshot({ home: targetHome, apply: true, provider }), /本地插件依赖未包含在备份中/u)
+  await assert.rejects(() => fs.stat(path.join(targetHome, 'profiles', 'desktop', 'package.json')), { code: 'ENOENT' })
+})
+

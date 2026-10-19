@@ -1,1 +1,273 @@
-Ly8gdGVzdC9wcm9ncmVzcy11aS1yZWdyZXNzaW9uLnRlc3QubWpzIOKAlCDplIHmrbvov5vluqbmnaHnmoTkuKTkuKrmmL7npLogYnVnICsg5LiJ57G75aSH5Lu95YWo6KaG55uW44CCCi8vCi8vIOiDjOaZr++8iDIwMjYtMTAtMTUg55yf5a6e5pWF6Zqc77yJ77yaCi8vICAgQlVHLTEg5YmN56uvIGV4aXRpbmcg6ZuG5ZCI5Y+q5aKe5LiN5YePIOKGkiDmn5DnsbvlpIfku73jgJDnrKzkuozmrKHotbfjgJHmsLjov5zluKYgaXMtZXhpdGluZwovLyAgICAgICAgIO+8iENTUyBvcGFjaXR5OjAgKyBzY2FsZe+8ieKGkiDov5vluqbmnaHmuLLmn5PkuobljbTlrozlhajnnIvkuI3op4HjgIIKLy8gICBCVUctMiBkaXNwbGF5UmVmIOaui+eVmeS4iuS4gOi9rueahCAxMDAlIOKGkiDmlrDkuIDova7ku44gMTAwIOWbnuiQveOAggovLyAgIEJVRy0zIOiHquWKqC/lrprml7blpIfku73kuI3nmbvorrDov5vluqYg4oaSIOeUqOaIt+S7peS4uuayoeWcqOi3keOAggovLwovLyDov5nkupvmlq3oqIDor7vjgJDnnJ/lrp7mupDnoIHmlofmnKzjgJHvvIzkuI3mmK/lpI3liLvlia/mnKwg4oCU4oCUIOmYsuatouS7o+eggeaUueWbnuaXp+WGmeazleiAjOa1i+ivleS7jee7v+OAggppbXBvcnQgeyB0ZXN0IH0gZnJvbSAnbm9kZTp0ZXN0JwppbXBvcnQgYXNzZXJ0IGZyb20gJ25vZGU6YXNzZXJ0L3N0cmljdCcKaW1wb3J0IHsgcmVhZEZpbGVTeW5jIH0gZnJvbSAnbm9kZTpmcycKCmNvbnN0IGNsaWVudFNyYyA9IHJlYWRGaWxlU3luYyhuZXcgVVJMKCcuLi9jbGllbnQuanMnLCBpbXBvcnQubWV0YS51cmwpLCAndXRmOCcpCmNvbnN0IGluZGV4U3JjID0gcmVhZEZpbGVTeW5jKG5ldyBVUkwoJy4uL2luZGV4Lm1qcycsIGltcG9ydC5tZXRhLnVybCksICd1dGY4JykKCnRlc3QoJ+WJjeerr++8muaWsOS4gOi9riBydW5uaW5nIOaXtuW/hemhu+a4hemZpCBleGl0aW5nIOagh+iusO+8iEJVRy0xIOWbnuW9ku+8iScsICgpID0+IHsKICAvLyDlv4XpobvmnIkgZGVsZXRl77yM5LiU5piv5Zyo5aSE55CGIHJ1bm5pbmdLZXlz77yIa2luZCthY3Rpb24g5aSN5ZCI6ZSu77yJ55qE5LiK5LiL5paH6YeMCiAgYXNzZXJ0Lm1hdGNoKGNsaWVudFNyYywgL3J1bm5pbmdLZXlzW1xzXFNdezAsNDAwfW5leHRcLmRlbGV0ZVwoa1wpL3UsCiAgICAnZXhpdGluZyDlj6rlop7kuI3lh4/kvJrorqnnrKzkuozmrKHotbfnmoTov5vluqbmnaHmsLjkuYUgb3BhY2l0eTowIOKAlOKAlCDlv4XpobvlnKggcnVubmluZyDml7bmuIXpmaQnKQp9KQoKdGVzdCgn5YmN56uv77ya5paw5LiA6L2uIHJ1bm5pbmcg5pe25b+F6aG76YeN572u5q6L55WZ5pi+56S65YC877yIQlVHLTIg5Zue5b2S77yJJywgKCkgPT4gewogIGFzc2VydC5tYXRjaChjbGllbnRTcmMsIC9kaXNwbGF5UmVmXC5jdXJyZW50XC5kZWxldGVcKC91LAogICAgJ2Rpc3BsYXlSZWYg5q6L55WZ5LiK5LiA6L2uIDEwMCUg5Lya6K6p5paw5LiA6L2u5LuOIDEwMCDlm57okL0g4oCU4oCUIOW/hemhu+mHjee9ricpCn0pCgp0ZXN0KCfliY3nq6/vvJrov5vluqbmta7lsYLmjILlnKggc2hlbGwub3Zlcmxhee+8iOi3qOW3peS9nOWMuuWPr+ingeeahOWJjeaPkO+8iScsICgpID0+IHsKICBhc3NlcnQubWF0Y2goY2xpZW50U3JjLCAvc2xvdHNcLmluamVjdFwoJ3NoZWxsXC5vdmVybGF5Jy91KQp9KQoKdGVzdCgn5YmN56uv77ya6L+b5bqm5p2h5a655Zmo5LiO5LiJ5p2h5o6S5YiX55qE5qC35byP5a2Y5ZyoJywgKCkgPT4gewogIGFzc2VydC5tYXRjaChjbGllbnRTcmMsIC9cLnNzLXByb2ctZG9ja1x7L3UpCiAgYXNzZXJ0Lm1hdGNoKGNsaWVudFNyYywgL1wuc3MtcHJvZy1yb3dcLmlzLWV4aXRpbmdcey91LCAn5pS25bC+5Yqo55S75qC35byP5b+F6aG75a2Y5ZyoJykKICBhc3NlcnQubWF0Y2goY2xpZW50U3JjLCAvXC5zcy1wcm9nLWZsb3dcey91LCAn5LiN56Gu5a6a5oCB5rWB5Yqo5p2h57q55qC35byP5b+F6aG75a2Y5ZyoJykKfSkKCnRlc3QoJ+WQjuerr++8muS4ieadoeWkh+S7veWfn+mDveaciSBwcm9ncmVzcy5zdGFydCDnmbvorrAnLCAoKSA9PiB7CiAgY29uc3Qgc3RhcnRzID0gWy4uLmluZGV4U3JjLm1hdGNoQWxsKC9wcm9ncmVzc1wuc3RhcnRcKChbXiwpXSspL2d1KV0ubWFwKChtKSA9PiBtWzFdLnRyaW0oKSkKICBhc3NlcnQub2soc3RhcnRzLnNvbWUoKHMpID0+IHMgPT09ICInc2Vzc2lvbiciKSwgJ+S8muivneWkh+S7veW/hemhu+eZu+iusCcpCiAgYXNzZXJ0Lm9rKHN0YXJ0cy5zb21lKChzKSA9PiBzID09PSAia2luZCIpLCAn5o+S5Lu2L+aKgOiDve+8iOi3r+eUseWMheijhe+8ieW/hemhu+eZu+iusCcpCiAgYXNzZXJ0Lm9rKHN0YXJ0cy5sZW5ndGggPj0gNCwgYOeZu+iusOeCueW6lOimhuebluaJi+WKqC/oh6rliqgvdHVybi1lbmQv5a6a5pe25o+S5Lu277yM5a6e6ZmFICR7c3RhcnRzLmxlbmd0aH0g5aSEYCkKfSkKCnRlc3QoJ+WQjuerr++8muaJi+WKqOS8muivneWkh+S7veaKiiBvblN0ZGVyciDpgI/kvKDnu5nlvJXmk44nLCAoKSA9PiB7CiAgYXNzZXJ0Lm1hdGNoKGluZGV4U3JjLCAvYmFja3VwRW5naW5lXC5wdXNoXChce1tcc1xTXXswLDIwMH1vblN0ZGVyci91KQp9KQoKdGVzdCgn5ZCO56uv77ya6Ieq5Yqo5aSH5Lu977yI5a6a5pe277yJ5Lmf55m76K6w6L+b5bqm77yIQlVHLTMg5Zue5b2S77yJJywgKCkgPT4gewogIC8vIHJ1bkF1dG9tYXRpY0JhY2t1cCDlh73mlbDkvZPlhoXlv4XpobvmnIkgcHJvZ3Jlc3Muc3RhcnQKICBjb25zdCBmbiA9IGluZGV4U3JjLm1hdGNoKC9hc3luYyBmdW5jdGlvbiBydW5BdXRvbWF0aWNCYWNrdXBcKFwpW1xzXFNdKj9cbiAgXH0vdSkKICBhc3NlcnQub2soZm4gIT09IG51bGwsICfmib7kuI3liLAgcnVuQXV0b21hdGljQmFja3VwIOWumuS5iScpCiAgYXNzZXJ0Lm1hdGNoKGZuWzBdLCAvcHJvZ3Jlc3NcLnN0YXJ0XCgnc2Vzc2lvbicvdSwgJ+iHquWKqOS8muivneWkh+S7veW/hemhu+eZu+iusOi/m+W6picpCiAgYXNzZXJ0Lm1hdGNoKGZuWzBdLCAvcHJvZ3Jlc3NcLmZpbmlzaFwoJ3Nlc3Npb24nL3UpCn0pCgp0ZXN0KCflkI7nq6/vvJp0dXJuL2VuZCDoh6rliqjmjqjpgIHkuZ/nmbvorrDov5vluqbvvIhCVUctMyDlm57lvZLvvIknLCAoKSA9PiB7CiAgY29uc3QgYmxvY2sgPSBpbmRleFNyYy5tYXRjaCgvaWYgXChyZXNvbHZlZFwuYXV0b1B1c2hPblR1cm5FbmRcKVtcc1xTXSo/XG4gIFx9L3UpCiAgYXNzZXJ0Lm9rKGJsb2NrICE9PSBudWxsLCAn5om+5LiN5YiwIGF1dG9QdXNoT25UdXJuRW5kIOWIhuaUrycpCiAgYXNzZXJ0Lm1hdGNoKGJsb2NrWzBdLCAvcHJvZ3Jlc3NcLnN0YXJ0XCgnc2Vzc2lvbicvdSwgJ3R1cm4vZW5kIOaOqOmAgeW/hemhu+eZu+iusOi/m+W6picpCn0pCgp0ZXN0KCflkI7nq6/vvJrlrprml7bmj5Lku7blpIfku73kuZ/nmbvorrDov5vluqbvvIhCVUctMyDlm57lvZLvvIknLCAoKSA9PiB7CiAgLy8g5a6a5pe25ZmoIHRpY2sg5YaF55qEIHJ1blBsdWdpbkJhY2t1cCDosIPnlKjlv4XpobvooqsgcHJvZ3Jlc3Mg5YyF6KO5CiAgYXNzZXJ0Lm1hdGNoKGluZGV4U3JjLCAvaWYgXChkdWVcKSBce1tcc1xTXXswLDQwMH1wcm9ncmVzc1wuc3RhcnRcKCdwbHVnaW4nL3UsCiAgICAn5a6a5pe25o+S5Lu25aSH5Lu95LiN55m76K6wIOKGkiDoh6rliqjot5Hml7bnnIvkuI3liLDov5vluqbmnaEnKQp9KQoKdGVzdCgn5ZCO56uv77ya5LqU5p2h5LqR6Lev55Sx5pig5bCE5Yiw77yI5Z+fLCDmk43kvZzvvInvvIzkuJTmjInjgJDnu5PlsL7jgJHljLnphY0nLCAoKSA9PiB7CiAgLy8g5Yy56YWN6YC76L6R5bey5pS25pWb5YiwIHJvdXRlS2luZCgp77ya5b+F6aG75oyJ6Lev5b6E57uT5bC+5Yy56YWN5aSa5q616Lev55Sx5ZCN44CCCiAgLy8g5Y+W5pyA5ZCO5LiA5q615Y+q5Lya5ou/5YiwIHB1c2gvZGVsZXRl77yM5ZyoIC9hcGkvLi4uL2Nsb3VkL3NuYXBzaG90L3B1c2gg5LiK5rC46L+c5Yy56YWN5LiN5LiKCiAgLy8g77yIMjAyNi0xMC0xNSDlrp7mtYvvvJrmj5Lku7Yv5oqA6IO95aSH5Lu95LuO5LiN55m76K6w6L+b5bqm77yM5qC55Zug5bCx5piv5pen5YaZ5rOV77yJ44CCCiAgLy8KICAvLyDmlq3oqIDmjInjgIznu5PlsL7ot6/lvoQgKyDor6XooYzlkKsga2luZC9hY3Rpb24vbGFiZWzjgI3liIbliKvmoKHpqozvvIzkuI3nlKjkuIDmlbTmnaHmraPliJkKICAvLyDlvLrmsYLkuInogIXlkIzooYzvvJrmupDnoIHph4zlroPku6zmmK/lkIzkuIAgcmV0dXJuIOWvueixoe+8jOS9hue8qei/my/mjaLooYzkvJrpmo/moLzlvI/ljJblj5jliqjjgIIKICBjb25zdCBleHBlY3RlZCA9IFsKICAgIFsnL3NraWxsL3B1c2gnLCAnc2tpbGwnLCAnYmFja3VwJywgJ+aKgOiDveWkh+S7vSddLAogICAgWycvc2tpbGwvaGlzdG9yeS9kZWxldGUnLCAnc2tpbGwnLCAnZGVsZXRlJywgJ+aKgOiDveWkh+S7veWIoOmZpCddLAogICAgWycvc25hcHNob3QvcHVzaCcsICdwbHVnaW4nLCAnYmFja3VwJywgJ+aPkuS7tuWkh+S7vSddLAogICAgWycvc25hcHNob3QvaGlzdG9yeS9kZWxldGUnLCAncGx1Z2luJywgJ2RlbGV0ZScsICfmj5Lku7blpIfku73liKDpmaQnXSwKICAgIFsnL3NuYXBzaG90L3JlY2xhaW0tb3JwaGFucycsICdwbHVnaW4nLCAnZGVsZXRlJywgJ+WtpOWEv+WvueixoeWbnuaUtiddLAogIF0KICBmb3IgKGNvbnN0IFt0YWlsLCBraW5kLCBhY3Rpb24sIGxhYmVsXSBvZiBleHBlY3RlZCkgewogICAgY29uc3QgbGluZSA9IG5ldyBSZWdFeHAoYGVuZHNXaXRoXFwoJyR7dGFpbC5yZXBsYWNlKC9bLiorP14ke30oKXxbXF1cXF0vZ3UsICdcXCQmJyl9J1xcKVteXFxuXSpgLCAndScpLmV4ZWMoaW5kZXhTcmMpCiAgICBhc3NlcnQub2sobGluZSAhPT0gbnVsbCwgYOe8uuWwkee7k+WwvuWMuemFje+8miR7dGFpbH1gKQogICAgYXNzZXJ0Lm1hdGNoKGxpbmVbMF0sIG5ldyBSZWdFeHAoYGtpbmQ6XFxzKicke2tpbmR9J2AsICd1JyksIGAke3RhaWx9IOeahCBraW5kIOW6lOS4uiAke2tpbmR9YCkKICAgIGFzc2VydC5tYXRjaChsaW5lWzBdLCBuZXcgUmVnRXhwKGBhY3Rpb246XFxzKicke2FjdGlvbn0nYCwgJ3UnKSwgYCR7dGFpbH0g55qEIGFjdGlvbiDlupTkuLogJHthY3Rpb259YCkKICAgIGFzc2VydC5tYXRjaChsaW5lWzBdLCBuZXcgUmVnRXhwKGBsYWJlbDpcXHMqJyR7bGFiZWx9J2AsICd1JyksIGAke3RhaWx9IOeahCBsYWJlbCDlupTkuLogJHtsYWJlbH1gKQogIH0KICBhc3NlcnQuZG9lc05vdE1hdGNoKGluZGV4U3JjLCAvY29uc3QgdGFpbCA9IGl0ZW1cLnBhdGhcLnNsaWNlXChpdGVtXC5wYXRoXC5sYXN0SW5kZXhPZlwoJ1wvJ1wpIFwrIDFcKS91LAogICAgJ+aXp+eahOWPluacgOWQjuS4gOauteWGmeazleWcqCAvYXBpLy4uLi9jbG91ZC9zbmFwc2hvdC9wdXNoIOS4iuawuOi/nOWMuemFjeS4jeS4iicpCn0pCgp0ZXN0KCflkI7nq6/vvJrlpIfku73kuI7liKDpmaTkvb/nlKjkuI3lkIwgYWN0aW9u77yI5ZCM5Z+f5Y+v5ZCM5pe25pi+56S677yM5LqS5LiN6KaG55uW77yJJywgKCkgPT4gewogIGFzc2VydC5tYXRjaChpbmRleFNyYywgL3Byb2dyZXNzXC5zdGFydFwoa2luZCxccypce1tefV0qYWN0aW9uXHMqXH0vdSwgJ3N0YXJ0IOW/hemhu+S8oCBhY3Rpb24nKQogIGFzc2VydC5tYXRjaChpbmRleFNyYywgL3Byb2dyZXNzXC5maW5pc2hcKGtpbmQsXHMqXHtbXn1dKmFjdGlvblxzKlx9L3UsICdmaW5pc2gg5b+F6aG75LygIGFjdGlvbicpCn0pCgp0ZXN0KCflkI7nq6/vvJrljIXoo4XniYjlv4XpobvjgJDmm7/mjaLjgJFjbG91ZCDln5/lkIzlkI3pobnvvIzogIzkuI3mmK/lubbliJfov73liqDvvIjms6jlhozljrvph43pmbfpmLHvvIknLCAoKSA9PiB7CiAgLy8gd2ViU2VydmVyIOeahCBleGFjdCDooajmjIkgcGF0aCDlgZrplK7vvIzlkIzkuIDot6/lvoTlj6rog73ms6jlhozkuIDmrKHjgIIKICAvLyDml6flhpnms5UgYFsuLi5yb3V0ZXMsIC4uLnByb2dyZXNzV3JhcHBlZF1gIOS8muiuqeWMheijheeJiOazqOWGjOiiq+mdmem7mOi3s+i/h++8jAogIC8vIOeUn+aViOeahOS7jeaYr+acquWMheijheeJiOacrCDigJTigJQg6L+b5bqm5p2h5a6M5YWo5LiN5Ye6546w44CCCiAgLy8g5a6e5rWL77ya5Yig6Zmk6Lev55SxIDE0IOasoemHh+agt+WFqOaXoCBkZWxldGUg5p2h55uu77yM5qC55Zug5Y2z5q2k44CCCiAgYXNzZXJ0Lm1hdGNoKGluZGV4U3JjLCAvY29uc3Qgd3JhcHBlZEJ5UGF0aCA9IG5ldyBNYXBcKHByb2dyZXNzV3JhcHBlZFwubWFwL3UsCiAgICAn5b+F6aG755SoIE1hcCDlu7rnq4sgcGF0aCDihpIg5YyF6KOF54mIIOeahOe0ouW8lScpCiAgLy8gY2xvdWQg5Z+f5b+F6aG757uP6L+HIuWRveS4reWImeabv+aNoiLnmoQgbWFwCiAgYXNzZXJ0Lm1hdGNoKGluZGV4U3JjLCAvY2xvdWRSb3V0ZXNcKFwpXC5tYXBcKFwoaXRlbVwpID0+IHdyYXBwZWRCeVBhdGhcLmdldFwoaXRlbVwucGF0aFwpIFw/XD8gaXRlbVwpL3UsCiAgICAnY2xvdWQg5Z+f5b+F6aG757uP6L+H5YyF6KOF5pu/5o2iJykKICBhc3NlcnQuZG9lc05vdE1hdGNoKGluZGV4U3JjLCAvXFtcLlwuXC5yb3V0ZXMsIFwuXC5cLnByb2dyZXNzV3JhcHBlZC91LAogICAgJ+W5tuWIl+i/veWKoOS8muiuqeWMheijheeJiOazqOWGjOiiq+mdmem7mOi3s+i/h++8iOmHjeWkjei3r+W+hO+8iScpCn0pCgp0ZXN0KCflkI7nq6/vvJphbGxSb3V0ZXMg5b+F6aG75ZCM5pe25ZCrIHJvdXRlcyDkuI4gY2xvdWQg5Z+f77yI5ryP5LiA5Liq5bCx5pW05L2TIDQwNO+8iScsICgpID0+IHsKICAvLyDlt7Lniq/mraTplJnvvJrlj6rlkIjlubYgcm91dGVzIOiAjOa8j+aOiSBjbG91ZFJvdXRlcygp77yMCiAgLy8g5a+86Ie0IDMyIOadoSBjbG91ZCDot6/nlLHmlbTkvZPkuKLlpLHvvIzmioDog70v5o+S5Lu25aSH5Lu95YWo6YOoIDQwNAogIC8vIO+8iOaMgui9veaXpeW/lyByb3V0ZXMtZG9uZSDku44gNDUvNDUg5o6J5YiwIDEzLzEz77yJ44CCCiAgY29uc3QgYmxvY2sgPSAvY29uc3QgYWxsUm91dGVzID0gXFsoW1xzXFNdKj8pXF0vdS5leGVjKGluZGV4U3JjKQogIGFzc2VydC5vayhibG9jayAhPT0gbnVsbCwgJ+aJvuS4jeWIsCBhbGxSb3V0ZXMg5a6a5LmJJykKICBhc3NlcnQubWF0Y2goYmxvY2tbMV0sIC9cLlwuXC5yb3V0ZXMvdSwgJ+W/hemhu+WMheWQq+S8muivneWfnyByb3V0ZXMnKQogIGFzc2VydC5tYXRjaChibG9ja1sxXSwgL1wuXC5cLmNsb3VkL3UsICflv4XpobvljIXlkKsgY2xvdWQg5Z+f77yI5YyF6KOF5pu/5o2i5ZCO77yJJykKICBhc3NlcnQubWF0Y2goYmxvY2tbMV0sIC9BUElfUFJFRklYXH1cL3Byb2dyZXNzL3UsICflv4XpobvljIXlkKsgL3Byb2dyZXNzJykKICAvLyDnu53kuI3og73lho3lh7rnjrDlj6rnlZkgcm91dGVzIOeahOWGmeazlQogIGFzc2VydC5kb2VzTm90TWF0Y2goaW5kZXhTcmMsIC9jb25zdCBtZXJnZWRSb3V0ZXMgPSByb3V0ZXNcLm1hcC91LAogICAgJ+WPquWQiOW5tiByb3V0ZXMg5Lya5Lii5o6J5YWo6YOoIGNsb3VkIOi3r+eUse+8iDMyIOadoe+8ie+8jOaKgOiDvS/mj5Lku7blpIfku70gNDA0JykKfSkKCnRlc3QoJ+WQjuerr++8mmNsb3VkIE9QUyDmnaHmlbDkuI3lvpflsJHkuo4gMzLvvIjpmLLmlbTkvZPkuKLlpLHnmoTlhZzlupXvvIknLCAoKSA9PiB7CiAgLy8g5pWw5a2X5p2l6Ieq5a6e5rWL77yaY2xvdWRSb3V0ZVBhdGhzKCkg6L+U5ZueIDMyIOadoe+8iDIwMjYtMTAtMTbvvIkKICBjb25zdCBjbG91ZCA9IHJlYWRGaWxlU3luYyhuZXcgVVJMKCcuLi9saWIvY2xvdWQubWpzJywgaW1wb3J0Lm1ldGEudXJsKSwgJ3V0ZjgnKQogIGNvbnN0IG9wQ291bnQgPSBbLi4uY2xvdWQubWF0Y2hBbGwoL14gICdbYS16XVtcdy8tXSonOi9nbXUpXS5sZW5ndGgKICBhc3NlcnQub2sob3BDb3VudCA+PSAzMiwgYGNsb3VkIE9QUyDlupTmnInoh7PlsJEgMzIg5p2h77yM5a6e6ZmFICR7b3BDb3VudH1gKQp9KQoKdGVzdCgn5ZCO56uv77yaL3Byb2dyZXNzIOi3r+eUseW3suazqOWGjCcsICgpID0+IHsKICBhc3NlcnQubWF0Y2goaW5kZXhTcmMsIC9yb3V0ZVwoYFwkXHtBUElfUFJFRklYXH1cL3Byb2dyZXNzYC91KQp9KQoKdGVzdCgn5ZCO56uv77ya6L+b5bqm5Zue6LCD57ud5LiN5pS55Y+YIGdpdCDooYzkuLrvvIjkuI3kvKDml7blkb3ku6TkuI3luKYgLS1wcm9ncmVzc++8iScsICgpID0+IHsKICBjb25zdCBnaXRTcmMgPSByZWFkRmlsZVN5bmMobmV3IFVSTCgnLi4vbGliL2dpdC5tanMnLCBpbXBvcnQubWV0YS51cmwpLCAndXRmOCcpCiAgYXNzZXJ0Lm1hdGNoKGdpdFNyYywgL29wdHNcLm9uU3RkZXJyID09PSB1bmRlZmluZWQgXD8gXFtcXSA6IFxbJy0tcHJvZ3Jlc3MnXF0vdSwKICAgICflj6rmnInkvKDlm57osIPml7bmiY3liqAgLS1wcm9ncmVzc++8jOWQpuWImeWRveS7pOW/hemhu+S4juaUueWKqOWJjeS4gOiHtCcpCn0pCgovLyDigJTigJQg5YWo6YeP6KaG55uW6L+Y5Y6f77yIb3ZlcndyaXRlQXBwbHnvvInvvJpEU0gg5YaF55u05o6l5omn6KGM77yM5peg5aSW6YOoIGhlbHBlciDigJTigJQKdGVzdCgn5ZCO56uv77ya5YWo6YeP6L+Y5Y6fIG92ZXJ3cml0ZUFwcGx5IOWtmOWcqOS4lOS4jeeUn+aIkOWklumDqCBoZWxwZXInLCAoKSA9PiB7CiAgY29uc3QgcmVzdG9yZVNyYyA9IHJlYWRGaWxlU3luYyhuZXcgVVJMKCcuLi9saWIvcmVzdG9yZS5tanMnLCBpbXBvcnQubWV0YS51cmwpLCAndXRmOCcpCiAgYXNzZXJ0Lm1hdGNoKHJlc3RvcmVTcmMsIC9leHBvcnQgYXN5bmMgZnVuY3Rpb24gb3ZlcndyaXRlQXBwbHkvdSwgJ3Jlc3RvcmUubWpzIOW/hemhu+WvvOWHuiBvdmVyd3JpdGVBcHBseScpCiAgLy8g57ud5LiN55Sf5oiQ5aSW6YOo6ISa5pysL+i+heWKqeeoi+W6j++8iOeUqOaIt+aYjuehruimgeaxgu+8iQogIGFzc2VydC5kb2VzTm90TWF0Y2gocmVzdG9yZVNyYywgL3dyaXRlRmlsZVwoW14pXSpcLnBzMXxzcGF3blwoW14pXSpwd3NofGNoaWxkX3Byb2Nlc3MvdSwKICAgICfkuI3lvpfnlJ/miJDmiJbosIPnlKjlpJbpg6ggaGVscGVyIOiEmuacrCcpCiAgYXNzZXJ0LmRvZXNOb3RNYXRjaChpbmRleFNyYywgL1JFU1RPUkVfSEVMUEVSX05BTUUvdSwKICAgICfkuI3lvpflvJXnlKggaGVscGVyIOWQjeW4uOmHjycpCiAgLy8g5YWo6YeP6L+Y5Y6f5L+d55WZ5pys5Zyw5aKe6YeP77yM5LiN5b6X5YaN5Lqk5o2i5pW05Liq5Lya6K+d5bqT77yI5Lya5L2/IGxpdmUgd3JpdGVyIOeahOa4uOagh+iEseiKgu+8ieOAggogIGFzc2VydC5kb2VzTm90TWF0Y2gocmVzdG9yZVNyYywgL2ZzWy5dcmVuYW1lWyhdc2Vzc2lvblJvb3QvdSwKICAgICfkuI3lvpfmiorku43mnIkgbGl2ZSB3cml0ZXIg55qE5pW05Liq5Lya6K+d5bqT56e76LWwJykKICBhc3NlcnQubWF0Y2gocmVzdG9yZVNyYywgL2hpc3RvcnlQcmVmaXgvdSwgJ+W/hemhu+aMieW3suaPkOS6pOS6i+S7tuagoemqjOWJjee8gOWFs+ezuycpCiAgYXNzZXJ0Lm1hdGNoKGluZGV4U3JjLCAvYWNxdWlyZVdyaXRlTGVhc2UvdSwgJ+WunumZheWGmeWFpeW/hemhu+aOpeWuv+S4u+WGmeenn+e6picpCn0pCgp0ZXN0KCflkI7nq6/vvJrlhajph4/ov5jljp/liY3lv4Xpobvmo4Dmn6XmtLvliqjova7mrKHvvIhsaXZlIOS8muivneato+WcqOWGmSBzZXNzaW9uUm9vdO+8iScsICgpID0+IHsKICBhc3NlcnQubWF0Y2goaW5kZXhTcmMsIC9vcGVuVHVybkZyb21Qcm9qZWN0aW9uXChjdHgsIHNlc3Npb25cKS91LAogICAgJ+W/hemhu+S+neaNruadg+WogeaKleW9seWIpOWumui9ruasoeeKtuaAgScpCiAgYXNzZXJ0Lm1hdGNoKGluZGV4U3JjLCAvaWYgXChvcGVuVHVybiAhPT0gZmFsc2VcKSBibG9ja2VkXC5wdXNoXChzZXNzaW9uXC5pZFwpL3UsCiAgICAndHJ1Ze+8iOi9ruasoeS4re+8ieS4jiB1bmRlZmluZWTvvIjmipXlvbHnvLrluK3vvInpg73lv4Xpobvmi5Lnu53vvIzlj6rmnIkgZmFsc2Ug5pS+6KGMJykKICBhc3NlcnQubWF0Y2goaW5kZXhTcmMsIC/lt7Lmi5Lnu53lhajph4/ov5jljp8vdSwgJ+aLkue7neaXtuW/hemhu+e7meWHuuWPr+ivu+WOn+WboCcpCn0pCgp0ZXN0KCfliY3nq6/vvJrlhajph4/ov5jljp/mjInpkq7osIMgYXBwbHnvvIjkuI3mmK8gcHJlcGFyZSDmrbvot6/vvIknLCAoKSA9PiB7CiAgYXNzZXJ0Lm1hdGNoKGNsaWVudFNyYywgL2NhbGxcKCdcL3Jlc3RvcmVcL292ZXJ3cml0ZVwvYXBwbHknL3UsCiAgICAn5b+F6aG76LCD55SoIGFwcGx5IOerr+eCue+8iHByZXBhcmUg5Y+q5bu6IHBlbmRpbmcg5Lu75Yqh44CB5rC45LiN5omn6KGM5pu/5o2i77yJJykKICBhc3NlcnQuZG9lc05vdE1hdGNoKGNsaWVudFNyYywgL2NhbGxcKCdcL3Jlc3RvcmVcL292ZXJ3cml0ZVwvcHJlcGFyZScvdSwKICAgICfkuI3lvpflho3osIPnlKggcHJlcGFyZSDigJTigJQg5a6D5piv5q276LevJykKICBhc3NlcnQubWF0Y2goY2xpZW50U3JjLCAvdFwoJ3Jlc3RvcmVcLm92ZXJ3cml0ZVJpc2snXCkvdSwKICAgICfnoa7orqTlvLnnqpflv4XpobvljIXlkKvmlrDor63kuYnnmoTpo47pmanor7TmmI7vvIjkv53nlZnlop7ph4/vvIzliIblj4nmi5Lnu53vvIknKQogIGFzc2VydC5tYXRjaChjbGllbnRTcmMsIC8naGlzdG9yeVwub3ZlcndyaXRlJzogJ+WFqOmHj+i/mOWOnycvdSwgJ+aMiemSruaWh+ahiOW6lOS4uuOAjOWFqOmHj+i/mOWOn+OAjScpCn0pCgp0ZXN0KCflkI7nq6/vvJovcmVzdG9yZS9vdmVyd3JpdGUvYXBwbHkg6Lev55Sx5bey5rOo5YaMJywgKCkgPT4gewogIGNvbnN0IGFwaVNyYyA9IHJlYWRGaWxlU3luYyhuZXcgVVJMKCcuLi9saWIvYXBpLm1qcycsIGltcG9ydC5tZXRhLnVybCksICd1dGY4JykKICBhc3NlcnQubWF0Y2goYXBpU3JjLCAvcmVzdG9yZVwvb3ZlcndyaXRlXC9hcHBseS91KQp9KQoKLy8g4oCU4oCUIOaPkuS7ti/mioDog73lpIfku73nmoTnnJ/lrp7orqHmlbDvvIjkuI3kvKrpgKDnmb7liIbmr5TvvInigJTigJQKY29uc3QgY2xvdWRTcmMgPSByZWFkRmlsZVN5bmMobmV3IFVSTCgnLi4vbGliL2Nsb3VkLm1qcycsIGltcG9ydC5tZXRhLnVybCksICd1dGY4JykKY29uc3QgY29yZVNyYyA9IHJlYWRGaWxlU3luYyhuZXcgVVJMKCcuLi9saWIvY2xvdWQtY29yZS5tanMnLCBpbXBvcnQubWV0YS51cmwpLCAndXRmOCcpCgp0ZXN0KCflkI7nq6/vvJpjbG91ZCDov5vluqbnu4/mqKHlnZfnuqcgc2luayDkuIrmiqXvvIjlm57osIPml6Dms5Xnqb/ov4cgSFRUUCDor7fmsYLkvZPvvIknLCAoKSA9PiB7CiAgYXNzZXJ0Lm1hdGNoKGNsb3VkU3JjLCAvZXhwb3J0IGZ1bmN0aW9uIHNldENsb3VkUHJvZ3Jlc3NTaW5rL3UpCiAgYXNzZXJ0Lm1hdGNoKGNsb3VkU3JjLCAvZnVuY3Rpb24gZW1pdFByb2dyZXNzXChwYXRjaFwpL3UpCn0pCgp0ZXN0KCflkI7nq6/vvJrmj5Lku7Yv5oqA6IO9IE9QUyDmioogb25Qcm9ncmVzcyDmjqXliLAgZW1pdFByb2dyZXNzJywgKCkgPT4gewogIGFzc2VydC5tYXRjaChjbG91ZFNyYywgL29uUHJvZ3Jlc3M6IGVtaXRQcm9ncmVzcy91KQogIGNvbnN0IGhpdHMgPSBbLi4uY2xvdWRTcmMubWF0Y2hBbGwoL29uUHJvZ3Jlc3M6IGVtaXRQcm9ncmVzcy9ndSldCiAgYXNzZXJ0Lm9rKGhpdHMubGVuZ3RoID49IDIsIGDmj5Lku7bkuI7mioDog73kuKTmnaHot6/lvoTpg73opoHmjqXvvIzlrp7pmYUgJHtoaXRzLmxlbmd0aH0g5aSEYCkKfSkKCnRlc3QoJ+WQjuerr++8muaPkuS7ti/mioDog73lpIfku73kuIrmiqXjgJDnnJ/lrp7orqHmlbDjgJHogIzpnZ7kvLDnrpfnmb7liIbmr5QnLCAoKSA9PiB7CiAgLy8g5oqA6IO977ya55yf5a6e5oqA6IO95pWwICsg55yf5a6e5YiG54mH5pWwCiAgYXNzZXJ0Lm1hdGNoKGNvcmVTcmMsIC90b3RhbDogbmFtZXNcLmxlbmd0aC91LCAn5oqA6IO95oC75pWw5b+F6aG75p2l6Ieq5a6e6ZmF5p6a5Li+JykKICBhc3NlcnQubWF0Y2goY29yZVNyYywgL3RvdGFsOiB1cGxvYWRzXC5sZW5ndGgvdSwgJ+WIhueJh+aAu+aVsOW/hemhu+adpeiHquWunumZheW+heS4iuS8oOWIl+ihqCcpCiAgLy8g5o+S5Lu277ya55yf5a6eIHByb2ZpbGUg5pWwCiAgYXNzZXJ0Lm1hdGNoKGNvcmVTcmMsIC90b3RhbDogcHJvZmlsZUxpc3RcLmxlbmd0aC91LCAncHJvZmlsZSDmgLvmlbDlv4XpobvmnaXoh6rlrp7pmYXmnprkuL4nKQogIC8vIOS7u+S9leS4gOWkhOmDveS4jeW+l+aKiiBwZXJjZW50IOWGmeaIkOWbuuWumuWAvAogIGFzc2VydC5kb2VzTm90TWF0Y2goY29yZVNyYywgL3JlcG9ydFwoXHtbXn1dKnBlcmNlbnQ6XHMqXGQvdSwKICAgICdjb3JlIOS4jeW+l+S4iuaKpee8lumAoOeahOeZvuWIhuavlCcpCn0pCgp0ZXN0KCflkI7nq6/vvJpjb3JlIOeahCBvblByb2dyZXNzIOaYr+WPr+mAieeahO+8iOS4jeS8oOaXtuihjOS4uuS4jeWPmO+8iScsICgpID0+IHsKICBhc3NlcnQubWF0Y2goY29yZVNyYywgL3R5cGVvZiBvblByb2dyZXNzID09PSAnZnVuY3Rpb24nL3UsICflm57osIPlv4XpobvlgZrlrZjlnKjmgKfmo4Dmn6UnKQogIGFzc2VydC5tYXRjaChjb3JlU3JjLCAvdHJ5IFx7IG9uUHJvZ3Jlc3NcKHBhdGNoXCkgXH0gY2F0Y2ggXHsvdSwgJ+Wbnuiwg+aKm+mUmeS4jeW+l+W9seWTjeWkh+S7vScpCn0pCgp0ZXN0KCflkI7nq6/vvJpzaW5rIOWcqCBmaW5hbGx5IOa4hemZpO+8iOmYsuWbnuiwg+azhOa8j+WIsOS4i+S4gOasoeiwg+eUqO+8iScsICgpID0+IHsKICBhc3NlcnQubWF0Y2goaW5kZXhTcmMsIC9maW5hbGx5IFx7XHMqc2V0Q2xvdWRQcm9ncmVzc1NpbmtcKG51bGxcKS91KQp9KQoKdGVzdCgn5YmN56uv77ya5peg55m+5YiG5q+U5L2G5pyJ55yf5a6e6K6h5pWw5pe277yM55So6K6h5pWw5q+U5L6L6amx5Yqo5p2h5a69JywgKCkgPT4gewogIGFzc2VydC5tYXRjaChjbGllbnRTcmMsIC9jb25zdCBkZXJpdmVkUGN0ID0gL3UsICflupTmnInku44gZmlsZXMuZG9uZS9maWxlcy50b3RhbCDmtL7nlJ/nmoTnmb7liIbmr5QnKQogIGFzc2VydC5tYXRjaChjbGllbnRTcmMsIC9jb25zdCBlZmZlY3RpdmVQY3QgPSB0YXJnZXQgIT09IG51bGwgXD8gc2hvd24gOiBkZXJpdmVkUGN0L3UpCiAgYXNzZXJ0Lm1hdGNoKGNsaWVudFNyYywgL2NvbnN0IHNob3dJbmRldGVybWluYXRlID0gaW5kZXRlcm1pbmF0ZSAmJiBkZXJpdmVkUGN0ID09PSBudWxsL3UsCiAgICAn5Y+q5pyJ6L+e55yf5a6e6K6h5pWw6YO95rKh5pyJ5pe25omN6LWw5LiN56Gu5a6a5oCBJykKfSkKCnRlc3QoJ+WJjeerr++8muWujOaIkOaPkOekuuW4puiAl+aXtuS4juiuoeaVsO+8jOS4lOWIoOmZpC/lpIfku73mlofmoYjljLrliIYnLCAoKSA9PiB7CiAgLy8g5a6M5oiQ5paH5qGI5oyJIGFjdGlvbiDljLrliIbvvJrliKDpmaTor7Qi5bey5Yig6ZmkIu+8jOWkh+S7veivtCLlpIfku73lrozmr5Ui4oCU4oCU5LiN6IO96YO95Y+r5aSH5Lu95a6M5q+V44CCCiAgYXNzZXJ0Lm1hdGNoKGNsaWVudFNyYywgL2NvbnN0IGRvbmVUZXh0ID0gaXNEZWxldGUvdSwgJ+W6lOacieaMieaTjeS9nOWMuuWIhueahOWujOaIkOaWh+ahiCcpCiAgYXNzZXJ0Lm1hdGNoKGNsaWVudFNyYywgL2xvY2FsZSA9PT0gJ2VuJyBcPyAnRGVsZXRlZCcgOiAn5bey5Yig6ZmkJy91LCAn5Yig6Zmk5a6M5oiQ5bqU5Li644CM5bey5Yig6Zmk44CNJykKICBhc3NlcnQubWF0Y2goY2xpZW50U3JjLCAvbG9jYWxlID09PSAnZW4nIFw/ICdEb25lJyA6ICflpIfku73lrozmr5UnL3UsICflpIfku73lrozmiJDlupTkuLrjgIzlpIfku73lrozmr5XjgI0nKQogIGFzc2VydC5tYXRjaChjbGllbnRTcmMsIC9cW2RvbmVUZXh0LCBlbGFwc2VkLCBmaWxlQ291bnRzXF0vdSwKICAgICflrozmiJDlkI7lupTmmL7npLog5paH5qGIIMK3IOiAl+aXtiDCtyDorqHmlbAnKQogIC8vIOWksei0peaWh+ahiOWQjOagt+WMuuWIhgogIGFzc2VydC5tYXRjaChjbGllbnRTcmMsIC9jb25zdCBmYWlsVGV4dCA9IGlzRGVsZXRlL3UsICflpLHotKXmlofmoYjkuZ/lupTmjInmk43kvZzljLrliIYnKQp9KQoKdGVzdCgn5YmN56uv77yaZXhpdGluZyAvIGRpc3BsYXlSZWYgLyBSZWFjdCBrZXkg5L2/55SoIGtpbmQrYWN0aW9uIOWkjeWQiOmUricsICgpID0+IHsKICAvLyDlkIzln5/lj6/lkIzml7bmnInlpIfku73kuI7liKDpmaTkuKTmnaHvvIzlj6rnlKgga2luZCDkvJrkupLnm7jor6/liKQKICAvLyDvvIjliKDpmaTlrozmiJDmiorlpIfku73mnaHnm67moIfmiJAgZXhpdGluZyDihpIg5aSH5Lu95p2h6KKrIENTUyDpmpDol4/vvInjgIIKICBhc3NlcnQubWF0Y2goY2xpZW50U3JjLCAvY29uc3Qga2V5T2YgPSBcKGVudHJ5XCkgPT4gYFwkXHtlbnRyeVwua2luZFx9OlwkXHtlbnRyeVwuYWN0aW9uIFw/XD8gJ2JhY2t1cCdcfWAvdSwKICAgICflupTlrprkuYkga2luZCthY3Rpb24g5aSN5ZCI6ZSu5Ye95pWwJykKICBhc3NlcnQubWF0Y2goY2xpZW50U3JjLCAvY29uc3QgcnVubmluZ0tleXMgPSBlbnRyaWVzXC5maWx0ZXJcKFwoZVwpID0+IGVcLnN0YXRlID09PSAncnVubmluZydcKVwubWFwXChrZXlPZlwpL3UsCiAgICAn5riF6Zmk6YCA5Ye65qCH6K6w5bqU5pS26ZuG5aSN5ZCI6ZSu77yI5LiN6IO955So6KO4IGtpbmTvvIknKQogIGFzc2VydC5tYXRjaChjbGllbnRTcmMsIC9kaXNwbGF5UmVmXC5jdXJyZW50XC5nZXRcKGtleVwpL3UsICfmmL7npLrlgLzor7vlj5blupTnlKjlpI3lkIjplK4nKQogIGFzc2VydC5tYXRjaChjbGllbnRTcmMsIC9kaXNwbGF5UmVmXC5jdXJyZW50XC5zZXRcKGtleSwgc2hvd25cKS91LCAn5pi+56S65YC85YaZ5YWl5bqU55So5aSN5ZCI6ZSuJykKICBhc3NlcnQubWF0Y2goY2xpZW50U3JjLCAvZXhpdGluZ1wuaGFzXChrZXlcKS91LCAn6YCA5Ye65qCH6K6w5Yik5pat5bqU55So5aSN5ZCI6ZSuJykKICBhc3NlcnQubWF0Y2goY2xpZW50U3JjLCAvXG5ccyprZXksXG4vLCAnUmVhY3Qga2V5IHByb3Ag5bqU5Li65aSN5ZCI6ZSu77yI5Lik5p2h5ZCMIGtpbmQg5LyaIGtleSDlhrLnqoHkuKLkuIDmnaHvvIknKQp9KQoKdGVzdCgn5YmN56uv77yac3RhZ2VMYWJlbCDopobnm5YgZGVsZXRlIOmYtuautScsICgpID0+IHsKICBhc3NlcnQubWF0Y2goY2xpZW50U3JjLCAvZGVsZXRlOiAnRGVsZXRpbmfigKYnL3UsICfoi7HmloflupTmnIkgRGVsZXRpbmcnKQogIGFzc2VydC5tYXRjaChjbGllbnRTcmMsIC9kZWxldGU6ICfliKDpmaTkuK3igKYnL3UsICfkuK3mloflupTmnInjgIzliKDpmaTkuK3igKbjgI0nKQp9KQoKdGVzdCgn5ZCO56uv77ya5Lya6K+d5Y6G5Y+y5Yig6Zmk5Lmf55m76K6w6L+b5bqm77yI55yf5a6e6K6h5pWwID0g6ZyA6YeN5YaZ5o+Q5Lqk5pWw77yJJywgKCkgPT4gewogIGNvbnN0IGhpc3RvcnlTcmMgPSByZWFkRmlsZVN5bmMobmV3IFVSTCgnLi4vbGliL2hpc3RvcnkubWpzJywgaW1wb3J0Lm1ldGEudXJsKSwgJ3V0ZjgnKQogIGFzc2VydC5tYXRjaChoaXN0b3J5U3JjLCAvdHlwZW9mIGRlcHNcLm9uUHJvZ3Jlc3MgIT09ICdmdW5jdGlvbicvdSwgJ29uUHJvZ3Jlc3Mg5b+F6aG75piv5Y+v6YCJ5Zue6LCDJykKICBhc3NlcnQubWF0Y2goaGlzdG9yeVNyYywgL3JlcG9ydFwoXHsgc3RhZ2U6ICdkZWxldGUnLCBmaWxlczogXHsgZG9uZTogMCwgdG90YWw6IHJld3JpdGVUb3RhbCBcfSBcfVwpL3UsCiAgICAn5Yig6Zmk5YmN5bqU5LiK5oql55yf5a6e5oC75pWw77yI6ZyA6YeN5YaZ55qE5o+Q5Lqk5pWw77yJJykKICBhc3NlcnQubWF0Y2goaGlzdG9yeVNyYywgL3JlcG9ydFwoXHsgc3RhZ2U6ICdkZWxldGUnLCBmaWxlczogXHsgZG9uZTogcmV3cml0dGVuLCB0b3RhbDogcmV3cml0ZVRvdGFsIFx9IFx9XCkvdSwKICAgICfmr4/kuKrmj5DkuqTph43lhpnlkI7lupTkuIrmiqXnnJ/lrp7ov5vluqYnKQogIC8vIOS4ieS4quWuieWFqOaKpOagj+S4gOS4qumDveS4jeiuuOWJiuW8sQogIGFzc2VydC5tYXRjaChoaXN0b3J5U3JjLCAv5LuF5Ymp5pyA5ZCO5LiA5p2h5Y6G5Y+y77yM5peg5rOV5Yig6ZmkL3UpCiAgYXNzZXJ0Lm1hdGNoKGhpc3RvcnlTcmMsIC/lkIjlubbmj5DkuqTkuI3lj6/liKDpmaQvdSkKICBhc3NlcnQubWF0Y2goaGlzdG9yeVNyYywgL+i/nOerr+mihuWFiOacrOWcsC91KQp9KQoKdGVzdCgn5ZCO56uv77yaZGVsZXRlSGlzdG9yeSDnlKggYWN0aW9uPWRlbGV0ZSDnmbvorrDlubblnKjlpLHotKXml7bmlLblsL4nLCAoKSA9PiB7CiAgYXNzZXJ0Lm1hdGNoKGluZGV4U3JjLCAvcHJvZ3Jlc3NcLnN0YXJ0XCgnc2Vzc2lvbicsIFx7IGxhYmVsOiAn5Lya6K+d5aSH5Lu95Yig6ZmkJywgc3RhZ2U6ICdkZWxldGUnLCBhY3Rpb246ICdkZWxldGUnIFx9L3UpCiAgYXNzZXJ0Lm1hdGNoKGluZGV4U3JjLCAvZGVsZXRlSGlzdG9yeUNvbW1pdFwoYmFja2VuZCwgXHtbXHNcU117MCw0MDB9b25Qcm9ncmVzczovdSwKICAgICdkZWxldGVIaXN0b3J5IOW/hemhu+aKiiBvblByb2dyZXNzIOmAj+S8oOe7mSBkZWxldGVIaXN0b3J5Q29tbWl0JykKICBhc3NlcnQubWF0Y2goaW5kZXhTcmMsIC9wcm9ncmVzc1wuZmluaXNoXCgnc2Vzc2lvbicsIFx7IG9rOiBmYWxzZSwgZXJyb3I6IG1lc3NhZ2VPZlwoZXJyb3JcKSwgYWN0aW9uOiAnZGVsZXRlJyBcfS91LAogICAgJ+WIoOmZpOWksei0peW/hemhu+S7pSBhY3Rpb249ZGVsZXRlIOaUtuWwvu+8iOS4jeiDveaKiuWkh+S7veadoeebruagh+aIkOWksei0pe+8iScpCn0pCg==
+// test/progress-ui-regression.test.mjs — 锁死进度条的两个显示 bug + 三类备份全覆盖。
+//
+// 背景（2026-10-15 真实故障）：
+//   BUG-1 前端 exiting 集合只增不减 → 某类备份【第二次起】永远带 is-exiting
+//         （CSS opacity:0 + scale）→ 进度条渲染了却完全看不见。
+//   BUG-2 displayRef 残留上一轮的 100% → 新一轮从 100 回落。
+//   BUG-3 自动/定时备份不登记进度 → 用户以为没在跑。
+//
+// 这些断言读【真实源码文本】，不是复刻副本 —— 防止代码改回旧写法而测试仍绿。
+import { test } from 'node:test'
+import assert from 'node:assert/strict'
+import { readFileSync } from 'node:fs'
+
+const clientSrc = readFileSync(new URL('../client.js', import.meta.url), 'utf8')
+const indexSrc = readFileSync(new URL('../index.mjs', import.meta.url), 'utf8')
+
+test('前端：新一轮 running 时必须清除 exiting 标记（BUG-1 回归）', () => {
+  // 必须有 delete，且是在处理 runningKeys（kind+action 复合键）的上下文里
+  assert.match(clientSrc, /runningKeys[\s\S]{0,400}next\.delete\(k\)/u,
+    'exiting 只增不减会让第二次起的进度条永久 opacity:0 —— 必须在 running 时清除')
+})
+
+test('前端：新一轮 running 时必须重置残留显示值（BUG-2 回归）', () => {
+  assert.match(clientSrc, /displayRef\.current\.delete\(/u,
+    'displayRef 残留上一轮 100% 会让新一轮从 100 回落 —— 必须重置')
+})
+
+test('前端：进度浮层挂在 shell.overlay（跨工作区可见的前提）', () => {
+  assert.match(clientSrc, /slots\.inject\('shell\.overlay'/u)
+})
+
+test('前端：进度条容器与三条排列的样式存在', () => {
+  assert.match(clientSrc, /\.ss-prog-dock\{/u)
+  assert.match(clientSrc, /\.ss-prog-row\.is-exiting\{/u, '收尾动画样式必须存在')
+  assert.match(clientSrc, /\.ss-prog-flow\{/u, '不确定态流动条纹样式必须存在')
+})
+
+test('后端：三条备份域都有 progress.start 登记', () => {
+  const starts = [...indexSrc.matchAll(/progress\.start\(([^,)]+)/gu)].map((m) => m[1].trim())
+  assert.ok(starts.some((s) => s === "'session'"), '会话备份必须登记')
+  assert.ok(starts.some((s) => s === "kind"), '插件/技能（路由包装）必须登记')
+  assert.ok(starts.length >= 4, `登记点应覆盖手动/自动/turn-end/定时插件，实际 ${starts.length} 处`)
+})
+
+test('后端：手动会话备份把 onStderr 透传给引擎', () => {
+  assert.match(indexSrc, /backupEngine\.push\(\{[\s\S]{0,200}onStderr/u)
+})
+
+test('后端：自动备份（定时）也登记进度（BUG-3 回归）', () => {
+  // runAutomaticBackup 函数体内必须有 progress.start
+  const fn = indexSrc.match(/async function runAutomaticBackup\(\)[\s\S]*?\n  \}/u)
+  assert.ok(fn !== null, '找不到 runAutomaticBackup 定义')
+  assert.match(fn[0], /progress\.start\('session'/u, '自动会话备份必须登记进度')
+  assert.match(fn[0], /progress\.finish\('session'/u)
+})
+
+test('后端：turn/end 自动推送也登记进度（BUG-3 回归）', () => {
+  const block = indexSrc.match(/if \(resolved\.autoPushOnTurnEnd\)[\s\S]*?\n  \}/u)
+  assert.ok(block !== null, '找不到 autoPushOnTurnEnd 分支')
+  assert.match(block[0], /progress\.start\('session'/u, 'turn/end 推送必须登记进度')
+})
+
+test('后端：定时插件备份也登记进度（BUG-3 回归）', () => {
+  // 定时器 tick 内的 runPluginBackup 调用必须被 progress 包裹
+  assert.match(indexSrc, /if \(due\) \{[\s\S]{0,400}progress\.start\('plugin'/u,
+    '定时插件备份不登记 → 自动跑时看不到进度条')
+})
+
+test('后端：五条云路由映射到（域, 操作），且按【结尾】匹配', () => {
+  // 匹配逻辑已收敛到 routeKind()：必须按路径结尾匹配多段路由名。
+  // 取最后一段只会拿到 push/delete，在 /api/.../cloud/snapshot/push 上永远匹配不上
+  // （2026-10-15 实测：插件/技能备份从不登记进度，根因就是旧写法）。
+  //
+  // 断言按「结尾路径 + 该行含 kind/action/label」分别校验，不用一整条正则
+  // 强求三者同行：源码里它们是同一 return 对象，但缩进/换行会随格式化变动。
+  const expected = [
+    ['/skill/push', 'skill', 'backup', '技能备份'],
+    ['/skill/history/delete', 'skill', 'delete', '技能备份删除'],
+    ['/snapshot/push', 'plugin', 'backup', '插件备份'],
+    ['/snapshot/history/delete', 'plugin', 'delete', '插件备份删除'],
+    ['/snapshot/reclaim-orphans', 'plugin', 'delete', '孤儿对象回收'],
+  ]
+  for (const [tail, kind, action, label] of expected) {
+    const line = new RegExp(`endsWith\\('${tail.replace(/[.*+?^${}()|[\]\\]/gu, '\\$&')}'\\)[^\\n]*`, 'u').exec(indexSrc)
+    assert.ok(line !== null, `缺少结尾匹配：${tail}`)
+    assert.match(line[0], new RegExp(`kind:\\s*'${kind}'`, 'u'), `${tail} 的 kind 应为 ${kind}`)
+    assert.match(line[0], new RegExp(`action:\\s*'${action}'`, 'u'), `${tail} 的 action 应为 ${action}`)
+    assert.match(line[0], new RegExp(`label:\\s*'${label}'`, 'u'), `${tail} 的 label 应为 ${label}`)
+  }
+  assert.doesNotMatch(indexSrc, /const tail = item\.path\.slice\(item\.path\.lastIndexOf\('\/'\) \+ 1\)/u,
+    '旧的取最后一段写法在 /api/.../cloud/snapshot/push 上永远匹配不上')
+})
+
+test('后端：备份与删除使用不同 action（同域可同时显示，互不覆盖）', () => {
+  assert.match(indexSrc, /progress\.start\(kind,\s*\{[^}]*action\s*\}/u, 'start 必须传 action')
+  assert.match(indexSrc, /progress\.finish\(kind,\s*\{[^}]*action\s*\}/u, 'finish 必须传 action')
+})
+
+test('后端：包装版必须【替换】cloud 域同名项，而不是并列追加（注册去重陷阱）', () => {
+  // webServer 的 exact 表按 path 做键，同一路径只能注册一次。
+  // 旧写法 `[...routes, ...progressWrapped]` 会让包装版注册被静默跳过，
+  // 生效的仍是未包装版本 —— 进度条完全不出现。
+  // 实测：删除路由 14 次采样全无 delete 条目，根因即此。
+  assert.match(indexSrc, /const wrappedByPath = new Map\(progressWrapped\.map/u,
+    '必须用 Map 建立 path → 包装版 的索引')
+  // cloud 域必须经过"命中则替换"的 map
+  assert.match(indexSrc, /cloudRoutes\(\)\.map\(\(item\) => wrappedByPath\.get\(item\.path\) \?\? item\)/u,
+    'cloud 域必须经过包装替换')
+  assert.doesNotMatch(indexSrc, /\[\.\.\.routes, \.\.\.progressWrapped/u,
+    '并列追加会让包装版注册被静默跳过（重复路径）')
+})
+
+test('后端：allRoutes 必须同时含 routes 与 cloud 域（漏一个就整体 404）', () => {
+  // 已犯此错：只合并 routes 而漏掉 cloudRoutes()，
+  // 导致 32 条 cloud 路由整体丢失，技能/插件备份全部 404
+  // （挂载日志 routes-done 从 45/45 掉到 13/13）。
+  const block = /const allRoutes = \[([\s\S]*?)\]/u.exec(indexSrc)
+  assert.ok(block !== null, '找不到 allRoutes 定义')
+  assert.match(block[1], /\.\.\.routes/u, '必须包含会话域 routes')
+  assert.match(block[1], /\.\.\.cloud/u, '必须包含 cloud 域（包装替换后）')
+  assert.match(block[1], /API_PREFIX\}\/progress/u, '必须包含 /progress')
+  // 绝不能再出现只留 routes 的写法
+  assert.doesNotMatch(indexSrc, /const mergedRoutes = routes\.map/u,
+    '只合并 routes 会丢掉全部 cloud 路由（32 条），技能/插件备份 404')
+})
+
+test('后端：cloud OPS 条数不得少于 32（防整体丢失的兜底）', () => {
+  // 数字来自实测：cloudRoutePaths() 返回 32 条（2026-10-16）
+  const cloud = readFileSync(new URL('../lib/cloud.mjs', import.meta.url), 'utf8')
+  const opCount = [...cloud.matchAll(/^  '[a-z][\w/-]*':/gmu)].length
+  assert.ok(opCount >= 32, `cloud OPS 应有至少 32 条，实际 ${opCount}`)
+})
+
+test('后端：/progress 路由已注册', () => {
+  assert.match(indexSrc, /route\(`\$\{API_PREFIX\}\/progress`/u)
+})
+
+test('后端：进度回调绝不改变 git 行为（不传时命令不带 --progress）', () => {
+  const gitSrc = readFileSync(new URL('../lib/git.mjs', import.meta.url), 'utf8')
+  assert.match(gitSrc, /opts\.onStderr === undefined \? \[\] : \['--progress'\]/u,
+    '只有传回调时才加 --progress，否则命令必须与改动前一致')
+})
+
+// —— 全量覆盖还原（overwriteApply）：DSH 内直接执行，无外部 helper ——
+test('后端：全量还原 overwriteApply 存在且不生成外部 helper', () => {
+  const restoreSrc = readFileSync(new URL('../lib/restore.mjs', import.meta.url), 'utf8')
+  assert.match(restoreSrc, /export async function overwriteApply/u, 'restore.mjs 必须导出 overwriteApply')
+  // 绝不生成外部脚本/辅助程序（用户明确要求）
+  assert.doesNotMatch(restoreSrc, /writeFile\([^)]*\.ps1|spawn\([^)]*pwsh|child_process/u,
+    '不得生成或调用外部 helper 脚本')
+  assert.doesNotMatch(indexSrc, /RESTORE_HELPER_NAME/u,
+    '不得引用 helper 名常量')
+  // 全量还原保留本地增量，不得再交换整个会话库（会使 live writer 的游标脱节）。
+  assert.doesNotMatch(restoreSrc, /fs[.]rename[(]sessionRoot/u,
+    '不得把仍有 live writer 的整个会话库移走')
+  assert.match(restoreSrc, /historyPrefix/u, '必须按已提交事件校验前缀关系')
+  assert.match(indexSrc, /acquireWriteLease/u, '实际写入必须接宿主写租约')
+})
+
+test('后端：全量还原前必须检查活动轮次（live 会话正在写 sessionRoot）', () => {
+  assert.match(indexSrc, /openTurnFromProjection\(ctx, session\)/u,
+    '必须依据权威投影判定轮次状态')
+  assert.match(indexSrc, /if \(openTurn !== false\) blocked\.push\(session\.id\)/u,
+    'true（轮次中）与 undefined（投影缺席）都必须拒绝，只有 false 放行')
+  assert.match(indexSrc, /已拒绝全量还原/u, '拒绝时必须给出可读原因')
+})
+
+test('前端：全量还原按钮调 apply（不是 prepare 死路）', () => {
+  assert.match(clientSrc, /call\('\/restore\/overwrite\/apply'/u,
+    '必须调用 apply 端点（prepare 只建 pending 任务、永不执行替换）')
+  assert.doesNotMatch(clientSrc, /call\('\/restore\/overwrite\/prepare'/u,
+    '不得再调用 prepare —— 它是死路')
+  assert.match(clientSrc, /t\('restore\.overwriteRisk'\)/u,
+    '确认弹窗必须包含新语义的风险说明（保留增量，分叉拒绝）')
+  assert.match(clientSrc, /'history\.overwrite': '全量还原'/u, '按钮文案应为「全量还原」')
+})
+
+test('后端：/restore/overwrite/apply 路由已注册', () => {
+  const apiSrc = readFileSync(new URL('../lib/api.mjs', import.meta.url), 'utf8')
+  assert.match(apiSrc, /restore\/overwrite\/apply/u)
+})
+
+// —— 插件/技能备份的真实计数（不伪造百分比）——
+const cloudSrc = readFileSync(new URL('../lib/cloud.mjs', import.meta.url), 'utf8')
+const coreSrc = readFileSync(new URL('../lib/cloud-core.mjs', import.meta.url), 'utf8')
+
+test('后端：cloud 进度经模块级 sink 上报（回调无法穿过 HTTP 请求体）', () => {
+  assert.match(cloudSrc, /export function setCloudProgressSink/u)
+  assert.match(cloudSrc, /function emitProgress\(patch\)/u)
+})
+
+test('后端：插件/技能 OPS 把 onProgress 接到 emitProgress', () => {
+  assert.match(cloudSrc, /onProgress: emitProgress/u)
+  const hits = [...cloudSrc.matchAll(/onProgress: emitProgress/gu)]
+  assert.ok(hits.length >= 2, `插件与技能两条路径都要接，实际 ${hits.length} 处`)
+})
+
+test('后端：插件/技能备份上报【真实计数】而非估算百分比', () => {
+  // 技能：真实技能数 + 真实分片数
+  assert.match(coreSrc, /total: names\.length/u, '技能总数必须来自实际枚举')
+  assert.match(coreSrc, /total: uploads\.length/u, '分片总数必须来自实际待上传列表')
+  // 插件：真实 profile 数
+  assert.match(coreSrc, /total: profileList\.length/u, 'profile 总数必须来自实际枚举')
+  // 任何一处都不得把 percent 写成固定值
+  assert.doesNotMatch(coreSrc, /report\(\{[^}]*percent:\s*\d/u,
+    'core 不得上报编造的百分比')
+})
+
+test('后端：core 的 onProgress 是可选的（不传时行为不变）', () => {
+  assert.match(coreSrc, /typeof onProgress === 'function'/u, '回调必须做存在性检查')
+  assert.match(coreSrc, /try \{ onProgress\(patch\) \} catch \{/u, '回调抛错不得影响备份')
+})
+
+test('后端：sink 在 finally 清除（防回调泄漏到下一次调用）', () => {
+  assert.match(indexSrc, /finally \{\s*setCloudProgressSink\(null\)/u)
+})
+
+test('前端：无百分比但有真实计数时，用计数比例驱动条宽', () => {
+  assert.match(clientSrc, /const derivedPct = /u, '应有从 files.done/files.total 派生的百分比')
+  assert.match(clientSrc, /const effectivePct = target !== null \? shown : derivedPct/u)
+  assert.match(clientSrc, /const showIndeterminate = indeterminate && derivedPct === null/u,
+    '只有连真实计数都没有时才走不确定态')
+})
+
+test('前端：完成提示带耗时与计数，且删除/备份文案区分', () => {
+  // 完成文案按 action 区分：删除说"已删除"，备份说"备份完毕"——不能都叫备份完毕。
+  assert.match(clientSrc, /const doneText = isDelete/u, '应有按操作区分的完成文案')
+  assert.match(clientSrc, /locale === 'en' \? 'Deleted' : '已删除'/u, '删除完成应为「已删除」')
+  assert.match(clientSrc, /locale === 'en' \? 'Done' : '备份完毕'/u, '备份完成应为「备份完毕」')
+  assert.match(clientSrc, /\[doneText, elapsed, fileCounts\]/u,
+    '完成后应显示 文案 · 耗时 · 计数')
+  // 失败文案同样区分
+  assert.match(clientSrc, /const failText = isDelete/u, '失败文案也应按操作区分')
+})
+
+test('前端：exiting / displayRef / React key 使用 kind+action 复合键', () => {
+  // 同域可同时有备份与删除两条，只用 kind 会互相误判
+  // （删除完成把备份条目标成 exiting → 备份条被 CSS 隐藏）。
+  assert.match(clientSrc, /const keyOf = \(entry\) => `\$\{entry\.kind\}:\$\{entry\.action \?\? 'backup'\}`/u,
+    '应定义 kind+action 复合键函数')
+  assert.match(clientSrc, /const runningKeys = entries\.filter\(\(e\) => e\.state === 'running'\)\.map\(keyOf\)/u,
+    '清除退出标记应收集复合键（不能用裸 kind）')
+  assert.match(clientSrc, /displayRef\.current\.get\(key\)/u, '显示值读取应用复合键')
+  assert.match(clientSrc, /displayRef\.current\.set\(key, shown\)/u, '显示值写入应用复合键')
+  assert.match(clientSrc, /exiting\.has\(key\)/u, '退出标记判断应用复合键')
+  assert.match(clientSrc, /\n\s*key,\n/, 'React key prop 应为复合键（两条同 kind 会 key 冲突丢一条）')
+})
+
+test('前端：stageLabel 覆盖 delete 阶段', () => {
+  assert.match(clientSrc, /delete: 'Deleting…'/u, '英文应有 Deleting')
+  assert.match(clientSrc, /delete: '删除中…'/u, '中文应有「删除中…」')
+})
+
+test('后端：会话历史删除也登记进度（真实计数 = 需重写提交数）', () => {
+  const historySrc = readFileSync(new URL('../lib/history.mjs', import.meta.url), 'utf8')
+  assert.match(historySrc, /typeof deps\.onProgress !== 'function'/u, 'onProgress 必须是可选回调')
+  assert.match(historySrc, /report\(\{ stage: 'delete', files: \{ done: 0, total: rewriteTotal \} \}\)/u,
+    '删除前应上报真实总数（需重写的提交数）')
+  assert.match(historySrc, /report\(\{ stage: 'delete', files: \{ done: rewritten, total: rewriteTotal \} \}\)/u,
+    '每个提交重写后应上报真实进度')
+  // 三个安全护栏一个都不许削弱
+  assert.match(historySrc, /仅剩最后一条历史，无法删除/u)
+  assert.match(historySrc, /合并提交不可删除/u)
+  assert.match(historySrc, /远端领先本地/u)
+})
+
+test('后端：deleteHistory 用 action=delete 登记并在失败时收尾', () => {
+  assert.match(indexSrc, /progress\.start\('session', \{ label: '会话备份删除', stage: 'delete', action: 'delete' \}/u)
+  assert.match(indexSrc, /deleteHistoryCommit\(backend, \{[\s\S]{0,400}onProgress:/u,
+    'deleteHistory 必须把 onProgress 透传给 deleteHistoryCommit')
+  assert.match(indexSrc, /progress\.finish\('session', \{ ok: false, error: messageOf\(error\), action: 'delete' \}/u,
+    '删除失败必须以 action=delete 收尾（不能把备份条目标成失败）')
+})

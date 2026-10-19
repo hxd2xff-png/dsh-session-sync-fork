@@ -1,1 +1,121 @@
-aW1wb3J0IHsgdGVzdCB9IGZyb20gJ25vZGU6dGVzdCcKaW1wb3J0IGFzc2VydCBmcm9tICdub2RlOmFzc2VydC9zdHJpY3QnCmltcG9ydCBmcyBmcm9tICdub2RlOmZzL3Byb21pc2VzJwppbXBvcnQgdm0gZnJvbSAnbm9kZTp2bScKaW1wb3J0IHsgYnVpbGRSb3V0ZXMsIE9wZXJhdGlvbkdhdGUgfSBmcm9tICcuLi9saWIvYXBpLm1qcycKaW1wb3J0IHsgQVBJX1BSRUZJWCB9IGZyb20gJy4uL2xpYi9jb25zdGFudHMubWpzJwoKYXN5bmMgZnVuY3Rpb24gbW91bnQoeyBhdXhpbGlhcnkgPSBmYWxzZSB9ID0ge30pIHsKICAvKiogQHR5cGUge2FueX0gKi8KbGV0IGRlc2NyaXB0b3IsIE1haW4sIGN1cnJlbnQKICBjb25zdCBzdGF0ZSA9IG5ldyBNYXAoKSwgcmVmcyA9IG5ldyBNYXAoKSwgcmVxdWVzdHMgPSBbXQogIGNvbnN0IHNoYSA9ICdhJy5yZXBlYXQoNDApLCBmb3JlaWduID0gJ1o6L1VzZXJzL29sZC9wcm9qZWN0JywgbG9jYWwgPSAnRDovUHJvamVjdHMvbG9jYWwnCiAgc3RhdGUuc2V0KCdTZXNzaW9uU3luY1BhZ2UnLCBbdW5kZWZpbmVkLCB1bmRlZmluZWQsIHVuZGVmaW5lZCwgdW5kZWZpbmVkLCBbeyBzaGEsIGF0OiAxLCBzdWJqZWN0OiAnYmFja3VwJyB9XV0pCiAgY29uc3QgaCA9ICh0eXBlLCBwcm9wcywgLi4uY2hpbGRyZW4pID0+ICh7IHR5cGUsIHByb3BzOiB7IC4uLnByb3BzLCBjaGlsZHJlbiB9IH0pCiAgY29uc3QgUmVhY3QgPSB7IGNyZWF0ZUVsZW1lbnQ6IGgsCiAgICB1c2VTdGF0ZShpbml0aWFsKSB7CiAgICAgIGNvbnN0IG93bmVyID0gY3VycmVudC5uYW1lLCBpbmRleCA9IGN1cnJlbnQuc3RhdGUrKwogICAgICBpZiAoIXN0YXRlLmhhcyhvd25lcikpIHN0YXRlLnNldChvd25lciwgW10pCiAgICAgIGNvbnN0IHNsb3RzID0gc3RhdGUuZ2V0KG93bmVyKQogICAgICBpZiAoc2xvdHNbaW5kZXhdID09PSB1bmRlZmluZWQpIHNsb3RzW2luZGV4XSA9IHR5cGVvZiBpbml0aWFsID09PSAnZnVuY3Rpb24nID8gaW5pdGlhbCgpIDogaW5pdGlhbAogICAgICByZXR1cm4gW3Nsb3RzW2luZGV4XSwgdmFsdWUgPT4geyBzbG90c1tpbmRleF0gPSB0eXBlb2YgdmFsdWUgPT09ICdmdW5jdGlvbicgPyB2YWx1ZShzbG90c1tpbmRleF0pIDogdmFsdWUgfV0KICAgIH0sCiAgICB1c2VSZWYoaW5pdGlhbCkgewogICAgICBjb25zdCBrZXkgPSBjdXJyZW50Lm5hbWUgKyAnOicgKyBjdXJyZW50LnJlZisrCiAgICAgIGlmICghcmVmcy5oYXMoa2V5KSkgcmVmcy5zZXQoa2V5LCB7IGN1cnJlbnQ6IGluaXRpYWwgfSkKICAgICAgcmV0dXJuIHJlZnMuZ2V0KGtleSkKICAgIH0sCiAgICB1c2VDYWxsYmFjazogZm4gPT4gZm4sIHVzZUVmZmVjdCgpIHt9LAogIH0KICBjb25zdCBkb2N1bWVudCA9IHsgaGVhZDogeyBhcHBlbmQoKSB7fSB9LCBxdWVyeVNlbGVjdG9yKCkgeyByZXR1cm4gbnVsbCB9LCBjcmVhdGVFbGVtZW50KCkgeyByZXR1cm4geyBkYXRhc2V0OiB7fSwgc2hvd01vZGFsKCkge30gfSB9IH0KICBjb25zdCBmZXRjaCA9IGFzeW5jICh1cmwsIG9wdGlvbnMgPSB7fSkgPT4gewogICAgY29uc3QgYm9keSA9IG9wdGlvbnMuYm9keSA/IEpTT04ucGFyc2Uob3B0aW9ucy5ib2R5KSA6IHt9CiAgICByZXF1ZXN0cy5wdXNoKHsgdXJsLCBib2R5IH0pCiAgICBjb25zdCBwcm9qZWN0cyA9IGF1eGlsaWFyeSA/IFt7IHNvdXJjZTogbG9jYWwsIHRhcmdldDogbG9jYWwsIHJlcXVpcmVzU2VsZWN0aW9uOiBmYWxzZSB9XSA6IFt7IHNvdXJjZTogZm9yZWlnbiwgdGFyZ2V0OiBib2R5LnByb2plY3RQYXRocz8uW2ZvcmVpZ25dID8/ICcnLCBzdWdnZXN0ZWQ6IGxvY2FsLCByZXF1aXJlc1NlbGVjdGlvbjogIWJvZHkucHJvamVjdFBhdGhzIH1dCiAgICBjb25zdCBhcnRpZmFjdHMgPSBhdXhpbGlhcnkgPyB7IGF1eGlsaWFyeUNvdW50OiAxLCBhdXhpbGlhcnlGaWxlczogWydzZXNzaW9uLWFydGlmYWN0LTIwMjYxMDE2LTE0Mzg1NC56c3RkJ10sIGFydGlmYWN0RGlyOiAnRDovRFNIL3NuYXBzaG90cy9yZXN0b3JlLWFydGlmYWN0cy10ZXN0JyB9IDoge30KICAgIGNvbnN0IHZhbHVlID0gdXJsLmVuZHNXaXRoKCcvcmVzdG9yZS9wcmV2aWV3JykgPyB7IHByZXZpZXc6IHsgb2s6IHRydWUsIHRvdGFsRmlsZXM6IDEsIG1pc3Npbmc6IDEsIHByb2plY3RzLCAuLi5hcnRpZmFjdHMgfSB9IDogeyByZXN1bHQ6IHsgb2s6IHRydWUsIHJlcGxhY2VkOiAxLCBwcmVzZXJ2ZWQ6IDAsIC4uLmFydGlmYWN0cyB9LCBjb21taXRzOiBbXSB9CiAgICByZXR1cm4geyBvazogdHJ1ZSwganNvbjogYXN5bmMgKCkgPT4gKHsgb2s6IHRydWUsIHZhbHVlIH0pIH0KICB9CiAgdm0ucnVuSW5OZXdDb250ZXh0KGF3YWl0IGZzLnJlYWRGaWxlKG5ldyBVUkwoJy4uL2NsaWVudC5qcycsIGltcG9ydC5tZXRhLnVybCksICd1dGY4JyksIHsgd2luZG93OiB7IF9fTW9kdWxlTG9hZGVyX186IHsgbG9hZDogdmFsdWUgPT4geyBkZXNjcmlwdG9yID0gdmFsdWUgfSB9IH0sIGRvY3VtZW50LCBuYXZpZ2F0b3I6IHsgbGFuZ3VhZ2U6ICd6aC1DTicgfSwgZmV0Y2ggfSkKICBjb25zdCBwbHVnaW4gPSBkZXNjcmlwdG9yLmZhY3RvcnkobmFtZSA9PiB7IGFzc2VydC5lcXVhbChuYW1lLCAncmVhY3QnKTsgcmV0dXJuIFJlYWN0IH0pCiAgcGx1Z2luLmFwcGx5KHsgc2xvdHM6IHsgaW5qZWN0KF9uYW1lLCBmbikgeyBmbigpIH0sIHJlZ2lzdGVyKG1ldGEsIGNvbXBvbmVudCkgeyBpZiAobWV0YS5uYW1lID09PSAnbWFpbicpIE1haW4gPSBjb21wb25lbnQ7IHJldHVybiBudWxsIH0gfSB9KQogIGZ1bmN0aW9uIHZpc2l0KG5vZGUsIG5vZGVzID0gW10pIHsKICAgIGlmIChBcnJheS5pc0FycmF5KG5vZGUpKSB7IGZvciAoY29uc3QgY2hpbGQgb2Ygbm9kZSkgdmlzaXQoY2hpbGQsIG5vZGVzKTsgcmV0dXJuIG5vZGVzIH0KICAgIGlmIChub2RlID09PSBudWxsIHx8IHR5cGVvZiBub2RlICE9PSAnb2JqZWN0JykgcmV0dXJuIG5vZGVzCiAgICBpZiAodHlwZW9mIG5vZGUudHlwZSA9PT0gJ2Z1bmN0aW9uJykgeyBjb25zdCBwcmV2aW91cyA9IGN1cnJlbnQ7IGN1cnJlbnQgPSB7IG5hbWU6IG5vZGUudHlwZS5uYW1lLCBzdGF0ZTogMCwgcmVmOiAwIH07IGNvbnN0IGNoaWxkID0gbm9kZS50eXBlKG5vZGUucHJvcHMpOyBjdXJyZW50ID0gcHJldmlvdXM7IHJldHVybiB2aXNpdChjaGlsZCwgbm9kZXMpIH0KICAgIG5vZGVzLnB1c2gobm9kZSk7IHZpc2l0KG5vZGUucHJvcHM/LmNoaWxkcmVuLCBub2Rlcyk7IHJldHVybiBub2RlcwogIH0KICBjb25zdCByZW5kZXIgPSAoKSA9PiB2aXNpdChoKE1haW4sIHt9KSkKICByZXR1cm4geyByZW5kZXIsIHN0YXRlLCByZXF1ZXN0cywgZm9yZWlnbiwgbG9jYWwgfQp9CmNvbnN0IHRleHQgPSBub2RlID0+IEFycmF5LmlzQXJyYXkobm9kZSkgPyBub2RlLm1hcCh0ZXh0KS5qb2luKCcnKSA6IG5vZGUgJiYgdHlwZW9mIG5vZGUgPT09ICdvYmplY3QnID8gdGV4dChub2RlLnByb3BzPy5jaGlsZHJlbikgOiBTdHJpbmcobm9kZSA/PyAnJykKY29uc3QgbmV4dFR1cm4gPSAoKSA9PiBuZXcgUHJvbWlzZShyZXNvbHZlID0+IHNldEltbWVkaWF0ZShyZXNvbHZlKSkKCnRlc3QoJ+ecn+Wunui/mOWOn+aMiemSruWFiOehruiupOebruagh+ebruW9le+8jOWGjemihOiniOW5tuWwhuaYoOWwhOS8oOe7meWFqOmHj+i/mOWOn0FQSScsIGFzeW5jICgpID0+IHsKICBjb25zdCBhcHAgPSBhd2FpdCBtb3VudCgpCiAgbGV0IG5vZGVzID0gYXBwLnJlbmRlcigpCiAgY29uc3QgYnV0dG9uID0gbm9kZXMuZmluZChub2RlID0+IG5vZGUudHlwZSA9PT0gJ2J1dHRvbicgJiYgdGV4dChub2RlKSA9PT0gJ+WFqOmHj+i/mOWOnycpCiAgYXNzZXJ0KGJ1dHRvbikKICBjb25zdCBwZW5kaW5nID0gYnV0dG9uLnByb3BzLm9uQ2xpY2soKQogIGF3YWl0IG5leHRUdXJuKCkKICBub2RlcyA9IGFwcC5yZW5kZXIoKQogIGNvbnN0IGRpYWxvZyA9IG5vZGVzLmZpbmQobm9kZSA9PiBub2RlLnR5cGUgPT09ICdkaWFsb2cnICYmIG5vZGUucHJvcHNbJ2FyaWEtbGFiZWwnXSA9PT0gJ+ehruiupOebruagh+iuvuWkh+mhueebruebruW9lScpCiAgYXNzZXJ0KGRpYWxvZykKICBjb25zdCBpbnB1dCA9IG5vZGVzLmZpbmQobm9kZSA9PiBub2RlLnR5cGUgPT09ICdpbnB1dCcgJiYgbm9kZS5wcm9wcy5pZCA9PT0gJ3NzLXJlc3RvcmUtcGF0aC0wJykKICBhc3NlcnQuZXF1YWwoaW5wdXQucHJvcHMucmVxdWlyZWQsIHRydWUpCiAgY29uc3QgY2hvc2VuID0gJ0U6L0FjdHVhbCBQcm9qZWN0JwogIGlucHV0LnByb3BzLm9uQ2hhbmdlKHsgdGFyZ2V0OiB7IHZhbHVlOiBjaG9zZW4gfSB9KQogIG5vZGVzID0gYXBwLnJlbmRlcigpCiAgY29uc3QgZm9ybSA9IG5vZGVzLmZpbmQobm9kZSA9PiBub2RlLnR5cGUgPT09ICdmb3JtJyAmJiB0ZXh0KG5vZGUpLmluY2x1ZGVzKCfmoLjlr7nnm67lvZXlubbnu6fnu60nKSkKICBmb3JtLnByb3BzLm9uU3VibWl0KHsgcHJldmVudERlZmF1bHQoKSB7fSB9KQogIGF3YWl0IG5leHRUdXJuKCkKICBub2RlcyA9IGFwcC5yZW5kZXIoKQogIGNvbnN0IGNvbmZpcm0gPSBub2Rlcy5maW5kKG5vZGUgPT4gbm9kZS50eXBlID09PSAnYnV0dG9uJyAmJiB0ZXh0KG5vZGUpID09PSAn56Gu6K6kJykKICBhc3NlcnQoY29uZmlybSkKICBjb25maXJtLnByb3BzLm9uQ2xpY2soKQogIGF3YWl0IHBlbmRpbmcKICBjb25zdCBhcHBseSA9IGFwcC5yZXF1ZXN0cy5maW5kKGl0ZW0gPT4gaXRlbS51cmwuZW5kc1dpdGgoJy9yZXN0b3JlL292ZXJ3cml0ZS9hcHBseScpKQogIGFzc2VydC5lcXVhbChhcHBseS5ib2R5LnByb2plY3RQYXRoc1thcHAuZm9yZWlnbl0sIGNob3NlbikKICBhc3NlcnQuZXF1YWwoYXBwLnJlcXVlc3RzLmZpbHRlcihpdGVtID0+IGl0ZW0udXJsLmVuZHNXaXRoKCcvcmVzdG9yZS9wcmV2aWV3JykpLmxlbmd0aCwgMikKfSkKCnRlc3QoJ+ebruW9lemAieaLqeWPlua2iOaXtuS4jeaPkOS6pOS7u+S9leS8muivnei/mOWOn+WGmeWFpScsIGFzeW5jICgpID0+IHsKICBjb25zdCBhcHAgPSBhd2FpdCBtb3VudCgpCiAgY29uc3QgYnV0dG9uID0gYXBwLnJlbmRlcigpLmZpbmQobm9kZSA9PiBub2RlLnR5cGUgPT09ICdidXR0b24nICYmIHRleHQobm9kZSkgPT09ICflhajph4/ov5jljp8nKQogIGNvbnN0IHBlbmRpbmcgPSBidXR0b24ucHJvcHMub25DbGljaygpCiAgYXdhaXQgbmV4dFR1cm4oKQogIGNvbnN0IGRpYWxvZyA9IGFwcC5yZW5kZXIoKS5maW5kKG5vZGUgPT4gbm9kZS50eXBlID09PSAnZGlhbG9nJyAmJiBub2RlLnByb3BzWydhcmlhLWxhYmVsJ10gPT09ICfnoa7orqTnm67moIforr7lpIfpobnnm67nm67lvZUnKQogIGRpYWxvZy5wcm9wcy5vbkNhbmNlbCh7IHByZXZlbnREZWZhdWx0KCkge30gfSkKICBhd2FpdCBwZW5kaW5nCiAgYXNzZXJ0KCFhcHAucmVxdWVzdHMuc29tZShpdGVtID0+IGl0ZW0udXJsLmVuZHNXaXRoKCcvcmVzdG9yZS9vdmVyd3JpdGUvYXBwbHknKSkpCn0pCgp0ZXN0KCfkuInmnaHkvJror53ov5jljp/ot6/nlLHpgJDpobnpgI/kvKDpobnnm67nm67lvZXmmKDlsITvvIzkv53mjIHlkIzmupDkupLmlqXnuqbmnZ8nLCBhc3luYyAoKSA9PiB7CiAgZm9yIChjb25zdCBbc3VmZml4LCBrZXldIG9mIFtbJy9yZXN0b3JlL3ByZXZpZXcnLCAncHJldmlld1Jlc3RvcmUnXSwgWycvcmVzdG9yZS9tZXJnZScsICdtZXJnZVJlc3RvcmUnXSwgWycvcmVzdG9yZS9vdmVyd3JpdGUvYXBwbHknLCAnb3ZlcndyaXRlQXBwbHknXV0pIHsKICAgIGNvbnN0IHNlZW4gPSBbXSwgbWFwcGluZyA9IHsgJ0M6L29sZC9wcm9qZWN0JzogJ0Q6L2xvY2FsL3Byb2plY3QnIH0KICAgIGNvbnN0IHJvdXRlID0gYnVpbGRSb3V0ZXMoeyBnYXRlOiBuZXcgT3BlcmF0aW9uR2F0ZSgpLCBba2V5XTogYXN5bmMgKC4uLmFyZ3MpID0+IHsgc2Vlbi5wdXNoKGFyZ3MpOyByZXR1cm4geyBvazogdHJ1ZSB9IH0gfSkuZmluZChpdGVtID0+IGl0ZW0ucGF0aCA9PT0gQVBJX1BSRUZJWCArIHN1ZmZpeCkKICAgIGNvbnN0IHJlcXVlc3QgPSB7IG1ldGhvZDogJ1BPU1QnLCB1cmw6IHJvdXRlLnBhdGgsIGhlYWRlcnM6IHsgaG9zdDogJzEyNy4wLjAuMToxOTM4NycgfSwgc29ja2V0OiB7IHJlbW90ZUFkZHJlc3M6ICcxMjcuMC4wLjEnIH0sIGFzeW5jICpbU3ltYm9sLmFzeW5jSXRlcmF0b3JdKCkgeyB5aWVsZCBCdWZmZXIuZnJvbShKU09OLnN0cmluZ2lmeSh7IGNvbW1pdDogJ2EnLnJlcGVhdCg0MCksIHByb2plY3RQYXRoczogbWFwcGluZyB9KSkgfSB9CiAgICBjb25zdCByZXNwb25zZSA9IHsgd3JpdGVIZWFkKHN0YXR1cykgeyB0aGlzLnN0YXR1cyA9IHN0YXR1cyB9LCBlbmQoYm9keSkgeyB0aGlzLmJvZHkgPSBKU09OLnBhcnNlKGJvZHkpIH0gfQogICAgYXdhaXQgcm91dGUuaGFuZGxlcihyZXF1ZXN0LCByZXNwb25zZSkKICAgIGFzc2VydC5lcXVhbChyZXNwb25zZS5zdGF0dXMsIDIwMCkKICAgIGFzc2VydC5kZWVwRXF1YWwoc2VlblswXSwgWydhJy5yZXBlYXQoNDApLCBtYXBwaW5nXSkKICB9Cn0pCgpmb3IgKGNvbnN0IG1vZGUgb2YgWyflronlhajlkIjlubYnLCAn5YWo6YeP6L+Y5Y6fJ10pIHRlc3QobW9kZSArICfnnJ/lrp7pobXpnaLnoa7orqTliJflh7rpmYTlsZ7lia/mnKzvvIzmiJDlip/nu5PmnpzlsZXnpLrljp/moLfkv53nlZnnm67lvZUnLCBhc3luYyAoKSA9PiB7CiAgY29uc3QgYXBwID0gYXdhaXQgbW91bnQoeyBhdXhpbGlhcnk6IHRydWUgfSkKICBjb25zdCBidXR0b24gPSBhcHAucmVuZGVyKCkuZmluZChub2RlID0+IG5vZGUudHlwZSA9PT0gJ2J1dHRvbicgJiYgdGV4dChub2RlKSA9PT0gbW9kZSkKICBhc3NlcnQoYnV0dG9uKQogIGNvbnN0IHBlbmRpbmcgPSBidXR0b24ucHJvcHMub25DbGljaygpCiAgYXdhaXQgbmV4dFR1cm4oKQogIGxldCBub2RlcyA9IGFwcC5yZW5kZXIoKQogIGFzc2VydChub2Rlcy5zb21lKG5vZGUgPT4gdGV4dChub2RlKS5pbmNsdWRlcygn6ZmE5bGe5aSH5Lu95bCG5Y6f5qC35Y+m5a2Y77yM5LiN5L2c5Li65q2j5byP5Lya6K+d5omT5byA77yaMScpKSkKICBhc3NlcnQobm9kZXMuc29tZShub2RlID0+IHRleHQobm9kZSkuaW5jbHVkZXMoJ3Nlc3Npb24tYXJ0aWZhY3QtMjAyNjEwMTYtMTQzODU0LnpzdGQnKSkpCiAgYXNzZXJ0KCFhcHAucmVxdWVzdHMuc29tZShpdGVtID0+IC9yZXN0b3JlXC8obWVyZ2V8b3ZlcndyaXRlXC9hcHBseSkkL3UudGVzdChpdGVtLnVybCkpKQogIGNvbnN0IGNvbmZpcm0gPSBub2Rlcy5maW5kKG5vZGUgPT4gbm9kZS50eXBlID09PSAnYnV0dG9uJyAmJiB0ZXh0KG5vZGUpID09PSAn56Gu6K6kJykKICBhc3NlcnQoY29uZmlybSk7IGNvbmZpcm0ucHJvcHMub25DbGljaygpCiAgYXdhaXQgcGVuZGluZwogIG5vZGVzID0gYXBwLnJlbmRlcigpCiAgYXNzZXJ0KG5vZGVzLnNvbWUobm9kZSA9PiB0ZXh0KG5vZGUpLmluY2x1ZGVzKCfpmYTlsZ7lpIfku73lt7Lkv53nlZnvvJoxIMK3IEQ6L0RTSC9zbmFwc2hvdHMvcmVzdG9yZS1hcnRpZmFjdHMtdGVzdCcpKSkKICBhc3NlcnQoYXBwLnJlcXVlc3RzLnNvbWUoaXRlbSA9PiBpdGVtLnVybC5lbmRzV2l0aChtb2RlID09PSAn5a6J5YWo5ZCI5bm2JyA/ICcvcmVzdG9yZS9tZXJnZScgOiAnL3Jlc3RvcmUvb3ZlcndyaXRlL2FwcGx5JykpKQp9KQo=
+import { test } from 'node:test'
+import assert from 'node:assert/strict'
+import fs from 'node:fs/promises'
+import vm from 'node:vm'
+import { buildRoutes, OperationGate } from '../lib/api.mjs'
+import { API_PREFIX } from '../lib/constants.mjs'
+
+async function mount({ auxiliary = false } = {}) {
+  /** @type {any} */
+let descriptor, Main, current
+  const state = new Map(), refs = new Map(), requests = []
+  const sha = 'a'.repeat(40), foreign = 'Z:/Users/old/project', local = 'D:/Projects/local'
+  state.set('SessionSyncPage', [undefined, undefined, undefined, undefined, [{ sha, at: 1, subject: 'backup' }]])
+  const h = (type, props, ...children) => ({ type, props: { ...props, children } })
+  const React = { createElement: h,
+    useState(initial) {
+      const owner = current.name, index = current.state++
+      if (!state.has(owner)) state.set(owner, [])
+      const slots = state.get(owner)
+      if (slots[index] === undefined) slots[index] = typeof initial === 'function' ? initial() : initial
+      return [slots[index], value => { slots[index] = typeof value === 'function' ? value(slots[index]) : value }]
+    },
+    useRef(initial) {
+      const key = current.name + ':' + current.ref++
+      if (!refs.has(key)) refs.set(key, { current: initial })
+      return refs.get(key)
+    },
+    useCallback: fn => fn, useEffect() {},
+  }
+  const document = { head: { append() {} }, querySelector() { return null }, createElement() { return { dataset: {}, showModal() {} } } }
+  const fetch = async (url, options = {}) => {
+    const body = options.body ? JSON.parse(options.body) : {}
+    requests.push({ url, body })
+    const projects = auxiliary ? [{ source: local, target: local, requiresSelection: false }] : [{ source: foreign, target: body.projectPaths?.[foreign] ?? '', suggested: local, requiresSelection: !body.projectPaths }]
+    const artifacts = auxiliary ? { auxiliaryCount: 1, auxiliaryFiles: ['session-artifact-20261016-143854.zstd'], artifactDir: 'D:/DSH/snapshots/restore-artifacts-test' } : {}
+    const value = url.endsWith('/restore/preview') ? { preview: { ok: true, totalFiles: 1, missing: 1, projects, ...artifacts } } : { result: { ok: true, replaced: 1, preserved: 0, ...artifacts }, commits: [] }
+    return { ok: true, json: async () => ({ ok: true, value }) }
+  }
+  vm.runInNewContext(await fs.readFile(new URL('../client.js', import.meta.url), 'utf8'), { window: { __ModuleLoader__: { load: value => { descriptor = value } } }, document, navigator: { language: 'zh-CN' }, fetch })
+  const plugin = descriptor.factory(name => { assert.equal(name, 'react'); return React })
+  plugin.apply({ slots: { inject(_name, fn) { fn() }, register(meta, component) { if (meta.name === 'main') Main = component; return null } } })
+  function visit(node, nodes = []) {
+    if (Array.isArray(node)) { for (const child of node) visit(child, nodes); return nodes }
+    if (node === null || typeof node !== 'object') return nodes
+    if (typeof node.type === 'function') { const previous = current; current = { name: node.type.name, state: 0, ref: 0 }; const child = node.type(node.props); current = previous; return visit(child, nodes) }
+    nodes.push(node); visit(node.props?.children, nodes); return nodes
+  }
+  const render = () => visit(h(Main, {}))
+  return { render, state, requests, foreign, local }
+}
+const text = node => Array.isArray(node) ? node.map(text).join('') : node && typeof node === 'object' ? text(node.props?.children) : String(node ?? '')
+const nextTurn = () => new Promise(resolve => setImmediate(resolve))
+
+test('真实还原按钮先确认目标目录，再预览并将映射传给全量还原API', async () => {
+  const app = await mount()
+  let nodes = app.render()
+  const button = nodes.find(node => node.type === 'button' && text(node) === '全量还原')
+  assert(button)
+  const pending = button.props.onClick()
+  await nextTurn()
+  nodes = app.render()
+  const dialog = nodes.find(node => node.type === 'dialog' && node.props['aria-label'] === '确认目标设备项目目录')
+  assert(dialog)
+  const input = nodes.find(node => node.type === 'input' && node.props.id === 'ss-restore-path-0')
+  assert.equal(input.props.required, true)
+  const chosen = 'E:/Actual Project'
+  input.props.onChange({ target: { value: chosen } })
+  nodes = app.render()
+  const form = nodes.find(node => node.type === 'form' && text(node).includes('核对目录并继续'))
+  form.props.onSubmit({ preventDefault() {} })
+  await nextTurn()
+  nodes = app.render()
+  const confirm = nodes.find(node => node.type === 'button' && text(node) === '确认')
+  assert(confirm)
+  confirm.props.onClick()
+  await pending
+  const apply = app.requests.find(item => item.url.endsWith('/restore/overwrite/apply'))
+  assert.equal(apply.body.projectPaths[app.foreign], chosen)
+  assert.equal(app.requests.filter(item => item.url.endsWith('/restore/preview')).length, 2)
+})
+
+test('目录选择取消时不提交任何会话还原写入', async () => {
+  const app = await mount()
+  const button = app.render().find(node => node.type === 'button' && text(node) === '全量还原')
+  const pending = button.props.onClick()
+  await nextTurn()
+  const dialog = app.render().find(node => node.type === 'dialog' && node.props['aria-label'] === '确认目标设备项目目录')
+  dialog.props.onCancel({ preventDefault() {} })
+  await pending
+  assert(!app.requests.some(item => item.url.endsWith('/restore/overwrite/apply')))
+})
+
+test('三条会话还原路由逐项透传项目目录映射，保持同源互斥约束', async () => {
+  for (const [suffix, key] of [['/restore/preview', 'previewRestore'], ['/restore/merge', 'mergeRestore'], ['/restore/overwrite/apply', 'overwriteApply']]) {
+    const seen = [], mapping = { 'C:/old/project': 'D:/local/project' }
+    const route = buildRoutes({ gate: new OperationGate(), [key]: async (...args) => { seen.push(args); return { ok: true } } }).find(item => item.path === API_PREFIX + suffix)
+    const request = { method: 'POST', url: route.path, headers: { host: '127.0.0.1:19387' }, socket: { remoteAddress: '127.0.0.1' }, async *[Symbol.asyncIterator]() { yield Buffer.from(JSON.stringify({ commit: 'a'.repeat(40), projectPaths: mapping })) } }
+    const response = { writeHead(status) { this.status = status }, end(body) { this.body = JSON.parse(body) } }
+    await route.handler(request, response)
+    assert.equal(response.status, 200)
+    assert.deepEqual(seen[0], ['a'.repeat(40), mapping])
+  }
+})
+
+for (const mode of ['安全合并', '全量还原']) test(mode + '真实页面确认列出附属副本，成功结果展示原样保留目录', async () => {
+  const app = await mount({ auxiliary: true })
+  const button = app.render().find(node => node.type === 'button' && text(node) === mode)
+  assert(button)
+  const pending = button.props.onClick()
+  await nextTurn()
+  let nodes = app.render()
+  assert(nodes.some(node => text(node).includes('附属备份将原样另存，不作为正式会话打开：1')))
+  assert(nodes.some(node => text(node).includes('session-artifact-20261016-143854.zstd')))
+  assert(!app.requests.some(item => /restore\/(merge|overwrite\/apply)$/u.test(item.url)))
+  const confirm = nodes.find(node => node.type === 'button' && text(node) === '确认')
+  assert(confirm); confirm.props.onClick()
+  await pending
+  nodes = app.render()
+  assert(nodes.some(node => text(node).includes('附属备份已保留：1 · D:/DSH/snapshots/restore-artifacts-test')))
+  assert(app.requests.some(item => item.url.endsWith(mode === '安全合并' ? '/restore/merge' : '/restore/overwrite/apply')))
+})
