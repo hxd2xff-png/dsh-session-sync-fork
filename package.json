@@ -28,6 +28,8 @@
     "client.js",
     "types.d.ts",
     "lib",
+    "vendor",
+    "scripts/vendor-locked-dependencies.mjs",
     "cordis.patch.yml",
     "README.md",
     "README-zh.md",

@@ -7,7 +7,7 @@
 
 *在设备间同步会话，冲突时两边都保留，绝不丢失任何一轮。*
 
-> **官方仓库。** 本仓库是 dsh-session-sync 的唯一官方仓库，由 PerryLink 维护。其他账号下的同名仓库与本项目无关。
+> **修改分支：** [hxd2xff-png/dsh-session-sync-fork](https://github.com/hxd2xff-png/dsh-session-sync-fork)，基于 PerryLink 上游项目。本仓库包含最新插件修改和全部锁定依赖归档，详见[离线安装说明与依赖校验清单](vendor/README.md)；本分支不是上游官方仓库。
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Gitee](https://img.shields.io/badge/Gitee-mirror-c71d23?logo=gitee)](https://gitee.com/perrylink/dsh-session-sync)

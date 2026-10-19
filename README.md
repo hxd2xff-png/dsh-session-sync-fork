@@ -10,7 +10,7 @@
 
 *Sync your sessions between devices, keep both sides on any conflict, never lose a turn.*
 
-> **Official repository.** This is the only official repository of dsh-session-sync, maintained by PerryLink. Same-name repositories under other accounts are not affiliated.
+> **Modified fork:** [hxd2xff-png/dsh-session-sync-fork](https://github.com/hxd2xff-png/dsh-session-sync-fork), based on PerryLink's upstream project. This fork includes the latest local plugin changes and all locked dependency archives; see [offline installation and integrity manifest](vendor/README.md). It is not the upstream official repository.
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![DSH plugin](https://img.shields.io/badge/dsh--plugin-✅-green)](https://github.com/topics/dsh-plugin)

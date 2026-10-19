@@ -1429,19 +1429,27 @@ export function apply(ctx, config = {}) {
         tempRoot: os.tmpdir(),
       }),
       mergeRestore: async (commit, projectPaths) => {
-        const meta = await ensureMeta().catch(() => ({ deviceId: 'unknown' }))
-        const backend = await uiBackend()
-        const restoreContext = sessionRestoreContext(projectPaths)
-        const result = await mergeRestore({
-          ...restoreContext,
-          artifactRoot: path.join(detectDshHome(), SNAPSHOT_DIR_NAME),
-          git: await uiBackend(),
-          sessionRoot,
-          commit,
-          deviceShort: String(meta.deviceId ?? 'unknown').replaceAll('-', '').slice(0, 8).toLowerCase() || 'unknown',
-          tempRoot: os.tmpdir(),
-        })
-        return result
+        progress.start('session', { label: '会话安全合并还原', stage: 'restore', action: 'restore' })
+        try {
+          const meta = await ensureMeta().catch(() => ({ deviceId: 'unknown' }))
+          const backend = await uiBackend()
+          const restoreContext = sessionRestoreContext(projectPaths)
+          const result = await mergeRestore({
+            ...restoreContext,
+            artifactRoot: path.join(detectDshHome(), SNAPSHOT_DIR_NAME),
+            git: backend,
+            sessionRoot,
+            commit,
+            deviceShort: String(meta.deviceId ?? 'unknown').replaceAll('-', '').slice(0, 8).toLowerCase() || 'unknown',
+            tempRoot: os.tmpdir(),
+            onProgress: patch => progress.update('session', { ...patch, action: 'restore' }),
+          })
+          progress.finish('session', { action: 'restore', ok: result?.ok !== false, error: result?.error })
+          return result
+        } catch (error) {
+          progress.finish('session', { action: 'restore', ok: false, error: messageOf(error) })
+          throw error
+        }
       },
       prepareOverwrite: async (commit) => {
         const backend = await uiBackend()
@@ -1484,7 +1492,7 @@ export function apply(ctx, config = {}) {
         const snapshotRoot = path.join(path.dirname(sessionRoot), SNAPSHOT_DIR_NAME)
         const stagingDir = path.join(os.tmpdir(), `dsh-session-sync-staging-${id}`)
         // 进度：真实计数（快照文件数 / 物化文件数），与备份同域但 action 不同。
-        progress.start('session', { label: '会话全量还原', stage: 'delete', action: 'delete' })
+        progress.start('session', { label: '会话全量还原', stage: 'restore', action: 'restore' })
         try {
           const result = await overwriteApply({
             ...sessionRestoreContext(projectPaths),
@@ -1512,19 +1520,19 @@ export function apply(ctx, config = {}) {
               return lease
             },
             onProgress: (patch) => progress.update('session', {
-              action: 'delete',
+              action: 'restore',
               ...(typeof patch?.stage === 'string' ? { stage: patch.stage } : {}),
               ...(patch?.files !== undefined ? { files: patch.files } : {}),
             }),
           })
           progress.finish('session', {
             ok: result?.ok !== false,
-            action: 'delete',
+            action: 'restore',
             error: result?.ok === false ? result.error : undefined,
           })
           return result
         } catch (error) {
-          progress.finish('session', { ok: false, error: messageOf(error), action: 'delete' })
+          progress.finish('session', { ok: false, error: messageOf(error), action: 'restore' })
           throw error
         }
       },
@@ -1593,6 +1601,8 @@ export function apply(ctx, config = {}) {
         if (path.endsWith('/snapshot/push')) return { kind: 'plugin', action: 'backup', label: '插件备份' }
         if (path.endsWith('/snapshot/history/delete')) return { kind: 'plugin', action: 'delete', label: '插件备份删除' }
         if (path.endsWith('/snapshot/reclaim-orphans')) return { kind: 'plugin', action: 'delete', label: '孤儿对象回收' }
+        if (path.endsWith('/snapshot/pull')) return { kind: 'plugin', action: 'restore', label: '插件还原' }
+        if (path.endsWith('/skill/restore')) return { kind: 'skill', action: 'restore', label: '技能还原' }
         return null
       }
       const mapped = routeKind(item.path)
@@ -1603,7 +1613,7 @@ export function apply(ctx, config = {}) {
         ...item,
         handler: async (request, response) => withCloudOperation(label, async () => {
           let operationError = null
-          progress.start(kind, { label, stage: 'collecting', action })
+          progress.start(kind, { label, stage: action === 'restore' ? 'restore' : action === 'delete' ? 'delete' : 'collecting', action })
           // core 的真实计数 → 进度条目（stage/files 全部照抄，不做换算）。
           setCloudProgressSink((patch) => {
             if (typeof patch?.error === 'string') operationError = patch.error

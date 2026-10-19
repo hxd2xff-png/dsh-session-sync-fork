@@ -1034,7 +1034,10 @@ window.__ModuleLoader__.load({
       const refreshHistory = useCallback(async () => {
         try {
           const value = await call('/history?limit=50')
-          if (value.history?.ok === false) throw new Error(value.history.error ?? '备份历史同步失败')
+          if (value.history?.ok === false) {
+            if (value.history.commits?.length > 0) setHistory(value.history.commits)
+            throw new Error(value.history.error ?? '备份历史同步失败')
+          }
           setHistory(value.history?.commits ?? [])
           setHistoryError(null)
         } catch (error) {
@@ -1562,8 +1565,8 @@ window.__ModuleLoader__.load({
     /** 阶段文案（中文/英文二选一，跟随现有 locale 机制）。 */
     function stageLabel(stage, phase) {
       const table = locale === 'en'
-        ? { starting: 'Preparing…', mirror: 'Mirroring files…', collecting: 'Collecting…', push: 'Uploading…', delete: 'Deleting…' }
-        : { starting: '准备中…', mirror: '镜像文件中…', collecting: '收集数据中…', push: '上传中…', delete: '删除中…' }
+        ? { starting: 'Preparing…', mirror: 'Mirroring files…', collecting: 'Collecting…', push: 'Uploading…', restore: 'Restoring…', delete: 'Deleting…' }
+        : { starting: '准备中…', mirror: '镜像文件中…', collecting: '收集数据中…', push: '上传中…', restore: '还原中…', delete: '删除中…' }
       if (stage === 'push' && typeof phase === 'string' && phase !== '') {
         const phases = locale === 'en'
           ? { enumerating: 'Enumerating', counting: 'Counting', compressing: 'Compressing', writing: 'Uploading', receiving: 'Receiving', resolving: 'Resolving', updating: 'Updating', transfer: 'Transferring' }
@@ -1618,9 +1621,19 @@ window.__ModuleLoader__.load({
 
       const entries = Array.isArray(snapshot?.entries) ? snapshot.entries : []
 
-      // 条目唯一键：kind + action。同域可以同时有备份和删除两条，
-      // 只用 kind 会互相误判（删除完成把备份的条目标成 exiting，反之亦然）。
-      const keyOf = (entry) => `${entry.kind}:${entry.action ?? 'backup'}`
+      // 每轮独立：即使两轮之间的 running 没被轮询到，也不复用上轮退出动画。
+      const keyOf = (entry) => `${entry.kind}:${entry.action ?? 'backup'}:${entry.runId ?? entry.startedAt ?? 0}`
+
+      useEffect(() => {
+        const activeKeys = new Set(entries.map(keyOf))
+        for (const key of displayRef.current.keys()) {
+          if (!activeKeys.has(key)) displayRef.current.delete(key)
+        }
+        setExiting(prev => {
+          const next = new Set([...prev].filter(key => activeKeys.has(key)))
+          return next.size === prev.size ? prev : next
+        })
+      }, [entries.map(keyOf).join('|')])
 
       // 新一轮开始（running）时必须清除该条目的退出标记与残留显示值：
       // 否则上一次的 is-exiting（CSS opacity:0 + scale）会永久粘住，
@@ -1679,12 +1692,13 @@ window.__ModuleLoader__.load({
         let shown = prev
         if (target !== null) {
           const delta = target - prev
-          shown = isFinished ? 100 : prev + delta * 0.22
+          shown = isFinished && entry.ok !== false ? 100 : prev + delta * 0.22
           if (Math.abs(target - shown) < 0.4) shown = target
         }
         displayRef.current.set(key, shown)
 
         const isDelete = (entry.action ?? 'backup') === 'delete'
+        const isRestore = entry.action === 'restore'
         const indeterminate = target === null && !isFinished
         const phaseText = stageLabel(entry.stage, entry.phase)
         const elapsed = formatElapsed(entry.elapsedMs ?? 0)
@@ -1705,9 +1719,11 @@ window.__ModuleLoader__.load({
         // 完成文案按操作区分：删除说"已删除"，备份说"备份完毕"——不能都叫备份完毕。
         const doneText = isDelete
           ? (locale === 'en' ? 'Deleted' : '已删除')
+          : isRestore ? (locale === 'en' ? 'Restored' : '还原完成')
           : (locale === 'en' ? 'Done' : '备份完毕')
         const failText = isDelete
           ? (locale === 'en' ? 'Delete failed' : '删除失败')
+          : isRestore ? (locale === 'en' ? 'Restore failed' : '还原失败')
           : (locale === 'en' ? 'Failed' : '失败')
         const detail = isFinished
           ? (entry.ok === false

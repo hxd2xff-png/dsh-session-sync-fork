@@ -4,3 +4,4 @@ node_modules/
 .review/
 %SystemDrive%/
 *.tgz
+!vendor/npm/*.tgz
