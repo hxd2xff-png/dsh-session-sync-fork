@@ -6,7 +6,7 @@ import vm from 'node:vm'
 
 const clientUrl = new URL('../client.js', import.meta.url)
 
-async function loadMainComponent() {
+async function loadMainComponent(options = {}) {
   /** @type {any} */
 let descriptor
   const document = {
@@ -20,7 +20,7 @@ let descriptor
     open() {},
   }
   const source = await fs.readFile(clientUrl, 'utf8')
-  vm.runInNewContext(source, { window, document, navigator: { language: 'zh-CN' }, fetch: async () => ({ ok: true, json: async () => ({ ok: true, value: {} }) }) })
+  vm.runInNewContext(source, { window, document, navigator: { language: 'zh-CN' }, fetch: options.fetch ?? (async () => ({ ok: true, json: async () => ({ ok: true, value: {} }) })), setTimeout: options.setTimeout, clearTimeout: options.clearTimeout })
 
   let hookIndex = 0
   let overrides = {}
@@ -36,7 +36,7 @@ let descriptor
       return [value, () => {}]
     },
     useCallback(fn) { return fn },
-    useEffect() {},
+    useEffect(fn) { options.effects?.push(fn) },
     useRef(value) { return { current: value } },
   }
   const plugin = descriptor.factory((name) => {
@@ -81,6 +81,38 @@ let descriptor
 function textOf(node) {
   return (node.renderedChildren ?? []).map(child => typeof child === 'object' ? textOf(child) : String(child)).join('')
 }
+
+test('会话历史自动轮询获取远端，等待完成后重排，并在卸载时取消', async () => {
+  const effects = []
+  const timers = new Map()
+  let nextTimer = 0
+  let requests = 0
+  let release
+  const render = await loadMainComponent({
+    effects,
+    setTimeout(fn, delay) { assert.equal(delay, 60_000); timers.set(++nextTimer, fn); return nextTimer },
+    clearTimeout(id) { timers.delete(id) },
+    fetch: async () => {
+      requests++
+      await new Promise(resolve => { release = resolve })
+      return { ok: true, json: async () => ({ ok: true, value: { history: { ok: true, commits: [] } } }) }
+    },
+  })
+  render({})
+  const poll = effects.find(fn => fn.toString().includes('let stopped = false'))
+  assert.equal(typeof poll, 'function')
+  const dispose = poll()
+  const tick = timers.values().next().value
+  timers.clear()
+  const pending = tick()
+  assert.equal(requests, 1)
+  assert.equal(timers.size, 0, 'no overlapping fetch while remote request is pending')
+  release()
+  await pending
+  assert.equal(timers.size, 1)
+  dispose()
+  assert.equal(timers.size, 0)
+})
 
 function collect(nodes, predicate) {
   const out = []

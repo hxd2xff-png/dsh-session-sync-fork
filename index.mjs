@@ -57,6 +57,7 @@ import {
 } from './lib/errors.mjs'
 import {
   assertNestingSafe,
+  detectDshHome,
   resolveRepoDir,
   resolveSessionRoot,
   sessionIdOfForkPath,
@@ -77,7 +78,6 @@ import { createSafetySnapshot, materializeCommit, mergeRestore, overwriteApply, 
 import { OperationGate, buildRoutes, route } from './lib/api.mjs'
 import { createSessionMapper, sessionHeader } from './lib/session-portable.mjs'
 import { WORKSPACE_MANIFEST, captureWorkspaceManifest, repairMirroredWorkspaceGrouping, restoreWorkspaceGrouping } from './lib/workspace-manifest.mjs'
-import { detectDshHome } from './lib/paths.mjs'
 import { cloudRoutes, cloudRoutePaths, cloudOperationBusy, withCloudOperation, readPluginSchedule, runPluginBackup, setCloudProgressSink } from './lib/cloud.mjs'
 import { ProgressRegistry, feedGitProgress } from './lib/progress.mjs'
 
@@ -85,7 +85,7 @@ import { ProgressRegistry, feedGitProgress } from './lib/progress.mjs'
 // （某个 import 解析失败，或宿主根本没加载本模块）。
 try {
   fsSync.appendFileSync(
-    path.join(os.homedir(), '.dsh', 'session-sync-import.log'),
+    path.join(detectDshHome() ?? path.join(os.homedir(), '.dsh'), 'session-sync-import.log'),
     `${new Date().toISOString()} module-body-started pid=${process.pid}\n`,
   )
 } catch {
@@ -644,7 +644,7 @@ export function apply(ctx, config = {}) {
   // 「apply 是否被调用」这一基本事实。用 appendFileSync 保证同步落盘。
   const mountProbe = (stage, extra = '') => {
     try {
-      fsSync.appendFileSync(path.join(os.homedir(), '.dsh', 'session-sync-mount.log'),
+      fsSync.appendFileSync(path.join(detectDshHome() ?? path.join(os.homedir(), '.dsh'), 'session-sync-mount.log'),
         `${new Date().toISOString()} ${stage} ${extra}\n`)
     } catch {
       // 探针失败绝不影响插件。

@@ -1034,6 +1034,7 @@ window.__ModuleLoader__.load({
       const refreshHistory = useCallback(async () => {
         try {
           const value = await call('/history?limit=50')
+          if (value.history?.ok === false) throw new Error(value.history.error ?? '备份历史同步失败')
           setHistory(value.history?.commits ?? [])
           setHistoryError(null)
         } catch (error) {
@@ -1077,6 +1078,24 @@ window.__ModuleLoader__.load({
           alive = false
         }
       }, [refresh, refreshHistory, refreshPending])
+
+      // Poll remote backup objects while this page is visible. Schedule only after
+      // completion so slow fetches cannot accumulate background requests.
+      useEffect(() => {
+        let stopped = false
+        let timer
+        const tick = async () => {
+          try {
+            if (document.visibilityState !== 'hidden') await refreshHistory()
+          } catch {
+            // refreshHistory retains the last successful list and exposes the error.
+          } finally {
+            if (!stopped) timer = setTimeout(tick, 60_000)
+          }
+        }
+        timer = setTimeout(tick, 60_000)
+        return () => { stopped = true; clearTimeout(timer) }
+      }, [refreshHistory])
 
       /** 统一忙碌包装。 */
       const run = useCallback(async (key, fn) => {
